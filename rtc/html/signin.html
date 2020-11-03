@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<!-- Bootstrap core CSS -->
+<link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script src="https://nedol.ru/rtc/lib/bootstrap/js/bootstrap.min.js"></script>
+<body>
+<div id="signin_form" class="container">
+    <style>
+        .form-signin {
+            max-width: 330px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+        .form-signin .form-signin-heading,
+        .form-signin .checkbox {
+            margin-bottom: 10px;
+        }
+        .form-signin .checkbox {
+            font-weight: normal;
+        }
+        .form-signin .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
+
+
+
+    <h2 class="form-signin-heading">Sign in</h2>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" class="form-control" placeholder="First Name" required autofocus  disabled>
+    <label for="middlename">Middle Name:</label>
+    <input type="text" id="middlename" class="form-control" placeholder="Middle Name" disabled>
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" class="form-control" placeholder="Last Name" required  disabled>
+    <label for="inputEmail">Email:</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required  disabled>
+    <label for="inputPassword" class="form-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required  disabled>
+    <button id="send_form" class="btn btn-primary" onclick="onClickSend()">Send</button>
+
+</div> <!-- /container -->
+</body>
+</html>
