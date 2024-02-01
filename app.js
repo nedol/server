@@ -5,7 +5,7 @@ const app = express();
 import http from 'http';
 const port = process.env.PORT || 3000;
 
-// import HandleRequest from './server/server';
+import HandleRequest from './server.js';
 
 app.get('/', (req, res) => res.type('html').send(html));
 
@@ -17,7 +17,7 @@ const html = `
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello from Render!</title>
+    <title>Hello from Kolmit!</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
       setTimeout(() => {
