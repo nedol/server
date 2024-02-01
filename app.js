@@ -7,9 +7,9 @@ const port = process.env.PORT || 3000;
 
 import HandleRequest from './server.js';
 
-app.get('/', (req, res) => res.type('html').send(html));
+app.get('/server', (req, res) => res.type('html').send(html));
 
-app.post('/', (req, res) => res.type('html').send(HandleRequest(req, req.post, res)));
+app.post('/server', (req, res) => res.type('html').send(HandleRequest(req, req.post, res)));
 
 const server_app = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
