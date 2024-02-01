@@ -1,0 +1,21 @@
+{
+    "name": "kolmit-server",
+    "version": "0.0.1",
+    "engines": {
+        "node": ">=18"
+    },
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "package": "svelte-kit package",
+        "preview": "vite preview",
+        "test": "playwright test",
+        "lint": "prettier --check --plugin-search-dir=. . && eslint .",
+        "format": "prettier --write --plugin-search-dir=. .",
+        "start": "node build/index.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
