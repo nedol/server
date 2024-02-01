@@ -1,66 +1,65 @@
-const server= require('./server')
+// import server from './server/server';
+import url from 'url';
+import express from 'express';
+const app = express();
+import http from 'http';
+const port = process.env.PORT || 3000;
 
-const qs = require('querystring');
-const url = require('url');
-const express = require('express')
-app = express();
-var http = require('http');
+// import HandleRequest from './server/server';
 
+app.get('/', (req, res) => res.type('html').send(html));
 
+app.post('/', (req, res) => res.type('html').send(HandleRequest(req, req.post, res)));
 
-function processPost(request, response, callback) {
-    var queryData = "";
-    if(typeof callback !== 'function') return null;
+const server_app = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-    if(request.method == 'POST') {
-        request.on('data', function(data) {
-            queryData += data;
-            if(queryData.length > 1e9) {//LIMIT!
-                queryData = "";
-            }
+const html = `
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello from Render!</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+      setTimeout(() => {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          disableForReducedMotion: true
         });
-
-        request.on('end', function() {
-            if(queryData.length>0) {
-                request.post = JSON.parse(queryData);
-                callback(request, response);
-            }
-        });
-
-    } else {
-        response.writeHead(405, {'Content-Type': 'text/plain'});
-        response.end();
-    }
-}
-
-
-var node = http.createServer(function(req, res) {
-    // res.writeHead(200, {'Content-Type': 'application/json'});
-    // res.end('test');
-    // return;
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
-
-    if(req.method == 'POST') {
-        processPost(req, res, function (req, res) {
-            server.HandleRequest(req, req.post, res);
-        });
-    }else{
-
-        var q = url.parse(req.url, true).query;
-
-        // res.writeHead(200, {'Content-Type': 'application/json'});
-        // res.end(JSON.stringify({'test get':q.func}));
-        // return;
-
-        server.HandleRequest(req, q, res)
-    }
-});
-
-node.listen(3000);
+      }, 500);
+    </script>
+    <style>
+      @import url("https://p.typekit.net/p.css?s=1&k=vnd5zic&ht=tk&f=39475.39476.39477.39478.39479.39480.39481.39482&a=18673890&app=typekit&e=css");
+      @font-face {
+        font-family: "neo-sans";
+        src: url("https://use.typekit.net/af/00ac0a/00000000000000003b9b2033/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/00ac0a/00000000000000003b9b2033/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/00ac0a/00000000000000003b9b2033/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+        font-style: normal;
+        font-weight: 700;
+      }
+      html {
+        font-family: neo-sans;
+        font-weight: 700;
+        font-size: calc(62rem / 16);
+      }
+      body {
+        background: white;
+      }
+      section {
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      Hello from Kolmit!
+    </section>
+  </body>
+</html>
+`;
