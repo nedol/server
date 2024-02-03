@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 
 import HandleRequest from './server.js';
 
-app.get('/server', (req, res) => res.type('html').send(html));
+app.get('/', (req, res) => res.type('html').send(html));
 
 app.post('/server', (req, res) => res.type('html').send(HandleRequest(req, req.post, res)));
 
