@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: opentts
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 5500
+    healthCheckPath: /
