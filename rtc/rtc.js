@@ -425,7 +425,7 @@ module.exports = class RTC {
             //https://github.com/matheuss/google-translate-api
 
             new translate(data[key][from], {to: to}).then(curriedDoWork.bind(null, obj),function (ev) {
-                console.log(ev);
+                // console.log(ev);
             });
 
         }
