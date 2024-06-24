@@ -4,8 +4,18 @@ import url from 'url';
 import express from 'express';
 let app = express();
 import http from 'http';
+import cors from 'cors';
+app.use(cors());
+let response;
 
-function processPost(request, response, callback) {
+app.post('/stt', (req, res) => {
+	console.log('Получены данные транскрибации:', req.body);
+	// Обработайте данные транскрибации здесь
+	response.status(200).send('Данные получены');
+});
+
+function processPost(request, resp, callback) {
+	response = resp;
 	var queryData = '';
 	if (typeof callback !== 'function') return null;
 
