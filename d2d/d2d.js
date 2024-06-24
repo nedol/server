@@ -111,7 +111,7 @@ module.exports = class D2D {
 
                 }
             } catch (ex) {
-                console.log(ex);
+                // console.log(ex);
                 res.end(JSON.stringify({err:ex}));
             }
         }
@@ -469,7 +469,7 @@ module.exports = class D2D {
 
         var curriedDoWork = function(obj,trans) {
             cnt++;
-            console.log(trans.text + obj.key);
+            // console.log(trans.text + obj.key);
             obj.data[obj.key][obj.to] = trans.text;
             obj.data[obj.key][trans.from.language.iso] = obj.src;
             if(obj.length===cnt) {
@@ -485,7 +485,7 @@ module.exports = class D2D {
             //https://github.com/matheuss/google-translate-api
 
             new translate(data[key][from], {to: to}).then(curriedDoWork.bind(null, obj),function (ev) {
-                console.log(ev);
+                // console.log(ev);
             });
 
         }

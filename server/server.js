@@ -12,7 +12,7 @@ import url from 'url';
 // let con_param = globaljs.con_param; //change every 8 min
 
 export default function HandleRequest(req, q, res) {
-	console.log(q);
+	// console.log(q);
 }
 
 // wget https://nodejs.org/dist/v9.7.0/node-v9.7.0-linux-x64.tar.x
