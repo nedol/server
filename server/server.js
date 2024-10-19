@@ -182,6 +182,8 @@ async function HandleMessage(q) {
   }
 }
 
+export default HandleMessage;
+
 function SetParams(q) {
   if (!global.rtcPool[q.type][q.abonent]) {
     global.rtcPool[q.type][q.abonent] = {};
