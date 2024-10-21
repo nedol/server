@@ -1,12 +1,20 @@
 import { WebSocketServer } from 'ws';
 import express from 'express';
 
-// import { json } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
 
 import pkg_l from 'lodash';
 const { find, findKey } = pkg_l;
 
-import { CreatePool, CreateOperator, CheckOperator, GetUsers } from './server/db.js'; //src\lib\server\server.db.js
+import {
+  CreatePool,
+  CreateOperator,
+  CheckOperator,
+  UpdateQuizUsers,
+  GetUsers,
+  GetDialog,
+  GetWords,
+} from './db.js'; //src\lib\server\server.db.js
 
 const app = express();
 
@@ -24,12 +32,12 @@ let prom = new Promise((resolve, reject) => {
 const pool = await prom;
 
 global.rtcPool;
-import { rtcPool_st } from './server/stores.js';
+import { rtcPool_st } from '../../lib/js/stores.js';
 rtcPool_st.subscribe((data) => {
   global.rtcPool = data;
 });
 
-const wsStore = {};
+// const wsStore = {};
 
 // Настраиваем WebSocket сервер
 const wss = new WebSocketServer({ server });
@@ -38,11 +46,14 @@ wss.on('connection', (ws) => {
   console.log('Новое WebSocket соединение');
 
   ws.on('message', (message) => {
-    console.log(`Получено сообщение: ${message}`);
+    // console.log(`Получено сообщение: ${message}`);
     const msg = JSON.parse(message);
-    if (msg.par.operator) wsStore[msg.par.operator] = ws;
+    if (msg.par.operator && msg.par.abonent) {
+      msg.par.ws = ws;
+      SetParams(msg.par);
+    }
 
-    HandleMessage(msg.par);
+    HandleMessage(msg.par, ws);
     // ws.send(`Echo: ${message}`);
   });
 
@@ -51,8 +62,9 @@ wss.on('connection', (ws) => {
   });
 });
 
-async function HandleMessage(q) {
-  console.log(q);
+async function HandleMessage(q, ws) {
+  // console.log(q);
+  let resp = '';
   switch (q.func) {
     case 'operator':
       if (q.email && q.psw) {
@@ -86,54 +98,14 @@ async function HandleMessage(q) {
       break;
 
     case 'operators':
-      const resp = await getOperators({
+      resp = await getOperators({
         operator: q.operator,
         abonent: q.abonent,
       });
-      wsStore[q.operator].send(JSON.stringify({ resp }));
+      global.rtcPool[q.abonent][q.operator].ws.send(JSON.stringify({ resp }));
 
       break;
 
-    case 'check':
-      SetParams(q);
-
-      if (q.type === 'user') {
-        const item = global.rtcPool[q.type][q.abonent][q.operator][q.uid];
-
-        const operators = { [q.operator]: {} };
-        for (let uid in global.rtcPool['operator'][q.abonent]) {
-          if (uid !== 'resolve')
-            operators[q.operator][uid] = {
-              type: q.type,
-              abonent: q.abonent,
-              operator: q.operator,
-              uid: q.uid,
-              status: global.rtcPool['operator'][q.abonent][uid].status,
-            };
-        }
-
-        resp = {
-          func: q.func,
-          type: q.type,
-          check: true,
-          // operators: operators,
-        };
-
-        SendOperatorOffer(q);
-        return new Response(JSON.stringify({ resp }));
-      } else if (q.type === 'operator') {
-        const res = cookies.get('kolmit.operator:' + q.abonent);
-        let kolmit;
-        if (res) {
-          kolmit = JSON.parse(res);
-          q.psw = kolmit.psw;
-        }
-        // console.log(q.operator)
-        resp = await CheckOperator(q);
-        console.log(resp);
-      }
-
-      break;
     case 'offer':
       try {
         SetParams(q);
@@ -158,20 +130,20 @@ async function HandleMessage(q) {
       SetParams(q);
       if (q.status === 'call') {
         if (q.type === 'operator') {
-          const item = global.rtcPool[q.type][q.abonent][q.operator][q.uid];
+          const item = global.rtcPool[q.abonent][q.operator];
           // if (item) item.status = 'call';
           BroadcastOperatorStatus(q, 'close');
-          // global.rtcPool['operator'][q.abonent][q.operator].shift();
+          // global.rtcPool[q.abonent][q.operator].shift();
         }
         break;
       }
       if (q.status === 'close') {
         try {
-          const item = global.rtcPool[q.type][q.abonent][q.operator][q.uid];
+          const item = global.rtcPool[q.abonent][q.operator];
           if (item) {
             item.status = q.status;
-            if (q.type === 'operator') BroadcastOperatorStatus(q, q.status);
-            //delete global.rtcPool['operator'][q.abonent][q.operator];
+            BroadcastOperatorStatus(q, q.status);
+            //delete global.rtcPool[q.abonent][q.operator];
           }
         } catch (ex) {}
         //this.RemoveAbonent(q);
@@ -179,60 +151,79 @@ async function HandleMessage(q) {
       }
 
       break;
+
+    case 'quiz_users':
+      resp = await BroadcastQuizUsers(q);
+      break;
+
+    case 'get_subscribers':
+      if (q.type === 'dialog') {
+        const dlg = await GetDialog({
+          name: q.quiz,
+          owner: q.abonent,
+          level: q.level,
+        });
+        if (dlg.subscribe?.length > 0) {
+          resp = {
+            [q.type]: { quiz: q.quiz, subscribers: dlg.subscribe },
+          };
+          ws?.send(JSON.stringify({ resp }));
+        }
+      } else if (q.type === 'word') {
+        const dlg = await GetWords({
+          name: q.quiz,
+          owner: q.abonent,
+          level: q.level,
+        });
+        if (dlg.subscribe?.length > 0) {
+          resp = {
+            [q.type]: { quiz: q.quiz, subscribers: dlg.subscribe },
+          };
+          ws?.send(JSON.stringify({ resp }));
+        }
+      }
+      break;
   }
 }
 
-export default HandleMessage;
-
 function SetParams(q) {
-  if (!global.rtcPool[q.type][q.abonent]) {
-    global.rtcPool[q.type][q.abonent] = {};
+  if (!global.rtcPool[q.abonent]) {
+    global.rtcPool[q.abonent] = {};
   }
 
-  if (!global.rtcPool[q.type][q.abonent][q.operator])
-    global.rtcPool[q.type][q.abonent][q.operator] = [];
+  const item = global.rtcPool[q.abonent][q.operator] || {};
 
-  let item;
-  if (q.type === 'user') {
-    item = global.rtcPool[q.type][q.abonent][q.operator][q.uid];
-  } else item = global.rtcPool[q.type][q.abonent][q.operator][0];
-
-  if (!item) {
-    item = {};
-    item.cand = [];
-    global.rtcPool[q.type][q.abonent][q.operator][q.uid] = item;
-  }
-
-  item.uid = q.uid;
-  item.status = q.status;
-  item.abonent = q.abonent;
-  item.operator = q.operator;
+  if (q.status) item.status = q.status;
+  item.ws = q.ws;
 
   if (q.desc) item.desc = q.desc;
+  if (!item.cand) item.cand = [];
   if (Array.isArray(q.cand)) {
     q.cand.forEach((cand, index) => {
       item.cand.push(cand);
     });
   } else if (q.cand) item.cand.push(q.cand);
 
+  global.rtcPool[q.abonent][q.operator] = item;
+
   // ws.onclose = function (ev) {
   // 	if (q.type === 'operator') {
-  // 		let item = _.find(global.rtcPool[q.type][q.abonent][q.operator], {
+  // 		let item = _.find(global.rtcPool[q.abonent][q.operator], {
   // 			uid: q.uid
   // 		});
   // 		if (item) item.status = 'close';
   // 		that.BroadcastOperatorStatus(q, 'close');
-  // 		const ind = _.findIndex(global.rtcPool[q.type][q.abonent][q.operator], {
+  // 		const ind = _.findIndex(global.rtcPool[q.abonent][q.operator], {
   // 			uid: q.uid
   // 		});
-  // 		global.rtcPool[q.type][q.abonent][q.operator].splice(ind, 1);
+  // 		global.rtcPool[q.abonent][q.operator].splice(ind, 1);
   // 	} else if ((q.type = 'user')) {
-  // 		if (global.rtcPool[q.type][q.abonent]) {
+  // 		if (global.rtcPool[q.abonent]) {
   // 			that.SendUserStatus(q);
-  // 			const index = _.findIndex(global.rtcPool[q.type][q.abonent][q.operator], {
+  // 			const index = _.findIndex(global.rtcPool[q.abonent][q.operator], {
   // 				uid: q.uid
   // 			});
-  // 			global.rtcPool[q.type][q.abonent][q.operator].splice(index, 1);
+  // 			global.rtcPool[q.abonent][q.operator].splice(index, 1);
   // 		}
   // 	}
   // };
@@ -240,38 +231,34 @@ function SetParams(q) {
 
 async function BroadcastOperatorStatus(q, check) {
   try {
-    let type = q.type === 'operator' ? 'user' : 'operator';
-
-    for (let operator in global.rtcPool['operator'][q.abonent]) {
+    for (let operator in global.rtcPool[q.abonent]) {
       if (operator === q.operator)
         //not to send to yourself
         continue;
-      for (let uid in global.rtcPool['operator'][q.abonent][operator]) {
-        let item = global.rtcPool[q.type][q.abonent][operator][uid];
-        let offer = ''; //find(operators[q.operator], { status: 'offer' });
-        if (
-          item.status === 'offer' &&
-          // && item.abonent === q.operator
-          item.uid !== q.uid
-        ) {
-          const users = await GetUsers({
+
+      let item = global.rtcPool[q.abonent][operator];
+      let offer = ''; //find(operators[q.operator], { status: 'offer' });
+      if (
+        item.status === 'offer'
+        // && item.abonent === q.operator
+        // item.uid !== q.uid
+      ) {
+        const users = await GetUsers({
+          abonent: q.abonent,
+          operator: q.operator,
+        });
+        const oper = find(users.operators, { operator: q.operator });
+        global.rtcPool[q.abonent][operator].ws.send(
+          JSON.stringify({
+            func: q.func,
             abonent: q.abonent,
             operator: q.operator,
-          });
-          const oper = find(users.operators, { operator: q.operator });
-          wsStore[operator].send(
-            JSON.stringify({
-              func: q.func,
-              type: type,
-              abonent: q.abonent,
-              operator: q.operator,
-              uid: q.uid,
-              status: check,
-              picture: oper.picture,
-              name: oper.name,
-            })
-          );
-        }
+            uid: q.uid,
+            status: check,
+            picture: oper.picture,
+            name: oper.name,
+          })
+        );
       }
     }
 
@@ -281,81 +268,37 @@ async function BroadcastOperatorStatus(q, check) {
   }
 }
 
-function SendOperatorOffer(q) {
-  if (
-    global.rtcPool['operator'] &&
-    global.rtcPool['operator'][q.abonent] &&
-    global.rtcPool['operator'][q.abonent][q.operator]
-  ) {
-    for (let uid in global.rtcPool['operator'][q.abonent][q.operator]) {
-      if (
-        global.rtcPool['operator'][q.abonent][q.operator][uid].status ===
-        'offer'
-      ) {
-        let operator = {
-          abonent: q.abonent,
-          operator: q.operator,
-          uid: uid,
-          status: global.rtcPool['operator'][q.abonent][q.operator][uid].status,
-          desc: global.rtcPool['operator'][q.abonent][q.operator][uid].desc,
-          cand: global.rtcPool['operator'][q.abonent][q.operator][uid].cand,
-        };
-
-        if (q.type === 'user') {
-          let item = global.rtcPool['user'][q.abonent][q.operator][q.uid];
-          socket?.send(JSON.stringify([{ operator: operator }]));
-        }
-      }
-    }
-  }
-}
-
 async function HandleCall(q) {
   let remAr = [];
-  if (q.type === 'user') {
-    if (q.desc || q.cand) {
+
+  if (q.desc || q.cand) {
+    remAr.push({
+      func: q.func,
+      desc: q.desc,
+      cand: q.cand,
+      abonent: q.abonent,
+      user: q.operator,
+      // "abonent": q.operator
+    });
+    if (!global.rtcPool[q.abonent][q.target]) return;
+    let item = global.rtcPool[q.abonent][q.target];
+
+    if (item) {
+      global.rtcPool[q.abonent][q.target].ws.send(JSON.stringify(remAr[0]));
+    }
+  } else {
+    let item = global.rtcPool[q.abonent][q.user];
+
+    if (item.status === 'offer') {
       remAr.push({
         func: q.func,
-        desc: q.desc,
-        cand: q.cand,
         abonent: q.abonent,
-        user: q.operator,
-        // "abonent": q.operator
+        target: q.user,
+        desc: item.desc,
+        cand: item.cand,
       });
-      if (!global.rtcPool['operator'][q.abonent][q.target]) return;
-      let item = global.rtcPool['operator'][q.abonent][q.target][q.oper_uid];
-
-      if (item) {
-        wsStore[q.target].send(JSON.stringify(remAr[0]));
-      }
-    } else {
-      let item = global.rtcPool['operator'][q.abonent][q.user];
-
-      if (item) {
-        let oper_offer_key = findKey(
-          global.rtcPool['operator'][q.abonent][q.user],
-          {
-            status: 'offer',
-          }
-        );
-
-        let oper_offer =
-          global.rtcPool['operator'][q.abonent][q.user][oper_offer_key];
-
-        if (oper_offer) {
-          remAr.push({
-            func: q.func,
-            abonent: q.abonent,
-            uid: q.uid,
-            oper_uid: oper_offer.uid,
-            desc: oper_offer.desc,
-            cand: oper_offer.cand,
-          });
-          wsStore[q.operator].send(JSON.stringify(remAr[0]));
-          // console.log('HandleCall to user', remAr.length);
-          return;
-        }
-      }
+      global.rtcPool[q.abonent][q.operator].ws.send(JSON.stringify(remAr[0]));
+      // console.log('HandleCall to user', remAr.length);
     }
   }
 }
@@ -363,18 +306,33 @@ async function HandleCall(q) {
 async function getOperators(q, func) {
   const users = await GetUsers(q);
   let operators = { [q.operator]: {} };
-  for (let oper in global.rtcPool['operator'][q.abonent]) {
+  for (let oper in global.rtcPool[q.abonent]) {
     const user = find(users.operators, { operator: oper });
 
     operators[oper] = {
       type: q.type,
       abonent: q.abonent,
       operator: oper,
-      status: global.rtcPool['operator'][q.abonent][oper][oper].status,
+      status: global.rtcPool[q.abonent][oper].status,
       picture: user?.picture,
       name: user?.name,
     };
   }
 
   return operators;
+}
+
+async function BroadcastQuizUsers(q) {
+  let qu = await UpdateQuizUsers(q);
+
+  let remAr = [q];
+
+  for (let operator in global.rtcPool[q.abonent]) {
+    if (operator === q.rem || operator === q.add)
+      //not to send to yourself
+      continue;
+
+    if(global.rtcPool[q.abonent][operator].ws)
+      global.rtcPool[q.abonent][operator].ws.send(remAr);
+  }
 }
