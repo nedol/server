@@ -332,7 +332,7 @@ async function BroadcastQuizUsers(q) {
       //not to send to yourself
       continue;
 
-    if(global.rtcPool[q.abonent][operator].ws)
+    if (global.rtcPool[q.abonent][operator].ws)
       global.rtcPool[q.abonent][operator].ws.send(remAr);
   }
 }
