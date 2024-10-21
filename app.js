@@ -19,8 +19,8 @@ import {
 const app = express();
 
 // Настраиваем HTTP сервер для Express (для WebSocket)
-const server = app.listen(3001, () => {
-  console.log('WebSocket сервер запущен на порту 3001');
+const server = app.listen(3000, () => {
+  console.log('WebSocket сервер запущен на порту 3000');
 });
 
 // global.rtcPull = { user: {}, operator: {} };
