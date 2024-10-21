@@ -14,7 +14,7 @@ import {
   GetUsers,
   GetDialog,
   GetWords,
-} from './db.js'; //src\lib\server\server.db.js
+} from './server/db.js'; //src\lib\server\server.db.js
 
 const app = express();
 
