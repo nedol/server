@@ -32,7 +32,7 @@ let prom = new Promise((resolve, reject) => {
 const pool = await prom;
 
 global.rtcPool;
-import { rtcPool_st } from '../../lib/js/stores.js';
+import { rtcPool_st } from './server/stores.js';
 rtcPool_st.subscribe((data) => {
   global.rtcPool = data;
 });
