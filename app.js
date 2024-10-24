@@ -6,6 +6,8 @@ import { json } from '@sveltejs/kit';
 import pkg_l from 'lodash';
 const { find, findKey } = pkg_l;
 
+import Turn from 'node-turn';
+
 import {
   CreatePool,
   CreateOperator,
@@ -15,6 +17,18 @@ import {
   GetDialog,
   GetWords,
 } from './server/db.js'; //src\lib\server\server.db.js
+
+if (!global.turn_server) {
+  global.turn_server = new Turn({
+    // set options
+    authMech: 'long-term',
+    listeningPort: 3000,
+  });
+  global.turn_server.start();
+  global.turn_server.addUser('username', 'password');
+  global.turn_server.log();
+  console.log('Turn server started on ' + global.turn_server.listeningPort);
+}
 
 const app = express();
 
@@ -332,6 +346,6 @@ async function BroadcastQuizUsers(q, ws) {
       //not to send to yourself
       continue;
 
-      global.rtcPool[q.abonent][operator].ws.send(JSON.stringify(remAr));
+    global.rtcPool[q.abonent][operator].ws.send(JSON.stringify(remAr));
   }
 }
