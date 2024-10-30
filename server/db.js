@@ -5,7 +5,7 @@ import pkg_l from 'lodash';
 const { find, remove, findIndex, difference } = pkg_l;
 
 import md5 from 'md5';
-import { writable } from 'svelte/store';
+// import { writable } from 'svelte/store';
 
 // import { tarifs } from './tarifs.json';
 
@@ -15,7 +15,7 @@ export let sql;
 
 let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
 
-import { redirect } from '@sveltejs/kit';
+// import { redirect } from '@sveltejs/kit';
 import Email from './email.js';
 
 let conStr = {
