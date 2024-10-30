@@ -28,6 +28,7 @@
         "postgres": "^3.4.4",
         "querystring": "^0.2.1",
         "svelte": "^5.0.1",
+        "translate": "^3.0.1",
         "ws": "^8.18.0"
     }
 }
