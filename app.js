@@ -5,7 +5,7 @@ import cron from 'node-cron';
 
 import Translate from './server/Translate.js';
 
-import { json } from '@sveltejs/kit';
+// import { json } from '@sveltejs/kit';
 
 import Email from './server/email.js';
 
