@@ -84,6 +84,18 @@ export function SendEmail(q, new_email) {
   );
 }
 
+export function SendEmailTodayPublished(q) {
+  let operator = new Email();
+  const mail = q.send_email;
+  const hash = getHash(mail);
+  let html = q.html;
+  let head = q.head;
+
+  operator.SendMail(`nedooleg@gmail.com`, mail, head, html, (result) => {
+    console.log();
+  });
+}
+
 export async function CreateOperator(par) {
   try {
     // if (par.abonent === par.email) return false;
@@ -107,6 +119,12 @@ export async function CreateOperator(par) {
   } catch (er) {
     console.log(er);
   }
+}
+
+export async function CreateSession(oper, suid) {
+  let res = await sql` 
+    SELECT create_session(${oper}, ${suid})
+  `;
 }
 
 async function updateOper(q) {
@@ -143,6 +161,11 @@ export async function GetGroup(par) {
         AND operator=${par.operator} AND psw=${par.psw}
       )`;
 
+  if (group) {
+    const timestamp = new Date().toISOString(); // Получаем текущую метку времени
+    CreateSession(par.operator, md5(par.operator + timestamp));
+  }
+
   const oper = await sql`
 			SELECT 
 			"group", abonent, role, operator, picture, lang, name
@@ -151,6 +174,23 @@ export async function GetGroup(par) {
       `;
 
   return { group, oper };
+}
+
+export async function GetUsersEmail(owner, level) {
+  const group = await sql`
+    SELECT 
+    name
+    FROM groups
+    WHERE owner=${owner} AND level=${level}
+  `;
+
+  const emails = await sql`
+    SELECT 
+    email, name, lang
+    FROM operators
+    WHERE "group"=${group[0].name}
+    `;
+  return emails;
 }
 
 export async function GetUsers(par) {
@@ -179,7 +219,7 @@ export async function GetUsers(par) {
 			FROM operators
 			WHERE role='admin' AND operators.abonent=${par.abonent}
 			`;
-    } 
+    }
   } catch (ex) {
     console.log();
   }
@@ -414,7 +454,6 @@ export async function GetWords(q) {
   try {
     let res = await sql`SELECT data, context, subscribe  FROM word
 		WHERE name=${q.name} AND owner=${q.owner} AND level=${q.level}`;
-    //debugger;
     return res[0];
   } catch (ex) {
     return JSON.stringify({ func: q.func, res: ex });
@@ -452,6 +491,19 @@ export async function getLevels(owner) {
   });
 }
 
+export async function GetLessonsByDate() {
+  const startOfDay = new Date();
+  startOfDay.setHours(0, 0, 0, 0); // Начало текущего дня
+
+  const endOfDay = new Date();
+  endOfDay.setHours(23, 59, 59, 999); // Конец текущего дня
+
+  return await sql`SELECT owner, data, level, lang 
+    FROM lessons 
+    WHERE timestamp BETWEEN ${startOfDay} AND ${endOfDay} 
+    ORDER BY level DESC`;
+}
+
 export async function GetLesson(q) {
   try {
     let res = '';
@@ -467,21 +519,18 @@ export async function GetLesson(q) {
       res =
         await sql`SELECT data, level, lang FROM lessons WHERE owner=${q.owner} AND level=${q.level}  ORDER BY level desc`;
     } else {
-
-      
       res =
         await sql`SELECT data, level, lang FROM lessons WHERE owner=${q.owner}  ORDER BY level desc`;
-      
     }
     //debugger;
     const levels = await getLevels(q.owner);
 
-    const les = find(res, {level:q.level})
+    const les = find(res, { level: q.level });
 
     return {
-      data: les?les.data:res[0].data,
-      lang: les?.lang?les.lang:res[0].lang,
-      level: les?.level?les.level:res[0].level,
+      data: les ? les.data : res[0].data,
+      lang: les?.lang ? les.lang : res[0].lang,
+      level: les?.level ? les.level : res[0].level,
       levels: levels,
     };
   } catch (ex) {
@@ -551,16 +600,26 @@ export async function GetDict(q) {
 }
 
 export async function WriteSpeech(q) {
-  await sql.begin(async (sql) => {
-    let res = await sql`INSERT INTO speech
-		(lang, key, text, data) VALUES ( ${q.lang},${q.key}, ${q.text}, ${q.data})`;
-  });
+  try {
+    await sql.begin(async (sql) => {
+      await sql`INSERT INTO speech (lang, key, text, data, quiz)
+                VALUES (${q.lang}, ${q.key}, ${q.text}, ${q.data}, ${q.quiz})
+                ON CONFLICT (key) 
+                DO UPDATE SET 
+                    lang = ${q.lang}, 
+                    text = ${q.text}, 
+                    data = ${q.data}, 
+                    quiz = ${q.quiz}`;
+    });
+  } catch (ex) {
+    console.log();
+  }
 }
 
 export async function ReadSpeech(q) {
   try {
     let res = await sql`SELECT data FROM speech
-		WHERE key= ${q.key}`;
+		WHERE key= ${q.key} AND quiz IS NOT NULL`;
     if (res[0]) {
       return res[0].data;
     }
