@@ -14,7 +14,7 @@
         "lint": "prettier --check --plugin-search-dir=. . && eslint .",
         "format": "prettier --write --plugin-search-dir=. .",
         "start": "node build/index.js",
-        "ws": "node server/server.js"
+        "ws": "node app.js"
     },
     "dependencies": {
         "@sveltejs/kit": "^2.7.1",

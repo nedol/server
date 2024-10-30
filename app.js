@@ -3,11 +3,11 @@ import express from 'express';
 import Turn from 'node-turn';
 import cron from 'node-cron';
 
-import Translate from './Translate.js';
+import Translate from './server/Translate.js';
 
 import { json } from '@sveltejs/kit';
 
-import Email from './email.js';
+import Email from './server/email.js';
 
 import pkg_l from 'lodash';
 const { find, findKey } = pkg_l;
@@ -23,7 +23,7 @@ import {
   GetLessonsByDate,
   GetUsersEmail,
   SendEmailTodayPublished,
-} from './db.js'; //src\lib\server\server.db.js
+} from './server/db.js'; //src\lib\server\server.db.js
 
 if (!global.turn_server) {
   global.turn_server = new Turn({
