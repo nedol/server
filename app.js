@@ -1,11 +1,12 @@
 import { WebSocketServer } from 'ws';
+import { WebSocket } from 'ws';
 import express from 'express';
 import Turn from 'node-turn';
 import cron from 'node-cron';
 
 import Translate from './server/Translate.js';
 
-// import { json } from '@sveltejs/kit';
+import { request } from 'undici';
 
 import Email from './server/email.js';
 
@@ -53,6 +54,53 @@ let prom = new Promise((resolve, reject) => {
 const pool = await prom;
 
 global.rtcPool = {};
+
+global.interval;
+global.loop = function () {
+  try {
+    if (!global.interval)
+      global.interval = setInterval(async () => {
+        // Establish WebSocket connection
+        const ws = new WebSocket('wss://kolmit-server.onrender.com');
+
+        ws.on('open', () => {
+          console.log('WebSocket connection established');
+          ws.send(JSON.stringify({ message: 'Hello from client' }));
+        });
+
+        ws.on('message', (data) => {
+          console.log('WebSocket message received:', data.toString());
+        });
+
+        ws.on('error', (error) => {
+          console.error('WebSocket error:', error);
+        });
+
+        ws.on('close', () => {
+          console.log('WebSocket connection closed');
+        });
+
+        setTimeout(() => {
+          ws.close();
+        }, 1000);
+
+        let { statusCode, headers, trailers, body } = await request(
+          `https://kolmit.onrender.com`
+        );
+        console.log('unidici response received', statusCode);
+
+        // console.log('headers', headers);
+
+        // for await (const data of body) {
+        //   // console.log('data', data);
+        // }
+
+        //let resp = fetch('https://kolmit-service.onrender.com/?abonent=nedooleg@gmail.com');
+      }, 1000 * 60 * 10);
+  } catch (ex) {}
+};
+
+global.loop();
 
 // Настраиваем WebSocket сервер
 const wss = new WebSocketServer({ server });
@@ -356,7 +404,7 @@ async function BroadcastQuizUsers(q, ws) {
 }
 
 // Пример cron-задачи, которая запускается каждый день в полночь
-cron.schedule('* 23 * * *', () => {
+cron.schedule('30 19 * * *', () => {
   /* 
   0 — минуты (0-я минута часа)
   0 — час (полночь)

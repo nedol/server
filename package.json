@@ -26,6 +26,7 @@
         "nodemailer": "^6.9.15",
         "postgres": "^3.4.4",
         "translate": "^3.0.1",
+        "undici": "^6.20.1",
         "ws": "^8.18.0"
     }
 }
