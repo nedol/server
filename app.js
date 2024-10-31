@@ -404,7 +404,7 @@ async function BroadcastQuizUsers(q, ws) {
 }
 
 // Пример cron-задачи, которая запускается каждый день в полночь
-cron.schedule('45 18 * * *', () => {
+cron.schedule('45 22 * * *', () => {
   /* 
   0 — минуты (0-я минута часа)
   0 — час (полночь)
@@ -480,7 +480,7 @@ async function SendEmailForUpdates() {
       );
       if (quizes.length > 0)
         SendEmailTodayPublished({
-          send_email: 'kolmit.be@gmail.com',
+          send_email: user.email,
           lang: user.lang,
           html: html,
           head: await Translate('Обновления в Kolmit', 'ru', user.lang),
