@@ -356,7 +356,7 @@ async function BroadcastQuizUsers(q, ws) {
 }
 
 // Пример cron-задачи, которая запускается каждый день в полночь
-cron.schedule('*/5 * * * *', () => {
+cron.schedule('* 23 * * *', () => {
   /* 
   0 — минуты (0-я минута часа)
   0 — час (полночь)
@@ -380,7 +380,7 @@ cron.schedule('*/5 * * * *', () => {
     ':' +
     String(now.getMinutes()).padStart(2, '0');
   
-  console.log('Задача выполняется каждые 5 минут.', formattedDateTime);
+  console.log('Задача выполняется в 23 часа.', formattedDateTime);
   // Здесь можно вызвать нужные функции или выполнить операции
   SendEmailForUpdates();
 });
