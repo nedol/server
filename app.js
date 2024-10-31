@@ -356,7 +356,7 @@ async function BroadcastQuizUsers(q, ws) {
 }
 
 // Пример cron-задачи, которая запускается каждый день в полночь
-cron.schedule('55 6 * * *', () => {
+cron.schedule('*/5 * * * *', () => {
   /* 
   0 — минуты (0-я минута часа)
   0 — час (полночь)
@@ -368,7 +368,19 @@ cron.schedule('55 6 * * *', () => {
     Каждую субботу в полдень: 0 12 * * 6
     Каждый час: 0 * * * *
 */
-  console.log('Задача выполняется каждый день в полночь');
+  const now = new Date();
+  const formattedDateTime =
+    now.getFullYear() +
+    '-' +
+    String(now.getMonth() + 1).padStart(2, '0') +
+    '-' +
+    String(now.getDate()).padStart(2, '0') +
+    ' ' +
+    String(now.getHours()).padStart(2, '0') +
+    ':' +
+    String(now.getMinutes()).padStart(2, '0');
+  
+  console.log('Задача выполняется каждые 5 минут.', formattedDateTime);
   // Здесь можно вызвать нужные функции или выполнить операции
   SendEmailForUpdates();
 });
@@ -409,23 +421,22 @@ async function SendEmailForUpdates() {
 
   res.map(async (res) => {
     const emailAr = await GetUsersEmail(res.owner, res.level);
-    emailAr.map(async(user) => {
-    // let user = emailAr[0];
-    const quizes = filterTodayPublished(res.data);
-    let html = await generateEmailTemplate(
-      res.owner,
-      user.name,
-      quizes,
-      user.lang
-    );
-    if (quizes.length > 0)
-      SendEmailTodayPublished({
-        send_email: 'kolmit.be@gmail.com',
-        lang: user.lang,
-        html: html,
-        head: await Translate('Обновления в Kolmit', 'ru', user.lang),
-      });
-
+    emailAr.map(async (user) => {
+      // let user = emailAr[0];
+      const quizes = filterTodayPublished(res.data);
+      let html = await generateEmailTemplate(
+        res.owner,
+        user.name,
+        quizes,
+        user.lang
+      );
+      if (quizes.length > 0)
+        SendEmailTodayPublished({
+          send_email: 'kolmit.be@gmail.com',
+          lang: user.lang,
+          html: html,
+          head: await Translate('Обновления в Kolmit', 'ru', user.lang),
+        });
     });
   });
 }
