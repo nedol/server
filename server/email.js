@@ -43,8 +43,8 @@ export default class Email {
         console.log(error);
       } else {
         cb('Email sent: ' + info.response);
-        console.log('Email sent: ' + info.response);
+        console.log('Email sent to: ' + info.accepted[0]);
       }
     });
   }
-};
+}
