@@ -435,30 +435,27 @@ cron.schedule('45 22 * * 7', () => {
 
 // SendEmailForUpdates();
 
-async function SendEmailForUpdates() {
-  const email = new Email();
-  const today = new Date().toISOString().split('T')[0];
-  const res = await GetLessonsByDate({ date: today });
+async function filterWeekPublished(data) {
+  const todayEnd = new Date();
+  todayEnd.setHours(23, 59, 59, 999); // Конец сегодняшнего дня
 
-  async function filterTodayPublished(data) {
-    const todayStart = new Date().setHours(0, 0, 0, 0);
-    const tomorrowStart = new Date(todayStart).setDate(
-      new Date(todayStart).getDate() + 1
-    );
+  const weekStart = new Date();
+  weekStart.setDate(todayEnd.getDate() - 7); // Начало недели
+  weekStart.setHours(0, 0, 0, 0); // Начало дня
 
-    return data.module.themes.flatMap((theme) =>
-      theme.lessons.flatMap((lesson) =>
-        lesson.quizes
-          .filter(
-            (quiz) =>
-              quiz.published &&
-              new Date(quiz.published) >= todayStart &&
-              new Date(quiz.published) < tomorrowStart
-          )
-          .map((quiz) => ({ ...quiz, theme }))
-      )
-    );
-  }
+  return data.module.themes.flatMap((theme) =>
+    theme.lessons.flatMap((lesson) =>
+      lesson.quizes
+        .filter(
+          (quiz) =>
+            quiz.published &&
+            new Date(quiz.published) >= weekStart &&
+            new Date(quiz.published) <= todayEnd
+        )
+        .map((quiz) => ({ ...quiz, theme }))
+    )
+  );
+}
 
   await Promise.all(
     res.map(async (res) => {
