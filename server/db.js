@@ -492,11 +492,14 @@ export async function getLevels(owner) {
 }
 
 export async function GetLessonsByDate() {
-  const startOfDay = new Date();
-  startOfDay.setHours(0, 0, 0, 0); // Начало текущего дня
+  // Начало дня ровно неделю назад (включая сегодняшнюю дату)
+  const startOfWeek = new Date();
+  startOfWeek.setDate(startOfWeek.getDate() - 7); // Перемещаем на 7 дней назад
+  startOfWeek.setHours(0, 0, 0, 0); // Начало дня
 
+  // Конец текущего дня
   const endOfDay = new Date();
-  endOfDay.setHours(23, 59, 59, 999); // Конец текущего дня
+  endOfDay.setHours(23, 59, 59, 999); // Конец дня
 
   return await sql`SELECT owner, data, level, lang 
     FROM lessons 
