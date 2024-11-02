@@ -503,7 +503,7 @@ export async function GetLessonsByDate() {
 
   return await sql`SELECT owner, data, level, lang 
     FROM lessons 
-    WHERE timestamp BETWEEN ${startOfDay} AND ${endOfDay} 
+    WHERE timestamp BETWEEN ${startOfWeek} AND ${endOfDay} 
     ORDER BY level DESC`;
 }
 
