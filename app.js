@@ -112,6 +112,7 @@ wss.on('connection', (ws) => {
     // console.log(`Получено сообщение: ${message}`);
     const msg = JSON.parse(message);
     if (msg.par?.operator && msg.par?.abonent) {
+      ws.q = msg.par;
       msg.par.ws = ws;
       SetParams(msg.par);
     }
@@ -122,6 +123,7 @@ wss.on('connection', (ws) => {
 
   ws.on('close', () => {
     console.log('Соединение закрыто');
+    BroadcastOperatorStatus(ws.q, 'close');
   });
 });
 
@@ -432,6 +434,7 @@ cron.schedule('45 22 * * 7', () => {
   // Здесь можно вызвать нужные функции или выполнить операции
   SendEmailForUpdates();
 });
+
 
 // SendEmailForUpdates();
 
