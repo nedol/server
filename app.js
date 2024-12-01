@@ -469,9 +469,8 @@ async function SendEmailForUpdates() {
 
   await Promise.all(
     res.map(async (res) => {
-      const emailAr = [
-        {email: 'nedooleg@gmail.com', name: 'Oleg', lang: 'uk'}
-      ]//await GetUsersEmail(res.owner, res.level);//['nedooleg@gmail.com']//
+      const emailAr = //[{email: 'nedooleg@gmail.com', name: 'Oleg', lang: 'uk'}]//
+        await GetUsersEmail(res.owner, res.level);//
       const quizes = await filterTodayPublished(res.data);
 
       if (quizes.length > 0) {
