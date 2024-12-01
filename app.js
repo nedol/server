@@ -299,6 +299,8 @@ function SetParams(q) {
 }
 
 async function BroadcastOperatorStatus(q, check) {
+  if(!q)
+    return;
   try {
     for (let operator in global.rtcPool[q.abonent]) {
       if (operator === q.operator)
@@ -432,11 +434,11 @@ cron.schedule('45 22 * * 7', () => {
 
   console.log('Задача выполняется в 23 часа 45 минут.', formattedDateTime);
   // Здесь можно вызвать нужные функции или выполнить операции
-  SendEmailForUpdates();
+  // SendEmailForUpdates();
 });
 
 
-// SendEmailForUpdates();
+SendEmailForUpdates();
 
 async function SendEmailForUpdates() {
   const email = new Email();
@@ -467,7 +469,9 @@ async function SendEmailForUpdates() {
 
   await Promise.all(
     res.map(async (res) => {
-      const emailAr = await GetUsersEmail(res.owner, res.level);
+      const emailAr = [
+        {email: 'nedooleg@gmail.com', name: 'Oleg', lang: 'uk'}
+      ]//await GetUsersEmail(res.owner, res.level);//['nedooleg@gmail.com']//
       const quizes = await filterTodayPublished(res.data);
 
       if (quizes.length > 0) {
@@ -507,6 +511,17 @@ async function generateEmailTemplate(owner, userName, quizes, lang) {
     lang
   );
 
+
+  async function getGrammar(quiz){
+    if(quiz.theme.grammar) 
+      return `<strong>${await Translate('Грамматика', 'ru', lang)}:</strong> ${
+          await quiz.theme.grammar
+        }</li>}`  
+    else
+        return ''
+  } 
+
+
   // Ожидаем завершения всех переводов внутри updateList
   const updateList = (
     await Promise.all(
@@ -518,10 +533,7 @@ async function generateEmailTemplate(owner, userName, quizes, lang) {
       <strong>${await Translate('Название', 'ru', lang)}:</strong> ${
           quiz.name.nl
         }<br>
-      <strong>${await Translate('Грамматика', 'ru', lang)}:</strong> ${
-          quiz.grammar
-        }</li>
-    `
+        ${await getGrammar(quiz)}`
       )
     )
   ).join(''); // Преобразуем результат в строку

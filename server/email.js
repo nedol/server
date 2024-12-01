@@ -23,9 +23,8 @@ export default class Email {
       port: 465,
       secure: true, // upgrade later with STARTTLS
       auth: {
-        user: 'nedooleg@gmail.com',
-        // pass: 'NissanPathfinder@720'
-        pass: 'gytn jkgk ucll koig',
+        user:'kolmit.be@gmail.com',
+        pass:'zsfz xbhd iwax jvxj'
       },
     });
   }
