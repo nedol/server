@@ -434,11 +434,11 @@ cron.schedule('45 22 * * 7', () => {
 
   console.log('Задача выполняется в 23 часа 45 минут.', formattedDateTime);
   // Здесь можно вызвать нужные функции или выполнить операции
-  // SendEmailForUpdates();
+  SendEmailForUpdates();
 });
 
 
-SendEmailForUpdates();
+// SendEmailForUpdates();
 
 async function SendEmailForUpdates() {
   const email = new Email();
