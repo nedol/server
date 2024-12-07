@@ -130,7 +130,7 @@ wss.on('connection', (ws) => {
 async function HandleMessage(q, ws) {
   // console.log(q);
   let resp = '';
-  switch (q.func) {
+  switch (q?.func) {
     case 'operator':
       if (q.email && q.psw) {
         const par = await CreateOperator(q);
@@ -504,38 +504,68 @@ async function generateEmailTemplate(owner, userName, quizes, lang) {
     lang
   );
 
-  const head_2 = await Translate(
-    'Добавленные или обновленные упражнения',
-    'ru',
-    lang
+  const head_2 = await Translate('Добавленные или обновленные упражнения', 'ru', lang);
+
+  // Группировка грамматических элементов
+  async function mergeGrammar(exercises) {
+    const grammarSet = new Set();
+    exercises.forEach((exercise) => {
+      if (exercise.theme && Array.isArray(exercise.theme.grammar)) {
+        exercise.theme.grammar.forEach((rule) => grammarSet.add(rule));
+      }
+    });
+    return [...grammarSet];
+  }
+
+  // Группировка упражнений по темам и названиям
+  const groupedQuizes = quizes.reduce((acc, quiz) => {
+    const themeName = quiz.theme.name.nl;
+    const exerciseName = quiz.name.nl;
+
+    if (!acc[themeName]) acc[themeName] = {};
+    if (!acc[themeName][exerciseName]) acc[themeName][exerciseName] = {
+      exercises: [],
+      grammar: [],
+    };
+
+    acc[themeName][exerciseName].exercises.push(quiz);
+    return acc;
+  }, {});
+
+  // Генерация списка обновлений
+  const updateList = await Promise.all(
+    Object.entries(groupedQuizes).map(async ([themeName, exercises]) => {
+      // Сбор уникальных грамматических правил для темы
+      const themeGrammar = await mergeGrammar(
+        Object.values(exercises).flatMap((details) => details.exercises)
+      );
+
+      // Генерация списка упражнений
+      const exerciseList = await Promise.all(
+        Object.entries(exercises).map(async ([exerciseName, details]) => {
+          return `
+            <li>
+              <strong>${await Translate('Название', 'ru', lang)}:</strong> ${exerciseName}
+            </li>`;
+        })
+      );
+
+      // Формирование блока для темы с грамматикой и упражнениями
+      return `
+        <li>
+          <h3>${await Translate('Тема изучения', 'ru', lang)}: ${themeName}</h3>
+          ${
+            themeGrammar.length
+              ? `
+            <strong>${await Translate('Грамматика', 'ru', lang)}:</strong>
+            <ul>${themeGrammar.map((rule) => `<li>${rule}</li>`).join('')}</ul>
+          `
+              : ''
+          }
+          <ul>${exerciseList.join('')}</ul>
+        </li>`;
+    })
   );
-
-
-  async function getGrammar(quiz){
-    if(quiz.theme.grammar) 
-      return `<strong>${await Translate('Грамматика', 'ru', lang)}:</strong> ${
-          await quiz.theme.grammar
-        }</li>}`  
-    else
-        return ''
-  } 
-
-
-  // Ожидаем завершения всех переводов внутри updateList
-  const updateList = (
-    await Promise.all(
-      quizes.map(
-        async (quiz) => `
-      <li><strong>${await Translate('Тема изучения', 'ru', lang)}:</strong> ${
-          quiz.theme.name.nl
-        }<br>
-      <strong>${await Translate('Название', 'ru', lang)}:</strong> ${
-          quiz.name.nl
-        }<br>
-        ${await getGrammar(quiz)}`
-      )
-    )
-  ).join(''); // Преобразуем результат в строку
 
   const appLink = `<a href='https://kolmit.onrender.com/?abonent=${owner}' class="button">${await Translate(
     'Перейти в приложение Kolmit',
@@ -556,95 +586,26 @@ async function generateEmailTemplate(owner, userName, quizes, lang) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Kolmit Updates</title>
       <style>
-          body { 
-              font-family: Arial, sans-serif; 
-              background-color: #f4f4f9; 
-              color: #333; 
-              margin: 0; 
-              padding: 0; 
-          }
-          .container { 
-              width: 100%; 
-              max-width: 600px; 
-              margin: 0 auto; 
-              background-color: #ffffff; 
-              padding: 30px; 
-              border-radius: 12px; 
-              box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
-          }
-          .header { 
-              background-color: #3a7ecf; 
-              color: #ffffff; 
-              padding: 25px; 
-              text-align: center; 
-              border-top-left-radius: 12px; 
-              border-top-right-radius: 12px; 
-          }
-          .header h1 { 
-              margin: 0; 
-              font-size: 26px; 
-              font-weight: bold; 
-          }
-          .content { 
-              padding: 25px; 
-          }
-          .content h2 { 
-              font-size: 22px; 
-              color: #3a7ecf; 
-              margin-top: 0; 
-              margin-bottom: 15px; 
-          }
-          .content p { 
-              line-height: 1.8; 
-              font-size: 16px; 
-          }
-          .updates { 
-              background-color: #f1f9ff; 
-              padding: 20px; 
-              border-radius: 8px; 
-              margin: 20px 0; 
-          }
-          .updates ul { 
-              padding: 0; 
-              list-style-type: none; 
-          }
-          .updates li { 
-              padding: 15px 0; 
-              border-bottom: 1px solid #d1e8ff; 
-              font-size: 18px; 
-              line-height: 1.6; 
-          }
-          .updates li:last-child { 
-              border-bottom: none; 
-          }
-          .footer { 
-              text-align: center; 
-              font-size: 14px; 
-              color: #666; 
-              padding: 25px; 
-              border-top: 1px solid #eaeaea; 
-          }
-          .button { 
-              display: inline-block; 
-              padding: 12px 24px; 
-              background-color: #3a7ecf; /* Основной цвет кнопки */
-              color: #ffffff !important; /* Белый цвет текста с приоритетом */
-              text-decoration: none; 
-              border-radius: 6px; 
-              font-weight: bold; 
-              margin-top: 20px; 
-              box-shadow: 0 4px 8px rgba(58, 126, 207, 0.3); 
-              transition: background-color 0.3s ease, box-shadow 0.3s ease;
-          }
-
-          .button:hover { 
-              background: linear-gradient(135deg, #336fb1, #3a7ecf); /* Градиент при наведении */
-              color: #ffffff !important; 
-              box-shadow: 0 6px 12px rgba(58, 126, 207, 0.4); /* Усиленная тень */
-          }
+        body { font-family: Arial, sans-serif; background-color: #f9fbfc; color: #333; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .header { background-color: #4a90e2; color: #ffffff; padding: 20px; text-align: center; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+        .header h1 { margin: 0; font-size: 24px; font-weight: bold; }
+        .content { padding: 20px; }
+        .content h2 { font-size: 20px; color: #4a90e2; margin-top: 0; margin-bottom: 15px; }
+        .updates { background-color: #f1f7ff; padding: 15px 20px; border-radius: 8px; margin: 15px 0; }
+        .updates ul {
+          padding: 0;
+          list-style-type: none;
+        }
+        .updates ul ul {
+          padding-left: 20px; /* Добавляем отступ для вложенных списков */
+        }
+        .updates li { padding: 10px 0; border-bottom: 1px solid #d1e8ff; font-size: 16px; }
+        .updates li:last-child { border-bottom: none; }
+        .footer { text-align: center; font-size: 14px; color: #666; padding: 20px; border-top: 1px solid #eaeaea; }
+        .button { display: inline-block; padding: 12px 24px; background-color: #4a90e2; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3); transition: background-color 0.3s ease, box-shadow 0.3s ease; }
+        .button:hover { background: #3b7acc; box-shadow: 0 6px 12px rgba(74, 144, 226, 0.4); }
       </style>
-
-
     </head>
     <body>
       <div class="container">
@@ -655,7 +616,7 @@ async function generateEmailTemplate(owner, userName, quizes, lang) {
           ${introText}
           <div class="updates">
             <h2>${head_2}:</h2>
-            <ul>${updateList}</ul>
+            <ul>${updateList.join('')}</ul>
           </div>
           ${appLink}
         </div>
@@ -668,3 +629,5 @@ async function generateEmailTemplate(owner, userName, quizes, lang) {
     </html>
   `;
 }
+
+
