@@ -112,7 +112,7 @@ wss.on('connection', (ws) => {
     // console.log(`Получено сообщение: ${message}`);
     function handlePing() {
       if (msg.type === "ping") {
-          console.log("Получен ping от "+ msg.operator);
+          // console.log("Получен ping от "+ msg.operator);
          
           if ( ws.timeoutId) {
               clearTimeout( ws.timeoutId);
@@ -127,8 +127,6 @@ wss.on('connection', (ws) => {
     }  
     const msg = JSON.parse(message);
     if(msg.type==="ping"){
-      console.log()
-  
       // Пример вызова функции
       handlePing();
 
