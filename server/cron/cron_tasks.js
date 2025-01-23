@@ -20,7 +20,6 @@ const lang = 'nl'
 import { Buffer } from 'buffer';
 
 import puppeteer from 'puppeteer';
-// process.env.PUPPETEER_CACHE_DIR = '/opt/render/.cache/puppeteer';
 import { exec } from "child_process";
 // import whisper from "whisper-node";
 
@@ -91,16 +90,8 @@ async function getNews(url, content = 'link', newsContent = [], browser = null) 
 
   // Открываем браузер, если он ещё не открыт
   if (!browser) {
-
-    browser = await puppeteer.launch({
-        headless: true, // Используйте "new" для Puppeteer 20+
-        args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-dev-shm-usage',
-          '--disable-gpu',
-        ],
-    });
+    
+    browser = await puppeteer.launch({ headless: true });
   }
 
   let page;
