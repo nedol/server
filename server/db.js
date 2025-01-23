@@ -475,20 +475,18 @@ export async function GetDialog(q) {
   }
 }
 
-export async function GetPrompt(name) {
-  let prompt = await sql`SELECT system, user FROM prompts
-		WHERE name=${name}`;
-  return {
-    prompt: prompt[0],
-  };
-}
+// export async function GetPrompt(name) {
+//   let prompt = await sql`SELECT system, user FROM prompts
+// 		WHERE name=${name}`;
+//   return {
+//     prompt: prompt[0],
+//   };
+// }
 
 export async function getLevels(owner) {
   const levels = await sql`SELECT level FROM lessons WHERE owner=${owner}`;
 
-  return levels.map((item) => {
-    return item.level;
-  });
+  return levels;
 }
 
 export async function GetLessonsByDate() {
@@ -605,17 +603,20 @@ export async function GetDict(q) {
 export async function WriteSpeech(q) {
   try {
     await sql.begin(async (sql) => {
-      await sql`INSERT INTO speech (lang, key, text, data, quiz)
-                VALUES (${q.lang}, ${q.key}, ${q.text}, ${q.data}, ${q.quiz})
+      await sql`INSERT INTO speech (lang, key, text, data, quiz, timestamps)
+                VALUES (${q.lang}, ${q.key}, ${q.text}, ${q.data}, ${q.quiz}, ${q.timestamps})
                 ON CONFLICT (key) 
                 DO UPDATE SET 
-                    lang = ${q.lang}, 
-                    text = ${q.text}, 
-                    data = ${q.data}, 
-                    quiz = ${q.quiz}`;
+                    lang = EXCLUDED.lang, 
+                    text = EXCLUDED.text, 
+                    data = EXCLUDED.data, 
+                    quiz = EXCLUDED.quiz,
+                    timestamps = EXCLUDED.timestamps`;
     });
+    return { success: true, message: "Data written successfully." };
   } catch (ex) {
-    console.log();
+    console.error("Error writing speech:", ex);
+    return { success: false, message: "Failed to write data.", error: ex };
   }
 }
 
@@ -630,3 +631,114 @@ export async function ReadSpeech(q) {
     return JSON.stringify('');
   }
 }
+
+
+export async function GetPrompt(prompt = '', quiz_name= '', owner= '', level= '', theme= '') {
+  let prompt_res, words_res, gram_res, gram;
+  try {
+    if(prompt)
+      prompt_res = await sql`SELECT * FROM prompts WHERE name=${prompt}`;
+    if(quiz_name)
+      words_res = await sql`SELECT * FROM word WHERE name=${quiz_name}`;
+    if(owner && level){
+      gram_res = await sql`SELECT * FROM grammar WHERE owner=${owner} AND level=${level}`;
+      gram = find(gram_res[0].data, { theme: theme });
+    }
+  } catch (ex) {
+    console.log(JSON.stringify({ res: ex }));
+  }
+  return {
+    prompt: prompt_res[0],
+    words: words_res,
+    grammar: gram,
+  };
+}
+
+export async function createBrickAndUpdateLesson(brickData) {
+  try {
+    // Begin transaction
+    await sql.begin(async (tx) => {
+      // Insert into `bricks` table or update if the name already exists
+      await tx`
+        INSERT INTO bricks ("name", "owner", html, "level", "timestamp","original")
+        VALUES (${brickData.name}, ${brickData.owner}, ${brickData.html}, ${brickData.level}, CURRENT_TIMESTAMP, ${brickData.original})
+        ON CONFLICT ("name","owner","level")
+        DO UPDATE SET 
+          html = ${brickData.html}, 
+          timestamp = CURRENT_TIMESTAMP, 
+          original =  ${brickData.original};
+      `;
+
+      console.log('INSERT INTO bricks:', brickData.html);      
+
+      // Retrieve lesson data from `lessons` table
+      const lessonResult = await tx`
+        SELECT data
+        FROM lessons
+        WHERE "owner" = ${brickData.owner} AND "level" = ${brickData.level} AND lang = 'nl';
+      `;
+
+      if (lessonResult.length === 0) {
+        throw new Error('No lesson found for the provided criteria.');
+      }
+
+      let lessonData = lessonResult[0].data;
+
+      // Find or create the theme by name
+      let theme = lessonData.module.themes.find(
+        (t) => t.name.nl === brickData.theme
+      );
+
+      if (!theme) {
+        // If the theme doesn't exist, create it
+        theme = {
+          name: {
+            nl: brickData.theme,
+          },
+          lessons: [
+            {
+              // Create a default lesson structure if necessary
+              type: 'default',
+              content: 'Initial content for the lesson',
+              quizes: [],
+            },
+          ],
+        };
+        // Add the newly created theme to the module
+        lessonData.module.themes.push(theme);
+      }
+
+      // Check if the brick type and name already exist in the first lesson's quizes
+      const lesson = theme.lessons[0]; // Assuming we're updating the first lesson
+      if (!lesson.quizes) {
+        lesson.quizes = [];
+      }
+
+      const quizExists = lesson.quizes.some(
+        (quiz) => quiz.type === 'bricks' && quiz.name.nl === brickData.name
+      );
+
+      if (!quizExists) {
+        // Add new brick to the quizes if it doesn't already exist
+        lesson.quizes.push({
+          type: 'bricks',
+          name: { nl: brickData.name },
+          published:  Date.now()
+        });
+      }
+
+      // Update the lesson in the `lessons` table
+      await tx`
+        UPDATE lessons
+        SET data = ${lessonData}, "timestamp" =  CURRENT_TIMESTAMP
+        WHERE "owner" = ${brickData.owner} AND "level" = ${brickData.level} AND lang = 'nl';
+      `;
+
+      // console.log('UPDATE lessons:', lessonData.module.themes);
+    });
+  } catch (error) {
+    console.error('Error processing brick and updating lesson:', error);
+    throw error;
+  }
+}
+

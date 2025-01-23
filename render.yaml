@@ -1,11 +1,41 @@
 services:
-  - type: web
-    name: opentts
-    env: docker
-    plan: free
-    region: oregon
-    dockerfilePath: ./Dockerfile
-    envVars:
-      - key: PORT
-        value: 5500
-    healthCheckPath: /
+  # - type: web
+  #   name: opentts
+  #   env: docker
+  #   plan: free
+  #   region: oregon
+  #   dockerfilePath: ./Dockerfile
+  #   envVars:
+  #     - key: PORT
+  #       value: 5500
+  #   healthCheckPath: /
+
+  #   services:
+  # - name: vosk-server
+  #   type: web
+  #   env: docker
+  #   region: frankfurt # Выберите ближайший к вам регион
+  #   dockerfilePath: ./Dockerfile
+  #   envVars:
+  #     - key: VOSK_MODEL_PATH
+  #       value: /app/model
+  #   disk:
+  #     sizeGB: 1 # Увеличьте, если используете большую языковую модель
+  #   ports:
+  #     - port: 2700
+
+  # Базовый образ вашего приложения
+FROM node:18
+
+# Установите Vosk WebSocket Server
+RUN apt-get update && apt-get install -y python3 python3-pip
+RUN pip3 install vosk
+
+# Скопируйте файлы вашего приложения
+COPY . /app
+WORKDIR /app
+
+# Добавьте команду для запуска Vosk
+CMD ["sh", "-c", "python3 -m vosk.server & node index.js"]
+
+

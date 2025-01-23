@@ -1,9 +1,11 @@
 import { WebSocketServer } from 'ws';
 import { WebSocket } from 'ws';
+import https from 'https';
 import express from 'express';
+import http from 'http';
 import Turn from 'node-turn';
 import cron from 'node-cron';
-
+import fs from 'fs';
 import Translate from './server/Translate.js';
 
 import { request } from 'undici';
@@ -12,6 +14,8 @@ import Email from './server/email.js';
 
 import pkg_l from 'lodash';
 const { find, findKey } = pkg_l;
+
+import generate_news from './server/cron/cron_tasks.js'
 
 import {
   CreatePool,
@@ -30,20 +34,26 @@ import {
 //   global.turn_server = new Turn({
 //     // set options
 //     authMech: 'long-term',
-//     listeningPort: 3000,
+//     еingPort: 3000,
 //   });
 //   global.turn_server.start();
 //   global.turn_server.addUser('username', 'password');
 //   global.turn_server.log();
-//   console.log('Turn server started on ' + global.turn_server.listeningPort);
+//   console.log('Turn server started on ' + global.turn_server.tingPort);
 // }
 
 const app = express();
 
+const server = https.createServer({
+  cert: fs.readFileSync('./cert.pem'),
+  key: fs.readFileSync('./key.pem'),
+}, app);
+
+
 // Настраиваем HTTP сервер для Express (для WebSocket)
-const server = app.listen(process.env.PORT || 3000, () => {
-  console.log('WebSocket сервер запущен на порту 3000');
-});
+// const server = app.(process.env.PORT || 3000, '0.0.0.0',() => {
+//   console.log('WebSocket сервер запущен на порту 3000');
+// });
 
 // global.rtcPull = { user: {}, operator: {} };
 
@@ -62,6 +72,7 @@ global.loop = function () {
       global.interval = setInterval(async () => {
         // Establish WebSocket connection
         const ws = new WebSocket('wss://kolmit-server.onrender.com');
+        // const ws = new WebSocket('wss://192.168.2.10:3000');
 
         ws.on('open', () => {
           console.log('WebSocket connection established');
@@ -86,6 +97,7 @@ global.loop = function () {
 
         let { statusCode, headers, trailers, body } = await request(
           `https://kolmit.onrender.com`
+          // 'https://192.168.2.10:3000'
         );
         console.log('unidici response received', statusCode);
 
@@ -112,16 +124,25 @@ wss.on('connection', (ws) => {
     // console.log(`Получено сообщение: ${message}`);
     function handlePing() {
       if (msg.type === "ping") {
-          // console.log("Получен ping от "+ msg.operator);
+          console.log("Получен ping от "+ msg.operator);
          
           if ( ws.timeoutId) {
               clearTimeout( ws.timeoutId);
           }
 
+          if(msg.status!== ws.status){
+            ws.status = msg.status;
+            if(msg.status=='close')
+              BroadcastOperatorStatus(ws.q, 'close');
+          }
+
+
         // Устанавливаем новый таймер
         ws.timeoutId = setTimeout(() => {
-        console.log(`Сокет ${msg.operator} закрыт`);
-        BroadcastOperatorStatus(ws.q, 'close');
+
+            console.log(`Оператор ${msg.operator} отключился от сети`);
+            BroadcastOperatorStatus(ws.q, 'close');
+   
         }, 7000);
       }
     }  
@@ -147,6 +168,14 @@ wss.on('connection', (ws) => {
     console.log('Соединение закрыто');
     BroadcastOperatorStatus(ws.q, 'close');
   });
+
+});
+
+server.listen(3000, "192.168.2.10",() => {
+  console.log('Server is running on https://192.168.0.6:3000');
+});
+server.listen(3000,() => {
+  console.log('Server is running on https://localhost:3000');
 });
 
 async function HandleMessage(q, ws) {
@@ -455,13 +484,34 @@ cron.schedule('45 22 * * 7', () => {
     ':' +
     String(now.getMinutes()).padStart(2, '0');
 
-  console.log('Задача выполняется в 23 часа 45 минут.', formattedDateTime);
+  console.log('Задача выполняется в 22 часа 45 минут.', formattedDateTime);
   // Здесь можно вызвать нужные функции или выполнить операции
   SendEmailForUpdates();
 });
 
+// Пример cron-задачи, которая запускается каждый день в полночь
+cron.schedule('40 19 * * *', () => {
 
+  const now = new Date();
+  const formattedDateTime =
+    now.getFullYear() +
+    '-' +
+    String(now.getMonth() + 1).padStart(2, '0') +
+    '-' +
+    String(now.getDate()).padStart(2, '0') +
+    ' ' +
+    String(now.getHours()).padStart(2, '0') +
+    ':' +
+    String(now.getMinutes()).padStart(2, '0');
+
+  console.log('Задача выполняется в 22 часа 45 минут.', formattedDateTime);
+  // Здесь можно вызвать нужные функции или выполнить операции
+  generate_news();
+});
+
+// generate_news();
 // SendEmailForUpdates();
+
 
 async function SendEmailForUpdates() {
   const email = new Email();
