@@ -93,7 +93,7 @@ async function getNews(url, content = 'link', newsContent = [], browser = null) 
   if (!browser) {
 
     browser = await puppeteer.launch({
-        headless: "new", // Используйте "new" для Puppeteer 20+
+        headless: true, // Используйте "new" для Puppeteer 20+
         args: [
           '--no-sandbox',
           '--disable-setuid-sandbox',
