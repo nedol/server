@@ -509,7 +509,7 @@ cron.schedule('40 19 * * *', () => {
   generate_news();
 });
 
-// generate_news();
+generate_news();
 // SendEmailForUpdates();
 
 
