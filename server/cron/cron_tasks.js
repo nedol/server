@@ -20,7 +20,7 @@ const lang = 'nl'
 import { Buffer } from 'buffer';
 
 import puppeteer from 'puppeteer';
-process.env.PUPPETEER_CACHE_DIR = '/opt/render/.cache/puppeteer';
+// process.env.PUPPETEER_CACHE_DIR = '/opt/render/.cache/puppeteer';
 import { exec } from "child_process";
 // import whisper from "whisper-node";
 
@@ -95,14 +95,10 @@ async function getNews(url, content = 'link', newsContent = [], browser = null) 
     browser = await puppeteer.launch({
         headless: "new", // Используйте "new" для Puppeteer 20+
         args: [
-          '--no-sandbox',                // Отключение песочницы
-          '--disable-setuid-sandbox',    // Отключение некоторых проверок безопасности
-          '--disable-dev-shm-usage',     // Использование временной памяти вместо shared memory
-          '--disable-accelerated-2d-canvas',
-          '--no-first-run',
-          '--no-zygote',
-          '--single-process',            // Для минимизации использования памяти
-          '--disable-gpu',               // Отключение графического ускорения
+          '--no-sandbox',
+          '--disable-setuid-sandbox',
+          '--disable-dev-shm-usage',
+          '--disable-gpu',
         ],
     });
   }
