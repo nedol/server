@@ -6,6 +6,7 @@ import http from 'http';
 import Turn from 'node-turn';
 import cron from 'node-cron';
 import fs from 'fs';
+import os from'os';
 import Translate from './server/Translate.js';
 
 import { request } from 'undici';
@@ -50,10 +51,23 @@ const server = https.createServer({
 }, app);
 
 
-// Настраиваем HTTP сервер для Express (для WebSocket)
-// const server = app.(process.env.PORT || 3000, '0.0.0.0',() => {
-//   console.log('WebSocket сервер запущен на порту 3000');
-// });
+
+if(os.hostname().includes("DESKTOP")){
+
+  server.listen(3000, "192.168.2.10",() => {
+    console.log('Server is running on https://192.168.0.6:3000');
+  });
+  server.listen(3000,() => {
+    console.log('Server is running on https://localhost:3000');
+  });
+}else{
+  // Настраиваем HTTP сервер для Express (для WebSocket)
+  app.listen(process.env.PORT || 3000, () => {
+    app.listen(process.env.PORT || 3000, () => {
+    console.log('WebSocket сервер запущен на порту 3000');
+  });
+
+}
 
 // global.rtcPull = { user: {}, operator: {} };
 
@@ -171,12 +185,7 @@ wss.on('connection', (ws) => {
 
 });
 
-server.listen(3000, "192.168.2.10",() => {
-  console.log('Server is running on https://192.168.0.6:3000');
-});
-server.listen(3000,() => {
-  console.log('Server is running on https://localhost:3000');
-});
+
 
 async function HandleMessage(q, ws) {
   // console.log(q);
@@ -490,7 +499,7 @@ cron.schedule('45 22 * * 7', () => {
 });
 
 // Пример cron-задачи, которая запускается каждый день в полночь
-cron.schedule('40 19 * * *', () => {
+cron.schedule('00 23 * * *', () => {
 
   const now = new Date();
   const formattedDateTime =
@@ -506,10 +515,12 @@ cron.schedule('40 19 * * *', () => {
 
   console.log('Задача выполняется в 22 часа 45 минут.', formattedDateTime);
   // Здесь можно вызвать нужные функции или выполнить операции
-  generate_news();
+  // if(os.hostname().includes("DESKTOP") || os.hostname().includes("192.168"))
+  //     generate_news();
 });
 
-generate_news();
+// if(os.hostname().includes("DESKTOP"))
+//   generate_news();
 // SendEmailForUpdates();
 
 

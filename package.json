@@ -18,9 +18,9 @@
         "dbg": "node --inspect-brk=9229 app.js"
     },
     "dependencies": {
+        "@anthropic-ai/sdk": "^0.36.3",
         "@google-cloud/vertexai": "^1.9.2",
         "child_process": "^1.0.2",
-        "deepspeech": "^0.9.3",
         "dotenv": "^16.4.7",
         "express": "^4.18.2",
         "google-tts-api": "^2.0.2",
@@ -39,7 +39,6 @@
         "translate": "^3.0.1",
         "undici": "^6.20.1",
         "url": "^0.11.4",
-        "whisper-node": "^1.1.1",
         "ws": "^8.18.0"
     }
 }

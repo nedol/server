@@ -484,7 +484,7 @@ export async function GetDialog(q) {
 // }
 
 export async function getLevels(owner) {
-  const levels = await sql`SELECT level FROM lessons WHERE owner=${owner}`;
+  const levels = await sql`SELECT level FROM groups WHERE owner=${owner} AND level IS NOT NULL AND level != ''`;
 
   return levels;
 }
@@ -682,7 +682,8 @@ export async function createBrickAndUpdateLesson(brickData) {
         throw new Error('No lesson found for the provided criteria.');
       }
 
-      let lessonData = lessonResult[0].data;
+      let lessonData = 
+      lessonResult[0].data;
 
       // Find or create the theme by name
       let theme = lessonData.module.themes.find(
