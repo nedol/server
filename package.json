@@ -13,7 +13,7 @@
         "test": "playwright test",
         "lint": "prettier --check --plugin-search-dir=. . && eslint .",
         "format": "prettier --write --plugin-search-dir=. .",
-        "start": "node build/index.js",
+        "start": "node app.js",
         "ws": "node app.js",
         "dbg": "node --inspect-brk=9229 app.js"
     },
@@ -40,5 +40,8 @@
         "undici": "^6.20.1",
         "url": "^0.11.4",
         "ws": "^8.18.0"
+    },
+    "devDependencies": {
+        "vite": "^6.0.11"
     }
 }
