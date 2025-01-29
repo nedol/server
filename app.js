@@ -50,26 +50,24 @@ const server = https.createServer({
   key: fs.readFileSync('./key.pem'),
 }, app);
 
-
-
 if(os.hostname().includes("DESKTOP")){
 
-  server.listen(3000, "192.168.2.10",() => {
-    console.log('Server is running on https://192.168.0.6:3000');
-  });
-  server.listen(3000,() => {
-    console.log('Server is running on https://localhost:3000');
-  });
-}else{
-  // Настраиваем HTTP сервер для Express (для WebSocket)
-  app.listen(process.env.PORT || 3000, () => {
+    server.listen(3000, "192.168.2.10",() => {
+      console.log('Server is running on https://192.168.0.6:3000');
+    });
+    server.listen(3000,() => {
+      console.log('Server is running on https://localhost:3000');
+    });
+  }else{
+    // Настраиваем HTTP сервер для Express (для WebSocket)
     app.listen(process.env.PORT || 3000, () => {
-    console.log('WebSocket сервер запущен на порту 3000');
-  });
+      app.listen(process.env.PORT || 3000, () => {
+      console.log('WebSocket сервер запущен на порту 3000');
+    });
+  })
 
 }
 
-// global.rtcPull = { user: {}, operator: {} };
 
 let prom = new Promise((resolve, reject) => {
   CreatePool(resolve);
