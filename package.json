@@ -6,13 +6,6 @@
     },
     "type": "module",
     "scripts": {
-        "dev": "vite dev",
-        "build": "vite build",
-        "package": "svelte-kit package",
-        "preview": "vite preview",
-        "test": "playwright test",
-        "lint": "prettier --check --plugin-search-dir=. . && eslint .",
-        "format": "prettier --write --plugin-search-dir=. .",
         "start": "node app.js",
         "ws": "node app.js",
         "dbg": "node --inspect-brk=9229 app.js"
