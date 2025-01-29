@@ -37,23 +37,22 @@ import {
 const formatDate = (date) => {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0'); // Добавляем 0, если месяц < 10
-    const day = String(date.getDate()-1).padStart(2, '0'); // Добавляем 0, если день < 10
+    const day = String(date.getDate()).padStart(2, '0'); // Добавляем 0, если день < 10
     return `${year}-${month}-${day}`;
 };
 
 import { JSDOM } from 'jsdom';
 
-
 export default async function generate_news() {
   try {
     // Получить шаблон запроса для новостей
-    let data = await GetPrompt('news');
+    let data = await GetPrompt(`news.${lang}`);
     const today = new Date();
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
-    const date = formatDate(tomorrow);
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate()-1);
+    const date = formatDate(today);
     let prompt = data.prompt.system;
-    const owners = ["3069991b34226dbb2c9d2c0bbbf398d0","7d3176310799f12e680f58c11266fd17"];
+    const owners = [/*"3069991b34226dbb2c9d2c0bbbf398d0",*/"7d3176310799f12e680f58c11266fd17"]
 
     for(const o in owners){
 
@@ -68,15 +67,23 @@ export default async function generate_news() {
       // Заменить плейсхолдер даты на текущую дату
       prompt = prompt.replace(/\$\{date\}/g, date);
 
+      let adapted = []
+
       for (const input of inputs) {
         const articles = await getNews(input.url);
         for(const l in levels){
-          try{
-            await handleNews(articles,owners[o], input, prompt, levels[l], lang);  // Ensure each news item is processed sequentially
-          }catch(ex){
-            console.log()
-          }
+          for(const a in articles){
+            try{
+              adapted.push(await adaptNews(articles[a].content, prompt, levels[l], lang, 5));  // Ensure each news item is processed sequentially
+              // break;
+              
+            }catch(ex){
+              console.log()
+            }
+          }  
+          handleNews(articles, adapted, owners[o], input, levels[l], lang);
         }
+    
       }
     }
 
@@ -85,13 +92,13 @@ export default async function generate_news() {
   }
 }
 
-async function getNews(url, content = 'link', newsContent = [], browser = null) {
+async function getNews(url, content = 'link', newsContent = new Set(), browser = null) {
   const feedUrl = url;
+  let isBrowserOwner = false;
 
-  // Открываем браузер, если он ещё не открыт
   if (!browser) {
-    
-    browser = await puppeteer.launch({ headless: true });
+    browser = await puppeteer.launch({ headless: 'new' });
+    isBrowserOwner = true;
   }
 
   let page;
@@ -100,29 +107,41 @@ async function getNews(url, content = 'link', newsContent = [], browser = null) 
     await page.goto(feedUrl, { waitUntil: 'domcontentloaded' });
 
     if (content === 'link') {
-      // Получение текущей даты в формате ГГГГ/ММ/ДД
       const today = new Date();
       const year = today.getFullYear();
       const month = String(today.getMonth() + 1).padStart(2, '0');
       const day = String(today.getDate()).padStart(2, '0');
-
-      // Формирование строки даты
       const currentDate = `${year}/${month}/${day}`;
-      // Извлечение ссылок новостей
+
       const links = await page.evaluate((currentDate) => {
-        return Array.from(document.querySelectorAll(`a[href*="${currentDate}"]`)).map(h => h.href.trim());
+        return Array.from(document.querySelectorAll(`a[href*="${currentDate}"]`))
+          .map(h => h.href.trim())
+          .filter((value, index, self) => self.indexOf(value) === index); // Удаление дубликатов
       }, currentDate);
 
       console.log('Найдено ссылок:', links);
-      let cnt = 0;
-      // Асинхронно обрабатываем каждую ссылку
-      for (const link of links) {
-        await getNews(link, 'content', newsContent, browser);
-        if (cnt++ >= 7) break;  // Ограничение на количество ссылок
-        
-      }
+      await Promise.all(links.slice(0, 8).map(link => getNews(link, 'content', newsContent, browser)));
+    } else {
+      const content = await page.evaluate(() => {
+        return Array.from(document.querySelectorAll('.cmp-text'))
+          .map(t => t.textContent.trim())
+          .filter(text => text.length > 0);
+      });
 
-      // Закрытие браузера, если это последний вызов
+      newsContent.add(JSON.stringify({ url, content })); // Добавление в Set для удаления дубликатов
+    }
+  } catch (error) {
+    console.error('Ошибка при обработке страницы:', error);
+  } finally {
+    if (page) {
+      try {
+        await page.close();
+      } catch (error) {
+        console.error('Ошибка при закрытии страницы:', error);
+      }
+    }
+
+    if (isBrowserOwner) {
       try {
         if (browser.isConnected()) {
           await browser.close();
@@ -130,56 +149,23 @@ async function getNews(url, content = 'link', newsContent = [], browser = null) 
       } catch (error) {
         console.error('Ошибка при закрытии браузера:', error);
       }
-
-      return newsContent;
-
-    } else {
-      // Извлечение контента
-      const content = await page.evaluate(() => {
-        const arr = Array.from(document.querySelectorAll('.cmp-text'));
-        return arr.map(t => t.innerHTML.replaceAll('“', '').replaceAll('”', '').trim());
-      });
-
-      newsContent.push({ url, content });
-      // console.log(`Контент из ${url}:`, content);
-
-      if (page) {
-        try {
-          await page.close(); // Закрытие страницы
-        } catch (error) {
-          console.error('Ошибка при закрытии страницы:', error);
-        }
-      }
     }
-
-  } catch (error) {
-    console.error('Ошибка при обработке страницы:', error);
-  } finally {
-    // Можно добавить дополнительные действия для очистки ресурсов, если необходимо
   }
+
+  return Array.from(newsContent).map(JSON.parse); // Преобразование обратно в массив
 }
 
-async function handleNews (articles, owner, inputData,prompt, level, lang){
   // Получить статьи
-
-
-  if (articles.length > 0) {
-    // Получить контент статей
-    const content = articles.map((item) => {
-      if (item.content) return item.content;
-    });
-
-    const adaptedData = await adaptNews(prompt, content, level, lang);
+  async function handleNews (original, content, owner, inputData, level, lang){
     // Сохранить результат
-    const htmlString = adaptedData.candidates[0].content.parts[0].text;
-
+    
     createBrickAndUpdateLesson({
       theme: "Belgisch Nieuws", 
       name: inputData.name, 
       owner:  owner,
-      html: htmlString,
+      html: content,
       level: level.level,
-      original: content
+      original: original
     });
 
     function extractParagraphs(htmlString) {
@@ -192,7 +178,7 @@ async function handleNews (articles, owner, inputData,prompt, level, lang){
       
 
     // Extract paragraphs from the HTML string
-    const paragraphs = extractParagraphs(htmlString);
+    const paragraphs = extractParagraphs(content);
 
     for (const text of paragraphs) {
       const sentences = text.split(/(?<=[.?!])\s/);
@@ -206,21 +192,26 @@ async function handleNews (articles, owner, inputData,prompt, level, lang){
         }
       }
     }
-
-  } else {
-    console.log("Нет новостей для отображения.");
-  }
 }
 
-async function adaptNews (prompt, content, level = 'B1.1', lang = 'nl') {
-  // Заменить плейсхолдер ${text} в prompt
-  prompt = prompt.replaceAll('${text}', JSON.stringify(content))
-                  .replaceAll('${lang}', lang)
-                  .replaceAll('${level}', level.level);
+async function adaptNews (article, prompt, level, lang='nl', qnty=5) {
 
+    if (article.length > 0) {
+      // Получить контент статей
+      const content = article.map((item) => {
+        if (item) return item;
+      });
+    
+    // Заменить плейсхолдер ${text} в prompt
+    prompt = prompt.replaceAll('${text}', "```"+JSON.stringify(content)+"```")
+      .replaceAll('${lang}', lang)
+      .replaceAll('${qnty}', qnty)
+      .replaceAll('${level}', level.level);
 
     // Адаптировать статьи для B1.1 уровня и форматировать в HTML
-    return await generate_from_text_input(prompt);
+    const adaptedData = await generate_from_text_input(prompt);
+    return adaptedData.candidates[0].content.parts[0].text;
+  }
 }
 
 

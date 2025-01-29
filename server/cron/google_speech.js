@@ -1,6 +1,6 @@
 import * as googleTTS from 'google-tts-api';
 
-import whisper from  whisper-node
+// import whisper from  whisper-node
 
 
 import {
