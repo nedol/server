@@ -1,5 +1,9 @@
 import fetch from 'node-fetch';
-import  generate_from_text_input from './vertex.js'
+// import  generate_from_text_input from './vertex.js'
+import  generate_from_text_input from './deepseek.js'
+
+import postToLinkedIn from './linkedin.js'
+
 import { config } from 'dotenv';
 config();
 
@@ -30,8 +34,11 @@ import {
 	GetPrompt, 
   getLevels,
   createBrickAndUpdateLesson,
+  UpdateDialog,
   ReadSpeech,
-  WriteSpeech
+  WriteSpeech,
+  getContext,
+  saveContext
 } from '../db.js';
 
 const formatDate = (date) => {
@@ -43,58 +50,168 @@ const formatDate = (date) => {
 
 import { JSDOM } from 'jsdom';
 
+const style = `
+<style>
+article {
+  display: block;
+  background: #f9f9f9;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+article p {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+article p:last-child {
+  margin-bottom: 0;
+}
+
+article subj {
+  font-weight: bold;
+  color: rgb(49, 49, 169);
+}
+
+article ver {
+  color: #e74c3c;
+  font-style: italic;
+}
+
+article dirobj {
+  color: #3498db;
+  font-weight: bold;
+}
+
+article tijd {
+  color: #27ae60;
+  font-style: italic;
+}
+
+article plaats {
+  color: magenta;
+  font-style: italic;
+}
+
+article extra, article adv {
+  color: grey;
+  font-style: italic;
+}
+
+article:hover {
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+</style>`;
+
 export default async function generate_news() {
   try {
     // Получить шаблон запроса для новостей
-    let data = await GetPrompt(`news.${lang}`);
+    // let data = await GetPrompt(`news.ru`);
+    let data = await GetPrompt(`bricks.news.${lang}`);
     const today = new Date();
     const yesterday = new Date(today);
     yesterday.setDate(today.getDate()-1);
-    const date = formatDate(today);
-    let prompt = data.prompt.system;
-    const owners = [/*"3069991b34226dbb2c9d2c0bbbf398d0",*/"7d3176310799f12e680f58c11266fd17"]
-
-    for(const o in owners){
-
-      const levels = await getLevels(owners[o]);
-
-      const inputs = [
-        {name:`Antwerpen Nieuws (${date})`, url:'https://www.vrt.be/vrtnws/nl/regio/antwerpen'},
-        // {name:`Belgisch Nieuws (${date})`, url:'https://www.vrt.be/vrtnws/nl/'},
-        // {name:`Belgisch Nieuws (${date})`, url:'https://www.vrt.be/vrtnws/nl/kies24/'}
-      ];
-
-      // Заменить плейсхолдер даты на текущую дату
-      prompt = prompt.replace(/\$\{date\}/g, date);
-
-      let adapted = []
-
-      for (const input of inputs) {
-        const articles = await getNews(input.url);
-        for(const l in levels){
-          for(const a in articles){
-            try{
-              adapted.push(await adaptNews(articles[a].content, prompt, levels[l], lang, 5));  // Ensure each news item is processed sequentially
-              // break;
-              
-            }catch(ex){
-              console.log()
-            }
-          }  
-          handleNews(articles, adapted, owners[o], input, levels[l], lang);
-        }
     
-      }
+    const date = formatDate(today);
+    // const date = formatDate(yesterday);
+    
+    let prompt = data.prompt.system;
+    const owners = [
+      "3069991b34226dbb2c9d2c0bbbf398d0",
+      "7d3176310799f12e680f58c11266fd17",
+      "public"
+    ]
+
+    const inputs = [
+      {name:`Antwerpen Nieuws (${date})`, url:'https://www.vrt.be/vrtnws/nl/regio/antwerpen'},
+      {name:`Brasschaat Nieuws (${date})`, url:'https://www.vrt.be/vrtnws/nl/regio/antwerpen/brasschaat/'},
+      {name:`Kapellen Nieuws (${date})`, url:'https://www.vrt.be/vrtnws/nl/regio/antwerpen/kapellen/'},
+      // {name:`Wereld Nieuws (${date})`, url:'https://www.vrt.be/vrtnws/nl/'},
+      // {name:`Belgisch Nieuws (${date})`, url:'https://www.vrt.be/vrtnws/nl/kies24/'}
+    ];
+
+    // Заменить плейсхолдер даты на текущую дату
+    prompt = prompt.replace(/\$\{date\}/g, date);    
+
+    let adapted = [];
+
+    for (const input of inputs) {
+
+      const articles = await getNews(date,input.url); 
+         
+      await adaptNews_(articles, input);
     }
+
+    async function adaptNews_(articles, input) {  
+      for (const owner of owners) {  
+        const levels = await getLevels(owner);  
+        for (const level of levels) {  
+          if(level<80)
+            continue;
+          const adaptedArticles = [];  
+          for (const article of articles) {  
+            try {  
+              if (article.content.includes('Контент не найден')) continue;  
+              let adaptedArticle = await adaptNews(article, prompt, level, lang, 7);  
+              adaptedArticle = adaptedArticle?.replace(/```html|```xml|```|\n/g, '');  
+              if (adaptedArticle) {  
+                adaptedArticles.push(adaptedArticle);  
+                console.log(adaptedArticle);  
+              }  
+            } catch (ex) {  
+              console.error('Ошибка при адаптации статьи:', ex);  
+            }  
+          }  
+          if(adaptedArticles.length>0)
+            await handleNews(articles, adaptedArticles, owner, input, level, lang);  
+        }  
+      }  
+    }  
+
+
+  console.log('News completed');
 
   } catch (error) {
     console.error("Ошибка при генерации новостей:", error);
   }
 }
 
-async function getNews(url, content = 'link', newsContent = new Set(), browser = null) {
-  const feedUrl = url;
+
+
+async function getNews(date, url, content = 'link', newsContent = [], browser = null, maxLinks = 10) {
   let isBrowserOwner = false;
+
+  const formatDate = (date) => {
+    const today = new Date(date);
+    return `${today.getFullYear()}/${String(today.getMonth() + 1).padStart(2, '0')}/${String(today.getDate()).padStart(2, '0')}`;
+  };
+
+  const extractLinks = async (page, currentDate) => {
+    return await page.evaluate((currentDate) => {
+      return [...new Set(
+        Array.from(document.querySelectorAll(`a[href*="${currentDate}"]`)).map(h => h.href.trim())
+      )];
+    }, currentDate);
+  };
+
+  const extractArticleContent = async (page) => {
+    return await page.evaluate(() => {
+      const elements = document.querySelectorAll('.cmp-text');
+      return elements.length
+        ? Array.from(elements)
+            .map(t => t.textContent.trim())
+            .filter(text => text.length > 0)
+            .join('\n')
+        : 'Контент не найден';
+    });
+  };
 
   if (!browser) {
     browser = await puppeteer.launch({ headless: 'new' });
@@ -104,68 +221,89 @@ async function getNews(url, content = 'link', newsContent = new Set(), browser =
   let page;
   try {
     page = await browser.newPage();
-    await page.goto(feedUrl, { waitUntil: 'domcontentloaded' });
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
 
     if (content === 'link') {
-      const today = new Date();
-      const year = today.getFullYear();
-      const month = String(today.getMonth() + 1).padStart(2, '0');
-      const day = String(today.getDate()).padStart(2, '0');
-      const currentDate = `${year}/${month}/${day}`;
+      const links = await extractLinks(page, formatDate(date));
+      const limitedLinks = links.slice(0, maxLinks).filter(link => !link.includes('/kijk/'));
 
-      const links = await page.evaluate((currentDate) => {
-        return Array.from(document.querySelectorAll(`a[href*="${currentDate}"]`))
-          .map(h => h.href.trim())
-          .filter((value, index, self) => self.indexOf(value) === index); // Удаление дубликатов
-      }, currentDate);
+      const results = await Promise.allSettled(
+        limitedLinks.map(link => getNews(date, link, 'content', [], browser))
+      );
 
-      console.log('Найдено ссылок:', links);
-      await Promise.all(links.slice(0, 8).map(link => getNews(link, 'content', newsContent, browser)));
-    } else {
-      const content = await page.evaluate(() => {
-        return Array.from(document.querySelectorAll('.cmp-text'))
-          .map(t => t.textContent.trim())
-          .filter(text => text.length > 0);
-      });
-
-      newsContent.add(JSON.stringify({ url, content })); // Добавление в Set для удаления дубликатов
+      for (let i = 0; i < results.length; i++) {
+        if (results[i].status === 'fulfilled' && results[i].value.length > 0) {
+          newsContent.push({
+            link: limitedLinks[i],
+            content: results[i].value[0].content,
+          });
+        } else {
+          newsContent.push({ link: limitedLinks[i], content: 'Ошибка загрузки контента' });
+        }
+      }
+    } else if (!url.includes('/kijk/')) {
+      newsContent.push({ link: url, content: await extractArticleContent(page) });
     }
   } catch (error) {
     console.error('Ошибка при обработке страницы:', error);
   } finally {
-    if (page) {
-      try {
+    try {
+      if (page && !page.isClosed()) {
         await page.close();
-      } catch (error) {
-        console.error('Ошибка при закрытии страницы:', error);
       }
+    } catch (err) {
+      console.error('Ошибка при закрытии страницы:', err);
     }
 
-    if (isBrowserOwner) {
-      try {
-        if (browser.isConnected()) {
-          await browser.close();
-        }
-      } catch (error) {
-        console.error('Ошибка при закрытии браузера:', error);
+    try {
+      if (isBrowserOwner && browser) {
+        await browser.close();
       }
+    } catch (err) {
+      console.error('Ошибка при закрытии браузера:', err);
     }
   }
 
-  return Array.from(newsContent).map(JSON.parse); // Преобразование обратно в массив
+  return newsContent;
 }
 
-  // Получить статьи
-  async function handleNews (original, content, owner, inputData, level, lang){
+
+// Получить статьи
+async function handleNews (original, content, owner, inputData, level, lang){
     // Сохранить результат
+
+    console.log(content)
     
-    createBrickAndUpdateLesson({
-      theme: "Belgisch Nieuws", 
+    await createBrickAndUpdateLesson({
+      theme: "Nieuws", 
       name: inputData.name, 
       owner:  owner,
       html: content,
       level: level.level,
-      original: original
+      type: 'news'
+    });
+
+    let dlg_propmt = await GetPrompt(`dialog.news.ru`);
+    dlg_propmt = dlg_propmt.prompt.system ;
+
+    content = content;
+
+    dlg_propmt = dlg_propmt.replaceAll('${text}', "```"+JSON.stringify(content)+"```")
+    .replaceAll('${lang}', lang)
+    .replaceAll('${level}', level);
+
+    // console.log(dlg_propmt);
+
+    const dlg = await generate_from_text_input(dlg_propmt);
+
+    await UpdateDialog({
+      theme:"Nieuws",
+      name: inputData.name, 
+      dialog: dlg,
+      owner:  owner,
+      html: content,
+      level: level.level,
+      type:'news'
     });
 
     function extractParagraphs(htmlString) {
@@ -174,8 +312,7 @@ async function getNews(url, content = 'link', newsContent = new Set(), browser =
         
         // Convert NodeList to Array and extract text content
         return Array.from(paragraphs).map(p => p.textContent.trim());
-    }
-      
+    }      
 
     // Extract paragraphs from the HTML string
     const paragraphs = extractParagraphs(content);
@@ -184,121 +321,122 @@ async function getNews(url, content = 'link', newsContent = new Set(), browser =
       const sentences = text.split(/(?<=[.?!])\s/);
       
       // Process each sentence sequentially
-      for (const sentence of sentences) {
-        try {
-          await tts_google(sentence, lang, owner, inputData.name);
-        } catch (error) {
-          console.error('Error processing sentence:', sentence, error);
-        }
-      }
+      // for (const sentence of sentences) {
+      //   try {
+      //     await tts_google(sentence, lang, owner, inputData.name);
+      //   } catch (error) {
+      //     console.error('Error processing sentence:', sentence, error);
+      //   }
+      // }
     }
 }
 
-async function adaptNews (article, prompt, level, lang='nl', qnty=5) {
+async function adaptNews(article, prompt, level, lang = 'nl', qnty = 8) {
+  if (!article) return null; // Явный возврат, если статьи нет
 
-    if (article.length > 0) {
-      // Получить контент статей
-      const content = article.map((item) => {
-        if (item) return item;
-      });
-    
-    // Заменить плейсхолдер ${text} в prompt
-    prompt = prompt.replaceAll('${text}', "```"+JSON.stringify(content)+"```")
-      .replaceAll('${lang}', lang)
-      .replaceAll('${qnty}', qnty)
-      .replaceAll('${level}', level.level);
+  // Форматируем prompt с подстановкой значений
+  const formattedPrompt = prompt
+    .replaceAll('${text}', '```' + JSON.stringify(article) + '```')
+    .replaceAll('${lang}', lang)
+    .replaceAll('${qnty}', qnty)
+    .replaceAll('${level}', level.level);
 
-    // Адаптировать статьи для B1.1 уровня и форматировать в HTML
-    const adaptedData = await generate_from_text_input(prompt);
-    return adaptedData.candidates[0].content.parts[0].text;
+  console.log(formattedPrompt)  
+
+  // Проверяем наличие `generate_from_text_input`
+  if (typeof generate_from_text_input !== 'function') {
+    console.error('Функция generate_from_text_input не определена.');
+    return null;
   }
+
+  // Адаптация новостей
+  return await generate_from_text_input(formattedPrompt);
 }
+
 
 
 async function tts_google(text, lang, abonent, quiz) {
-    try {
-      // Генерируем md5-хеш для текста
-      // const fileName = md5(text) + '.mp3';
-      // const filePath = join(audioDir, fileName); // Полный путь к файлу
-  
-      // Проверяем наличие файла
-      const resp =  await ReadSpeech({ key: md5(text) });
-      if (resp?.data) {
-        console.log(`Файл уже существует`);
-        
-        return {audio:'data:audio/mpeg;base64,' + resp.data, ts:resp.timestamps};
-      }
-  
-      const url_b64 = await googleTTS.getAllAudioBase64(text, {
-        //getAudioUrl(text, {
-        lang: lang,
-        slow: false,
-        host: 'https://translate.google.com',
-        timeout: 10000,
-      });
-  
-      let timestamps = []
-  
-      const ts = await processAudio('data:audio/mpeg;base64,' + url_b64[0].base64)
-      .then((ts) => {
-        console.log('Silence timestamps:', ts.result);
-        if(ts)
-          timestamps = ts
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      })  
-  
-      let base64 = '';
-  
-      url_b64.map((e) => {
-        base64 += e.base64;
-      });
-  
-      WriteSpeech({ lang: lang, key: md5(text), text: text, data: base64, quiz:quiz, timestamps:timestamps.result.segments[0].words });
-  
-      // Записываем аудиофайл в директорию
-      // await fs.outputFile(filePath, Buffer.from(url, 'base64')); // Запись файла в папку audio
-      // console.log(`Файл сохранён`);
-  
-      // Читаем содержимое только что сохранённого файла и возвращаем его в формате base64
-      return  {audio:'data:audio/mpeg;base64,' + base64, ts:timestamps}
+  try {
+    // Генерируем md5-хеш для текста
+    // const fileName = md5(text) + '.mp3';
+    // const filePath = join(audioDir, fileName); // Полный путь к файлу
 
-    } catch (error) {
-      console.error('Error converting text to speech:', error);
+    // Проверяем наличие файла
+    const resp =  await ReadSpeech({ key: md5(text) });
+    if (resp?.data) {
+      console.log(`Файл уже существует`);
+      
+      return {audio:'data:audio/mpeg;base64,' + resp.data, ts:resp.timestamps};
     }
-  }
 
-
-
-  const transcribeAudio = (audioPath) => {
-    
-    return new Promise((resolve, reject) => {
-      // Полный путь к whisper_transcribe.py
-    const scriptPath = path.join(__dirname, '', 'whisper_transcribe.py');
-      exec(`python "${scriptPath}" "${audioPath}"`, (error, stdout, stderr) => {
-        if (error) {
-          return reject(error); 
-        }
-  
-        // Парсим результат JSON
-        const result = JSON.parse(stdout.trim());
-  
-        // Получаем текст
-        const text = result.text;
-  
-        // Получаем временные метки
-        // const segments = result.segments.map(segment => ({
-        //   start: segment.start,  // Начало сегмента
-        //   end: segment.end,      // Конец сегмента
-        //   text: segment.text     // Текст сегмента
-        // }));
-  
-        resolve({ text, result});
-      });
+    const url_b64 = await googleTTS.getAllAudioBase64(text, {
+      //getAudioUrl(text, {
+      lang: lang,
+      slow: false,
+      host: 'https://translate.google.com',
+      timeout: 10000,
     });
-  };
+
+    let timestamps = []
+
+    const ts = await processAudio('data:audio/mpeg;base64,' + url_b64[0].base64)
+    .then((ts) => {
+      console.log('Silence timestamps:', ts.result);
+      if(ts)
+        timestamps = ts
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    })  
+
+    let base64 = '';
+
+    url_b64.map((e) => {
+      base64 += e.base64;
+    });
+
+    WriteSpeech({ lang: lang, key: md5(text), text: text, data: base64, quiz:quiz, timestamps:timestamps.result.segments[0].words });
+
+    // Записываем аудиофайл в директорию
+    // await fs.outputFile(filePath, Buffer.from(url, 'base64')); // Запись файла в папку audio
+    // console.log(`Файл сохранён`);
+
+    // Читаем содержимое только что сохранённого файла и возвращаем его в формате base64
+    return  {audio:'data:audio/mpeg;base64,' + base64, ts:timestamps}
+
+  } catch (error) {
+    console.error('Error converting text to speech:', error);
+  }
+}
+
+const transcribeAudio = (audioPath) => {
   
+  return new Promise((resolve, reject) => {
+    // Полный путь к whisper_transcribe.py
+  const scriptPath = path.join(__dirname, '', 'whisper_transcribe.py');
+    exec(`python "${scriptPath}" "${audioPath}"`, (error, stdout, stderr) => {
+      if (error) {
+        return reject(error); 
+      }
+
+      // Парсим результат JSON
+      const result = JSON.parse(stdout.trim());
+
+      // Получаем текст
+      const text = result.text;
+
+      // Получаем временные метки
+      // const segments = result.segments.map(segment => ({
+      //   start: segment.start,  // Начало сегмента
+      //   end: segment.end,      // Конец сегмента
+      //   text: segment.text     // Текст сегмента
+      // }));
+
+      resolve({ text, result});
+    });
+  });
+};
+
 
 // Основная серверная функция
 async function processAudio(base64Str) {

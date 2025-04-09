@@ -654,91 +654,166 @@ export async function GetPrompt(prompt = '', quiz_name= '', owner= '', level= ''
   };
 }
 
-export async function createBrickAndUpdateLesson(brickData) {
+async function UpdateLesson(tx, type='bricks',data){
+
+  await sql.begin(async (tx) => {
+    const lessonResult = await tx`
+    SELECT data
+    FROM lessons
+    WHERE "owner" = ${data.owner} AND "level" = ${data.level} AND lang = 'nl';
+  `;
+
+  if (lessonResult.length === 0) {
+    throw new Error('No lesson found for the provided criteria.');
+  }
+
+  let lessonData = lessonResult[0].data;
+
+  // Find or create the theme by name
+  let theme = lessonData.module.themes.find(
+    (t) => t.name.nl === data.theme
+  );
+
+  if (!theme) {
+    // If the theme doesn't exist, create it
+    theme = {
+      name: {
+        nl: data.theme,
+      },
+      lessons: [
+        {
+          // Create a default lesson structure if necessary
+          type: 'default',
+          content: 'Initial content for the lesson',
+          quizes: [],
+        },
+      ],
+    };
+    // Add the newly created theme to the module
+    lessonData.module.themes.push(theme);
+  }
+
+  // Check if the brick type and name already exist in the first lesson's quizes
+  const lesson = theme.lessons[0]; // Assuming we're updating the first lesson
+  if (!lesson.quizes) {
+    lesson.quizes = [];
+  }
+
+  const quizExists = lesson.quizes.some(
+    (quiz) => quiz.type === type && quiz.name.nl === data.name
+  );
+
+  if (!quizExists) {
+    // Add new brick to the quizes if it doesn't already exist
+    lesson.quizes.push({
+      type: type,
+      name: { nl: data.name },
+      published: data.html? Date.now():""
+    });
+  }
+    try{
+    // Update the lesson in the `lessons` table
+    await tx`
+      UPDATE lessons
+      SET data = ${lessonData}, "timestamp" =  CURRENT_TIMESTAMP
+      WHERE "owner" = ${data.owner} AND "level" = ${data.level} AND lang = 'nl';
+    `;
+    }catch(ex){
+      console.log(ex)
+    }
+  })
+
+}
+
+export async function getContext(name) {
+  try {
+    // Начало транзакции
+    const result = await sql.begin(async (tx) => {
+      const res = await tx`
+        SELECT data
+        FROM context
+        WHERE name = ${name}
+      `;
+
+      return res.length > 0 ? res[0].data : null;
+    });
+
+    return result; // Вернем результат из транзакции
+  } catch (error) {
+    console.error('Error retrieving context:', error);
+    throw error;
+  }
+}
+
+
+export async function saveContext(data){
+  try {
+    if(data.original.length===0)
+      return;
+    // Begin transaction
+    await sql.begin(async (tx) => {
+      // Insert into `bricks` table or update if the name already exists
+      await tx`
+        INSERT INTO context ("name", "data", "prompt_type")
+        VALUES (${data.name}, ${data.original}, ${data.type})
+        ON CONFLICT ("name")
+        DO UPDATE SET 
+          timestamp = CURRENT_TIMESTAMP, 
+          data =  ${data.original};
+      `;
+    });
+  } catch (error) {
+    console.error('Error processing brick and updating lesson:', error);
+    throw error;
+  }
+}
+
+export async function createBrickAndUpdateLesson(data) {
   try {
     // Begin transaction
     await sql.begin(async (tx) => {
       // Insert into `bricks` table or update if the name already exists
       await tx`
-        INSERT INTO bricks ("name", "owner", html, "level", "timestamp","original")
-        VALUES (${brickData.name}, ${brickData.owner}, ${brickData.html}, ${brickData.level}, CURRENT_TIMESTAMP, ${brickData.original})
+        INSERT INTO bricks ("name", "owner", "data", "level", "timestamp", "theme", "prompt_type")
+        VALUES (${data.name}, ${data.owner}, ${data.html}, ${data.level}, CURRENT_TIMESTAMP, ${data.theme},${data.type})
         ON CONFLICT ("name","owner","level")
         DO UPDATE SET 
-          html = ${brickData.html}, 
-          timestamp = CURRENT_TIMESTAMP, 
-          original =  ${brickData.original};
+          data = ${data.html}, 
+          timestamp = CURRENT_TIMESTAMP
       `;
 
-      console.log('INSERT INTO bricks:', brickData.html);      
+      // console.log('INSERT INTO bricks:', brickData.html); 
 
-      // Retrieve lesson data from `lessons` table
-      const lessonResult = await tx`
-        SELECT data
-        FROM lessons
-        WHERE "owner" = ${brickData.owner} AND "level" = ${brickData.level} AND lang = 'nl';
-      `;
-
-      if (lessonResult.length === 0) {
-        throw new Error('No lesson found for the provided criteria.');
-      }
-
-      let lessonData = 
-      lessonResult[0].data;
-
-      // Find or create the theme by name
-      let theme = lessonData.module.themes.find(
-        (t) => t.name.nl === brickData.theme
-      );
-
-      if (!theme) {
-        // If the theme doesn't exist, create it
-        theme = {
-          name: {
-            nl: brickData.theme,
-          },
-          lessons: [
-            {
-              // Create a default lesson structure if necessary
-              type: 'default',
-              content: 'Initial content for the lesson',
-              quizes: [],
-            },
-          ],
-        };
-        // Add the newly created theme to the module
-        lessonData.module.themes.push(theme);
-      }
-
-      // Check if the brick type and name already exist in the first lesson's quizes
-      const lesson = theme.lessons[0]; // Assuming we're updating the first lesson
-      if (!lesson.quizes) {
-        lesson.quizes = [];
-      }
-
-      const quizExists = lesson.quizes.some(
-        (quiz) => quiz.type === 'bricks' && quiz.name.nl === brickData.name
-      );
-
-      if (!quizExists) {
-        // Add new brick to the quizes if it doesn't already exist
-        lesson.quizes.push({
-          type: 'bricks',
-          name: { nl: brickData.name },
-          published:  Date.now()
-        });
-      }
-
-      // Update the lesson in the `lessons` table
-      await tx`
-        UPDATE lessons
-        SET data = ${lessonData}, "timestamp" =  CURRENT_TIMESTAMP
-        WHERE "owner" = ${brickData.owner} AND "level" = ${brickData.level} AND lang = 'nl';
-      `;
+      UpdateLesson(tx,'bricks',data)
 
       // console.log('UPDATE lessons:', lessonData.module.themes);
     });
   } catch (error) {
     console.error('Error processing brick and updating lesson:', error);
+    throw error;
+  }
+}
+
+export async function UpdateDialog(data){
+  const dlg = JSON.parse( data.dialog?.replace(/```json|```html|```xml|```/g, '').replace(/\n/g, ' '));
+  // console.log(dlg)
+  try{
+    await sql.begin(async (tx) => {
+      // Insert into `bricks` table or update if the name already exists
+      await tx`
+        INSERT INTO dialogs ("name","data", "owner", "html", "level","theme", "prompt_type")
+        VALUES (${data.name},${dlg}, ${data.owner}, ${data.html}, ${data.level},${data.theme}, ${data.type})
+        ON CONFLICT ("name","owner","level")
+        DO UPDATE SET 
+          data = ${dlg},
+          html = ${data.html};
+      `;
+
+      UpdateLesson(tx,'dialogs',data)
+
+    });
+  }catch(error){
+    console.error('Error processing dialog and updating lesson:', error);
     throw error;
   }
 }
