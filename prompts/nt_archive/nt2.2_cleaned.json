@@ -1,0 +1,523 @@
+[
+  {
+    "kolmit_level": 1,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Alfabet en klanken",
+    "rule_name": "Nederlands alfabet",
+    "description": "Нидерландский алфавит состоит из 26 букв, как и английский алфавит, но имеет свои особенности в произношении.",
+    "rule_text": "The Dutch alphabet consists of 26 letters identical to the English alphabet. However, pronunciation differs for certain letters: 'g' has a guttural sound, 'ch' is a voiceless velar fricative, 'ij' is considered a single letter and pronounced as a diphthong [ɛi], and 'v' is pronounced as [f] at the end of words. Capitalization rules are similar to English, with the first letter of sentences and proper nouns capitalized.",
+    "examples": [
+      "A is de eerste letter van het alfabet.",
+      "Ik leer het alfabet: a, b, c...",
+      "Zee wordt geschreven met een z."
+    ],
+    "common_mistakes": "Смешивают буквы j, y, ij; неправильно произносят буквы g, ch, ij."
+  },
+  {
+    "kolmit_level": 29,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Modale werkwoorden",
+    "description": "Модальные глаголы выражают вероятность или возможность действия.",
+    "rule_text": "Modal verbs express possibility, permission, willingness, or necessity. 'Kan' expresses ability or possibility ('Ik kan zwemmen' - I can swim). 'Mag' expresses permission ('Je mag gaan' - You may go). 'Wil' expresses willingness or desire ('Ik wil leren' - I want to learn). 'Moet' expresses necessity or obligation ('Je moet werken' - You must work). Modal verbs are followed by the infinitive of the main verb and maintain their stem in all forms. In subordinate clauses, both the modal and main verb move to the end with the infinitive last.",
+    "examples": [
+      "Ik kan je helpen.",
+      "Zij mag niet komen.",
+      "Hij wil een boek lezen.",
+      "Wij moeten eten."
+    ],
+    "common_mistakes": "Путают модальные глаголы; неправильно используют модальные глаголы."
+  },
+  {
+    "kolmit_level": 63,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Relatieve bijzin met prepositie",
+    "description": "Относительные придаточные предложения образуются с помощью предлогов и относительных местоимений.",
+    "rule_text": "Relative clauses with prepositions place the preposition before the relative pronoun. This structure is common in formal Dutch and with longer relative clauses. For example, 'De man, met wie ik spreek' (The man, with whom I speak). The preposition can also be stranded at the end in informal speech ('De man, wie ik mee spreek'), but preposition fronting is preferred in formal contexts. The choice of relative pronoun still depends on the gender of the antecedent.",
+    "examples": [
+      "De man, met wie ik spreek, is mijn vader.",
+      "Het boek, over hetwelke hij sprak, was interessant."
+    ],
+    "common_mistakes": "Путают предлоги и относительные местоимения; неправильно используют предлоги и относительные местоимения."
+  },
+  {
+    "kolmit_level": 117,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Relatieve voornaamwoorden met voorzetsels in samengestelde zinnen",
+    "description": "Относительные местоимения с предлогами в составных предложениях.",
+    "rule_text": "wie, wat, dat, die",
+    "examples": [
+      "De man, met wie ik spreek, is mijn vader.",
+      "Het boek, over hetwelke hij sprak, was interessant."
+    ],
+    "common_mistakes": "Путают относительные местоимения; неправильно используют относительные местоимения."
+  },
+  {
+    "kolmit_level": 9,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Vragen stellen",
+    "rule_name": "Vragen met inversie",
+    "description": "Вопросы с инверсией образуются путем перестановки подлежащего и сказуемого.",
+    "rule_text": "Question formation with inversion places the conjugated verb before the subject. This applies to yes/no questions ('Werk jij elke dag?') and questions with question words when they're not the subject ('Heeft hij een auto?'). The verb must agree with the subject that follows. In more complex sentences, only the main verb inverts with the subject, while other verbs remain in their normal positions.",
+    "examples": [
+      "Werk jij elke dag?",
+      "Is zij een studente?",
+      "Heeft hij een auto?",
+      "Gaan jullie naar huis?"
+    ],
+    "common_mistakes": "Забывают инвертировать порядок слов; неправильно ставят знаки препинания; путают формы глаголов."
+  },
+  {
+    "kolmit_level": 21,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Tijd en gewoonte",
+    "rule_name": "Bijwoorden van frequentie",
+    "description": "Частотные наречия указывают на частоту действия.",
+    "rule_text": "Adverbs of frequency indicate how often an action occurs. 'Soms' means sometimes (occasional), 'vaak' means often (frequent), 'nooit' means never (zero occurrence), 'altijd' means always (100% occurrence), 'steeds' means always/constantly. These adverbs typically appear between the subject and the conjugated verb ('Ik vaak lees boeken' - I often read books) or at the end of the sentence. Their position can slightly change the emphasis of the frequency.",
+    "examples": [
+      "Ik eet soms brood.",
+      "Zij speelt vaak tennis.",
+      "Hij gaat nooit naar school."
+    ],
+    "common_mistakes": "Путают частотные наречия; неправильно используют частотные наречия."
+  },
+  {
+    "kolmit_level": 31,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Gebruik van omdat / want in langere zinnen",
+    "description": "Причинальные придаточные предложения образуются с помощью союзов 'omdat' или 'want'.",
+    "rule_text": "Redengevende bijzinnen met 'omdat' en 'want' drukken oorzaak en gevolg uit. 'Omdat' is formeler en introduceert een directe oorzaak ('Ik ga niet omdat het regent' - I'm not going because it's raining). 'Want' is informeler en geeft een reden of verklaring ('Ik ga niet want ik ben moe' - I'm not going because I'm tired). 'Omdat' vereist onderwerps-werkwoordinversie in de bijzin ('omdat hij komt' niet 'omdat hij komt'). 'Want' kan ook zonder inversie gebruikt worden in informele taal. Beide constructies zijn essentieel voor het uitdrukken van causaliteit in het Nederlands.",
+    "examples": [
+      "Ik ga naar school, omdat ik student ben.",
+      "Zij speelt, want ze heeft een kat."
+    ],
+    "common_mistakes": "Путают союзы 'omdat' и 'want'; неправильно используют союзы."
+  },
+  {
+    "kolmit_level": 35,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Reflexieve werkwoorden",
+    "description": "Рефлексивные глаголы используются для действия, которое направляется обратно к действующему лицу.",
+    "rule_text": "Reflexive verbs indicate that the subject performs an action on themselves. The reflexive pronoun 'zich' is used for the object ('Ik was mezelf' - I wash myself). With 'elkaar', actions are performed mutually ('Ze zien elkaar' - They see each other). Reflexive verbs are common with verbs of personal care (wassen, aankleden), emotions (zich verheugen), and reciprocal actions. The reflexive pronoun must agree with the subject and changes form based on grammatical case.",
+    "examples": [
+      "Ik was mezelf klaar.",
+      "Zij ziet zichzelf in de spiegel."
+    ],
+    "common_mistakes": "Неправильное использование рефлексивных глаголов; забывают использовать 'zichzelf'."
+  },
+  {
+    "kolmit_level": 36,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Perfektum met zijn",
+    "description": "Перфектум образуется с помощью вспомогательного глагола 'zijn'.",
+    "rule_text": "The perfect tense with 'zijn' is used with verbs of motion (gaan, komen, lopen, rijden, vliegen, zwemmen) and some state change verbs (worden, blijven, vallen). The structure is 'zijn' + past participle ('Ik ben naar school gegaan'). The past participle must agree in gender and number with the subject when 'zijn' is used as auxiliary. This tense expresses completed actions that result in a change of state or location.",
+    "examples": [
+      "Ik ben naar school gegaan.",
+      "Zij is gisteren aangekomen.",
+      "Wij zijn thuis gekomen."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'zijn'; неправильное образование прошедшего деепричастия."
+  },
+  {
+    "kolmit_level": 26,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Infinitiefconstructies",
+    "rule_name": "Infinitieven met meerdere hulpwerkwoorden",
+    "description": "Инфинитивы с несколькими вспомогательными глаголами.",
+    "rule_text": "te + werkwoord",
+    "examples": [
+      "Ik wil gaan leren.",
+      "Zij probeert te zwemmen."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'te'; неправильное использование инфинитива."
+  },
+  {
+    "kolmit_level": 113,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Bijvoeglijk naamwoord",
+    "rule_name": "Participium als adjectief in complexe context",
+    "description": "Деепричастия как прилагательные в сложном контексте.",
+    "rule_text": "werkwoordstam + -d",
+    "examples": [
+      "Een geïnteresseerd persoon.",
+      "De gebroken vaas lag op de grond."
+    ],
+    "common_mistakes": "Неправильное образование деепричастий; неправильное использование деепричастий."
+  },
+  {
+    "kolmit_level": 6,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Zelfstandig naamwoord",
+    "rule_name": "Bepaalde en onbepaalde lidwoorden",
+    "description": "Определенные (de) и неопределенные (een) артикли согласуются с родом существительного.",
+    "rule_text": "Dutch articles indicate definiteness and gender. 'De' is the definite article for both masculine and feminine nouns, while 'het' is used for neuter nouns. 'Een' is the indefinite article (a/an) used for all genders. Gender assignment is largely arbitrary and must be memorized with each noun. Articles agree with the noun they modify and change in plural forms (de/het + plural noun uses 'de').",
+    "examples": [
+      "De man leest een boek.",
+      "Het kind speelt.",
+      "Een huis in Amsterdam."
+    ],
+    "common_mistakes": "Неправильно определяют род существительного; путают de/het; забывают артикли."
+  },
+  {
+    "kolmit_level": 75,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Gebruik van hoewel, ondanks dat",
+    "description": "Союзы 'hoewel' и 'ondanks dat' используются для выражения противоречий.",
+    "rule_text": "Conjunctions 'hoewel' and 'ondanks dat' express contrast or concession between clauses. 'Hoewel' is more common and introduces subordinate clauses with inversion ('Hoewel hij moe was, werkte hij door'). 'Ondanks dat' is more emphatic and formal, emphasizing the unexpected nature of the contrast ('Ondanks dat het regende, gingen we naar buiten'). Both are essential for expressing complex logical relationships and adding nuance to argumentation in Dutch.",
+    "examples": [
+      "Hij werkt hard, hoewel hij moe is.",
+      "Zij speelt, ondanks dat het regent."
+    ],
+    "common_mistakes": "Путают союзы 'hoewel' и 'ondanks dat'; неправильно используют союзы."
+  },
+  {
+    "kolmit_level": 34,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Infinitiefconstructies",
+    "rule_name": "Om te + infinitief",
+    "description": "Для образования инфинитивов используется конструкция 'om te + инфинитив'.",
+    "rule_text": "The construction 'om te + infinitive' expresses purpose. It's used to explain why an action is performed ('Ik ga naar school om te leren' - I go to school to learn). The infinitive is always in its basic form. This construction typically appears at the end of a sentence. It can also be used with nouns and adjectives to express purpose ('Een plek om te spelen' - A place to play). The 'om' is necessary to distinguish purpose from other infinitive uses.",
+    "examples": [
+      "Ik ga naar school om te leren.",
+      "Zij wil een plek om te spelen vinden."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'om te'; неправильное использование инфинитива."
+  },
+  {
+    "kolmit_level": 133,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Modale werkwoorden in geavanceerde samengestelde tijden",
+    "description": "Модальные глаголы в продвинутых составных временах.",
+    "rule_text": "Modale werkwoorden in geavanceerde samengestelde tijden drukken complexe modaliteiten uit zoals mogelijkheid, noodzaak, toestemming en verwachting in verschillende tijdsverhoudingen. 'Kunnen' drukt vermogen of mogelijkheid uit ('Ik kan zwemmen' - heden) of onzekerheid in het verleden ('Hij kon het gedaan hebben' - verleden mogelijkheid). 'Moeten' drukt verplichting uit ('Je moet gaan' - heden) of veronderstelling in het verleden ('Hij moet gegaan zijn' - verleden waarschijnlijkheid). Deze modaliteiten vereisen een goed begrip van zinsbouw en tijdsrelaties.",
+    "examples": [
+      "Ik zou kunnen helpen.",
+      "Zij moet gegaan zijn.",
+      "Hij zou het kunnen doen."
+    ],
+    "common_mistakes": "Путают модальные глаголы; неправильно используют модальные глаголы."
+  },
+  {
+    "kolmit_level": 95,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Samenvattende en tegenstellende voegwoorden",
+    "description": "Союзы используются для соединения предложений.",
+    "rule_text": "en, of, maar, want, dus,",
+    "examples": [
+      "Hij werkt hard en leert veel.",
+      "Zij speelt of kijkt naar televisie.",
+      "Hij is slim maar lui."
+    ],
+    "common_mistakes": "Путают союзы; неправильно используют союзы."
+  },
+  {
+    "kolmit_level": 114,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Subjunctief in samengestelde zinnen",
+    "description": "Субъюнктив в составных предложениях.",
+    "rule_text": "",
+    "examples": [
+      "Als ik rijk was, zou ik een huis kopen.",
+      "Het is belangrijk dat hij komt."
+    ],
+    "common_mistakes": "Неправильное использование субъюнктивного; неправильное изменение времени глаголов."
+  },
+  {
+    "kolmit_level": 115,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Basis zinsbouw",
+    "rule_name": "Woordvolgorde in hoofdzinnen (SVO)",
+    "description": "В главном предложении стандартный порядок слов: подлежащее - сказуемое - дополнение (SVO).",
+    "rule_text": "Word order in main clauses follows the Subject-Verb-Object pattern. The conjugated verb occupies the second position in Dutch main clauses (V2 rule), directly after the subject. Objects and other sentence elements follow. In questions, the verb moves to first position (inversion). In subordinate clauses, the verb moves to the end. This SVO pattern is fundamental to Dutch syntax and applies to all tenses and moods, with variations only in questions, subordinate clauses, and special constructions.",
+    "examples": [
+      "Ik eet een appel.",
+      "Zij leest een boek.",
+      "Hij koopt koffie."
+    ],
+    "common_mistakes": "Неправильный порядок слов; забывают инвертировать при вопросах."
+  },
+  {
+    "kolmit_level": 106,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Idiomatiek",
+    "rule_name": "Idiomen in geschreven taal",
+    "description": "Идиоматические выражения в письменной речи.",
+    "rule_text": "",
+    "examples": [
+      "Hij houdt de kaars aan beide kanten brandend.",
+      "Ze hebben het brood nodig."
+    ],
+    "common_mistakes": "Путают идиоматические выражения; неправильно используем идиоматические выражения."
+  },
+  {
+    "kolmit_level": 107,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Taalgebruik",
+    "rule_name": "Formeel en informeel register",
+    "description": "Формальный и неформальный регистр.",
+    "rule_text": "Taalgebruik in formele teksten vereist een specifiek register dat zich onderscheidt door objectiviteit, precisie en respectvolle aanspreekvormen. Formele teksten gebruiken volledige zinnen, complexe grammatica en technische terminologie waar nodig. De aanspreekvorm 'u' is verplicht in formele contexten, in tegenstelling tot het informele 'jij'. Woordkeus is zorgvuldig en vermijdt colloquialismen. Zinsbouw is vaak complexer met subordinatie en passieve constructies. Deze stijl is essentieel voor academische werken, zakelijke correspondentie, officiële documenten en journalistiek waar professionaliteit en duidelijkheid belangrijk zijn.",
+    "examples": [
+      "Geachte heer/mevrouw, ... (formeel)",
+      "Hoi Jan, ... (informeel)"
+    ],
+    "common_mistakes": "Путают стили и регистры; неправильно используют стили и регистры."
+  },
+  {
+    "kolmit_level": 87,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Infinitiefconstructies",
+    "rule_name": "Infinitiefconstructies met meerdere werkwoorden",
+    "description": "Для образования инфинитивов используется конструкция 'te + инфинитив'.",
+    "rule_text": "Infinitiefconstructies met meerdere werkwoorden zijn complexe zinsdelen die meerdere acties of toestanden combineren. Deze constructies gebruiken vaak modale werkwoorden gevolgd door infinitieven ('ik kan zwemmen leren'). In sommige gevallen kunnen meerdere infinitieven achter elkaar staan ('ik wil gaan leren zwemmen'). De volgorde van de werkwoorden is cruciaal voor de betekenis: het eerste werkwoord drukt vaak de houding, mogelijkheid of intentie uit, terwijl de volgende werkwoorden de daadwerkelijke handeling beschrijven. Deze structuren zijn essentieel voor het uitdrukken van complexe ideeën en intenties.",
+    "examples": [
+      "Ik wil gaan leren zwemmen.",
+      "Zij probeert te gaan werken."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'te'; неправильное использование инфинитива."
+  },
+  {
+    "kolmit_level": 110,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Passief",
+    "rule_name": "Passief in academische teksten",
+    "description": "Пассивный залог в академических текстах.",
+    "rule_text": "In academische teksten wordt het passief vaak gebruikt om de focus te leggen op de actie of het object in plaats van de uitvoerder.",
+    "examples": [
+      "Het experiment werd uitgevoerd.",
+      "De resultaten werden geanalyseerd."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'worden'; неправильное образование причастия."
+  },
+  {
+    "kolmit_level": 31,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Scheidbare en onscheidbare werkwoorden met modale hulpwerkwoorden",
+    "description": "Разделяемые и несочитаемые глаголы используются в зависимости от контекста.",
+    "rule_text": "",
+    "examples": [
+      "Ik kan morgen komen.",
+      "Zij moet naar huis gaan."
+    ],
+    "common_mistakes": "Неправильное использование разделяемых и несочитаемых глаголов; неправильное использование частиц."
+  },
+  {
+    "kolmit_level": 105,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Relatieve voornaamwoorden met voorzetsels",
+    "description": "Относительные местоимения с предлогами.",
+    "rule_text": "wie, wat, dat, die",
+    "examples": [
+      "De man, met wie ik spreek, is mijn vader.",
+      "Het boek, over hetwelke hij sprak, was interessant."
+    ],
+    "common_mistakes": "Путают относительные местоимения; неправильно используют относительные местоимения."
+  },
+  {
+    "kolmit_level": 39,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Passief",
+    "rule_name": "Passieve vorm met zijn",
+    "description": "Пассивный залог образуется с помощью вспомогательного глагола 'zijn'.",
+    "rule_text": "The passive voice with 'zijn' is used with certain verbs and in specific contexts. Unlike 'worden' passive, 'zijn' passive often describes a state resulting from a completed action ('De deur is open' - The door is open). This construction is used with verbs of motion and change of state. The past participle must agree in gender and number with the subject. This form is less common than 'worden' passive but important for expressing resultant states.",
+    "examples": [
+      "De deur is open.",
+      "Het raam is gebroken."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'zijn'; неправильное образование причастия."
+  },
+  {
+    "kolmit_level": 46,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe inversie",
+    "description": "В сложных вопросах инверсия выполняется только со вторым глаголом.",
+    "rule_text": "Werkwoord1 - Onderwerp - Werkwoord2",
+    "examples": [
+      "Heeft hij een boek gelezen?",
+      "Zijn ze naar school gegaan?"
+    ],
+    "common_mistakes": "Неправильный порядок слов; забывают инвертировать только второй глагол."
+  },
+  {
+    "kolmit_level": 47,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Subjunctief en conditioneel in samengestelde zinnen",
+    "description": "Субъюнктивное и условное используются для предложений, описывающих невероятные или несуществующие ситуации.",
+    "rule_text": "Subjunctieve en conditionele vormen in samengestelde zinnen drukken hypothetische, onwaarschijnlijke of niet-bestaande situaties uit binnen complexe zinstructuren. De conditionele vorm wordt gevormd met 'zouden' + infinitief ('Als ik tijd had, zou ik gaan' - If I had time, I would go). De subjunctief wordt gebruikt in formele contexten, vooral na bepaalde werkwoorden en uitdrukkingen die wensen, voorstellen of twijfel uitdrukken ('Het is belangrijk dat hij kom' - It is important that he come). In samengestelde zinnen kunnen deze vormen voorkomen in zowel de hoofdzin als de bijzin, en vereisen ze specifieke woordvolgorde en grammaticale overeenkomst. Ze zijn essentieel voor het uitdrukken van beleefdheid, hypothetische redeneringen en voorwaardelijke uitspraken in formele en academische teksten.",
+    "examples": [
+      "Als ik rijk was, zou ik reizen.",
+      "Het is belangrijk dat hij komt."
+    ],
+    "common_mistakes": "Неправильное использование субъюнктивного и условного; неправильное изменение времени глаголов."
+  },
+  {
+    "kolmit_level": 84,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Samenvattende, redengevende en contrasterende voegwoorden",
+    "description": "Союзы используются для соединения предложений.",
+    "rule_text": "Voegwoorden verbinden zinnen of zinsdelen en drukken verschillende logische relaties uit. 'En' voegt gelijksoortige elementen samen ('Hij werkt hard en leert veel'). 'Of' drukt keuze of alternatief uit ('Zij speelt of kijkt naar televisie'). 'Maar' introduceert tegenstelling of beperking ('Hij is slim maar lui'). 'Want' geeft reden of oorzaak aan ('Ik ga niet omdat het regent'). 'Dus' drukt gevolg of conclusie uit ('Het regent dus ik blijf binnen'). De juiste keuze van voegwoord is essentieel voor duidelijke en logische communicatie. Elk voegwoord heeft een specifieke functie en verandert de betekenis van de zin waarin het wordt gebruikt. Het begrijpen van deze nuances is cruciaal voor het beheersen van complexe zinsstructuren.",
+    "examples": [
+      "Hij werkt hard en leert veel.",
+      "Zij speelt of kijkt naar televisie.",
+      "Hij is slim maar lui."
+    ],
+    "common_mistakes": "Путают союзы; неправильно используют союзы."
+  },
+  {
+    "kolmit_level": 129,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Relatieve voornaamwoorden met voorzetsels in complexe zinnen",
+    "description": "Относительные местоимения с предлогами в сложных предложениях.",
+    "rule_text": "Relatieve voornaamwoorden met voorzetsels in complexe zinnen plaatsen de voorzetsel voor het relatieve voornaamwoord. Deze structuur is gebruikelijk in formeel Nederlands en bij langere relatieve bijzinnen. Bijvoorbeeld, 'De man, met wie ik spreek' (The man, with whom I speak). De voorzetsel kan ook aan het einde blijven staan in informele spraak ('De man, wie ik mee spreek'), maar voorzetsel aan het begin is te prefereren in formele contexten. De keuze van het relatieve voornaamwoord hangt nog steeds af van het geslacht van het antecedent.",
+    "examples": [
+      "De man, met wie ik spreek, is mijn vader.",
+      "Het boek, over hetwelke hij sprak, was interessant."
+    ],
+    "common_mistakes": "Путают относительные местоимения; неправильно используют относительные местоимения."
+  },
+  {
+    "kolmit_level": 129,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Vaste voorzetsels bij werkwoorden in complexe zinnen",
+    "description": "Некоторые глаголы требуют использования фиксированных предлогов.",
+    "rule_text": "werkwoord + voorzetsel",
+    "examples": [
+      "Ik denk aan mijn toekomst.",
+      "Zij houdt van muziek."
+    ],
+    "common_mistakes": "Путают предлоги; неправильно используют предлоги."
+  },
+  {
+    "kolmit_level": 81,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Bijvoeglijk naamwoord",
+    "rule_name": "Participium als bijvoeglijk naamwoord in zinsconstructies",
+    "description": "Деепричастия могут быть использованы в качестве прилагательных.",
+    "rule_text": "Participia kunnen als bijvoeglijke naamwoorden fungeren in zinsconstructies, waarbij ze een kwaliteit of toestand van het zelfstandig naamwoord uitdrukken. Vaste participia als bijvoeglijk naamwoord zijn 'geïnteresseerd' (geïnteresseerd in), 'verrast' (verrast over), 'afhankelijk' (afhankelijk van). Deze constructies vereisen vaak specifieke voorzetsels die met het participium verbonden zijn. Het participium moet overeenkomen met het zelfstandig naamwoord dat het wijzigt in getal en geslacht. Deze structuren zijn essentieel voor het uitdrukken van complexe betekenissen in formele teksten.",
+    "examples": [
+      "Een geïnteresseerd persoon.",
+      "De gebroken vaas lag op de grond."
+    ],
+    "common_mistakes": "Неправильное образование деепричастий; неправильное использование деепричастий."
+  },
+  {
+    "kolmit_level": 15,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Vragen stellen",
+    "rule_name": "Vragende woorden",
+    "description": "Вопросительные слова используются для задания вопросов.",
+    "rule_text": "Question words are used to ask specific types of questions. 'Wie' asks about people (who), 'wat' asks about things (what), 'waar' asks about place (where), 'wanneer' asks about time (when), 'waarom' asks about reason (why), 'hoe' asks about manner (how). In main clause questions, these words trigger subject-verb inversion. In indirect questions, the normal word order is maintained. Each question word selects a specific type of information from the answer.",
+    "examples": [
+      "Wie is dat?",
+      "Wat is dit?",
+      "Waar is hij?",
+      "Wanneer kom je?",
+      "Waarom ga je?",
+      "Hoe gaat het?"
+    ],
+    "common_mistakes": "Путают вопросительные слова; неправильно ставят вопросительные слова в предложении."
+  },
+  {
+    "kolmit_level": 24,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Tijden",
+    "rule_name": "Perfektum met hebben",
+    "description": "Перфектум образуется с помощью вспомогательного глагола 'hebben'.",
+    "rule_text": "The perfect tense with 'hebben' is formed with the auxiliary verb 'hebben' and the past participle of the main verb. Most verbs use 'hebben', except for verbs of motion and some others that use 'zijn'. The participle comes at the end of the sentence ('Ik heb een boek gelezen'). In subordinate clauses, both the auxiliary and participle move to the end. The tense expresses completed past actions with relevance to the present.",
+    "examples": [
+      "Ik heb een boek gelezen.",
+      "Hij had een kat.",
+      "Wij hebben een auto gekocht."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'hebben'; неправильное образование прошедшего деепричастия."
+  },
+  {
+    "kolmit_level": 77,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Passief",
+    "rule_name": "Passief in samengestelde tijden",
+    "description": "Пассивный залог образуется с помощью вспомогательных глаголов в сложных временах.",
+    "rule_text": "",
+    "examples": [
+      "Het boek is gisteren geschreven.",
+      "De brief was al verzonden."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательных глаголов; неправильное образование причастия."
+  },
+  {
+    "kolmit_level": 115,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Bijvoeglijk naamwoord",
+    "rule_name": "Participium als bijvoeglijk naamwoord",
+    "description": "Деепричастия как прилагательные в составных предложениях.",
+    "rule_text": "groen, klein, mooi, etc.",
+    "examples": [
+      "Een geïnteresseerd persoon.",
+      "De gebroken vaas lag op de grond."
+    ],
+    "common_mistakes": "Неправильно согласуют прилагательные с существительными; забывают использовать правильные формы прилагательных."
+  },
+  {
+    "kolmit_level": 66,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie na bijwoordelijke bepaling",
+    "description": "В сложных вопросах инверсия выполняется после определения.",
+    "rule_text": "Inversion after adverbial modification occurs when a sentence begins with an adverbial element for emphasis or stylistic reasons. The normal word order (subject-verb) is inverted so that the verb comes first ('Vandaag werk ik niet' - Today I don't work). This pattern is common with time expressions, place expressions, and frequency adverbs. The inversion draws attention to the adverbial element and is essential for varied and expressive Dutch sentence structure.",
+    "examples": [
+      "Vandaag werk ik niet.",
+      "Gisteren ging ik naar school."
+    ],
+    "common_mistakes": "Неправильный порядок слов; забывают инвертировать после определения."
+  }
+]

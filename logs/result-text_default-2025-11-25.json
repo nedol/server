@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-11-25T21:44:04.087Z",
+  "name": "text_default",
+  "result": {
+    "result": {
+      "article": {
+        "name": "Problemen met voetbal op tv",
+        "cefr_level": 10,
+        "cefr_level_name": "A1.1",
+        "format": "simple_news",
+        "type": "sport",
+        "content": [
+          "DAZN stopt met het uitzenden van voetbal.",
+          "Het bedrijf heeft een contract met de Pro League.",
+          "Ze kunnen het voetbal niet op tv zetten.",
+          "DAZN wil het contract veranderen.",
+          "De Pro League moet nu een oplossing zoeken.",
+          "De clubs krijgen minder geld.",
+          "De fans kunnen het voetbal niet meer kijken.",
+          "DAZN praat nog met de Pro League.",
+          "Er is nog geen nieuw contract.",
+          "De situatie is niet goed voor iedereen."
+        ]
+      },
+      "check": [
+        "Punt 1: De zinnen zijn kort en eenvoudig.",
+        "Punt 2: Alle woorden zijn uit de top-100 van het Nederlands.",
+        "Punt 3: Er zijn geen moeilijke woorden of zinnen."
+      ]
+    }
+  }
+}

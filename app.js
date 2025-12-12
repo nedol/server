@@ -2,8 +2,7 @@ import { WebSocketServer } from 'ws';
 import { WebSocket } from 'ws';
 import https from 'https';
 import express from 'express';
-import http from 'http';
-import Turn from 'node-turn';
+
 import cron from 'node-cron';
 import fs from 'fs';
 import Translate from './server/Translate.js';
@@ -12,19 +11,10 @@ import { request } from 'undici';
 
 import Email from './server/email.js';
 
-import pkg_l from 'lodash';
-const { find, findKey } = pkg_l;
 
 import generate_news from './server/cron/cron_tasks.js'
 
 import {
-  CreatePool,
-  CreateOperator,
-  CheckOperator,
-  UpdateQuizUsers,
-  GetUsers,
-  GetDialog,
-  GetWords,
   GetLessonsByDate,
   GetUsersEmail,
   SendEmailTodayPublished,
@@ -42,6 +32,7 @@ import {
 //   console.log('Turn server started on ' + global.turn_server.tingPort);
 // }
 
+
 const app = express();
 
 const server = https.createServer({
@@ -56,12 +47,6 @@ const server = https.createServer({
 // });
 
 // global.rtcPull = { user: {}, operator: {} };
-
-let prom = new Promise((resolve, reject) => {
-  CreatePool(resolve);
-});
-
-const pool = await prom;
 
 
 // Пример cron-задачи, которая запускается каждый день в полночь
@@ -91,11 +76,11 @@ cron.schedule('45 22 * * 7', () => {
 
   console.log('Задача выполняется в 22 часа 45 минут.', formattedDateTime);
   // Здесь можно вызвать нужные функции или выполнить операции
-  SendEmailForUpdates();
+  // SendEmailForUpdates();
 });
 
 // Пример cron-задачи, которая запускается каждый день в полночь
-cron.schedule('40 19 * * *', () => {
+cron.schedule('45 21 * * *', () => {
 
   const now = new Date();
   const formattedDateTime =
@@ -109,7 +94,7 @@ cron.schedule('40 19 * * *', () => {
     ':' +
     String(now.getMinutes()).padStart(2, '0');
 
-  console.log('Задача выполняется в 22 часа 45 минут.', formattedDateTime);
+  console.log('Задача выполняется в ', formattedDateTime);
   // Здесь можно вызвать нужные функции или выполнить операции
   generate_news();
 });

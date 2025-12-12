@@ -1,0 +1,853 @@
+[
+  {
+    "kolmit_level": 1,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Alfabet en klanken",
+    "rule_name": "Nederlands alfabet",
+    "description": "Нидерландский алфавит состоит из 26 букв, как и английский, но имеет особенности произношения (g, ij, ch).",
+    "rule_text": "a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z",
+    "examples": [
+      "A is de eerste letter van het alfabet.",
+      "Ik leer het alfabet: a, b, c, d, e, f, g...",
+      "Zee wordt geschreven met een z.",
+      "Jij zegt 'j' zoals in 'ja'.",
+      "De letter 'ij' klinkt als 'ei' in 'wijn'."
+    ],
+    "common_mistakes": "Смешивают j и y; произносят g как [г]; путают ij с i+j."
+  },
+  {
+    "kolmit_level": 2,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Persoonlijke voornaamwoorden (subject)",
+    "description": "Личные местоимения в роли подлежащего.",
+    "rule_text": "ik, jij/u, hij, zij, het, wij, jullie, zij",
+    "examples": [
+      "Ik ben student.",
+      "Jij bent mijn vriend.",
+      "U bent leraar.",
+      "Hij werkt in Amsterdam.",
+      "Zij leest een boek.",
+      "Het regent vandaag.",
+      "Wij wonen in Rotterdam.",
+      "Jullie spelen voetbal.",
+      "Zij komen uit België."
+    ],
+    "common_mistakes": "Используют 'het' для людей; путают 'jij' и 'u'."
+  },
+  {
+    "kolmit_level": 3,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Persoonlijke voornaamwoorden (object)",
+    "description": "Личные местоимения в роли дополнения.",
+    "rule_text": "mij, jou/u, hem, haar, het, ons, jullie, hen/hun",
+    "examples": [
+      "Ik geef hem een boek.",
+      "Zij ziet haar vriend.",
+      "Hij helpt mij met huiswerk.",
+      "Wij bellen jou vanavond.",
+      "Geef het aan het kind.",
+      "Zij wachten op ons.",
+      "Ik zie hen in de stad.",
+      "De leraar vraagt jullie iets."
+    ],
+    "common_mistakes": "Путают 'hun' (косв. доп.) и 'hen' (прям. доп.); забывают 'het' для предметов."
+  },
+  {
+    "kolmit_level": 4,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerende voornaamwoorden",
+    "description": "Рефлексивные местоимения: действие возвращается к субъекту.",
+    "rule_text": "me, je, zich, ons, jullie",
+    "examples": [
+      "Ik was me elke ochtend.",
+      "Jij kleedt je snel aan.",
+      "Hij scheert zich.",
+      "Zij kamde zich voor de spiegel.",
+      "Wij vermaken ons goed.",
+      "Zij gedragen zich netjes."
+    ],
+    "common_mistakes": "Забывают местоимение; используют 'zich' с 'ik/jij'."
+  },
+  {
+    "kolmit_level": 5,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerende voornaamwoorden (elkaar)",
+    "description": "Взаимное действие между двумя или более субъектами.",
+    "rule_text": "elkaar",
+    "examples": [
+      "Wij helpen elkaar met huiswerk.",
+      "Zij kijken elkaar aan.",
+      "De kinderen vechten met elkaar.",
+      "Jullie moeten naar elkaar luisteren.",
+      "Ze schrijven elkaar brieven."
+    ],
+    "common_mistakes": "Путают 'elkaar' с 'zich'; используют с одним субъектом."
+  },
+  {
+    "kolmit_level": 6,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Betrekkelijke voornaamwoorden (basis)",
+    "description": "die (de-woorden), dat (het-woorden), wie (лица).",
+    "rule_text": "die, dat, wie",
+    "examples": [
+      "De man die daar staat, is mijn vader.",
+      "Het huis dat blauw is, is te koop.",
+      "De vrouw wie ik gisteren zag, werkt hier.",
+      "De boeken die op tafel liggen, zijn nieuw.",
+      "Het kind dat huilt, is moe."
+    ],
+    "common_mistakes": "Путают 'die' и 'dat'; используют 'wie' не для лиц."
+  },
+  {
+    "kolmit_level": 7,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Betrekkelijke voornaamwoorden (met voorzetsel)",
+    "description": "waar + voorzetsel или формально: voorzetsel + wie/wat.",
+    "rule_text": "waarmee, waarin, waarover; met wie, over wat",
+    "examples": [
+      "De stoel waarop ik zit, is kapot.",
+      "Het boek waarin ik lees, is spannend.",
+      "De man met wie ik sprak, komt uit Utrecht.",
+      "De stad waarover we praten, is Amsterdam.",
+      "Het probleem waarmee we kampen, is groot."
+    ],
+    "common_mistakes": "Предлог в конце; путают 'waarop' и 'waar over'."
+  },
+  {
+    "kolmit_level": 8,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Woordvolgorde in hoofdzinnen (SVO)",
+    "description": "Подлежащее — глагол — дополнение.",
+    "rule_text": "Onderwerp — Werkwoord — (Lijdend voorwerp)",
+    "examples": [
+      "Ik eet een appel.",
+      "Zij leest een boek.",
+      "Hij koopt koffie.",
+      "Wij kijken een film.",
+      "Jullie spelen buiten.",
+      "De kat slaapt op bed."
+    ],
+    "common_mistakes": "Дополнение перед глаголом; забывают инверсию в вопросах."
+  },
+  {
+    "kolmit_level": 9,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Imperatieven",
+    "description": "Повелительное наклонение: основа глагола.",
+    "rule_text": "stam (kom!); jullie: stam + en",
+    "examples": [
+      "Kom hier!",
+      "Ga zitten!",
+      "Eet je bord leeg!",
+      "Luister goed!",
+      "Kom allemaal binnen!",
+      "Help me even!"
+    ],
+    "common_mistakes": "Добавляют -t; используют 'jij' в команде."
+  },
+  {
+    "kolmit_level": 10,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Woordvolgorde in bijzinnen",
+    "description": "Глагол в конце придаточного.",
+    "rule_text": "... — Onderwerp — ... — Werkwoord",
+    "examples": [
+      "Ik weet dat hij komt.",
+      "Omdat ik moe ben, ga ik slapen.",
+      "De man die daar loopt, is mijn broer.",
+      "Als het regent, blijf ik thuis.",
+      "Het boek dat ik lees, is interessant."
+    ],
+    "common_mistakes": "Глагол не в конце; путают с hoofdzin."
+  },
+  {
+    "kolmit_level": 11,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Vragen met inversie",
+    "description": "Глагол перед подлежащим в вопросе.",
+    "rule_text": "Werkwoord — Onderwerp — ...?",
+    "examples": [
+      "Kom jij morgen?",
+      "Is zij thuis?",
+      "Werkt hij hier?",
+      "Hebben jullie tijd?",
+      "Gaat het goed met je?",
+      "Wil je koffie?"
+    ],
+    "common_mistakes": "Нет инверсии; ставят 'doe' как в английском."
+  },
+  {
+    "kolmit_level": 12,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Ontkenning (niet / geen)",
+    "description": "'geen' — перед неопределённым существительным; 'niet' — после глагола/в конце.",
+    "rule_text": "geen + zn; niet + ww / bijv. nw.",
+    "examples": [
+      "Ik heb geen tijd.",
+      "Zij is geen dokter.",
+      "Hij werkt niet vandaag.",
+      "Dat is niet waar.",
+      "Wij eten geen vlees.",
+      "Het regent niet."
+    ],
+    "common_mistakes": "Путают 'geen' и 'niet'; 'niet' перед глаголом."
+  },
+  {
+    "kolmit_level": 13,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Regelmatige werkwoorden (presens)",
+    "description": "stam + -t (2/3 ед.) / -en (мн.ч.), 't kofschip → -t.",
+    "rule_text": "ik: stam; jij/hij: stam + t; wij: stam + en",
+    "examples": [
+      "werken: ik werk, jij werkt, hij werkt, wij werken",
+      "maken: ik maak, jij maakt, hij maakt, wij maken",
+      "fietsen: ik fiets, jij fietst, hij fietst, wij fietsen",
+      "leren: ik leer, jij leert, hij leert, wij leren"
+    ],
+    "common_mistakes": "Забывают -t; удваивают согласные неправильно."
+  },
+  {
+    "kolmit_level": 14,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Onregelmatige werkwoorden (presens)",
+    "description": "zijn, hebben, gaan, komen, kunnen, willen, moeten.",
+    "rule_text": "ben/heb/ga/kom/kan/wil/moet",
+    "examples": [
+      "zijn: ik ben, jij bent, hij is, wij zijn",
+      "hebben: ik heb, jij hebt, hij heeft, wij hebben",
+      "gaan: ik ga, jij gaat, hij gaat, wij gaan",
+      "kunnen: ik kan, jij kunt, hij kan, wij kunnen"
+    ],
+    "common_mistakes": "Смешивают с правильными глаголами."
+  },
+  {
+    "kolmit_level": 15,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid deelwoord (regelmatig)",
+    "description": "ge- + stam + -t (t kofschip) / -d.",
+    "rule_text": "ge- + stam + -t/-d",
+    "examples": [
+      "werken → gewerkt",
+      "maken → gemaakt",
+      "fietsen → gefietst",
+      "leren → geleerd",
+      "kijken → gekeken",
+      "bellen → gebeld"
+    ],
+    "common_mistakes": "Забывают 'ge-'; путают -t и -d."
+  },
+  {
+    "kolmit_level": 16,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Scheidbare werkwoorden",
+    "description": "Приставка отделяется в presens, остаётся в infinitief/perfekt.",
+    "rule_text": "aanbellen → ik bel aan / ik heb aangebeld",
+    "examples": [
+      "opbellen: Ik bel je op. / Ik heb je opgebeld.",
+      "aankomen: De trein komt aan. / Hij is aangekomen.",
+      "uitgaan: Wij gaan uit. / We zijn uitgegaan.",
+      "aanzetten: Zet de tv aan. / Ik heb hem aangezet."
+    ],
+    "common_mistakes": "Не отделяют приставку; ставят в середине."
+  },
+  {
+    "kolmit_level": 17,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Bijwoorden",
+    "rule_name": "Bijwoorden van frequentie",
+    "description": "Перед основным глаголом, после модального.",
+    "rule_text": "altijd, vaak, soms, zelden, nooit",
+    "examples": [
+      "Ik eet altijd brood.",
+      "Zij speelt vaak tennis.",
+      "Hij komt soms te laat.",
+      "Wij gaan zelden uit.",
+      "Zij drinkt nooit koffie.",
+      "Ik heb altijd honger."
+    ],
+    "common_mistakes": "После глагола; путают 'soms' и 'altijd'."
+  },
+  {
+    "kolmit_level": 18,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Bijwoorden",
+    "rule_name": "Plaats van bijwoorden (manier/gradatie)",
+    "description": "После глагола или в конце.",
+    "rule_text": "Werkwoord + bijwoord",
+    "examples": [
+      "Hij loopt snel.",
+      "Zij praat zachtjes.",
+      "Ik werk hard.",
+      "Wij eten langzaam.",
+      "De kat springt hoog.",
+      "Hij zingt mooi."
+    ],
+    "common_mistakes": "Перед глаголом; путают с частотой."
+  },
+  {
+    "kolmit_level": 19,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Hulpwerkwoorden (hebben/zijn)",
+    "description": "'hebben' — большинство; 'zijn' — движение/состояние.",
+    "rule_text": "hebben + vd; zijn + vd (gaan, komen, worden, etc.)",
+    "examples": [
+      "Ik heb gewerkt.",
+      "Zij heeft gelezen.",
+      "Hij is gegaan.",
+      "Wij zijn gekomen.",
+      "Het kind is gegroeid.",
+      "De trein is vertrokken."
+    ],
+    "common_mistakes": "Используют 'hebben' с 'zijn'-глаголами."
+  },
+  {
+    "kolmit_level": 20,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Modale werkwoorden",
+    "description": "+ infinitief в конце.",
+    "rule_text": "kan, mag, wil, moet, zal, hoef",
+    "examples": [
+      "Ik kan zwemmen.",
+      "Zij mag niet roken.",
+      "Hij wil een auto kopen.",
+      "Wij moeten vroeg opstaan.",
+      "Jij hoeft niet te komen.",
+      "Ik zal je helpen."
+    ],
+    "common_mistakes": "Инфинитив не в конце; путают 'mag' и 'kan'."
+  },
+  {
+    "kolmit_level": 21,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Infinitiefconstructies",
+    "rule_name": "Om te + infinitief",
+    "description": "Цель: om te + ww.",
+    "rule_text": "om te + werkwoord",
+    "examples": [
+      "Ik ga naar school om te leren.",
+      "Zij koopt een boek om te lezen.",
+      "Hij werkt hard om geld te verdienen.",
+      "Wij eten vroeg om op tijd te zijn.",
+      "Jij belt om te vragen."
+    ],
+    "common_mistakes": "Забывают 'om te'; ставят 'voor te'."
+  },
+  {
+    "kolmit_level": 22,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Infinitiefconstructies",
+    "rule_name": "Te + infinitief",
+    "description": "После beginnen, proberen, leren, etc.",
+    "rule_text": "te + werkwoord",
+    "examples": [
+      "Ik begin te lachen.",
+      "Zij probeert te koken.",
+      "Hij leert Nederlands spreken.",
+      "Wij vergeten te bellen.",
+      "Jij lijkt te slapen."
+    ],
+    "common_mistakes": "Забывают 'te'; используют 'om te'."
+  },
+  {
+    "kolmit_level": 23,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Reflexieve werkwoorden",
+    "description": "Глаголы, требующие рефлексивного местоимения.",
+    "rule_text": "zich wassen, zich aankleden, zich voelen",
+    "examples": [
+      "Ik was me 's ochtends.",
+      "Zij kleedt zich mooi aan.",
+      "Hij voelt zich ziek.",
+      "Wij haasten ons.",
+      "Jij vergist je vaak."
+    ],
+    "common_mistakes": "Забывают 'zich/me/je'; путают с 'elkaar'."
+  },
+  {
+    "kolmit_level": 24,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Imperfectum (regelmatig/onregelmatig)",
+    "description": "-de/-te или сильные формы.",
+    "rule_text": "stam + -de/-te; ablaut (gaan → ging)",
+    "examples": [
+      "werken → ik werkte",
+      "maken → jij maakte",
+      "gaan → hij ging",
+      "zien → wij zagen",
+      "komen → zij kwam",
+      "hebben → ik had"
+    ],
+    "common_mistakes": "Путают окончания; забывают чередование гласных."
+  },
+  {
+    "kolmit_level": 25,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Vaste voorzetselcombinaties",
+    "description": "Фиксированные предлоги с глаголами.",
+    "rule_text": "denken aan, wachten op, praten over",
+    "examples": [
+      "Ik denk aan mijn vakantie.",
+      "Zij wacht op de bus.",
+      "Hij praat over politiek.",
+      "Wij lachen om de grap.",
+      "Jij rekent op mij."
+    ],
+    "common_mistakes": "Неправильный предлог; пропускают его."
+  },
+  {
+    "kolmit_level": 26,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Laten + infinitief",
+    "description": "Каузатив: 'позволять/заставлять'.",
+    "rule_text": "laten + werkwoord",
+    "examples": [
+      "Laat me je helpen.",
+      "Hij laat de hond uit.",
+      "Zij laten ons wachten.",
+      "Laat het licht aan.",
+      "Ik laat mijn haar knippen."
+    ],
+    "common_mistakes": "Ставят 'te' перед infinitief."
+  },
+  {
+    "kolmit_level": 27,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Zelfstandig naamwoord",
+    "rule_name": "Nominalisatie",
+    "description": "Отглагольные существительные на -ing, -tie, -heid.",
+    "rule_text": "werken → werking; beslissen → beslissing",
+    "examples": [
+      "lopen → de loop",
+      "werken → het werk / de werking",
+      "beslissen → de beslissing",
+      "leren → het leren",
+      "groeien → de groei"
+    ],
+    "common_mistakes": "Используют инфинитив как существительное."
+  },
+  {
+    "kolmit_level": 28,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Toekomst (zullen / gaan)",
+    "description": "zullen — формально; gaan — неформально.",
+    "rule_text": "zal/zullen + infinitief; ga/gaan + infinitief",
+    "examples": [
+      "Ik zal morgen komen.",
+      "Zij zullen winnen.",
+      "Hij gaat morgen reizen.",
+      "Wij gaan eten.",
+      "Jij gaat slagen.",
+      "Ik zal je bellen."
+    ],
+    "common_mistakes": "Путают с настоящим; используют 'wil' для будущего."
+  },
+  {
+    "kolmit_level": 29,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie na bijwoordelijke bepaling",
+    "description": "Обстоятельство в начале → инверсия.",
+    "rule_text": "Tijd/plaats — Werkwoord — Onderwerp",
+    "examples": [
+      "Morgen ga ik naar school.",
+      "In Amsterdam woont mijn zus.",
+      "Gisteren kwam hij laat.",
+      "Thuis eet ik altijd.",
+      "Met de bus kom je sneller."
+    ],
+    "common_mistakes": "Нет инверсии после обстоятельства."
+  },
+  {
+    "kolmit_level": 30,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Passief",
+    "rule_name": "Passief (basis)",
+    "description": "worden + voltooid deelwoord.",
+    "rule_text": "wordt/worden + vd",
+    "examples": [
+      "Het huis wordt schoongemaakt.",
+      "De brief wordt geschreven.",
+      "Boeken worden gelezen.",
+      "De deur wordt gesloten.",
+      "Het eten wordt opgediend."
+    ],
+    "common_mistakes": "Используют 'zijn' вместо 'worden' в процессе."
+  },
+  {
+    "kolmit_level": 31,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Zelfstandig naamwoord",
+    "rule_name": "Lidwoorden (de/het/een)",
+    "description": "de — общий род; het — средний; een — неопределённый.",
+    "rule_text": "de man, het huis, een boek",
+    "examples": [
+      "De man en de vrouw.",
+      "Het kind en het huis.",
+      "Een appel, een auto, een kind.",
+      "De grote stad, het kleine dorp.",
+      "Een mooie bloem."
+    ],
+    "common_mistakes": "Путают de/het; забывают 'een'."
+  },
+  {
+    "kolmit_level": 32,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Zelfstandig naamwoord",
+    "rule_name": "Meervoud",
+    "description": "-en, -s, -eren, умлаут + -en.",
+    "rule_text": "boek → boeken; auto → auto's; kind → kinderen",
+    "examples": [
+      "boek → boeken",
+      "huis → huizen",
+      "kind → kinderen",
+      "stad → steden",
+      "museum → musea",
+      "foto → foto's"
+    ],
+    "common_mistakes": "Неправильное окончание; забывают умлаут."
+  },
+  {
+    "kolmit_level": 33,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Bijvoeglijk naamwoord",
+    "rule_name": "Bijvoeglijk naamwoord (congruentie)",
+    "description": "-e при определённом артикле или притяжательном.",
+    "rule_text": "geen -e bij een; -e bij de/het/bezittelijk",
+    "examples": [
+      "Een groot huis — het grote huis.",
+      "Mijn oude jas — de oude jas.",
+      "Een mooie bloem — de mooie bloem.",
+      "Een klein kind — het kleine kind.",
+      "Jouw nieuwe auto — de nieuwe auto."
+    ],
+    "common_mistakes": "Забывают -e; добавляют -e к 'een'."
+  },
+  {
+    "kolmit_level": 34,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Bezittelijke voornaamwoorden",
+    "description": "Согласуются с обладателем.",
+    "rule_text": "mijn, jouw, zijn, haar, ons, jullie, hun",
+    "examples": [
+      "Mijn boek, jouw pen, zijn huis.",
+      "Haar kat, ons kind, jullie auto.",
+      "Hun ouders, mijn zus, jouw idee.",
+      "Zijn fiets is rood, haar tas is groot."
+    ],
+    "common_mistakes": "Путают с прилагательными; забывают -e."
+  },
+  {
+    "kolmit_level": 35,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Aanwijzende voornaamwoorden",
+    "description": "deze/dit — близко; die/dat — далеко.",
+    "rule_text": "deze/dit, die/dat",
+    "examples": [
+      "Deze man (hier), die man (daar).",
+      "Dit boek (in mijn hand), dat boek (op tafel).",
+      "Deze bloemen ruiken lekker.",
+      "Die auto is snel.",
+      "Dit huis is groot, dat huis is klein."
+    ],
+    "common_mistakes": "Путают близость; используют 'dat' с de-woorden."
+  },
+  {
+    "kolmit_level": 36,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Vragen",
+    "rule_name": "Vraagwoorden",
+    "description": "wie, wat, waar, wanneer, waarom, hoe, welk, hoeveel.",
+    "rule_text": "Vraagwoord + inversie",
+    "examples": [
+      "Wie komt er?",
+      "Wat doe je?",
+      "Waar woon je?",
+      "Wanneer begint de les?",
+      "Waarom lach je?",
+      "Hoe gaat het?",
+      "Welk boek wil je?",
+      "Hoeveel kost het?"
+    ],
+    "common_mistakes": "Нет инверсии; путают 'hoeveel' и 'hoe'."
+  },
+  {
+    "kolmit_level": 37,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van plaats",
+    "description": "in, op, onder, naast, voor, achter, tussen, bij.",
+    "rule_text": "in de kast, op tafel, onder het bed",
+    "examples": [
+      "Het boek ligt op tafel.",
+      "De kat zit in de doos.",
+      "De sleutel hangt aan de muur.",
+      "Zij staat naast de deur.",
+      "Het kind speelt achter het huis.",
+      "Tussen twee stoelen."
+    ],
+    "common_mistakes": "Путают 'in' и 'op'; используют с движением."
+  },
+  {
+    "kolmit_level": 38,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Neven- en onderschikking (basis)",
+    "description": "en, maar, of — nevenschikkend; omdat, als, dat — onderschikkend.",
+    "rule_text": "neven: SVO+SVO; onder: S...V",
+    "examples": [
+      "Ik ga en jij blijft.",
+      "Hij wil maar hij kan niet.",
+      "Omdat ik moe ben, ga ik slapen.",
+      "Ik weet dat je komt.",
+      "Als het regent, blijf ik thuis."
+    ],
+    "common_mistakes": "Глагол не в конце в bijzin."
+  },
+  {
+    "kolmit_level": 39,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Tijd",
+    "rule_name": "Tijdsaanduidingen",
+    "description": "al, nog, pas, net, straks, over een uur.",
+    "rule_text": "al (завершено), nog (ещё), pas (только что)",
+    "examples": [
+      "Ik heb al gegeten.",
+      "Zij is nog niet klaar.",
+      "Pas gisteren hoorde ik het.",
+      "Net nu belt hij.",
+      "Straks ga ik boodschappen doen.",
+      "Over een uur begint de film."
+    ],
+    "common_mistakes": "Путают 'al' и 'nog'; 'pas' как 'скоро'."
+  },
+  {
+    "kolmit_level": 40,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Er-constructies",
+    "description": "er is/zijn, er + plaats/kwantiteit.",
+    "rule_text": "er is (enkelv.), er zijn (mv.)",
+    "examples": [
+      "Er is een probleem.",
+      "Er zijn drie boeken op tafel.",
+      "Er ligt sneeuw in de tuin.",
+      "Er wonen veel mensen in Amsterdam.",
+      "Er komt iemand aan."
+    ],
+    "common_mistakes": "Несогласование числа; забывают 'er'."
+  },
+  {
+    "kolmit_level": 41,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Tijden",
+    "rule_name": "Perfektum",
+    "description": "hebben/zijn + voltooid deelwoord.",
+    "rule_text": "heb/heeft/is/zijn + vd",
+    "examples": [
+      "Ik heb een film gekeken.",
+      "Zij is naar huis gegaan.",
+      "Wij hebben hard gewerkt.",
+      "Hij heeft een fout gemaakt.",
+      "Jullie zijn te laat gekomen."
+    ],
+    "common_mistakes": "Путают с imperfectum; неправильный vd."
+  },
+  {
+    "kolmit_level": 42,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Voorwaardelijke zinnen",
+    "description": "als + presens → presens; als + imperfectum → zou + infinitief.",
+    "rule_text": "als + tijd → gevolg",
+    "examples": [
+      "Als ik tijd heb, kom ik.",
+      "Als ik rijk was, zou ik reizen.",
+      "Als het regent, blijven we thuis.",
+      "Zou je me helpen als ik het vraag?",
+      "Als je belt, antwoord ik."
+    ],
+    "common_mistakes": "Неправильная последовательность времён."
+  },
+  {
+    "kolmit_level": 43,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Indirecte rede",
+    "rule_name": "Indirecte rede",
+    "description": "Сдвиг времён, местоимений, наречий.",
+    "rule_text": "zeggen dat + verschuiving",
+    "examples": [
+      "Hij zei: 'Ik kom morgen.' → Hij zei dat hij morgen kwam.",
+      "Zij vraagt: 'Waar woon je?' → Zij vraagt waar ik woon.",
+      "Ik dacht: 'Het is laat.' → Ik dacht dat het laat was.",
+      "'We gaan uit', zeiden ze. → Ze zeiden dat ze uitgingen."
+    ],
+    "common_mistakes": "Нет сдвига времён; сохраняют прямую речь."
+  },
+  {
+    "kolmit_level": 44,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Zelfstandig naamwoord",
+    "rule_name": "Samenstellingen",
+    "description": "Сложные существительные без пробела.",
+    "rule_text": "woord1 + woord2",
+    "examples": [
+      "boekenkast, fietspad, koffiekopje",
+      "schooltas, woonkamer, zakgeld",
+      "zonnestraal, regenjas, nachtlampje"
+    ],
+    "common_mistakes": "Разделяют слова; неправильный род."
+  },
+  {
+    "kolmit_level": 45,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Bijvoeglijk naamwoord",
+    "rule_name": "Vergelijkingen",
+    "description": "-er/-st; als, net zo ... als, minder, meer.",
+    "rule_text": "groter, grootst; zo groot als",
+    "examples": [
+      "Hij is groter dan ik.",
+      "Dit is het grootste huis.",
+      "Zij is net zo slim als hij.",
+      "Ik heb minder tijd dan jij.",
+      "Dit boek is interessanter."
+    ],
+    "common_mistakes": "Двойное сравнение; путают 'als' и 'dan'."
+  },
+  {
+    "kolmit_level": 46,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Passief",
+    "rule_name": "Passief (uitgebreid)",
+    "description": "Времена, модальные, состояния.",
+    "rule_text": "wordt/worden + vd; is/zijn + vd; kan worden + vd",
+    "examples": [
+      "Het wordt gebouwd.",
+      "Het is gebouwd.",
+      "Het werd gestolen.",
+      "Het zal worden opgelost.",
+      "Het kan niet worden gerepareerd."
+    ],
+    "common_mistakes": "Путают 'worden' (процесс) и 'zijn' (состояние)."
+  },
+  {
+    "kolmit_level": 47,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Complexe bijzinnen",
+    "description": "Относительные, причинные, целевые, уступительные.",
+    "rule_text": "die/dat + vz; omdat, zodat, hoewel, zodat",
+    "examples": [
+      "De man met wie ik sprak, is dokter.",
+      "Omdat het regent, blijf ik thuis.",
+      "Hij studeert zodat hij slaagt.",
+      "Hoewel hij moe is, werkt hij door.",
+      "Het boek dat ik gisteren kocht, is spannend."
+    ],
+    "common_mistakes": "Глагол не в конце; неправильный союз."
+  },
+  {
+    "kolmit_level": 48,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Idiomatiek",
+    "rule_name": "Idiomen en uitdrukkingen",
+    "description": "Фразеологизмы с фиксированным значением.",
+    "rule_text": "op de hoogte zijn, de plank mis slaan",
+    "examples": [
+      "Het regent pijpenstelen.",
+      "Ik ben in de war.",
+      "Hij slaat de plank mis.",
+      "Zij heeft het in de gaten.",
+      "Dat is koren op zijn molen."
+    ],
+    "common_mistakes": "Буквальный перевод; неправильное использование."
+  },
+  {
+    "kolmit_level": 49,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Taalgebruik",
+    "rule_name": "Register en stijl",
+    "description": "Формальный: nominalisatie, passief; неформальный: jij, uitdrukkingen.",
+    "rule_text": "u + passief + nominalisatie",
+    "examples": [
+      "Geachte heer, de beslissing is genomen.",
+      "Hierbij informeren wij u dat...",
+      "Hé, wat doe jij nou?",
+      "Ik snap er niks van.",
+      "De vergadering wordt bijgewoond door..."
+    ],
+    "common_mistakes": "Смешение регистров; избыточные nominalisaties."
+  }
+]

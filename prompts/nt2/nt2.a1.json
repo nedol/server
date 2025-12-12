@@ -1,0 +1,392 @@
+[
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Plaatsbepaling",
+    "description": "Использование простых предлогов для описания места",
+    "rule_text": "Voorzetsels in, op, onder, naast, achter gebruiken in korte zinnen.",
+    "examples": [
+      "Het boek ligt op tafel",
+      "De pen ligt onder het bed",
+      "De stoel staat naast de tafel",
+      "Hij zit achter het huis",
+      "Zij loopt in het park",
+      "De auto staat op straat",
+      "Ik leg het boek op de plank",
+      "De kat slaapt onder de bank",
+      "De fiets staat naast het huis",
+      "Het huis is achter het park."
+    ],
+    "kolmit_level": 10
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Getallen en tijd",
+    "rule_name": "Tellen en dagen",
+    "description": "Числа, дни недели, месяцы, дата",
+    "rule_text": "Cijfers en datums gebruiken in eenvoudige zinnen.",
+    "examples": [
+      "Ik tel tot tien",
+      "Vandaag is maandag",
+      "Morgen ga ik naar school",
+      "Mijn verjaardag is in juli",
+      "Wij hebben op woensdag les",
+      "Zij komt op vrijdag",
+      "Ik werk elke maandag",
+      "Het is januari",
+      "Hij is twintig jaar",
+      "Het is tien uur."
+    ],
+    "kolmit_level": 11
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Beweging en modaliteit",
+    "rule_name": "Gaan, komen, lopen + modale werkwoorden",
+    "description": "Простые глаголы движения и базовые модальные глаголы",
+    "rule_text": "Gebruik van gaan, komen, lopen en de modale werkwoorden kunnen, moeten, willen in tegenwoordige tijd.",
+    "examples": [
+      "Ik ga naar school",
+      "Jij komt thuis",
+      "Hij gaat naar de winkel",
+      "Ik kan goed zwemmen",
+      "Jij moet leren",
+      "Hij wil koffie"
+    ],
+    "kolmit_level": 12
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Tijdsaanduidingen",
+    "rule_name": "Vandaag, morgen, gisteren",
+    "description": "Использование слов для времени в простых предложениях",
+    "rule_text": "Eenvoudige tijdsaanduidingen: vandaag, gisteren, morgen, vanmorgen, vanavond, overmorgen.",
+    "examples": [
+      "Vandaag ga ik naar school",
+      "Gisteren werkte hij thuis",
+      "Morgen heb ik een afspraak",
+      "Vanmorgen at ik ontbijt",
+      "Vanavond kijken wij tv",
+      "Overmorgen gaan zij wandelen",
+      "Vorige week regende het",
+      "Deze maand is koud",
+      "Volgende week is druk",
+      "Vandaag is het zonnig."
+    ],
+    "kolmit_level": 13
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Plaatsaanduidingen",
+    "rule_name": "Hier, daar, links, rechts",
+    "description": "Простые указания местоположения",
+    "rule_text": "Eenvoudige plaatsaanduidingen: hier, daar, links, rechts, naast, onder, boven.",
+    "examples": [
+      "Het boek ligt op tafel",
+      "De pen ligt onder het bed",
+      "De stoel staat naast de tafel",
+      "Hij zit achter het huis",
+      "Zij loopt in het park",
+      "De auto staat op straat",
+      "Ik leg het boek op de plank",
+      "De kat slaapt onder de bank",
+      "De fiets staat links van het huis",
+      "Het huis is rechts van de school."
+    ],
+    "kolmit_level": 14
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Bijvoeglijke naamwoorden",
+    "rule_name": "Korte beschrijvingen",
+    "description": "Использование прилагательных для описания предметов и людей",
+    "rule_text": "Eenvoudige adjectieven: groot, klein, mooi, oud, jong, snel, langzaam.",
+    "examples": [
+      "Het huis is groot",
+      "De kat is klein",
+      "Zij is mooi",
+      "Het boek is interessant",
+      "Hij is oud",
+      "Het kind is jong",
+      "De bloemen zijn rood",
+      "De auto is snel",
+      "De tas is nieuw",
+      "De stoel is comfortabel."
+    ],
+    "kolmit_level": 15
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Eenvoudige samengestelde zinnen",
+    "rule_name": "En, maar, omdat",
+    "description": "Соединение двух простых предложений с помощью союзов",
+    "rule_text": "Gebruik van eenvoudige voegwoorden: en, maar, omdat in korte samengestelde zinnen.",
+    "examples": [
+      "Ik eet een appel en drink water",
+      "Hij is moe maar blij",
+      "Wij blijven thuis omdat het regent",
+      "Zij leest een boek en luistert naar muziek",
+      "Jij speelt buiten maar ik blijf binnen",
+      "Ik ga naar school omdat ik moet leren",
+      "Hij loopt naar huis en zij fietst",
+      "Wij kopen brood en melk",
+      "Zij gaat naar het park omdat het zonnig is",
+      "Ik schrijf een brief en zij leest een tijdschrift."
+    ],
+    "kolmit_level": 16
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Bezittelijke voornaamwoorden",
+    "rule_name": "Mijn, jouw, zijn, haar",
+    "description": "Указание принадлежности с притяжательными местоимениями",
+    "rule_text": "Gebruik van bezittelijke voornaamwoorden: mijn, jouw, zijn, haar, ons, jullie, hun.",
+    "examples": [
+      "Dit is mijn boek",
+      "Dat is jouw pen",
+      "Zijn tas is rood",
+      "Haar jas is warm",
+      "Ons huis is groot",
+      "Jullie auto is snel",
+      "Hun fietsen zijn nieuw",
+      "Mijn hond is klein",
+      "Jouw broer is sterk",
+      "Zijn moeder kookt."
+    ],
+    "kolmit_level": 17
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Uitbreiden van vraagzinnen",
+    "rule_name": "Wie, wat, waar, wanneer, waarom",
+    "description": "Расширение простых вопросов с помощью вопросительных слов",
+    "rule_text": "Vragen maken met wie, wat, waar, wanneer, waarom, hoe, welke.",
+    "examples": [
+      "Wie is dat?",
+      "Wat doe je?",
+      "Waar woon je?",
+      "Wanneer begint het?",
+      "Waarom huil je?",
+      "Hoe heet je?",
+      "Welke kleur heeft het?",
+      "Met wie ga je?",
+      "Waar kom je vandaan?",
+      "Wat is dit?"
+    ],
+    "kolmit_level": 18
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Negatie uitbreiden",
+    "rule_name": "Niet en geen in langere zinnen",
+    "description": "Отрицание в более длинных предложениях",
+    "rule_text": "Gebruik van niet en geen in samengestelde zinnen en langere contexten.",
+    "examples": [
+      "Ik heb vandaag geen tijd",
+      "Hij is niet thuis omdat hij werkt",
+      "Zij spreekt geen Nederlands en Frans",
+      "Wij eten niet omdat het laat is",
+      "Jullie hebben geen idee wat er gebeurd is",
+      "De kat is niet groot maar klein",
+      "Het boek is niet nieuw maar oud",
+      "Ik ga niet naar school en jij ook niet",
+      "Zij komt niet omdat zij ziek is",
+      "Hij zegt niets over het onderwerp."
+    ],
+    "kolmit_level": 19
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Tegenwoordige tijd voor routines",
+    "rule_name": "Dagelijkse handelingen in tegenwoordige tijd",
+    "description": "Использование настоящего времени для описания привычек и повседневных действий",
+    "rule_text": "Gebruik van tegenwoordige tijd voor dagelijkse routines en gewoontes.",
+    "examples": [
+      "Ik sta om zeven uur op",
+      "Zij eet ontbijt",
+      "Wij gaan naar school",
+      "Hij werkt op kantoor",
+      "Jullie lezen een boek",
+      "De kinderen spelen buiten",
+      "Ik neem een douche",
+      "Hij kookt avondeten",
+      "Zij studeert Nederlands",
+      "Wij slapen om tien uur."
+    ],
+    "kolmit_level": 20
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Diminutieve artikelen",
+    "rule_name": "Diminutieve artikelen en hun gebruik",
+    "description": "Использование артиклей с уменьшительными формами",
+    "rule_text": "Gebruik van het lidwoord 'het' met diminutieve vormen op -je, -tje, -pje, -kje. Uitzonderingen op de regel.",
+    "examples": [
+      "Het meisje",
+      "het hondje",
+      "het boekje (altijd 'het').",
+      "Uitzonderingen: een omeletje (het)",
+      "een nachtje (het)",
+      "een maatje (het)."
+    ],
+    "kolmit_level": 21
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Scheidbare en onscheidbare voorvoegsels",
+    "rule_name": "Scheidbare en onscheidbare voorvoegsels",
+    "description": "Отделимые и неотделимые префиксы",
+    "rule_text": "Gebruik van scheidbare en onscheidbare voorvoegsels bij werkwoorden en hun plaatsing в зinnen.",
+    "examples": [
+      "Ik maak de deur open / Ik open de deur",
+      "Hij zet het boek neer / Hij neert het boek",
+      "Ze roepen hun moeder aan / Ze aanroepen hun moeder",
+      "Ik zet de radio aan / Ik zet aan de radio",
+      "Hij maakt het werk af / Hij maakt af het werk"
+    ],
+    "kolmit_level": 22
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Eenvoudige bevestigende zinnen",
+    "rule_name": "SVO-structuur",
+    "description": "Простые утвердительные предложения",
+    "rule_text": "Eenvoudige bevestigende zinnen: onderwerp + werkwoord + object/complement.",
+    "examples": [
+      "Ik woon hier",
+      "Hij speelt buiten",
+      "Zij werkt hard",
+      "Wij eten brood"
+    ],
+    "kolmit_level": 23
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Begroetingen & basiszinnen",
+    "rule_name": "Eenvoudige begroetingen en basiszinnen",
+    "description": "Использование простых приветствий и коротких фраз",
+    "rule_text": "Begroetingen en basiswoordenschat: eenvoudige begroetingen, namen, familie, kleuren en getallen leren.",
+    "examples": [
+      "Hallo",
+      "Mijn naam is Anna",
+      "Dit is mijn broer",
+      "De kat is zwart",
+      "Ik heb een bal",
+      "Wij wonen in Amsterdam"
+    ],
+    "kolmit_level": 24
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Het werkwoord zijn",
+    "rule_name": "Zijn in de tegenwoordige tijd",
+    "description": "Использование werkwoord zijn в настоящем времени",
+    "rule_text": "Het werkwoord zijn in de tegenwoordige tijd: gebruik van ik ben, jij bent, hij/zij is om mensen en dingen te beschrijven.",
+    "examples": [
+      "Ik ben moe",
+      "Jij bent blij",
+      "Hij is groot",
+      "Zij is klein",
+      "Wij zijn vrienden",
+      "Jullie zijn hier",
+      "Zij zijn ziek",
+      "Ik ben thuis",
+      "Ben jij daar?",
+      "Het is warm."
+    ],
+    "kolmit_level": 25
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Het werkwoord hebben",
+    "rule_name": "Hebben + voornaamwoorden",
+    "description": "Использование werkwoord hebben с личными местоимениями",
+    "rule_text": "Het werkwoord hebben: ik heb, jij hebt, hij/zij heeft, wij/jullie/zij hebben.",
+    "examples": [
+      "Ik heb een boek"
+    ],
+    "kolmit_level": 26
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Negatie",
+    "rule_name": "Niet en geen",
+    "description": "Отрицание в простых предложениях",
+    "rule_text": "Gebruik van niet en geen: niet voor werkwoorden/bijvoeglijke naamwoorden, geen voor zelfstandige naamwoorden zonder lidwoord.",
+    "examples": [
+      "Ik heb geen tijd",
+      "Hij is niet thuis",
+      "Zij spreekt geen Nederlands",
+      "Wij eten niet"
+    ],
+    "kolmit_level": 27
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Vraagzinnen",
+    "rule_name": "Ja/nee-vragen en vraagwoorden",
+    "description": "Простые вопросы с инверсией и вопросительными словами",
+    "rule_text": "Vragen maken met inversie en vraagwoorden: wie, wat, waar, wanneer, waarom, hoe.",
+    "examples": [
+      "Wie is dat?",
+      "Wat doe je?",
+      "Waar woon je?",
+      "Wanneer begint het?",
+      "Waarom huil je?",
+      "Hoe heet je?",
+      "Welke kleur heeft het?",
+      "Met wie ga je?",
+      "Waar kom je vandaan?",
+      "Wat is dit?"
+    ],
+    "kolmit_level": 28
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Lidwoorden",
+    "rule_name": "De/het/een",
+    "description": "Использование определённых и неопределённых артиклей",
+    "rule_text": "Gebruik van lidwoorden de, het, een met zelfstandige naamwoorden.",
+    "examples": [
+      "De man leest",
+      "Het huis is groot",
+      "Een hond loopt buiten",
+      "Ik heb een boek",
+      "Zij ziet de kat",
+      "Het kind speelt"
+    ],
+    "kolmit_level": 29
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Meervoud",
+    "rule_name": "Maken van meervoud",
+    "description": "Формирование множественного числа существительных",
+    "rule_text": "Meervoudsvormen maken door -en of -s toe te voegen.",
+    "examples": [
+      "De boeken liggen op tafel",
+      "Ik zie drie katten",
+      "Wij kopen stoelen",
+      "De huizen zijn groot",
+      "De vrouwen praten",
+      "Ik heb twee pennen"
+    ],
+    "kolmit_level": 30
+  },
+  {
+    "cefr_level": "A1",
+    "nt2_theme": "Bijvoeglijke naamwoorden",
+    "rule_name": "Eenvoudige adjectieven",
+    "description": "Использование простых прилагательных для описания людей и предметов",
+    "rule_text": "Adjectieven plaatsen voor een zelfstandig naamwoord of na 'zijn'.",
+    "examples": [
+      "Het huis is groot",
+      "De kat is klein",
+      "Zij is mooi",
+      "Het boek is interessant",
+      "Hij is oud",
+      "De bloemen zijn rood"
+    ],
+    "kolmit_level": 31
+  }
+]

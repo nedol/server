@@ -1,3 +1,6 @@
+import { config } from 'dotenv';
+config();
+
 import pkg from 'moment';
 const { moment } = pkg;
 
@@ -7,124 +10,433 @@ const { find, remove, findIndex, difference } = pkg_l;
 import md5 from 'md5';
 // import { writable } from 'svelte/store';
 
-// import { tarifs } from './tarifs.json';
+import  {GetEmbedding} from './cron/gemini.js'
 
-import postgres from 'postgres';
+// import postgres from 'postgres';
 
-export let sql;
+import {Pool} from 'pg';
 
 let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
 
-// import { redirect } from '@sveltejs/kit';
-import Email from './email.js';
+// Log environment variables (without sensitive data) for debugging
+console.log('Database config:', {
+  user: process.env.RNDRUSER ? 'SET' : 'NOT SET',
+  host: process.env.RNDRHOST ? 'SET' : 'NOT SET',
+  database: process.env.RNDRDATABASE ? 'SET' : 'NOT SET',
+  password: process.env.RNDRPASSWORD ? 'SET' : 'NOT SET',
+  port: 5432
+});
 
-let conStr = {
-  connectionStringSupabase:
-    'postgresql://postgres.abzyzzvokjdnwgjbitga:NissanPathfinder@386/aws-0-eu-central-1.pooler.supabase.com:5432',
-};
+export const pool = new Pool({
+  user: process.env.RNDRUSER,
+  host: process.env.RNDRHOST,
+  database: process.env.RNDRDATABASE,
+  password: process.env.RNDRPASSWORD,
+  port: 5432,
+  ssl: {
+    rejectUnauthorized: false
+  },
+  // Add connection timeout
+  connectionTimeoutMillis: 5000,
+  // Add idle timeout
+  idleTimeoutMillis: 30000,
+  // Add max connections
+  max: 10
+});
 
-export async function CreatePool_(resolve) {
-  sql = postgres(conStr.connectionStringSupabase, {
-    host: 'aws-0-eu-central-1.pooler.supabase.com', // Postgres ip address[s] or domain name[s]
-    port: 5432, // Postgres server port[s]
-    database: 'postgres', // Name of database to connect to
-    username: 'postgres.abzyzzvokjdnwgjbitga', // Username of database user
-    password: 'NissanPathfinder@386', // Password of database user
-    idle_timeout: 20,
-    max_lifetime: 60 * 30,
-  });
-  resolve(sql);
+// Add connection event listeners for better error handling
+pool.on('error', (err) => {
+  console.error('Unexpected error on idle client', err);
+  // Handle the error appropriately
+});
+
+pool.on('connect', (client) => {
+  console.log('Connected to PostgreSQL database');
+});
+
+pool.on('remove', () => {
+  console.log('Client removed from pool');
+});
+
+// Test the database connection
+async function testConnection() {
+  let client;
+  try {
+    client = await pool.connect();
+    console.log('Database connection test successful');
+    const result = await client.query('SELECT NOW()');
+    console.log('Database time:', result.rows[0].now);
+  } catch (err) {
+    console.error('Database connection test failed:', err.message);
+  } finally {
+    if (client) {
+      client.release();
+    }
+  }
 }
 
-let conStrNeon = {
-  connectionString:
-    'postgresql://nedooleg:nHLhfQB0WS5Y@ep-polished-bush-a2n4g5y9-pooler.eu-central-1.aws.neon.tech:5432/neondb?sslmode=require',
-};
-
-export async function CreatePool(resolve) {
-  sql = postgres(conStrNeon.connectionString, {
-    host: 'ep-polished-bush-a2n4g5y9-pooler.eu-central-1.aws.neon.tech', // Postgres ip address[s] or domain name[s]
-    port: 5432, // Postgres server port[s]
-    database: 'neondb', // Name of database to connect to
-    username: 'nedooleg', // Username of database user
-    password: 'nHLhfQB0WS5Y', // Password of database user
-  });
-  resolve(sql);
-}
+// Run the connection test
+// testConnection();
 
 function getHash(par) {
   return md5(par + par);
 }
 
-export function SendEmail(q, new_email) {
-  let operator = new Email();
-  const abonent = q.abonent;
-  const mail = q.send_email;
-  const hash = getHash(mail);
-  let html =
-    `<a href='https://kolmit.onrender.com/?abonent=${abonent}&user=${mail}'>` +
-    {
-      ru: '<h1>Присоединиться к сети Kolmit:</h1></a>',
-      en: '<h1>Join Kolmit network:</h1></a>',
-      fr: '<h1>Rejoindre le réseau Kolmit:</h1></a>',
-    }[q.lang];
 
-  operator.SendMail(
-    `nedooleg@gmail.com`,
-    mail,
-    {
-      ru: 'Новый пользователь сети Колмит',
-      en: 'New Kolmit network user',
-      fr: 'Le nouvel opérateur de Kolmi',
-    }[q.lang],
-    html,
-    (result) => {
-      console.log();
-    }
-  );
-}
-
-export function SendEmailTodayPublished(q) {
-  let operator = new Email();
-  const mail = q.send_email;
-  const hash = getHash(mail);
-  let html = q.html;
-  let head = q.head;
-
-  operator.SendMail(`nedooleg@gmail.com`, mail, head, html, (result) => {
-    console.log();
-  });
-}
-
-export async function CreateOperator(par) {
+export async function GetGrammar(data) {
   try {
-    // if (par.abonent === par.email) return false;
-    let res = await sql` 
-		UPDATE operators 
-		SET
-		name = ${par.name},
-    email = ${par.email},
-		operator = ${md5(par.email)}, 
-		psw = ${md5(par.psw)}, 
-		picture = ${par.picture} 
-		WHERE email = ${par.email} AND abonent=${par.abonent}
-		`;
-    return {
-      operator: md5(par.email),
-      name: par.name,
-      email: par.email,
-      psw: md5(par.psw),
-      lang: par.lang,
-    };
-  } catch (er) {
-    console.log(er);
+    console.log('GetGrammar called with params:', data);
+    
+    // Import the JSON data from the file
+    const fs = await import('fs/promises');
+    const path = await import('path');
+    
+    const jsonFilePath = path.join(process.cwd(), 'server', 'nt2.json');
+    
+    let grammarRules;
+    try {
+      const jsonData = await fs.readFile(jsonFilePath, 'utf8');
+      grammarRules = JSON.parse(jsonData);
+    } catch (fileError) {
+      // If file doesn't exist, load from database
+      console.log('nt2.json file not found, loading from database instead');
+      let client;
+      try {
+        client = await pool.connect();
+        const result = await client.query('SELECT data FROM nt2 LIMIT 1');
+        if (result.rows.length > 0 && result.rows[0].data) {
+          grammarRules = result.rows[0].data;
+        } else {
+          // If no data in database, load from nt2.1.json file and populate database
+          console.log('No data in database, loading from nt2.1.json and populating database');
+          const backupJsonFilePath = path.join(process.cwd(), 'server', 'nt2.1.json');
+          const jsonData = await fs.readFile(backupJsonFilePath, 'utf8');
+          grammarRules = JSON.parse(jsonData);
+          await populateNt2Table(grammarRules);
+        }
+      } catch (dbError) {
+        console.error('Error loading from database:', dbError);
+        throw dbError;
+      } finally {
+        if (client) client.release();
+      }
+    }
+    
+    // Get data by sequential index (data.level as 1-based level, convert to 0-based array index)
+    const ruleIndex = data.level - 1;
+    
+    if (ruleIndex < 0 || ruleIndex >= grammarRules.length) {
+      console.log(`Level ${data.level} (index ${ruleIndex}) is out of bounds. Array length: ${grammarRules.length}`);
+      return [];
+    }
+    
+    const rule = grammarRules[ruleIndex];
+    
+    // Map the JSON structure to match GrammarRow interface (without kolmit_level)
+    const result = [{
+      cefr: rule.cefr_level,
+      rule_name: rule.rule_name,
+      description: rule.description,
+      rule_text: rule.rule_text,
+      examples: rule.examples,
+    }];
+    
+    console.log(`GetGrammar result from JSON (level ${data.level}, index ${ruleIndex}):`, result);
+    return result;
+  } catch (ex) {
+    console.error('Error in GetGrammar:', ex);
+    // logError('GetGrammar', ex, { data });
+    return [];
   }
 }
 
-export async function CreateSession(oper, suid) {
-  let res = await sql` 
-    SELECT create_session(${oper}, ${suid})
-  `;
+// Helper function to populate nt2 table from JSON data
+async function populateNt2Table(grammarRules) {
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+    
+    // Create table if it doesn't exist
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS nt2 (
+        id SERIAL PRIMARY KEY,
+        data JSONB
+      )
+    `);
+    
+    // Insert or update data
+    await client.query(
+      `INSERT INTO nt2 (data) VALUES ($1)
+       ON CONFLICT (id) DO UPDATE SET data = EXCLUDED.data`,
+      [JSON.stringify(grammarRules)]
+    );
+    
+    await client.query('COMMIT');
+    console.log('nt2 table populated successfully');
+  } catch (error) {
+    await client.query('ROLLBACK');
+    console.error('Error populating nt2 table:', error);
+    throw error;
+  } finally {
+    client.release();
+  }
+}
+
+export async function GetGrammarRegionToLevel(data) {
+  try {
+    // White list of allowed files (important for security!)
+    const allowedFiles = ["nt2.json", "nt2_3.json"];
+    const fileName = data.file || "nt2.json";
+    
+    if (!allowedFiles.includes(fileName)) {
+      throw new Error("Invalid file name");
+    }
+
+    // Validate that level is a valid integer
+    let level = parseInt(data.level);
+    if (isNaN(level) || level === undefined || level === null) {
+      console.warn("Invalid or missing level provided to GetGrammarRegionToLevel, defaulting to 0:", data.level);
+      level = 0;
+    }
+
+    // Read JSON file or load from database
+    const fs = await import('fs/promises');
+    const path = await import('path');
+    
+    let grammarRules = [];
+    try {
+      // Fetch data from the nt2_1 database table
+      const client = await pool.connect();
+      try {
+        const result = await client.query('SELECT a0, a1, a2, b1, b2 FROM nt2_1 ORDER BY version DESC LIMIT 1');
+        
+        if (result.rows.length > 0) {
+          const row = result.rows[0];
+          
+          // Combine all CEFR level data into a single array
+          if (row.a0) grammarRules = grammarRules.concat(row.a0);
+          if (row.a1) grammarRules = grammarRules.concat(row.a1);
+          if (row.a2) grammarRules = grammarRules.concat(row.a2);
+          if (row.b1) grammarRules = grammarRules.concat(row.b1);
+          if (row.b2) grammarRules = grammarRules.concat(row.b2);
+        }
+      } finally {
+        client.release();
+      }
+      
+      // If no data was found in the database, fall back to reading files
+      if (grammarRules.length === 0) {
+        // Read all CEFR level files and combine them
+        const cefrLevels = ['a0', 'a1', 'a2', 'b1', 'b2'];
+        for (const level of cefrLevels) {
+          const jsonFilePath = path.join(process.cwd(), 'prompts', 'nt2', `nt2.${level}.json`);
+          try {
+            const jsonData = await fs.readFile(jsonFilePath, 'utf8');
+            const levelRules = JSON.parse(jsonData);
+            grammarRules = grammarRules.concat(levelRules);
+          } catch (fileError) {
+            console.log(`nt2.${level}.json file not found or could not be parsed`);
+          }
+        }
+        
+        // If no files were found, fall back to the original path
+        if (grammarRules.length === 0) {
+          const jsonFilePath = path.join(process.cwd(), 'prompts', fileName);
+          const jsonData = await fs.readFile(jsonFilePath, 'utf8');
+          grammarRules = JSON.parse(jsonData);
+        }
+      }
+    } catch (fileError) {
+      // If file doesn't exist, load from database
+      console.log(`${fileName} file not found, loading from database instead`);
+      let client;
+      try {
+        client = await pool.connect();
+        const result = await client.query('SELECT data FROM nt2 LIMIT 1');
+        if (result.rows.length > 0 && result.rows[0].data) {
+          grammarRules = result.rows[0].data;
+        } else {
+          // If no data in database, load from nt2.1.json file and populate database
+          console.log('No data in database, loading from nt2.1.json and populating database');
+          const backupJsonFilePath = path.join(process.cwd(), 'server', 'nt2.1.json');
+          const jsonData = await fs.readFile(backupJsonFilePath, 'utf8');
+          grammarRules = JSON.parse(jsonData);
+          await populateNt2Table(grammarRules);
+        }
+      } catch (dbError) {
+        console.error('Error loading from database:', dbError);
+        throw dbError;
+      } finally {
+        if (client) client.release();
+      }
+    }
+
+    // Add kolmit_level based on array index (starting from 1 to match database behavior)
+    const rulesWithLevel = grammarRules.map((rule, index) => ({
+      ...rule,
+      kolmit_level: index + 1
+    }));
+
+    // Filter rules for region (±3 levels from current level)
+    const regionRecords = rulesWithLevel.filter(rule => 
+      rule.kolmit_level <= level && rule.kolmit_level >= level-9
+    ).map(item => ({
+      kolmit_level: item.kolmit_level,
+      cefr_level: item.cefr_level,
+      rule_name: item.rule_name,
+      rule_text: item.rule_text,
+      // description: item.description,
+      // examples: item.examples
+    }));
+
+    // Filter rules for exact level
+    const levelRecords = rulesWithLevel.filter(rule => 
+      rule.kolmit_level === level
+    ).map(item => ({
+      kolmit_level: item.kolmit_level,
+      cefr_level: item.cefr_level,
+      rule_name: item.rule_name,
+      rule_text: item.rule_text,
+      description: item.description,
+      examples: item.examples
+    }));
+
+    return {
+      region: regionRecords,
+      level: levelRecords
+    };
+
+  } catch (ex) {
+    console.error("Error in GetGrammarRegionToLevel:", ex);
+    return null;
+  }
+}
+
+export async function GetGrammarRegion(data) {
+  try {
+    // White list of allowed files (important for security!)
+    const allowedFiles = ["nt2.json", "nt2_3.json"];
+    const fileName = data.file || "nt2.json";
+    
+    if (!allowedFiles.includes(fileName)) {
+      throw new Error("Invalid file name");
+    }
+
+    // Validate that level is a valid integer
+    let level = parseInt(data.level);
+    if (isNaN(level) || level === undefined || level === null) {
+      console.warn("Invalid or missing level provided to GetGrammarRegion, defaulting to 0:", data.level);
+      level = 0;
+    }
+
+    // Read JSON file or load from database
+    const fs = await import('fs/promises');
+    const path = await import('path');
+    
+    let grammarRules = [];
+    try {
+      // Fetch data from the nt2_1 database table
+      const client = await pool.connect();
+      try {
+        const result = await client.query('SELECT a0, a1, a2, b1, b2 FROM nt2_1 ORDER BY version DESC LIMIT 1');
+        
+        if (result.rows.length > 0) {
+          const row = result.rows[0];
+          
+          // Combine all CEFR level data into a single array
+          if (row.a0) grammarRules = grammarRules.concat(row.a0);
+          if (row.a1) grammarRules = grammarRules.concat(row.a1);
+          if (row.a2) grammarRules = grammarRules.concat(row.a2);
+          if (row.b1) grammarRules = grammarRules.concat(row.b1);
+          if (row.b2) grammarRules = grammarRules.concat(row.b2);
+        }
+      } finally {
+        client.release();
+      }
+      
+      // If no data was found in the database, fall back to reading files
+      if (grammarRules.length === 0) {
+        // Read all CEFR level files and combine them
+        const cefrLevels = ['a0', 'a1', 'a2', 'b1', 'b2'];
+        for (const level of cefrLevels) {
+          const jsonFilePath = path.join(process.cwd(), 'prompts', 'nt2', `nt2.${level}.json`);
+          try {
+            const jsonData = await fs.readFile(jsonFilePath, 'utf8');
+            const levelRules = JSON.parse(jsonData);
+            grammarRules = grammarRules.concat(levelRules);
+          } catch (fileError) {
+            console.log(`nt2.${level}.json file not found or could not be parsed`);
+          }
+        }
+        
+        // If no files were found, fall back to the original path
+        if (grammarRules.length === 0) {
+          const jsonFilePath = path.join(process.cwd(), 'prompts', 'nt2.json');
+          const jsonData = await fs.readFile(jsonFilePath, 'utf8');
+          grammarRules = JSON.parse(jsonData);
+        }
+      }
+    } catch (fileError) {
+      // If file doesn't exist, load from database
+      console.log(`${fileName} file not found, loading from database instead`);
+      try {
+        const result = await pool.query('SELECT data FROM nt2 ORDER BY version DESC LIMIT 1');
+        if (result.rows.length > 0 && result.rows[0].data) {
+          grammarRules = result.rows[0].data;
+        } else {
+          // If no data in database, load from nt2.1.json file and populate database
+          console.log('No data in database, loading from nt2.1.json and populating database');
+          const backupJsonFilePath = path.join(process.cwd(), 'server', 'nt2.1.json');
+          const jsonData = await fs.readFile(backupJsonFilePath, 'utf8');
+          grammarRules = JSON.parse(jsonData);
+        }
+      } catch (dbError) {
+        console.error('Error loading from database:', dbError);
+        throw dbError;
+      }
+    }
+
+    // Add kolmit_level based on array index (starting from 1 to match database behavior)
+    const rulesWithLevel = grammarRules.map((rule, index) => ({
+      ...rule,
+      kolmit_level: index + 1
+    }));
+
+    // Filter rules for region (±3 levels from current level)
+    const regionRecords = rulesWithLevel.filter(rule => 
+      rule.kolmit_level <= level && rule.kolmit_level >= level-10 && rule.cefr_level !== 'A0'
+    ).map(item => ({
+      kolmit_level: item.kolmit_level,
+      cefr_level: item.cefr_level,
+      rule_name: item.rule_name,
+      rule_text: item.rule_text,
+      description: item.description,
+      examples: item.examples,
+      nt2_theme: item.nt2_theme // Add nt2_theme to the region records
+    }));
+
+    // Filter rules for exact level
+    const levelRecords = rulesWithLevel.filter(rule => 
+      rule.kolmit_level === level && rule.cefr_level !== 'A0'
+    ).map(item => ({
+      kolmit_level: item.kolmit_level,
+      cefr_level: item.cefr_level,
+      rule_name: item.rule_name,
+      rule_text: item.rule_text,
+      description: item.description,
+      examples: item.examples,
+      nt2_theme: item.nt2_theme // Add nt2_theme to the level records
+    }));
+
+    return {
+      region: regionRecords,
+      level: levelRecords
+    };
+
+  } catch (ex) {
+    console.error("Error in GetGrammarRegion:", ex);
+    return null;
+  }
 }
 
 async function updateOper(q) {
@@ -420,7 +732,7 @@ export async function ChangeOperator(q) {
 
 export async function RemoveOperator(q) {
   const res = sql`SELECT *, (SELECT users FROM users WHERE operator=?) as users ' +
-		'FROM  operators as oper 
+		'FROM  operators as oper'+ 
 		'WHERE oper.operator=${q.abonent || q.operator}  AND abonent=${
     q.abonent
   } AND psw=${q.psw}`;
@@ -475,227 +787,353 @@ export async function GetDialog(q) {
   }
 }
 
-// export async function GetPrompt(name) {
-//   let prompt = await sql`SELECT system, user FROM prompts
-// 		WHERE name=${name}`;
-//   return {
-//     prompt: prompt[0],
-//   };
-// }
-
-export async function getLevels(owner) {
-  const levels = await sql`SELECT level FROM groups WHERE owner=${owner} AND level IS NOT NULL AND level != ''`;
-
-  return levels;
-}
-
-export async function GetLessonsByDate() {
-  // Начало дня ровно неделю назад (включая сегодняшнюю дату)
-  const startOfWeek = new Date();
-  startOfWeek.setDate(startOfWeek.getDate() - 7); // Перемещаем на 7 дней назад
-  startOfWeek.setHours(0, 0, 0, 0); // Начало дня
-
-  // Конец текущего дня
-  const endOfDay = new Date();
-  endOfDay.setHours(23, 59, 59, 999); // Конец дня
-
-  return await sql`SELECT owner, data, level, lang 
-    FROM lessons 
-    WHERE timestamp BETWEEN ${startOfWeek} AND ${endOfDay} 
-    ORDER BY level DESC`;
-}
-
-export async function GetLesson(q) {
+export async function GetLevelCriteria(level) {
+  const client = await pool.connect();
   try {
-    let res = '';
-    if (q.operator !== q.owner) {
-      res = await sql`
-      SELECT lessons.data, lessons.level, lessons.lang 
-        FROM lessons
-        JOIN operators ON (operators.operator = ${q.operator} and operators.abonent=${q.owner})
-        JOIN groups ON (groups.name = operators.group and groups.level=lessons.level)
-        WHERE  groups.owner=${q.owner} AND lessons.owner=${q.owner}
-        ORDER BY level desc`;
-    } else if (q.level) {
-      res =
-        await sql`SELECT data, level, lang FROM lessons WHERE owner=${q.owner} AND level=${q.level}  ORDER BY level desc`;
-    } else {
-      res =
-        await sql`SELECT data, level, lang FROM lessons WHERE owner=${q.owner}  ORDER BY level desc`;
+    const res = await client.query(
+      `SELECT level_criteria_ru
+       FROM levels
+       WHERE level_number = $1`,
+      [level]
+    );
+
+    return res.rows.length > 0 ? res.rows[0].level_criteria_ru : null;
+  } catch (ex) {
+    console.error('Error in GetLevelCriteria:', ex);
+    return null;
+  } finally {
+    client.release();
+  }
+}
+
+export async function getLevels(abonent) {
+  let client;
+  try {
+    client = await pool.connect();
+    const query = abonent !== 'public'
+      ? `SELECT level AS level_group
+         FROM groups
+         WHERE owner = $1
+           AND level IS NOT NULL
+           AND level != ''`
+      : `SELECT DISTINCT (CAST(level AS INTEGER) / 5) * 5 AS level_group
+         FROM operators
+         WHERE abonent = $1
+           AND level IS NOT NULL
+           AND level != ''
+         ORDER BY level_group`;
+
+    const res = await client.query(query, [abonent]);
+
+    return res.rows
+      .map(row => row.level_group)
+      .filter(level => level !== null);
+  } catch (ex) {
+    console.error('Error in getLevels:', ex);
+    return [];
+  } finally {
+    if (client) client.release();
+  }
+}
+
+/**
+ * Get top words for a specific level from the subtlex table
+ * Selects words where id < level*20
+ * @param {number} level - The level to get top words for
+ * @returns {Promise<Array>} Array of top words
+ */
+export async function GetLevelTopWords(level, limit) {
+  const client = await pool.connect();
+  try {
+    // Calculate the threshold: level * 50
+    const threshold = level * 50;
+    
+    // First, check if the subtlex table exists and has data
+    try {
+      const tableCheck = await client.query(`
+        SELECT EXISTS (
+          SELECT 1 FROM information_schema.tables WHERE table_name = 'subtlex'
+        ) AS table_exists
+      `);
+      
+      if (!tableCheck.rows[0].table_exists) {
+        console.warn('SUBTLEX table does not exist. Returning empty array.');
+        return [];
+      }
+      
+      // Check if table has any data
+      const dataCheck = await client.query('SELECT COUNT(*) as count FROM subtlex');
+      if (parseInt(dataCheck.rows[0].count) === 0) {
+        console.warn('SUBTLEX table is empty. Returning empty array.');
+        return [];
+      }
+    } catch (checkError) {
+      console.warn('Error checking SUBTLEX table existence:', checkError.message);
+      return [];
     }
-    //debugger;
-    const levels = await getLevels(q.owner);
+    
+    // Query to select words from subtlex table where id < threshold
+    // Include the rank (id) of each word
+    const res = await client.query(
+      `SELECT word, id as rank
+       FROM subtlex
+       WHERE id < $1
+       ORDER BY id DESC
+       LIMIT $2`,
+      [threshold, limit]
+    );
 
-    const les = find(res, { level: q.level });
+    // Return array of objects with word and rank
+    return res.rows.map(row => `${row.word}(${row.rank})`);
+  } catch (ex) {
+    console.error('Error in GetLevelTopWords:', ex);
+    return []; // Return empty array in case of error
+  } finally {
+    client.release();
+  }
+}
 
+export async function GetAllSubtlexData() {
+  const client = await pool.connect();
+  try {
+    // Query to select all words from subtlex table
+    // Based on GetLevelTopWords, the table has columns: word, id
+    const res = await client.query(`
+      SELECT word, id
+      FROM subtlex
+      ORDER BY id ASC
+    `);
+    
+    // Create a Map with words as keys and IDs as values (using ID as proxy for frequency)
+    const wordFrequencyMap = new Map();
+    const sortedWords = [];
+    
+    for (const row of res.rows) {
+      wordFrequencyMap.set(row.word.toLowerCase(), row.id);
+      sortedWords.push(row.word.toLowerCase());
+    }
+    
+    // Return both the map and sorted words array
     return {
-      data: les ? les.data : res[0].data,
-      lang: les?.lang ? les.lang : res[0].lang,
-      level: les?.level ? les.level : res[0].level,
-      levels: levels,
+      frequencyData: wordFrequencyMap,
+      sortedWords: sortedWords
     };
   } catch (ex) {
-    return JSON.stringify({ func: q.func, res: ex });
+    console.error('Error in GetAllSubtlexData:', ex);
+    return { frequencyData: new Map(), sortedWords: [] };
+  } finally {
+    client.release();
   }
 }
 
-export async function UpdateQuizUsers(q) {
-  let res;
+export async function GetWordFrequency(word) {
+  const client = await pool.connect();
   try {
-    // Получаем текущие подписки в формате JSON
-
-    if (q.type == 'dialog')
-      res =
-        await sql`SELECT subscribe FROM dialogs WHERE name = ${q.quiz} AND owner = ${q.abonent}`;
-    else if (q.type == 'word')
-      res =
-        await sql`SELECT subscribe FROM word WHERE name = ${q.quiz} AND owner = ${q.abonent}`;
-
-    // Извлекаем подписки, если пусто - создаем пустой массив
-    let qu = res[0]?.subscribe || [];
-
-    // Если нужно добавить новую подписку
-    if (q.add) {
-      qu.push(q.add);
+    // Query to get ID for a specific word (using ID as proxy for frequency)
+    const res = await client.query(
+      `SELECT id FROM subtlex WHERE word = LOWER($1)`,
+      [word]
+    );
+    
+    if (res.rows.length > 0) {
+      return res.rows[0].id;
     }
-    // Если нужно удалить подписку
-    else if (q.rem) {
-      let index = qu.indexOf(q.rem); // находим индекс элемента
-      if (index > -1) {
-        // проверяем, что элемент найден
-        qu.splice(index, 1); // удаляем элемент
-      }
-    }
-
-    // Обновляем базу данных, преобразуя массив в JSON
-    if (q.type == 'dialog')
-      res = await sql`UPDATE dialogs 
-                    SET subscribe = ${sql.json(
-                      qu
-                    )} -- используем JSON для PostgreSQL
-                    WHERE name = ${q.quiz} AND owner = ${q.abonent}`;
-    else if (q.type == 'word')
-      res = await sql`UPDATE word 
-                    SET subscribe = ${sql.json(
-                      qu
-                    )} -- используем JSON для PostgreSQL
-                    WHERE name = ${q.quiz} AND owner = ${q.abonent}`;
-
-    return qu;
+    
+    return null;
   } catch (ex) {
-    console.log(ex);
-    throw ex; // чтобы ошибка могла быть обработана выше
-  }
-}
-
-export async function GetDict(q) {
-  try {
-    let res = await sql`SELECT words FROM dicts
-		WHERE type=${q.type} AND level= ${q.level}  AND owner=${q.owner}`;
-    if (res[0]) return res[0].words;
-    else return res;
-  } catch (ex) {
-    // debugger;
-    return JSON.stringify({ func: q.func, res: ex });
+    console.error('Error in GetWordFrequency:', ex);
+    return null;
+  } finally {
+    client.release();
   }
 }
 
 export async function WriteSpeech(q) {
+  const client = await pool.connect();
   try {
-    await sql.begin(async (sql) => {
-      await sql`INSERT INTO speech (lang, key, text, data, quiz, timestamps)
-                VALUES (${q.lang}, ${q.key}, ${q.text}, ${q.data}, ${q.quiz}, ${q.timestamps})
-                ON CONFLICT (key) 
-                DO UPDATE SET 
-                    lang = EXCLUDED.lang, 
-                    text = EXCLUDED.text, 
-                    data = EXCLUDED.data, 
-                    quiz = EXCLUDED.quiz,
-                    timestamps = EXCLUDED.timestamps`;
-    });
-    return { success: true, message: "Data written successfully." };
+    await client.query('BEGIN');
+
+    await client.query(
+      `INSERT INTO speech (lang, key, text, data, quiz, timestamps)
+       VALUES ($1, $2, $3, $4, $5, $6)
+       ON CONFLICT (key) DO UPDATE SET
+         lang = EXCLUDED.lang,
+         text = EXCLUDED.text,
+         data = EXCLUDED.data,
+         quiz = EXCLUDED.quiz,
+         timestamps = EXCLUDED.timestamps`,
+      [q.lang, q.key, q.text, q.data, q.quiz, q.timestamps]
+    );
+
+    await client.query('COMMIT');
+    return { success: true, message: 'Data written successfully.' };
   } catch (ex) {
-    console.error("Error writing speech:", ex);
-    return { success: false, message: "Failed to write data.", error: ex };
+    await client.query('ROLLBACK');
+    console.error('Error writing speech:', ex);
+    return { success: false, message: 'Failed to write data.', error: ex };
+  } finally {
+    client.release();
   }
 }
+
 
 export async function ReadSpeech(q) {
+  let client;
   try {
-    let res = await sql`SELECT data FROM speech
-		WHERE key= ${q.key} AND quiz IS NOT NULL`;
-    if (res[0]) {
-      return res[0].data;
-    }
+    client = await pool.connect();
+    const { rows } = await client.query(
+      `SELECT data
+       FROM speech
+       WHERE key = $1
+       AND quiz IS NOT NULL`,
+      [q.key]
+    );
+
+    return rows[0]?.data || null;
   } catch (ex) {
-    return JSON.stringify('');
+    console.error('Error reading speech:', ex);
+    return null;
+  } finally {
+    if (client) client.release();
   }
 }
 
-
-export async function GetPrompt(prompt = '', quiz_name= '', owner= '', level= '', theme= '') {
-  let prompt_res, words_res, gram_res, gram;
+export async function GetPrompt(name) {
   try {
-    if(prompt)
-      prompt_res = await sql`SELECT * FROM prompts WHERE name=${prompt}`;
-    if(quiz_name)
-      words_res = await sql`SELECT * FROM word WHERE name=${quiz_name}`;
-    if(owner && level){
-      gram_res = await sql`SELECT * FROM grammar WHERE owner=${owner} AND level=${level}`;
-      gram = find(gram_res[0].data, { theme: theme });
+    // First, try to read from the prompts folder
+    try {
+      const fs = await import('fs/promises');
+      const path = await import('path');
+      
+      // Try to read system prompt file
+      let systemContent = null;
+      try {
+        const systemFilePath = path.join(process.cwd(), '.', 'prompts', `${name}.system.txt`);
+        systemContent = await fs.readFile(systemFilePath, 'utf8');
+      } catch (systemError) {
+        // System file doesn't exist, try the old naming convention
+        try {
+          const systemFilePath = path.join(process.cwd(), '.', 'prompts', `${name}.txt`);
+          systemContent = await fs.readFile(systemFilePath, 'utf8');
+        } catch (oldSystemError) {
+          // Try pattern *.*.nl.txt
+          try {
+            const systemFilePath = path.join(process.cwd(), '.', 'prompts', `${name}.nl.txt`);
+            systemContent = await fs.readFile(systemFilePath, 'utf8');
+          } catch (nlError) {
+            // Neither system file exists
+            console.log(`System prompt file not found for ${name}`);
+          }
+        }
+      }
+      
+      // Try to read user prompt file
+      let userContent = null;
+      try {
+        const userFilePath = path.join(process.cwd(), '.', 'prompts', `${name}.user.txt`);
+        userContent = await fs.readFile(userFilePath, 'utf8');
+      } catch (userError) {
+        // User file doesn't exist
+        console.log(`User prompt file not found for ${name}`);
+      }
+      
+      // If we have at least one file, return the prompt object
+      if (systemContent || userContent) {
+        const promptObj = {};
+        if (systemContent) promptObj.system = systemContent.trim();
+        if (userContent) promptObj.user = userContent.trim();
+        return { prompt: promptObj };
+      }
+      
+      // If no files found, continue to database lookup
+      console.log(`Prompt files not found for ${name}, falling back to database`);
+    } catch (fileError) {
+      // File system error, continue to database lookup
+      console.log(`Error reading prompt files for ${name}, falling back to database:`, fileError.message);
+    }
+
+    // Fallback to database lookup
+    let client;
+    try {
+      client = await pool.connect();
+      const res = await client.query(
+        `SELECT * FROM prompts WHERE name = $1 ORDER BY string_to_array(version, '.')::int[] DESC`,
+        [name]
+      );
+
+      return res.rows[0] ? { prompt: res.rows[0] } : { prompt: 'Prompt not found' };
+    } catch (ex) {
+      console.error('Error in GetPrompt:', ex);
+      return null;
+    } finally {
+      if (client) client.release();
     }
   } catch (ex) {
-    console.log(JSON.stringify({ res: ex }));
+    console.error('Error in GetPrompt:', ex);
+    return null;
   }
-  return {
-    prompt: prompt_res[0],
-    words: words_res,
-    grammar: gram,
-  };
 }
 
-async function UpdateLesson(tx, type='bricks',data){
+async function UpdateLesson(client, type = 'bricks', data) {
+  // Тут нет BEGIN/COMMIT/ROLLBACK и client.release()
+  // Работаем в рамках транзакции, которую начал вызывающий код
 
-  await sql.begin(async (tx) => {
-    const lessonResult = await tx`
+  // 1. Получаем текущий урок
+  const lessonResult = await client.query(
+    `
     SELECT data
     FROM lessons
-    WHERE "owner" = ${data.owner} AND "level" = ${data.level} AND lang = 'nl';
-  `;
+    WHERE "owner" = $1 AND "level" = $2 AND lang = 'nl';
+    `,
+    [data.owner, data.level]
+  );
 
-  if (lessonResult.length === 0) {
+  if (lessonResult.rows.length === 0) {
     throw new Error('No lesson found for the provided criteria.');
   }
 
-  let lessonData = lessonResult[0].data;
+  let lessonData = lessonResult.rows[0].data;
 
-  // Find or create the theme by name
+  // 2. Находим или создаём тему
   let theme = lessonData.module.themes.find(
     (t) => t.name.nl === data.theme
   );
 
   if (!theme) {
-    // If the theme doesn't exist, create it
     theme = {
-      name: {
-        nl: data.theme,
-      },
+      name: { nl: data.theme },
       lessons: [
         {
-          // Create a default lesson structure if necessary
           type: 'default',
           content: 'Initial content for the lesson',
           quizes: [],
         },
       ],
     };
-    // Add the newly created theme to the module
     lessonData.module.themes.push(theme);
   }
 
-  // Check if the brick type and name already exist in the first lesson's quizes
-  const lesson = theme.lessons[0]; // Assuming we're updating the first lesson
+  // 3. Проверяем или создаём quiz
+  let lesson = theme.lessons[0];
+  
+  // Добавляем дополнительные проверки для устранения ошибки TypeError: Cannot read properties of undefined
+  if (!lesson) {
+    // Если у темы нет уроков, создаем пустой урок
+    lesson = {
+      type: 'default',
+      content: 'Initial content for the lesson',
+      quizes: []
+    };
+    theme.lessons[0] = lesson;
+  }
+  
+  // Убедимся, что массив quizes существует
   if (!lesson.quizes) {
+    lesson.quizes = [];
+  }
+
+  // Проверим, что lesson.quizes - это массив
+  if (!Array.isArray(lesson.quizes)) {
     lesson.quizes = [];
   }
 
@@ -704,117 +1142,171 @@ async function UpdateLesson(tx, type='bricks',data){
   );
 
   if (!quizExists) {
-    // Add new brick to the quizes if it doesn't already exist
     lesson.quizes.push({
       type: type,
       name: { nl: data.name },
-      published: data.html? Date.now():""
+      published:  Date.now(),
     });
   }
-    try{
-    // Update the lesson in the `lessons` table
-    await tx`
-      UPDATE lessons
-      SET data = ${lessonData}, "timestamp" =  CURRENT_TIMESTAMP
-      WHERE "owner" = ${data.owner} AND "level" = ${data.level} AND lang = 'nl';
-    `;
-    }catch(ex){
-      console.log(ex)
-    }
-  })
 
-}
-
-export async function getContext(name) {
-  try {
-    // Начало транзакции
-    const result = await sql.begin(async (tx) => {
-      const res = await tx`
-        SELECT data
-        FROM context
-        WHERE name = ${name}
-      `;
-
-      return res.length > 0 ? res[0].data : null;
-    });
-
-    return result; // Вернем результат из транзакции
-  } catch (error) {
-    console.error('Error retrieving context:', error);
-    throw error;
-  }
-}
-
-
-export async function saveContext(data){
-  try {
-    if(data.original.length===0)
-      return;
-    // Begin transaction
-    await sql.begin(async (tx) => {
-      // Insert into `bricks` table or update if the name already exists
-      await tx`
-        INSERT INTO context ("name", "data", "prompt_type")
-        VALUES (${data.name}, ${data.original}, ${data.type})
-        ON CONFLICT ("name")
-        DO UPDATE SET 
-          timestamp = CURRENT_TIMESTAMP, 
-          data =  ${data.original};
-      `;
-    });
-  } catch (error) {
-    console.error('Error processing brick and updating lesson:', error);
-    throw error;
-  }
+  // 4. Обновляем запись
+  await client.query(
+    `
+    UPDATE lessons
+    SET data = $1, "timestamp" = CURRENT_TIMESTAMP
+    WHERE "owner" = $2 AND "level" = $3 AND lang = 'nl';
+    `,
+    [lessonData, data.owner, data.level]
+  );
 }
 
 export async function createBrickAndUpdateLesson(data) {
+  const client = await pool.connect();
   try {
-    // Begin transaction
-    await sql.begin(async (tx) => {
-      // Insert into `bricks` table or update if the name already exists
-      await tx`
-        INSERT INTO bricks ("name", "owner", "data", "level", "timestamp", "theme", "prompt_type")
-        VALUES (${data.name}, ${data.owner}, ${data.html}, ${data.level}, CURRENT_TIMESTAMP, ${data.theme},${data.type})
-        ON CONFLICT ("name","owner","level")
-        DO UPDATE SET 
-          data = ${data.html}, 
-          timestamp = CURRENT_TIMESTAMP
-      `;
+    await client.query('BEGIN');
 
-      // console.log('INSERT INTO bricks:', brickData.html); 
+    // Вставка или обновление в bricks
+    // await client.query(
+    //   `INSERT INTO bricks ("name", "owner", "data", "level", "timestamp", "theme", "prompt_type")
+    //    VALUES ($1, $2, $3, $4, CURRENT_TIMESTAMP, $5, $6)
+    //    ON CONFLICT ("name", "owner", "level")
+    //    DO UPDATE SET 
+    //      data = EXCLUDED.data,
+    //      timestamp = CURRENT_TIMESTAMP`,
+    //   [data.name, data.owner, data.content, data.level, data.theme, data.type]
+    // );
 
-      UpdateLesson(tx,'bricks',data)
+    // Обновляем урок в рамках той же транзакции
+    await UpdateLesson(client, 'bricks', data);
 
-      // console.log('UPDATE lessons:', lessonData.module.themes);
-    });
+    await client.query('COMMIT');
   } catch (error) {
+    await client.query('ROLLBACK');
     console.error('Error processing brick and updating lesson:', error);
     throw error;
+  } finally {
+    client.release();
   }
 }
 
-export async function UpdateDialog(data){
-  const dlg = JSON.parse( data.dialog?.replace(/```json|```html|```xml|```/g, '').replace(/\n/g, ' '));
-  // console.log(dlg)
-  try{
-    await sql.begin(async (tx) => {
-      // Insert into `bricks` table or update if the name already exists
-      await tx`
-        INSERT INTO dialogs ("name","data", "owner", "html", "level","theme", "prompt_type")
-        VALUES (${data.name},${dlg}, ${data.owner}, ${data.html}, ${data.level},${data.theme}, ${data.type})
-        ON CONFLICT ("name","owner","level")
-        DO UPDATE SET 
-          data = ${dlg},
-          html = ${data.html};
-      `;
 
-      UpdateLesson(tx,'dialogs',data)
+export async function UpdateDialog(data) {
+  const dlg = data.dialog; // если нужно, можно добавить очистку строки
 
-    });
-  }catch(error){
+  const client = await pool.connect();
+
+  try {
+    await client.query('BEGIN');
+
+    await client.query(
+      `INSERT INTO dialogs ("name", "data", "owner", "html", "level", "theme", "prompt_type")
+       VALUES ($1, $2, $3, $4, $5, $6, $7)
+       ON CONFLICT ("name", "owner", "level")
+       DO UPDATE SET 
+         data = EXCLUDED.data,
+         html = EXCLUDED.html`,
+      [data.name, dlg, data.owner, data.html, data.level, data.theme, data.type]
+    );
+
+    await UpdateLesson(client, 'dialogs', data);
+
+    await client.query('COMMIT');
+  } catch (error) {
+    await client.query('ROLLBACK');
     console.error('Error processing dialog and updating lesson:', error);
     throw error;
+  } finally {
+    client.release();
   }
+}
+
+// Функция сохранения статьи
+export async function SaveArticle(theme, title, content, level, type, link, model = null) {
+  const client = await pool.connect();
+  let embeddingString = null;
+
+  // Если хочешь использовать эмбеддинги, раскомментируй и доработай
+  // try {
+  //   const embedding = await GetEmbedding(content);
+  //   if (!embedding || !Array.isArray(embedding)) {
+  //     throw new Error('Embedding is undefined or not an array');          
+  //   }
+  //   embeddingString = JSON.stringify(embedding);
+  // } catch (ex) {
+  //   console.warn('Failed to get embedding:', ex);
+  // }
+
+  try {
+    const contentString = JSON.stringify(content);
+
+    // Update the query to include the model column
+    const query = `
+      INSERT INTO articles (theme, title, content, level, embedding, type, link, model)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      ON CONFLICT (link, level) 
+      DO UPDATE SET content = EXCLUDED.content, published_at = CURRENT_TIMESTAMP, model = EXCLUDED.model
+      RETURNING id
+    `;
+
+    const values = [
+      theme,
+      title,
+      contentString,
+      level,
+      embeddingString,
+      type,
+      link,
+      model
+    ];
+
+    const res = await client.query(query, values);
+
+    if(res.rows[0])
+      console.log('Article saved with ID:', res.rows[0].id);
+    return;
+  } catch (err) {
+    console.error('Error saving article:', err);
+    throw err;
+  } finally {
+    client.release();
+  }
+}
+
+export async function GetLessonsByDate() {
+  let client;
+  try {
+    client = await pool.connect();
+    const startOfDay = new Date();
+    startOfDay.setHours(0, 0, 0, 0);
+
+    const endOfDay = new Date();
+    endOfDay.setHours(23, 59, 59, 999);
+
+    const result = await client.query(
+      `SELECT owner, data, level, lang
+       FROM lessons
+       WHERE timestamp BETWEEN $1 AND $2
+       ORDER BY level DESC`,
+      [startOfDay, endOfDay]
+    );
+
+    return result.rows;
+  } catch (ex) {
+    console.error('Error in GetLessonsByDate:', ex);
+    return [];
+  } finally {
+    if (client) client.release();
+  }
+}
+
+export function SendEmailTodayPublished(q) {
+  let operator = new Email();
+  const mail = q.send_email;
+  const head = q.head;
+  const html = q.html;
+
+  operator.SendMail(mail, head, html, (result) => {
+    console.log('Письмо успешно отправлено:', result);
+  });
 }
 

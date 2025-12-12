@@ -1,0 +1,323 @@
+[
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Voorzetsels complex",
+    "rule_name": "Plaats, tijd en oorzaak",
+    "description": "Расширение использования предлогов для описания места, времени и причины",
+    "rule_text": "Gebruik complexe voorzetsels voor plaats, tijd en oorzaak, zoals tijdens, vanaf, tot, vanwege.",
+    "examples": [
+      "Wij wandelden tijdens de vakantie",
+      "Hij werkt vanaf maandag",
+      "Het feest duurde tot vrijdag",
+      "Zij kwam vanwege de afspraak",
+      "Ik studeerde tijdens de les",
+      "Wij aten vanaf zes uur",
+      "Hij bleef thuis vanwege ziekte",
+      "Zij werkte tot laat",
+      "Ik las tijdens de reis",
+      "Wij spraken vanwege het probleem"
+    ],
+    "kolmit_level": 50
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Voltooid tegenwoordige tijd",
+    "rule_name": "Voltooid tegenwoordige tijd",
+    "description": "Использование перфекта для описания завершенных действий",
+    "rule_text": "Gebruik voltooid tegenwoordige tijd met hebben of zijn + voltooid deelwoord om voltooide acties te beschrijven.",
+    "examples": [
+      "Ik heb gegeten",
+      "Zij heeft gezien",
+      "Hij is gekomen",
+      "Wij hebben gewerkt",
+      "Zij hebben gelezen",
+      "Ik ben naar school gegaan",
+      "Jij hebt een boek geschreven",
+      "Hij heeft muziek gehoord",
+      "Wij zijn naar het park gegaan",
+      "Zij heeft een brief ontvangen"
+    ],
+    "kolmit_level": 51
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Formeel vs informeel",
+    "rule_name": "U/jij gebruik",
+    "description": "Формальное и неформальное обращение (u/jij)",
+    "rule_text": "Gebruik van u (formeel) en jij (informeel) afhankelijk van de context en relatie.",
+    "examples": [
+      "Mag ik u helpen? / Kan ik je helpen?",
+      "Hoe heet u? / Hoe heet je?",
+      "Dank u wel / Dank je wel",
+      "Uw mening / Jouw mening",
+      "Met u / Met jou",
+      "Uw naam / Je naam"
+    ],
+    "kolmit_level": 52
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Onvoltooid verleden tijd",
+    "rule_name": "Imperfectum van regelmatige en onregelmatige werkwoorden",
+    "description": "Применение простого прошедшего времени в повествовании",
+    "rule_text": "Gebruik imperfectum van regelmatige en onregelmatige werkwoorden om gebeurtenissen in het verleden te beschrijven.",
+    "examples": [
+      "Ik werkte gisteren thuis",
+      "Hij las een boek",
+      "Wij wandelden in het park",
+      "Zij studeerde hard",
+      "Hij fietste naar school",
+      "Ik speelde buiten",
+      "Jij schreef een brief",
+      "Wij kookten samen",
+      "Zij luisterde naar muziek",
+      "Hij sliep laat"
+    ],
+    "kolmit_level": 53
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Samengestelde bijzinnen complex",
+    "rule_name": "Omdat, terwijl, toen, als",
+    "description": "Сложноподчиненные предложения с разными союзами",
+    "rule_text": "Gebruik verschillende voegwoorden zoals omdat, terwijl, toen, als om complexe samengestelde zinnen te maken.",
+    "examples": [
+      "Ik bleef thuis omdat ik ziek was",
+      "Terwijl hij werkte, luisterde zij muziek",
+      "Toen ik thuiskwam, at ik avondeten",
+      "Als het regent, blijf ik binnen",
+      "Zij studeerde omdat ze examen had",
+      "Terwijl wij wandelden, regende het",
+      "Toen hij belde, kwam ik meteen",
+      "Als jij helpt, zijn we sneller klaar",
+      "Ik werkte hard omdat ik wilde slagen",
+      "Terwijl zij kookte, maakte hij huiswerk"
+    ],
+    "kolmit_level": 54
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Bijvoeglijke naamwoorden complex",
+    "rule_name": "Vergelijking en nadruk",
+    "description": "Прилагательные с использованием сравнительной степени и усиления",
+    "rule_text": "Gebruik bijvoeglijke naamwoorden met vergelijking en nadruk, inclusief versterkende woorden zoals erg, heel, tamelijk.",
+    "examples": [
+      "Het is erg mooi",
+      "Zij is heel slim",
+      "Hij is tamelijk groot",
+      "Het weer is erg slecht",
+      "Zij zingt heel goed",
+      "Hij loopt tamelijk snel",
+      "Het eten is erg lekker",
+      "Het huis is heel oud",
+      "Zij werkt tamelijk hard",
+      "Het boek is erg interessant"
+    ],
+    "kolmit_level": 55
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Vraagzinnen complex",
+    "rule_name": "Inversie en vraagwoorden in samengestelde zinnen",
+    "description": "Сложные вопросы с инверсией и вопросительными словами в сложных предложениях",
+    "rule_text": "Stel complexe vragen met inversie en vraagwoorden in samengestelde zinnen.",
+    "examples": [
+      "Wie komt er naar het feest",
+      "Wat doet zij vandaag",
+      "Waar woont hij",
+      "Waarom werkt zij hard",
+      "Hoe kan ik helpen",
+      "Wanneer begint de les",
+      "Wie helpt jou",
+      "Wat wil hij kopen",
+      "Waar ga je naartoe",
+      "Waarom is hij ziek"
+    ],
+    "kolmit_level": 56
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Woorden voor beroep en gezondheid",
+    "rule_name": "Specialistische en thematische woordenschat",
+    "description": "Слова для описания профессий, работы, здоровья и повседневных ситуаций",
+    "rule_text": "Breid woordenschat uit met thematische woorden voor beroep, werk, gezondheid en dagelijkse situaties.",
+    "examples": [
+      "De dokter werkt in het ziekenhuis",
+      "De leraar geeft les",
+      "Ik bel de apotheek",
+      "Zij schrijft een rapport",
+      "Hij werkt als ingenieur",
+      "Wij bezoeken de klant",
+      "Zij studeert geneeskunde",
+      "Ik maak een afspraak",
+      "Hij werkt op kantoor",
+      "Zij helpt de patiënt"
+    ],
+    "kolmit_level": 57
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Geavanceerde grammatica",
+    "rule_name": "Voltooide en onvoltooide tijden combineren",
+    "description": "Использование разных времен в сложных предложениях",
+    "rule_text": "Combineer voltooide en onvoltooide tijden voor precieze tijdsrelaties en logische samenhang.",
+    "examples": [
+      "Ik heb gewerkt, toen hij kwam",
+      "Zij had gegeten voordat wij vertrokken",
+      "Wij hadden gelezen terwijl hij sliep",
+      "Hij is naar huis gegaan terwijl ik werkte",
+      "Ik had geluisterd toen zij belde",
+      "Zij heeft gezongen toen wij binnenkwamen",
+      "Wij waren blij omdat het gelukt was",
+      "Hij had het boek gelezen toen het regende",
+      "Ik heb het gedaan terwijl hij sliep"
+    ],
+    "kolmit_level": 58
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Tussenliggende grammatica",
+    "rule_name": "Placeholder voor grammatica regel 61",
+    "description": "Промежуточная грамматическая структура",
+    "rule_text": "Tussenliggende grammatica regel voor correcte nummering.",
+    "examples": [
+      "Voorbeeldzin 1",
+      "Voorbeeldzin 2",
+      "Voorbeeldzin 3"
+    ],
+    "kolmit_level": 59
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Complexe samengestelde zinnen",
+    "rule_name": "Onderschikkende en nevenschikkende bijzinnen",
+    "description": "Сложноподчиненные и сложносочиненные предложения",
+    "rule_text": "Combineer onderschikkende en nevenschikkende bijzinnen voor complexere zinnen.",
+    "examples": [
+      "Ik denk dat hij komt en dat zij blijft",
+      "Zij zei dat zij moe was, maar zij werkte door",
+      "Terwijl hij sliep, werkte zij",
+      "Ik weet dat hij ziek is en dat zij helpt",
+      "Omdat het regende, bleven we binnen en we speelden spelletjes",
+      "Ik dacht dat hij kwam, terwijl zij vertrok",
+      "Hij werkt hard, maar hij is toch moe",
+      "Ik begrijp dat het moeilijk is en dat jij helpt",
+      "Zij vertelde dat zij ziek was en dat zij naar huis ging",
+      "Omdat het stormde, bleven wij binnen en zij lazen een boek"
+    ],
+    "kolmit_level": 60
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Complexe voorzetsels",
+    "rule_name": "Complexe plaats-, tijd- en reden voorzetsels",
+    "description": "Сложные предлоги места, времени и причины",
+    "rule_text": "Gebruik complexe voorzetsels zoals dankzij, vanwege, tijdens, op basis van in zinnen.",
+    "examples": [
+      "Dankzij haar hulp zijn we op tijd",
+      "Vanwege het weer bleef het feest binnen",
+      "Tijdens de vakantie bezochten wij vrienden",
+      "Op basis van zijn advies koos ik deze baan",
+      "Dankzij de regen bleef ik thuis",
+      "Vanwege de vertraging miste hij de trein",
+      "Tijdens de les nam hij aantekeningen",
+      "Op basis van de informatie besloten wij te watten",
+      "Dankzij de docent leerden wij veel",
+      "Vanwege de storm werd het evenement afgelast"
+    ],
+    "kolmit_level": 61
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Nuances van bijvoeglijke naamwoorden",
+    "rule_name": "Steeds meer complexiteit en nuance",
+    "description": "Оттенки значений прилагательных и наречий",
+    "rule_text": "Gebruik bijvoeglijke naamwoorden met nuance en intensiteit, inclusief frequentie en gradatie.",
+    "examples": [
+      "Het is erg belangrijk",
+      "Zij komt meestal op tijd",
+      "Hij sport soms in de ochtend",
+      "De film was tamelijk spannend",
+      "Het weer is heel slecht",
+      "Zij is altijd vriendelijk",
+      "Hij is nooit laat",
+      "Het eten is erg lekker",
+      "De docent legt vaak moeilijke woorden uit",
+      "Het huis is tamelijk groot"
+    ],
+    "kolmit_level": 62
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Modale werkwoorden in samengestelde zinnen",
+    "rule_name": "Kunnen, moeten, mogen, willen in samengestelde zinnen",
+    "description": "Модальные глаголы в сложносочиненных и сложноподчиненных предложениях",
+    "rule_text": "Gebruik modale werkwoorden in samengestelde zinnen om mogelijkheid, noodzaak или wens uit te drukken.",
+    "examples": [
+      "Ik kan komen als jij helpt",
+      "Zij moet werken, hoewel zij ziek is",
+      "Wij mogen spelen als het droog is",
+      "Hij wil leren terwijl hij werkt",
+      "Jij kunt zwemmen en hij kan fietsen",
+      "Zij moeten studeren voordat zij gaan",
+      "Ik wil lezen en zij wil schrijven",
+      "Hij mag blijven zolang hij stil is",
+      "Wij willen helpen als het nodig is",
+      "Zij kunnen zingen en dansen tegelijk"
+    ],
+    "kolmit_level": 63
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Vertellen van gebeurtenissen complex",
+    "rule_name": "Verschillende tijden en bijzinnen in langere teksten",
+    "description": "Повествование о событиях с использованием разных времен и придаточных в более длинных текстах",
+    "rule_text": "Gebruik verschillende tijden en bijzinnen in langere teksten om chronologie en logica duidelijk te maken.",
+    "examples": [
+      "Ik las een boek terwijl hij tv keek",
+      "Wij hadden gegeten toen zij aankwamen",
+      "Hij werkte hard, omdat hij deadlines had",
+      "Terwijl wij wandelden, regende het",
+      "Ik had gestudeerd voordat ik het examen maakte",
+      "Zij vertelde een verhaal terwijl wij luisterden",
+      "Wij hadden een pauze toen de docent kwam",
+      "Hij had al gegeten toen ik thuis kwam",
+      "Ik las een krant terwijl hij sliep",
+      "Zij had gewerkt voordat wij begonnen"
+    ],
+    "kolmit_level": 64
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Woorden voor formele communicatie",
+    "rule_name": "Specialistische en thematische woordenschat uitbreiden",
+    "description": "Слова для формальной коммуникации в профессиональной и медицинской сфере",
+    "rule_text": "Breid specialistische en thematische woordenschat uit voor beroep, werk, gezondheid, dagelijkse situaties en formele communicatie.",
+    "examples": [
+      "Ik zou graag een koffie willen",
+      "Zou je mij kunnen helpen",
+      "De dokter adviseerde een medicijn",
+      "De leraar gaf uitleg",
+      "Ik bel de apotheek",
+      "Zij schrijft een rapport",
+      "Hij werkt als ingenieur",
+      "Wij bezoeken de klant",
+      "Zij studeert geneeskunde",
+      "Ik maak een afspraak"
+    ],
+    "kolmit_level": 65
+  },
+  {
+    "cefr_level": "B1",
+    "nt2_theme": "Tegenstelling vroeger/nu",
+    "rule_name": "Vroeger..., nu...",
+    "description": "Контраст между прошлым и настоящим",
+    "rule_text": "Gebruik van vroeger en nu om tegenstellingen tussen verleden en heden aan te geven.",
+    "examples": [
+      "Vroeger werkte hij in Amsterdam, nu woont hij in Brussel.",
+      "Vroeger had ik geen auto, nu rijd ik elke dag naar mijn werk.",
+      "Vroeger was het dorp klein, nu zijn er veel nieuwe woningen."
+    ],
+    "kolmit_level": 66
+  }
+]

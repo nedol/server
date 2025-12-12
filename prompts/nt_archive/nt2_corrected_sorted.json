@@ -1,0 +1,3022 @@
+[
+  {
+    "kolmit_level": 1,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Alfabet en klanken",
+    "rule_name": "Nederlands alfabet",
+    "description": "Нидерландский алфавит состоит из 26 букв, как и английский алфавит, но имеет свои особенности в произношении.",
+    "rule_text": "Het Nederlandse alfabet bestaat uit 26 letters, hetzelfde als het Engelse alfabet. De uitspraak verschilt echter voor bepaalde letters: de 'g' heeft een keelklank, 'ch' is een stemloze velaire fricatief, 'ij' wordt beschouwd als een enkele letter en uitgesproken als een tweeklank [ɛi], en 'v' wordt aan het einde van woorden uitgesproken als [f]. Hoofdlettergebruik is vergelijkbaar met het Engels, waarbij de eerste letter van zinnen en eigennamen met een hoofdletter wordt geschreven.",
+    "examples": [
+      "A is de eerste letter van het alfabet.",
+      "Ik leer het alfabet: a, b, c...",
+      "Zee wordt geschreven met een z."
+    ],
+    "common_mistakes": "Смешивают буквы j, y, ij; неправильно произносят буквы g, ch, ij."
+  },
+  {
+    "kolmit_level": 2,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Zelfstandig naamwoord",
+    "rule_name": "Bepaalde en onbepaalde lidwoorden",
+    "description": "Определенные (de) и неопределенные (een) артикли согласуются с родом существительного.",
+    "rule_text": "Nederlandse lidwoorden geven bepaaldheid en geslacht aan. 'De' is het bepaalde lidwoord voor zowel mannelijke als vrouwelijke zelfstandige naamwoorden, terwijl 'het' wordt gebruikt voor onzijdige naamwoorden. 'Een' is het onbepaalde lidwoord (een) dat voor alle geslachten wordt gebruikt. Geslachts-toewijzing is grotendeels willekeurig en moet bij elk zelfstandig naamwoord worden onthouden. Lidwoorden komen overeen met het naamwoord dat ze wijzigen en veranderen in meervoudsvormen (de/het + meervoudig naamwoord gebruikt 'de').",
+    "examples": [
+      "De man leest een boek.",
+      "Het kind speelt.",
+      "Een huis in Amsterdam."
+    ],
+    "common_mistakes": "Неправильно определяют род существительного; путают de/het; забывают артикли."
+  },
+  {
+    "kolmit_level": 3,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Basis zinsbouw",
+    "rule_name": "Woordvolgorde in hoofdzinnen (SVO)",
+    "description": "В главном предложении стандартный порядок слов: подлежащее - сказуемое - дополнение (SVO).",
+    "rule_text": "Woordvolgorde in hoofdzinnen volgt het Onderwerp-Werkwoord-Voorwerp patroon. Het vervoegde werkwoord neemt de tweede positie in in Nederlandse hoofdzinnen (V2-regel), direct na het onderwerp. Voorwerpen en andere zinselementen volgen. In vragen verplaatst het werkwoord zich naar de eerste positie (inversie). In bijzinnen gaat het werkwoord naar het einde. Dit SVO-patroon is fundamenteel voor de Nederlandse syntaxis en is van toepassing op alle tijden en wijzen, met variaties alleen in vragen, bijzinnen en speciale constructies.",
+    "examples": [
+      "Ik eet een appel.",
+      "Zij leest een boek.",
+      "Hij koopt koffie."
+    ],
+    "common_mistakes": "Неправильный порядок слов; забывают инвертировать при вопросах."
+  },
+  {
+    "kolmit_level": 4,
+    "cefr_level": "A0",
+    "level_type": "new",
+    "nt2_theme": "Vragen stellen",
+    "rule_name": "Vragen met inversie",
+    "description": "Вопросы с инверсией образуются путем перестановки подлежащего и сказуемого.",
+    "rule_text": "Vraagvorming met inversie plaatst het vervoegde werkwoord voor het onderwerp. Dit geldt voor ja/nee-vragen ('Werk jij elke dag?') en vragen met vraagwoorden wanneer deze niet het onderwerp zijn ('Heeft hij een auto?'). Het werkwoord moet overeenkomen met het onderwerp dat volgt. In complexere zinnen keert alleen het hoofdwerkwoord om met het onderwerp, terwijl andere werkwoorden in hun normale posities blijven.",
+    "examples": [
+      "Werk jij elke dag?",
+      "Is zij een studente?",
+      "Heeft hij een auto?",
+      "Gaan jullie naar huis?"
+    ],
+    "common_mistakes": "Забывают инвертировать порядок слов; неправильно ставят знаки препинания; путают формы глаголов."
+  },
+  {
+    "kolmit_level": 5,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Vragen stellen",
+    "rule_name": "Vragende woorden",
+    "description": "Вопросительные слова используются для задания вопросов.",
+    "rule_text": "Vraagwoorden worden gebruikt om specifieke soorten vragen te stellen. 'Wie' vraagt naar personen (wie), 'wat' vraagt naar dingen (wat), 'waar' vraagt naar plaats (waar), 'wanneer' vraagt naar tijd (wanneer), 'waarom' vraagt naar reden (waarom), 'hoe' vraagt naar manier (hoe). In hoofdzinvragen veroorzaken deze woorden onderwerp-werkwoord inversie. In indirecte vragen blijft de normale woordvolgorde gehandhaafd. Elk vraagwoord selecteert een specifiek type informatie uit het antwoord.",
+    "examples": [
+      "Wie is dat?",
+      "Wat is dit?",
+      "Waar is hij?",
+      "Wanneer kom je?",
+      "Waarom ga je?",
+      "Hoe gaat het?"
+    ],
+    "common_mistakes": "Путают вопросительные слова; неправильно ставят вопросительные слова в предложении."
+  },
+  {
+    "kolmit_level": 6,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Tijd en gewoonte",
+    "rule_name": "Bijwoorden van frequentie",
+    "description": "Частотные наречия указывают на частоту действия.",
+    "rule_text": "Bijwoorden van frequentie geven aan hoe vaak een handeling plaatsvindt. 'Soms' betekent soms (af en toe), 'vaak' betekent vaak (frequent), 'nooit' betekent nooit (nul voorkomen), 'altijd' betekent altijd (100% voorkomen), 'steeds' betekent altijd/voortdurend. Deze bijwoorden verschijnen meestal tussen het onderwerp en het vervoegde werkwoord ('Ik lees vaak boeken') of aan het einde van de zin. Hun positie kan de nadruk van de frequentie enigszins veranderen.",
+    "examples": [
+      "Ik eet soms brood.",
+      "Zij speelt vaak tennis.",
+      "Hij gaat nooit naar school."
+    ],
+    "common_mistakes": "Путают частотные наречия; неправильно используют частотные наречия."
+  },
+  {
+    "kolmit_level": 7,
+    "cefr_level": "A1",
+    "level_type": "new",
+    "nt2_theme": "Tijden",
+    "rule_name": "Perfektum met hebben",
+    "description": "Перфектум образуется с помощью вспомогательного глагола 'hebben'.",
+    "rule_text": "De voltooide tijd met 'hebben' wordt gevormd met het hulpwerkwoord 'hebben' en het voltooid deelwoord van het hoofdwerkwoord. De meeste werkwoorden gebruiken 'hebben', behalve werkwoorden van beweging en enkele andere die 'zijn' gebruiken. Het deelwoord staat aan het einde van de zin ('Ik heb een boek gelezen'). In bijzinnen gaan zowel het hulpwerkwoord als het deelwoord naar het einde. De tijd drukt voltooide verleden handelingen uit met relevantie voor het heden.",
+    "examples": [
+      "Ik heb een boek gelezen.",
+      "Hij had een kat.",
+      "Wij hebben een auto gekocht."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'hebben'; неправильное образование прошедшего деепричастия."
+  },
+  {
+    "kolmit_level": 8,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Modale werkwoorden",
+    "description": "Модальные глаголы выражают вероятность или возможность действия.",
+    "rule_text": "Modale werkwoorden drukken mogelijkheid, toestemming, bereidheid of noodzaak uit. 'Kunnen' drukt vaardigheid of mogelijkheid uit ('Ik kan zwemmen'). 'Mogen' drukt toestemming uit ('Je mag gaan'). 'Willen' drukt bereidheid of verlangen uit ('Ik wil leren'). 'Moeten' drukt noodzaak of verplichting uit ('Je moet werken'). Modale werkwoorden worden gevolgd door het infinitief van het hoofdwerkwoord en behouden hun stam in alle vormen. In bijzinnen gaan zowel het modale werkwoord als het hoofdwerkwoord naar het einde, met de infinitief als laatste.",
+    "examples": [
+      "Ik kan je helpen.",
+      "Zij mag niet komen.",
+      "Hij wil een boek lezen.",
+      "Wij moeten eten."
+    ],
+    "common_mistakes": "Путают модальные глаголы; неправильно используют модальные глаголы."
+  },
+  {
+    "kolmit_level": 9,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Gebruik van omdat / want in langere zinnen",
+    "description": "Причинальные придаточные предложения образуются с помощью союзов 'omdat' или 'want'.",
+    "rule_text": "Redengevende bijzinnen met 'omdat' en 'want' drukken oorzaak en gevolg uit. 'Omdat' is formeler en introduceert een directe oorzaak ('Ik ga niet omdat het regent'). 'Want' is informeler en geeft een reden of verklaring ('Ik ga niet want ik ben moe'). 'Omdat' vereist onderwerps-werkwoordinversie in de bijzin ('omdat hij komt' niet 'omdat hij komt'). 'Want' kan ook zonder inversie gebruikt worden in informele taal. Beide constructies zijn essentieel voor het uitdrukken van causaliteit in het Nederlands.",
+    "examples": [
+      "Ik ga naar school, omdat ik student ben.",
+      "Zij speelt, want ze heeft een kat."
+    ],
+    "common_mistakes": "Путают союзы 'omdat' и 'want'; неправильно используют союзы."
+  },
+  {
+    "kolmit_level": 10,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Scheidbare en onscheidbare werkwoorden met modale hulpwerkwoorden",
+    "description": "Разделяемые и несочитаемые глаголы используются в зависимости от контекста.",
+    "rule_text": "Scheidbare en onscheidbare werkwoorden met modale hulpwerkwoorden volgen specifieke regels voor woordvolgorde. Bij scheidbare werkwoorden blijft het voorzetsel vast aan het werkwoord wanneer een modaal hulpwerkwoord wordt gebruikt ('Ik moet opstaan'). Bij onscheidbare werkwoorden blijft het voorvoegsel altijd vast ('Ik moet begrijpen'). In hoofdzinnen staat het modale werkwoord op de tweede positie en de infinitief aan het einde. In bijzinnen gaan beide werkwoorden naar het einde van de zin.",
+    "examples": [
+      "Ik kan morgen komen.",
+      "Zij moet naar huis gaan.",
+      "Hij wil het boek lezen."
+    ],
+    "common_mistakes": "Неправильное использование разделяемых и несочитаемых глаголов; неправильное использование частиц."
+  },
+  {
+    "kolmit_level": 11,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Reflexieve werkwoorden",
+    "description": "Рефлексивные глаголы используются для действия, которое направляется обратно к действующему лицу.",
+    "rule_text": "Wederkerende werkwoorden geven aan dat het onderwerp een handeling op zichzelf uitvoert. Het wederkerend voornaamwoord 'zich' wordt gebruikt voor het object ('Ik was mezelf'). Met 'elkaar' worden handelingen wederkerig uitgevoerd ('Ze zien elkaar'). Wederkerende werkwoorden komen vaak voor bij werkwoorden van persoonlijke verzorging (wassen, aankleden), emoties (zich verheugen) en wederkerige handelingen. Het wederkerend voornaamwoord moet overeenkomen met het onderwerp en verandert van vorm op basis van grammaticale naamval.",
+    "examples": [
+      "Ik was mezelf klaar.",
+      "Zij ziet zichzelf in de spiegel.",
+      "Wij helpen elkaar."
+    ],
+    "common_mistakes": "Неправильное использование рефлексивных глаголов; забывают использовать 'zichzelf'."
+  },
+  {
+    "kolmit_level": 12,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Perfektum met zijn",
+    "description": "Перфектум образуется с помощью вспомогательного глагола 'zijn'.",
+    "rule_text": "De voltooide tijd met 'zijn' wordt gebruikt met werkwoorden van beweging (gaan, komen, lopen, rijden, vliegen, zwemmen) en sommige toestandsveranderingswerkwoorden (worden, blijven, vallen). De structuur is 'zijn' + voltooid deelwoord ('Ik ben naar school gegaan'). Het voltooid deelwoord moet in geslacht en aantal overeenkomen met het onderwerp wanneer 'zijn' als hulpwerkwoord wordt gebruikt. Deze tijd drukt voltooide handelingen uit die resulteren in een verandering van toestand of locatie.",
+    "examples": [
+      "Ik ben naar school gegaan.",
+      "Zij is gisteren aangekomen.",
+      "Wij zijn thuis gekomen."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'zijn'; неправильное образование прошедшего деепричастия."
+  },
+  {
+    "kolmit_level": 13,
+    "cefr_level": "A2",
+    "level_type": "new",
+    "nt2_theme": "Infinitiefconstructies",
+    "rule_name": "Om te + infinitief",
+    "description": "Для образования инфинитивов используется конструкция 'om te + инфинитив'.",
+    "rule_text": "De constructie 'om te + infinitief' drukt doel uit. Het wordt gebruikt om uit te leggen waarom een handeling wordt uitgevoerd ('Ik ga naar school om te leren'). De infinitief staat altijd in zijn basisvorm. Deze constructie verschijnt meestal aan het einde van een zin. Het kan ook worden gebruikt met zelfstandige naamwoorden en bijvoeglijke naamwoorden om doel uit te drukken ('Een plek om te spelen'). De 'om' is nodig om doel te onderscheiden van andere infinitiefgebruiken.",
+    "examples": [
+      "Ik ga naar school om te leren.",
+      "Zij wil een plek om te spelen vinden.",
+      "Hij studeert hard om te slagen."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'om te'; неправильное использование инфинитива."
+  },
+  {
+    "kolmit_level": 14,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Relatieve bijzin met prepositie",
+    "description": "Относительные придаточные предложения образуются с помощью предлогов и относительных местоимений.",
+    "rule_text": "Relatieve bijzinnen met voorzetsels plaatsen het voorzetsel voor het betrekkelijk voornaamwoord. Deze structuur komt vaak voor in formeel Nederlands en bij langere relatieve bijzinnen. Bijvoorbeeld: 'De man, met wie ik spreek'. Het voorzetsel kan ook aan het einde blijven staan in informele spraak ('De man, wie ik mee spreek'), maar vooropplaatsing van het voorzetsel heeft de voorkeur in formele contexten. De keuze van het betrekkelijk voornaamwoord hangt nog steeds af van het geslacht van het antecedent.",
+    "examples": [
+      "De man, met wie ik spreek, is mijn vader.",
+      "Het boek, over hetwelke hij sprak, was interessant.",
+      "De stad, waarin ik woon, is groot."
+    ],
+    "common_mistakes": "Путают предлоги и относительные местоимения; неправильно используют предлоги и относительные местоимения."
+  },
+  {
+    "kolmit_level": 15,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie na bijwoordelijke bepaling",
+    "description": "В сложных вопросах инверсия выполняется после определения.",
+    "rule_text": "Inversie na bijwoordelijke bepaling treedt op wanneer een zin begint met een bijwoordelijk element voor nadruk of stilistische redenen. De normale woordvolgorde (onderwerp-werkwoord) wordt omgekeerd zodat het werkwoord eerst komt ('Vandaag werk ik niet'). Dit patroon komt vaak voor bij tijdsuitdrukkingen, plaatsuitdrukkingen en frequentiebijwoorden. De inversie vestigt de aandacht op het bijwoordelijke element en is essentieel voor gevarieerde en expressieve Nederlandse zinsstructuur.",
+    "examples": [
+      "Vandaag werk ik niet.",
+      "Gisteren ging ik naar school.",
+      "Hier woont mijn vriend."
+    ],
+    "common_mistakes": "Неправильный порядок слов; забывают инвертировать после определения."
+  },
+  {
+    "kolmit_level": 16,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Gebruik van hoewel, ondanks dat",
+    "description": "Союзы 'hoewel' и 'ondanks dat' используются для выражения противоречий.",
+    "rule_text": "Voegwoorden 'hoewel' en 'ondanks dat' drukken contrast of toegeving uit tussen zinsdelen. 'Hoewel' is gebruikelijker en introduceert bijzinnen met inversie ('Hoewel hij moe was, werkte hij door'). 'Ondanks dat' is nadrukkelijker en formeler, en benadrukt het onverwachte karakter van het contrast ('Ondanks dat het regende, gingen we naar buiten'). Beide zijn essentieel voor het uitdrukken van complexe logische relaties en het toevoegen van nuance aan argumentatie in het Nederlands.",
+    "examples": [
+      "Hij werkt hard, hoewel hij moe is.",
+      "Zij speelt, ondanks dat het regent.",
+      "Hoewel het laat was, bleef hij werken."
+    ],
+    "common_mistakes": "Путают союзы 'hoewel' и 'ondanks dat'; неправильно используют союзы."
+  },
+  {
+    "kolmit_level": 17,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Passief",
+    "rule_name": "Passief in samengestelde tijden",
+    "description": "Пассивный залог образуется с помощью вспомогательных глаголов в сложных временах.",
+    "rule_text": "De lijdende vorm in samengestelde tijden wordt gevormd met het hulpwerkwoord 'worden' in de juiste tijd gevolgd door het voltooid deelwoord. In de voltooide tijd wordt 'zijn' gebruikt als hulpwerkwoord ('Het boek is geschreven'). In de voltooide tijd met modale werkwoorden komt het voltooid deelwoord aan het einde ('Het boek moet geschreven zijn'). De lijdende vorm legt de focus op de handeling of het ondergaan in plaats van de uitvoerder, wat vooral nuttig is in formele en objectieve contexten.",
+    "examples": [
+      "Het boek is gisteren geschreven.",
+      "De brief was al verzonden.",
+      "Het huis wordt gebouwd."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательных глаголов; неправильное образование причастия."
+  },
+  {
+    "kolmit_level": 18,
+    "cefr_level": "B1",
+    "level_type": "new",
+    "nt2_theme": "Passief",
+    "rule_name": "Passieve vorm met zijn",
+    "description": "Пассивный залог образуется с помощью вспомогательного глагола 'zijn'.",
+    "rule_text": "De lijdende vorm met 'zijn' wordt gebruikt met bepaalde werkwoorden en in specifieke contexten. In tegenstelling tot 'worden' lijdend, beschrijft 'zijn' lijdend vaak een toestand die het gevolg is van een voltooide handeling ('De deur is open'). Deze constructie wordt gebruikt met werkwoorden van beweging en toestandsverandering. Het voltooid deelwoord moet in geslacht en aantal overeenkomen met het onderwerp. Deze vorm is minder gebruikelijk dan 'worden' lijdend, maar belangrijk voor het uitdrukken van resulterende toestanden.",
+    "examples": [
+      "De deur is open.",
+      "Het raam is gebroken.",
+      "Hij is vertrokken."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'zijn'; неправильное образование причастия."
+  },
+  {
+    "kolmit_level": 19,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Relatieve voornaamwoorden met voorzetsels in samengestelde zinnen",
+    "description": "Относительные местоимения с предлогами в составных предложениях.",
+    "rule_text": "Relatieve voornaamwoorden met voorzetsels in samengestelde zinnen vereisen een zorgvuldige keuze van het juiste voornaamwoord. 'Wie' wordt gebruikt voor personen, 'wat' voor dingen, 'dat' voor onzijdige zelfstandige naamwoorden, en 'die' voor mannelijke en vrouwelijke zelfstandige naamwoorden. Het voorzetsel komt voor het relatieve voornaamwoord in formele contexten. Deze constructies zijn essentieel voor het vormen van complexe, gestructureerde zinnen in geschreven en formeel Nederlands.",
+    "examples": [
+      "De man, met wie ik spreek, is mijn vader.",
+      "Het boek, over hetwelke hij sprak, was interessant.",
+      "De vrouw, aan wie ik dacht, is mijn tante."
+    ],
+    "common_mistakes": "Путают относительные местоимения; неправильно используют относительные местоимения."
+  },
+  {
+    "kolmit_level": 20,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Infinitiefconstructies",
+    "rule_name": "Infinitieven met meerdere hulpwerkwoorden",
+    "description": "Инфинитивы с несколькими вспомогательными глаголами.",
+    "rule_text": "Infinitieven met meerdere hulpwerkwoorden komen voor in complexe zinsconstructies waar verschillende modaliteiten of tijden worden gecombineerd. Bijvoorbeeld: 'zou hebben kunnen komen' combineert conditionele, voltooide tijd en mogelijkheid. De volgorde van de werkwoorden is cruciaal: het modale werkwoord komt eerst, gevolgd door de hulpwerkwoorden en ten slotte de infinitief. Deze constructies vereisen een goed begrip van de Nederlandse werkwoordsvolgorde en zijn kenmerkend voor geavanceerd taalgebruik.",
+    "examples": [
+      "Ik zou hebben kunnen komen.",
+      "Hij moet hebben gewerkt.",
+      "Zij had willen gaan."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'te'; неправильное использование инфинитива."
+  },
+  {
+    "kolmit_level": 21,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Infinitiefconstructies",
+    "rule_name": "Infinitiefconstructies met meerdere werkwoorden",
+    "description": "Для образования инфинитивов используется конструкция 'te + инфинитив'.",
+    "rule_text": "Infinitiefconstructies met meerdere werkwoorden zijn complexe zinsdelen die meerdere acties of toestanden combineren. Deze constructies gebruiken vaak modale werkwoorden gevolgd door infinitieven ('ik kan zwemmen leren'). In sommige gevallen kunnen meerdere infinitieven achter elkaar staan ('ik wil gaan leren zwemmen'). De volgorde van de werkwoorden is cruciaal voor de betekenis: het eerste werkwoord drukt vaak de houding, mogelijkheid of intentie uit, terwijl de volgende werkwoorden de daadwerkelijke handeling beschrijven. Deze structuren zijn essentieel voor het uitdrukken van complexe ideeën en intenties.",
+    "examples": [
+      "Ik wil gaan leren zwemmen.",
+      "Zij probeert te gaan werken.",
+      "Hij lijkt te blijven proberen te slagen."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'te'; неправильное использование инфинитива."
+  },
+  {
+    "kolmit_level": 22,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe inversie",
+    "description": "В сложных вопросах инверсия выполняется только со вторым глаголом.",
+    "rule_text": "Complexe inversie treedt op in vragen met samengestelde werkwoordstijden waar alleen het eerste werkwoord van plaats verandert. Het patroon is Werkwoord1 - Onderwerp - Werkwoord2. Deze structuur is essentieel voor correcte vraagvorming in complexere zinnen en vereist een goed begrip van de Nederlandse werkwoordsgroep en zinsstructuur. Het eerste werkwoord neemt de eerste positie in, gevolgd door het onderwerp en de overige werkwoorden.",
+    "examples": [
+      "Heeft hij een boek gelezen?",
+      "Zijn ze naar school gegaan?",
+      "Zou je hebben kunnen komen?"
+    ],
+    "common_mistakes": "Неправильный порядок слов; забывают инвертировать только второй глагол."
+  },
+  {
+    "kolmit_level": 23,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Subjunctief en conditioneel in samengestelde zinnen",
+    "description": "Субъюнктивное и условное используются для предложений, описывающих невероятные или несуществующие ситуации.",
+    "rule_text": "Subjunctieve en conditionele vormen in samengestelde zinnen drukken hypothetische, onwaarschijnlijke of niet-bestaande situaties uit binnen complexe zinstructuren. De conditionele vorm wordt gevormd met 'zouden' + infinitief ('Als ik tijd had, zou ik gaan'). De subjunctief wordt gebruikt in formele contexten, vooral na bepaalde werkwoorden en uitdrukkingen die wensen, voorstellen of twijfel uitdrukken ('Het is belangrijk dat hij kom'). In samengestelde zinnen kunnen deze vormen voorkomen in zowel de hoofdzin als de bijzin, en vereisen ze specifieke woordvolgorde en grammaticale overeenkomst. Ze zijn essentieel voor het uitdrukken van beleefdheid, hypothetische redeneringen en voorwaardelijke uitspraken in formele en academische teksten.",
+    "examples": [
+      "Als ik rijk was, zou ik reizen.",
+      "Het is belangrijk dat hij komt.",
+      "Had ik maar meer tijd gehad."
+    ],
+    "common_mistakes": "Неправильное использование субъюнктивного и условного; неправильное изменение времени глаголов."
+  },
+  {
+    "kolmit_level": 24,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Samenvattende, redengevende en contrasterende voegwoorden",
+    "description": "Союзы используются для соединения предложений.",
+    "rule_text": "Voegwoorden verbinden zinnen of zinsdelen en drukken verschillende logische relaties uit. 'En' voegt gelijksoortige elementen samen. 'Of' drukt keuze of alternatief uit. 'Maar' introduceert tegenstelling of beperking. 'Want' geeft reden of oorzaak aan. 'Dus' drukt gevolg of conclusie uit. De juiste keuze van voegwoord is essentieel voor duidelijke en logische communicatie. Elk voegwoord heeft een specifieke functie en verandert de betekenis van de zin waarin het wordt gebruikt. Het begrijpen van deze nuances is cruciaal voor het beheersen van complexe zinsstructuren.",
+    "examples": [
+      "Hij werkt hard en leert veel.",
+      "Zij speelt of kijkt naar televisie.",
+      "Hij is slim maar lui.",
+      "Het regent dus ik blijf binnen."
+    ],
+    "common_mistakes": "Путают союзы; неправильно используют союзы."
+  },
+  {
+    "kolmit_level": 25,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Subjunctief in samengestelde zinnen",
+    "description": "Субъюнктив в составных предложениях.",
+    "rule_text": "De aanvoegende wijs in samengestelde zinnen wordt gebruikt om wensen, vermoedens, aanbevelingen of hypothetische situaties uit te drukken in formele contexten. Deze constructie komt vooral voor na bepaalde werkwoorden en uitdrukkingen zoals 'het is belangrijk dat', 'ik wens dat', 'het is nodig dat'. In modern Nederlands wordt de aanvoegende wijs vaak vervangen door de indicativef of conditionele vormen, maar in formele geschreven taal blijft het gebruik relevant voor het uitdrukken van nuance en precisie.",
+    "examples": [
+      "Als ik rijk was, zou ik een huis kopen.",
+      "Het is belangrijk dat hij komt.",
+      "Men wens dat hij spoedig herstelt."
+    ],
+    "common_mistakes": "Неправильное использование субъюнктивного; неправильное изменение времени глаголов."
+  },
+  {
+    "kolmit_level": 26,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Bijvoeglijk naamwoord",
+    "rule_name": "Participium als adjectief in complexe context",
+    "description": "Деепричастия как прилагательные в сложном контексте.",
+    "rule_text": "Participia die als bijvoeglijke naamwoorden fungeren in complexe contexten vereisen aandacht voor verbuiging en positie. Voltooid deelwoorden (ge- + stam + -d/-t) en onvoltooid deelwoorden (stam + -d/-end) kunnen als bijvoeglijke naamwoorden worden gebruikt. In complexe contexten moeten deze overeenkomen met het zelfstandig naamwoord in geslacht en getal, en kunnen ze worden gecombineerd met voorzetsels of andere bepalingen. Deze constructies zijn kenmerkend voor formele en geschreven taal.",
+    "examples": [
+      "Een geïnteresseerd persoon.",
+      "De gebroken vaas lag op de grond.",
+      "De zorgvuldig voorbereide presentatie."
+    ],
+    "common_mistakes": "Неправильное образование деепричастий; неправильное использование деепричастий."
+  },
+  {
+    "kolmit_level": 27,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Bijvoeglijk naamwoord",
+    "rule_name": "Participium als bijvoeglijk naamwoord in zinsconstructies",
+    "description": "Деепричастия могут быть использованы в качестве прилагательных.",
+    "rule_text": "Participia kunnen als bijvoeglijke naamwoorden fungeren in zinsconstructies, waarbij ze een kwaliteit of toestand van het zelfstandig naamwoord uitdrukken. Vaste participia als bijvoeglijk naamwoord zijn 'geïnteresseerd' (geïnteresseerd in), 'verrast' (verrast over), 'afhankelijk' (afhankelijk van). Deze constructies vereisen vaak specifieke voorzetsels die met het participium verbonden zijn. Het participium moet overeenkomen met het zelfstandig naamwoord dat het wijzigt in getal en geslacht. Deze structuren zijn essentieel voor het uitdrukken van complexe betekenissen in formele teksten.",
+    "examples": [
+      "Een geïnteresseerd persoon.",
+      "De gebroken vaas lag op de grond.",
+      "De onverwachts gearriveerde gasten."
+    ],
+    "common_mistakes": "Неправильное образование деепричастий; неправильное использование деепричастий."
+  },
+  {
+    "kolmit_level": 28,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Bijvoeglijk naamwoord",
+    "rule_name": "Participium als bijvoeglijk naamwoord",
+    "description": "Деепричастия как прилагательные в составных предложениях.",
+    "rule_text": "Participia die als bijvoeglijke naamwoorden worden gebruikt, beschrijven een kenmerk of toestand van het zelfstandig naamwoord. Ze kunnen worden gevormd van zowel voltooide als onvoltooide deelwoorden en moeten in geslacht en getal overeenkomen met het naamwoord dat ze beschrijven. In samengestelde zinnen kunnen deze participia complexe beschrijvingen vormen en worden vaak gebruikt in formele en geschreven taal om precisie en nuance toe te voegen.",
+    "examples": [
+      "Een geïnteresseerd persoon.",
+      "De gebroken vaas lag op de grond.",
+      "De lopende zaken worden behandeld."
+    ],
+    "common_mistakes": "Неправильно согласуют прилагательные с существительными; забывают использовать правильные формы прилагательных."
+  },
+  {
+    "kolmit_level": 29,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Modale werkwoorden in geavanceerde samengestelde tijden",
+    "description": "Модальные глаголы в продвинутых составных временах.",
+    "rule_text": "Modale werkwoorden in geavanceerde samengestelde tijden drukken complexe modaliteiten uit zoals mogelijkheid, noodzaak, toestemming en verwachting in verschillende tijdsverhoudingen. 'Kunnen' drukt vermogen of mogelijkheid uit ('Ik kan zwemmen' - heden) of onzekerheid in het verleden ('Hij kon het gedaan hebben' - verleden mogelijkheid). 'Moeten' drukt verplichting uit ('Je moet gaan' - heden) of veronderstelling in het verleden ('Hij moet gegaan zijn' - verleden waarschijnlijkheid). Deze modaliteiten vereisen een goed begrip van zinsbouw en tijdsrelaties.",
+    "examples": [
+      "Ik zou kunnen helpen.",
+      "Zij moet gegaan zijn.",
+      "Hij zou het kunnen doen.",
+      "We hadden moeten weten."
+    ],
+    "common_mistakes": "Путают модальные глаголы; неправильно используют модальные глаголы."
+  },
+  {
+    "kolmit_level": 30,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Vaste voorzetsels bij werkwoorden in complexe zinnen",
+    "description": "Некоторые глаголы требуют использования фиксированных предлогов.",
+    "rule_text": "Vaste voorzetsels bij werkwoorden zijn voorzetsels die altijd met specifieke werkwoorden worden gecombineerd en niet kunnen worden veranderd zonder de betekenis te veranderen. Deze vaste combinaties moeten worden onthouden, zoals 'denken aan', 'houden van', 'wachten op', 'zoeken naar'. In complexe zinnen blijven deze voorzetsels verbonden met hun werkwoorden, zelfs wanneer het werkwoord wordt gescheiden door andere zinsdelen. Meestal komt het voorzetsel direct na het werkwoord of aan het einde van de zin.",
+    "examples": [
+      "Ik denk aan mijn toekomst.",
+      "Zij houdt van muziek.",
+      "Hij wacht op de bus.",
+      "We zoeken naar een oplossing."
+    ],
+    "common_mistakes": "Путают предлоги; неправильно используют предлоги."
+  },
+  {
+    "kolmit_level": 31,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Relatieve voornaamwoorden met voorzetsels in complexe zinnen",
+    "description": "Относительные местоимения с предлогами в сложных предложениях.",
+    "rule_text": "Relatieve voornaamwoorden met voorzetsels in complexe zinnen plaatsen de voorzetsel voor het relatieve voornaamwoord. Deze structuur is gebruikelijk in formeel Nederlands en bij langere relatieve bijzinnen. Bijvoorbeeld, 'De man, met wie ik spreek' (The man, with whom I speak). De voorzetsel kan ook aan het einde blijven staan in informele spraak ('De man, wie ik mee spreek'), maar voorzetsel aan het begin is te prefereren in formele contexten. De keuze van het relatieve voornaamwoord hangt nog steeds af van het geslacht van het antecedent.",
+    "examples": [
+      "De man, met wie ik spreek, is mijn vader.",
+      "Het boek, over hetwelke hij sprak, was interessant.",
+      "De vrouw, aan wie ik dacht, is mijn tante."
+    ],
+    "common_mistakes": "Путают относительные местоимения; неправильно используют относительные местоимения."
+  },
+  {
+    "kolmit_level": 32,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Passief",
+    "rule_name": "Passief in academische teksten",
+    "description": "Пассивный залог в академических текстах.",
+    "rule_text": "In academische teksten wordt het passief vaak gebruikt om de focus te leggen op de actie of het object in plaats van de uitvoerder. Dit bevordert objectiviteit en vermijdt persoonlijke verwijzingen. De lijdende vorm met 'worden' wordt gebruikt voor voortdurende handelingen, terwijl 'zijn' + voltooid deelwoord resulterende toestanden beschrijft. In academische contexten is de lijdende vorm bijzonder gebruikelijk in methodologie-secties en bij het beschrijven van onderzoeksprocessen.",
+    "examples": [
+      "Het experiment werd uitgevoerd.",
+      "De resultaten werden geanalyseerd.",
+      "Er wordt aangenomen dat..."
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола 'worden'; неправильное образование причастия."
+  },
+  {
+    "kolmit_level": 33,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Idiomatiek",
+    "rule_name": "Idiomen in geschreven taal",
+    "description": "Идиоматические выражения в письменной речи.",
+    "rule_text": "Idiomen in geschreven taal zijn vaste uitdrukkingen waarvan de betekenis niet direct af te leiden is uit de afzonderlijke woorden. Deze uitdrukkingen verrijken de taal en geven culturele nuance. In formele geschreven taal worden idiomen zorgvuldig geselecteerd om precisie en stijl te bevorderen. Het is belangrijk om de juiste context en register te begrijpen bij het gebruik van idiomen, aangezien ze vaak culturele en historische achtergronden hebben die essentieel zijn voor hun correcte interpretatie.",
+    "examples": [
+      "Hij houdt de kaars aan beide kanten brandend.",
+      "Ze hebben het brood nodig.",
+      "De koe bij de horens vatten."
+    ],
+    "common_mistakes": "Путают идиоматические выражения; неправильно используем идиоматические выражения."
+  },
+  {
+    "kolmit_level": 34,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Taalgebruik",
+    "rule_name": "Formeel en informeel register",
+    "description": "Формальный и неформальный регистр.",
+    "rule_text": "Taalgebruik in formele teksten vereist een specifiek register dat zich onderscheidt door objectiviteit, precisie en respectvolle aanspreekvormen. Formele teksten gebruiken volledige zinnen, complexe grammatica en technische terminologie waar nodig. De aanspreekvorm 'u' is verplicht in formele contexten, in tegenstelling tot het informele 'jij'. Woordkeus is zorgvuldig en vermijdt colloquialismen. Zinsbouw is vaak complexer met subordinatie en passieve constructies. Deze stijl is essentieel voor academische werken, zakelijke correspondentie, officiële documenten en journalistiek waar professionaliteit en duidelijkheid belangrijk zijn.",
+    "examples": [
+      "Geachte heer/mevrouw, ... (formeel)",
+      "Hoi Jan, ... (informeel)",
+      "Hierbij deel ik u mede... (formeel)"
+    ],
+    "common_mistakes": "Путают стили и регистры; неправильно используют стили и регистры."
+  },
+  [
+  {
+    "kolmit_level": 35,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Relatieve voornaamwoorden met voorzetsels",
+    "description": "Относительные местоимения с предлогами.",
+    "rule_text": "Relatieve voornaamwoorden met voorzetsels combineren betrekkelijke voornaamwoorden (wie, wat, dat, die) met voorzetsels om complexe bijzinnen te vormen. 'Wie' wordt gebruikt voor personen, 'wat' voor zaken en abstracties, 'dat' voor onzijdige woorden, en 'die' voor mannelijke en vrouwelijke woorden. Het voorzetsel komt voor het voornaamwoord in formele taal, maar kan in informele spraak aan het einde van de bijzin staan. Deze constructie is essentieel voor gestructureerde, formele zinsbouw.",
+    "examples": [
+      "De man, met wie ik spreek, is mijn vader.",
+      "Het boek, over hetwelke hij sprak, was interessant.",
+      "De stad, waarvan hij burgemeester is, is groot."
+    ],
+    "common_mistakes": "Путают относительные местоимения; неправильно используют относительные местоимения."
+  },
+  {
+    "kolmit_level": 36,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Samenvattende en tegenstellende voegwoorden",
+    "description": "Союзы используются для соединения предложений.",
+    "rule_text": "Samenvattende en tegenstellende voegwoorden verbinden zinsdelen en drukken verschillende logische relaties uit. Samenvattende voegwoorden zoals 'en', 'ook', 'eveneens' voegen gelijksoortige elementen samen. Tegenstellende voegwoorden zoals 'maar', 'echter', 'daarentegen' introduceren contrast of tegenstelling. De juiste keuze en plaatsing van deze voegwoorden is cruciaal voor coherente en logische tekstopbouw, vooral in complexe zinnen en formele contexten.",
+    "examples": [
+      "Hij werkt hard en leert veel.",
+      "Zij speelt of kijkt naar televisie.",
+      "Hij is slim maar lui.",
+      "Het regent echter gaan we toch."
+    ],
+    "common_mistakes": "Путают союзы; неправильно используют союзы."
+  },
+  {
+    "kolmit_level": 37,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooide deelwoorden als bijvoeglijk naamwoord",
+    "description": "Причастия прошедшего времени в качестве прилагательных.",
+    "rule_text": "Voltooide deelwoorden kunnen als bijvoeglijke naamwoorden fungeren en beschrijven dan een toestand die het resultaat is van een voltooide handeling. Deze deelwoorden worden verbogen volgens de standaard regels voor bijvoeglijke naamwoorden: geen uitgang voor onzijdige woorden met 'het', -e voor alle andere gevallen. Bijvoorbeeld: 'een gebroken ruit' (eenmalige handeling met blijvend resultaat) versus 'een brekende ruit' (voortdurende handeling).",
+    "examples": [
+      "De gesloten deur",
+      "Een geschreven brief",
+      "Het verbrande eten"
+    ],
+    "common_mistakes": "Неправильное образование причастий; путают с причастиями настоящего времени."
+  },
+  {
+    "kolmit_level": 38,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Werkwoordelijke eindgroep in bijzinnen",
+    "description": "Глагольная группа в конце придаточных предложений.",
+    "rule_text": "In bijzinnen staan alle werkwoorden aan het einde in een vaste volgorde: persoonsvorm, hulpwerkwoorden, voltooid deelwoord/infinitief. Deze werkwoordelijke eindgroep volgt specifieke regels: infinitieven komen voor deelwoorden, modale werkwoorden voor andere hulpwerkwoorden. De volgorde is: te + infinitief > infinitief > voltooid deelwoord. Deze structuur is essentieel voor correcte zinsbouw in complexe Nederlandse zinnen.",
+    "examples": [
+      "Ik denk dat hij heeft moeten werken",
+      "Zij zegt dat ze had kunnen komen",
+      "Hij wist dat het gedaan moest worden"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов; забывают ставить все глаголы в конец."
+  },
+  {
+    "kolmit_level": 39,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerende voornaamwoorden in complexe zinnen",
+    "description": "Возвратные местоимения в сложных предложениях.",
+    "rule_text": "Wederkerende voornaamwoorden (zich, mezelf, jezelf, zichzelf, onszelf, julliezelf, zichzelf) worden gebruikt wanneer het onderwerp en lijdend voorwerp dezelfde persoon zijn. In complexe zinnen moet het wederkerend voornaamwoord overeenkomen met het onderwerp van de zin. Bij samengestelde werkwoordstijden blijft het voornaamwoord bij het hoofdwerkwoord staan. Deze constructie komt vaak voor bij werkwoorden die een handeling op zichzelf beschrijven.",
+    "examples": [
+      "Hij waste zich voordat hij vertrok",
+      "Zij heeft zich altijd goed kunnen redden",
+      "Wij moeten ons beter voorbereiden"
+    ],
+    "common_mistakes": "Неправильное использование возвратных местоимений; путают формы местоимений."
+  },
+  {
+    "kolmit_level": 40,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Vaste voorzetseluitdrukkingen",
+    "description": "Устойчивые предложные выражения.",
+    "rule_text": "Vaste voorzetseluitdrukkingen zijn combinaties van voorzetsels met specifieke woorden (meestal zelfstandige naamwoorden, bijvoeglijke naamwoorden of werkwoorden) die als vaste constructies moeten worden onthouden. Deze uitdrukkingen volgen vaak geen logische regels en zijn kenmerkend voor geavanceerd taalgebruik. Voorbeelden zijn: 'in staat zijn tot', 'afhankelijk zijn van', 'vertrouwen hebben in'. Het juiste voorzetsel is essentieel voor de betekenis.",
+    "examples": [
+      "Hij is in staat tot grote prestaties",
+      "Zij is afhankelijk van haar ouders",
+      "Wij hebben vertrouwen in de toekomst"
+    ],
+    "common_mistakes": "Неправильный выбор предлогов; путают устойчивые сочетания."
+  },
+  {
+    "kolmit_level": 41,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Tijden",
+    "rule_name": "Voltooid verleden tijd in complexe context",
+    "description": "Предпрошедшее время в сложном контексте.",
+    "rule_text": "De voltooid verleden tijd (plusquamperfectum) wordt gebruikt om een handeling aan te geven die voltooid was vóór een andere handeling in het verleden. In complexe contexten wordt deze tijd vaak gecombineerd met andere werkwoordstijden en modale constructies. De vorm is 'had' + voltooid deelwoord. Deze tijd is essentieel voor het uitdrukken van temporele relaties in verhalende en beschrijvende teksten.",
+    "examples": [
+      "Nadat hij had gegeten, vertrok hij",
+      "Zij was al vertrokken toen ik aankwam",
+      "Had ik dat maar geweten"
+    ],
+    "common_mistakes": "Неправильное использование вспомогательного глагола; путают с другими прошедшими временами."
+  },
+  {
+    "kolmit_level": 42,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Lijdende vorm met modale werkwoorden",
+    "description": "Страдательный залог с модальными глаголами.",
+    "rule_text": "De lijdende vorm met modale werkwoorden combineert modaliteit (mogelijkheid, verplichting, toestemming) met de passieve constructie. De structuur is: modaal werkwoord + worden/zijn + voltooid deelwoord. De keuze tussen 'worden' en 'zijn' hangt af van het aspect: 'worden' voor voortdurende handelingen, 'zijn' voor resulterende toestanden. Deze constructie is gebruikelijk in formele, juridische en technische teksten.",
+    "examples": [
+      "Dit moet gedaan worden",
+      "Het kan gemaakt zijn",
+      "Dat mag niet gezegd worden"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов; путают 'worden' и 'zijn'."
+  },
+  {
+    "kolmit_level": 43,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Voorwaardelijke bijzinnen met indien en mits",
+    "description": "Условные придаточные предложения с indien и mits.",
+    "rule_text": "Voorwaardelijke bijzinnen met 'indien' en 'mits' drukken voorwaarden uit. 'Indien' is formeel voor 'als' en wordt gebruikt voor algemene voorwaarden. 'Mits' introduceert een voorwaarde die moet worden vervuld en impliceert vaak een voorwaarde voor toestemming of mogelijkheid. Beide voegwoorden vereinen een specifieke woordvolgorde in de bijzin en zijn kenmerkend voor formele, juridische en zakelijke taal.",
+    "examples": [
+      "Indien u akkoord gaat, teken dan hier",
+      "Mits u op tijd bent, kunt u deelnemen",
+      "Indien nodig, neem dan contact op"
+    ],
+    "common_mistakes": "Путают 'indien' и 'mits'; неправильный порядок слов в придаточном."
+  },
+  {
+    "kolmit_level": 44,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Woordenschat",
+    "rule_name": "Formele synoniemen voor alledaagse uitdrukkingen",
+    "description": "Формальные синонимы для повседневных выражений.",
+    "rule_text": "In formele contexten worden alledaagse uitdrukkingen vaak vervangen door formele synoniemen om professionaliteit en precisie te bevorderen. Bijvoorbeeld: 'doen' wordt 'verrichten', 'gaan' wordt 'zich begeven', 'zeggen' wordt 'verklaren'. Deze formele equivalenten zijn essentieel voor academische, juridische en zakelijke communicatie waar een hoog register vereist is.",
+    "examples": [
+      "Hij verrichtte zijn werk zorgvuldig",
+      "Zij begaf zich naar de vergaderzaal",
+      "De directeur verklaarde dat het project zou doorgaan"
+    ],
+    "common_mistakes": "Используют разговорные выражения в формальном контексте; неправильно подбирают синонимы."
+  },
+  {
+    "kolmit_level": 45,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Tangconstructies met scheidbare werkwoorden",
+    "description": "Конструкции с разделяемыми глаголами.",
+    "rule_text": "Tangconstructies met scheidbare werkwoorden ontstaan wanneer een scheidbaar werkwoord wordt gescheiden door andere zinsdelen. Het voorvoegsel staat aan het einde van de zin, terwijl het werkwoord zelf op de tweede positie staat. In complexe zinnen met meerdere werkwoorden kan deze constructie bijzonder ingewikkeld worden, vooral in bijzinnen waar alle werkwoorden aan het einde staan.",
+    "examples": [
+      "Hij belt zijn moeder elke dag op",
+      "Ik heb het boek gisteren uitgelezen",
+      "Zij is vroeger naar huis gegaan"
+    ],
+    "common_mistakes": "Неправильно разделяют глаголы; забывают ставить приставку в конец."
+  },
+  {
+    "kolmit_level": 46,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Betrekkelijke voornaamwoorden zonder antecedent",
+    "description": "Относительные местоимения без антецедента.",
+    "rule_text": "Betrekkelijke voornaamwoorden kunnen soms worden gebruikt zonder duidelijk antecedent, vooral in formele taal en vaste uitdrukkingen. 'Wat' wordt vaak gebruikt om naar een hele zin of een abstract concept te verwijzen. 'Wie' kan worden gebruikt in uitdrukkingen zoals 'wie het weet, mag het zeggen'. Deze constructies vereisen een goed begrip van de context en zijn kenmerkend voor geavanceerd taalgebruik.",
+    "examples": [
+      "Wat hij zei, was niet waar",
+      "Wie dat gelooft, is naïef",
+      "Wat mij betreft, kan het doorgaan"
+    ],
+    "common_mistakes": "Неправильный выбор местоимений; не понимают контекст использования."
+  },
+  {
+    "kolmit_level": 47,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Duratieve werkwoorden met aan het + infinitief",
+    "description": "Дуративные глаголы с конструкцией aan het + инфинитив.",
+    "rule_text": "De constructie 'aan het + infinitief' wordt gebruikt om een duratieve (voortdurende) handeling in de tegenwoordige tijd uit te drukken. Deze constructie benadrukt dat de handeling op het moment van spreken bezig is en enige tijd duurt. Het is een alternatief voor de tegenwoordige tijd en wordt vaak gebruikt in informelere contexten, maar komt ook voor in formelere beschrijvende teksten.",
+    "examples": [
+      "Hij is aan het werken",
+      "Zij was aan het studeren",
+      "We zijn het huis aan het schilderen"
+    ],
+    "common_mistakes": "Путают с другими конструкциями; неправильно используют предлог."
+  },
+  {
+    "kolmit_level": 48,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Concessieve bijzinnen met hoewel en ofschoon",
+    "description": "Уступительные придаточные предложения с hoewel и ofschoon.",
+    "rule_text": "Concessieve bijzinnen met 'hoewel' en 'ofschoon' drukken een tegenstelling of toegeving uit. 'Hoewel' is de meest gebruikelijke vorm, terwijl 'ofschoon' formeler en literair is. Beide voegwoorden introduceren een bijzin die een verwachting of assumptie tegenspreekt. De bijzin kan voor of na de hoofdzin staan en vereist altijd inversie van onderwerp en werkwoord.",
+    "examples": [
+      "Hoewel het regende, gingen we wandelen",
+      "Ofschoon hij moe was, werkte hij door",
+      "Hij slaagde voor het examen, hoewel hij niet had gestudeerd"
+    ],
+    "common_mistakes": "Путают с другими типами придаточных; неправильный порядок слов."
+  },
+  {
+    "kolmit_level": 49,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Complexe voorzetseluitdrukkingen met meerdere elementen",
+    "description": "Сложные предложные выражения с несколькими элементами.",
+    "rule_text": "Complexe voorzetseluitdrukkingen combineren meerdere voorzetsels of voorzetsels met vaste combinaties van woorden. Deze uitdrukkingen zijn vaak idiomatisch en moeten als geheel worden geleerd. Voorbeelden zijn: 'in plaats van', 'ten gevolge van', 'met betrekking tot'. Deze constructies zijn essentieel voor formele, academische en zakelijke communicatie waar precisie en nuance belangrijk zijn.",
+    "examples": [
+      "In plaats van te werken, ging hij uit",
+      "Ten gevolge van de regen werd het afgelast",
+      "Met betrekking tot uw brief van gisteren..."
+    ],
+    "common_mistakes": "Неправильно комбинируют предлоги; не запоминают устойчивые выражения."
+  },
+  {
+    "kolmit_level": 50,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Ingebedde bijzinnen met meerdere lagen",
+    "description": "Вложенные придаточные предложения с несколькими уровнями.",
+    "rule_text": "Ingebedde bijzinnen met meerdere lagen ontstaan wanneer een bijzin zelf weer een bijzin bevat. Deze complexe structuren vereisen zorgvuldige aandacht voor woordvolgorde, vooral wat betreft de plaatsing van werkwoorden. Alle werkwoorden van de diepst ingebedde bijzin staan helemaal aan het einde. Deze constructies zijn kenmerkend voor academische, juridische en formele teksten.",
+    "examples": [
+      "Ik zei dat ik dacht dat hij zou komen",
+      "Zij beweerde dat ze had gehoord dat het afgelast was",
+      "Hij weet dat ik wil dat hij stopt"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов; теряют структуру предложения."
+  },
+  {
+    "kolmit_level": 51,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Werkwoordstammen in vaste uitdrukkingen",
+    "description": "Основы глаголов в устойчивых выражениях.",
+    "rule_text": "Werkwoordstammen worden vaak gebruikt in vaste uitdrukkingen en gezegden zonder de typische werkwoordsuitgangen. Deze constructies zijn vaak historisch gegroeid en moeten als geheel worden geleerd. Voorbeelden zijn: 'met mate eten', 'tot ziens zeggen', 'ter kennis nemen'. Deze uitdrukkingen zijn kenmerkend voor formeel en literair Nederlands en vereisen een goede beheersing van de idiomatische aspecten van de taal.",
+    "examples": [
+      "Hij at met mate",
+      "Zij nam ter kennis dat het was goedgekeurd",
+      "We zeiden elkaar gedag"
+    ],
+    "common_mistakes": "Неправильно используют основы глаголов; не знают устойчивые выражения."
+  },
+  {
+    "kolmit_level": 52,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Aanvangende bijzinnen met alvorens en alvorens te",
+    "description": "Придаточные предложения времени с alvorens и alvorens te.",
+    "rule_text": "'Alvorens' en 'alvorens te' worden gebruikt om aan te geven dat een handeling plaatsvindt vóór een andere handeling. 'Alvorens' wordt gevolgd door een volledige bijzin, terwijl 'alvorens te' wordt gevolgd door een infinitief. Beide constructies zijn formeel en worden vooral gebruikt in geschreven taal. Ze benadrukken de temporele volgorde van handelingen en zijn essentieel voor precieze tijdsaanduiding in complexe zinnen.",
+    "examples": [
+      "Alvorens hij vertrok, controleerde hij alles",
+      "Alvorens te tekenen, las ze het contract",
+      "Alvorens te antwoorden, dacht hij goed na"
+    ],
+    "common_mistakes": "Путают 'alvorens' и 'alvorens te'; неправильный порядок слов."
+  },
+  {
+    "kolmit_level": 53,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerig voornaamwoord 'elkaar' in samengestelde zinnen",
+    "description": "Взаимное местоимение 'elkaar' в составных предложениях.",
+    "rule_text": "Het wederkerig voornaamwoord 'elkaar' wordt gebruikt wanneer twee of meer personen dezelfde handeling op elkaar verrichten. In samengestelde zinnen moet 'elkaar' correct worden geplaatst in relatie tot de werkwoorden. Het voornaamwoord kan worden gecombineerd met voorzetsels ('met elkaar', 'voor elkaar') en behoudt zijn vorm in alle personen. Deze constructie is essentieel voor het beschrijven van onderlinge relaties en interacties.",
+    "examples": [
+      "Zij helpen elkaar altijd",
+      "We spraken met elkaar over het probleem",
+      "Hij vertrouwde elkaar volledig"
+    ],
+    "common_mistakes": "Неправильно используют 'elkaar'; путают с возвратными местоимениями."
+  },
+  {
+    "kolmit_level": 54,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetselvoorwerpen in passieve zinnen",
+    "description": "Предложные дополнения в пассивных предложениях.",
+    "rule_text": "Voorzetselvoorwerpen kunnen ook in lijdende vorm worden gebruikt, waarbij het voorzetsel behouden blijft. Deze constructie is complex omdat het voorzetsel vast verbonden blijft met het werkwoord, zelfs wanneer de zin wordt gepassiveerd. Het onderwerp van de bedrijvende zin wordt in de lijdende vorm vaak weggelaten of met 'door' geïntroduceerd. Deze structuur komt vaak voor in formele en ambtelijke taal.",
+    "examples": [
+      "Er wordt naar een oplossing gezocht",
+      "Er werd over het probleem gesproken",
+      "Daar wordt al jarenlang onderzoek naar gedaan"
+    ],
+    "common_mistakes": "Забывают сохранять предлог; неправильно строят пассивную конструкцию."
+  },
+  {
+    "kolmit_level": 55,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij ontkennende bijwoorden",
+    "description": "Инверсия при отрицательных наречиях.",
+    "rule_text": "Bij ontkennende bijwoorden zoals 'nooit', 'nergens', 'niemand', 'noch' treedt inversie op wanneer deze aan het begin van de zin staan. Deze constructie benadrukt de ontkenning en is kenmerkend voor formeler en literair taalgebruik. De woordvolgorde is: ontkennend bijwoord - persoonsvorm - onderwerp - rest van de zin. Deze structuur vereist aandacht voor de werkwoordsplaatsing.",
+    "examples": [
+      "Nooit had ik zoiets gezien",
+      "Nergens kon hij een oplossing vinden",
+      "Noch wilde hij toegeven, noch wilde hij verliezen"
+    ],
+    "common_mistakes": "Неправильный порядок слов при отрицании; забывают инверсию."
+  },
+  {
+    "kolmit_level": 56,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid deelwoord als bijzin",
+    "description": "Причастие прошедшего времени в качестве придаточного предложения.",
+    "rule_text": "Voltooide deelwoorden kunnen soms zelfstandig als verkorte bijzinnen fungeren, vooral in formele en literaire taal. Deze constructie is beknopt en benadrukt het resultaat van een handeling. Het voltooid deelwoord staat dan aan het begin van de zin en wordt gevolgd door een komma en de hoofdzin. Deze stijlfiguur vereist een goed begrip van de context.",
+    "examples": [
+      "Aangekomen op station, nam hij de trein",
+      "Uitgeput door de reis, viel hij direct in slaap",
+      "Gewaarschuwd voor de gevaren, besloot hij toch te gaan"
+    ],
+    "common_mistakes": "Неправильно используют причастия; не понимают контекст."
+  },
+  {
+    "kolmit_level": 57,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Comparatief en superlatief in bijzinnen",
+    "description": "Сравнительная и превосходная степени в придаточных предложениях.",
+    "rule_text": "Comparatief (vergrotende trap) en superlatief (overtreffende trap) kunnen in complexe bijzinnen worden gebruikt om vergelijkingen en uitersten uit te drukken. In formele contexten worden vaak langere constructies gebruikt zoals 'des te' + comparatief, of 'hoe' + comparatief. Deze structuren zijn essentieel voor het maken van genuanceerde vergelijkingen en het benadrukken van verschillen.",
+    "examples": [
+      "Hoe langer hij wachtte, des te ongeduldiger hij werd",
+      "Dat is het mooiste dat ik ooit heb gezien",
+      "Hij werkte harder dan wie dan ook"
+    ],
+    "common_mistakes": "Неправильно образуют степени сравнения; путают конструкции."
+  },
+  {
+    "kolmit_level": 58,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Aanwijzende voornaamwoorden in complexe verwijzingen",
+    "description": "Указательные местоимения в сложных ссылках.",
+    "rule_text": "Aanwijzende voornaamwoorden (deze, dit, die, dat) worden in complexe zinnen gebruikt om naar specifieke elementen te verwijzen, soms over zinsgrenzen heen. In formele teksten kunnen deze voornaamwoorden worden gecombineerd met voorzetsels of andere bepalingen om precieze verwijzingen te maken. Het juiste gebruik vereist aandacht voor afstand (dichtbij/veraf) en geslacht.",
+    "examples": [
+      "Dit is het boek waarover ik sprak",
+      "Die van jou is beter dan deze van mij",
+      "Dat wat hij zei, was niet waar"
+    ],
+    "common_mistakes": "Неправильный выбор указательных местоимений; путают 'deze' и 'die'."
+  },
+  {
+    "kolmit_level": 59,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van tijd in complexe context",
+    "description": "Предлоги времени в сложном контексте.",
+    "rule_text": "Voorzetsels van tijd (gedurende, gedurende de, in de loop van, met ingang van) worden in formele contexten gebruikt om complexe temporele relaties uit te drukken. Deze voorzetsels geven vaak duur, beginpunt of periodiciteit aan en worden gecombineerd met specifieke tijdsaanduidingen. Het juiste gebruik is essentieel voor precieze tijdsbepaling in juridische, ambtelijke en academische teksten.",
+    "examples": [
+      "Gedurende de vergadering werd veel besproken",
+      "In de loop van de dag werd het beter",
+      "Met ingang van maandag is het nieuwe beleid van kracht"
+    ],
+    "common_mistakes": "Неправильно используют временные предлоги; путают значения."
+  },
+  {
+    "kolmit_level": 60,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Naamwoordelijk gezegde met meerdere werkwoorden",
+    "description": "Именное сказуемое с несколькими глаголами.",
+    "rule_text": "Een naamwoordelijk gezegde met meerdere werkwoorden combineert een koppelwerkwoord (zijn, worden, blijven, blijven, lijken, schijnen, heten, dunken, voorkomen) met een of meer hulpwerkwoorden en een naamwoordelijk deel. Deze constructies kunnen complex worden wanneer modale werkwoorden of voltooide tijden worden toegevoegd. De volgorde van de werkwoorden en de plaatsing van het naamwoordelijk deel volgen strikte regels.",
+    "examples": [
+      "Hij zou leraar zijn geworden",
+      "Zij had moe kunnen zijn",
+      "Het lijkt niet goed te zijn gegaan"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов; неправильно ставят именную часть."
+  },
+  {
+    "kolmit_level": 61,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Te + infinitief in formele constructies",
+    "description": "Конструкция te + инфинитив в формальных предложениях.",
+    "rule_text": "De constructie 'te + infinitief' wordt in formele contexten vaak gebruikt in combinatie met werkwoorden van verplichting, mogelijkheid of wenselijkheid. Deze constructie kan worden uitgebreid met modale hulpwerkwoorden en voorzetsels om complexe betekenissen uit te drukken. De plaatsing van 'te' is cruciaal en volgt specifieke regels in samengestelde zinnen.",
+    "examples": [
+      "Hij is verplicht te komen",
+      "Zij heeft besloten niet te gaan",
+      "Het is niet toegestaan hier te roken"
+    ],
+    "common_mistakes": "Неправильное положение 'te'; путают с другими инфинитивными конструкциями."
+  },
+  {
+    "kolmit_level": 62,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van voorwaarde met tenzij",
+    "description": "Условные придаточные предложения с tenzij.",
+    "rule_text": "'Ten zij' wordt gebruikt om een uitzondering of negatieve voorwaarde uit te drukken, vergelijkbaar met 'behalve als' of 'unless' in het Engels. Deze constructie is formeler dan 'behalve als' en wordt vaak gebruikt in juridische en formele contexten. De bijzin met 'tenzij' volgt de normale woordvolgorde voor bijzinnen en kan voor of na de hoofdzin staan.",
+    "examples": [
+      "Ik kom morgen, tenzij het regent",
+      "Tenzij er zich problemen voordoen, gaan we door",
+      "Het project wordt uitgevoerd, tenzij het budget ontoereikend is"
+    ],
+    "common_mistakes": "Путают 'tenzij' с другими условными союзами; неправильный порядок слов."
+  },
+  {
+    "kolmit_level": 63,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Onbepaalde voornaamwoorden in formele context",
+    "description": "Неопределенные местоимения в формальном контексте.",
+    "rule_text": "Onbepaalde voornaamwoorden (men, iemand, niemand, iets, niets, elk, ieder) worden in formele contexten vaak gebruikt om algemene uitspraken te doen of om niet-specifieke referenties te maken. In complexe zinnen kunnen deze voornaamwoorden worden gecombineerd met bijvoeglijke bijzinnen of voorzetseluitdrukkingen. Het gebruik vereist aandacht voor enkelvoud/meervoud en de juiste werkwoordsvorm.",
+    "examples": [
+      "Men dient zich aan de regels te houden",
+      "Ieder die komt, is welkom",
+      "Er is niets dat hij niet kan"
+    ],
+    "common_mistakes": "Неправильно используют неопределенные местоимения; путают формы."
+  },
+  {
+    "kolmit_level": 64,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Samengestelde voorzetsels in juridische taal",
+    "description": "Составные предлоги в юридическом языке.",
+    "rule_text": "Samengestelde voorzetsels (ingevolge, krachtens, met betrekking tot, in verband met) zijn kenmerkend voor juridische, ambtelijke en formele taal. Deze voorzetsels drukken vaak causale, juridische of formele relaties uit en moeten precies worden gebruikt volgens vaste patronen. Het juiste gebruik is essentieel voor de juridische geldigheid en duidelijkheid van formele documenten.",
+    "examples": [
+      "Ingevolge artikel 5 is dit verboden",
+      "Krachtens deze wet moet u betalen",
+      "In verband met de werkzaamheden is de weg afgesloten"
+    ],
+    "common_mistakes": "Неправильно используют составные предлоги; путают значения."
+  },
+  {
+    "kolmit_level": 65,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Afhankelijke vraagzinnen in formele context",
+    "description": "Зависимые вопросительные предложения в формальном контексте.",
+    "rule_text": "Afhankelijke vraagzinnen (indirecte vragen) worden in formele contexten gebruikt om vragen op beleefde en indirecte wijze te formuleren. Deze zinnen beginnen met vraagwoorden maar volgen de woordvolgorde van bijzinnen (geen inversie). In complexe zinnen kunnen afhankelijke vraagzinnen worden gecombineerd met andere bijzinnen, wat zorgvuldige aandacht voor werkwoordsplaatsing vereist.",
+    "examples": [
+      "Kunt u mij vertellen wanneer de vergadering begint?",
+      "Ik vraag me af waarom hij niet is gekomen",
+      "Weet u hoe laat het is?"
+    ],
+    "common_mistakes": "Используют прямой порядок слов в зависимых вопросах; путают с прямыми вопросами."
+  },
+  {
+    "kolmit_level": 66,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid tegenwoordige tijd in indirecte rede",
+    "description": "Совершенное настоящее время в косвенной речи.",
+    "rule_text": "De voltooid tegenwoordige tijd (perfectum) wordt vaak gebruikt in indirecte rede om aangehaalde uitspraken in het verleden weer te geven. Deze constructie benadrukt dat de handeling voltooid is maar nog relevantie heeft voor het heden. In formele contexten wordt deze tijd gecombineerd met voegwoorden zoals 'dat', 'of' en vraagwoorden om complexe indirecte uitspraken te vormen.",
+    "examples": [
+      "Hij zei dat hij het boek heeft gelezen",
+      "Zij vroeg of ik al gegeten heb",
+      "Hij vertelde wat er is gebeurd"
+    ],
+    "common_mistakes": "Неправильно используют времена в косвенной речи; путают с другими прошедшими временами."
+  },
+  {
+    "kolmit_level": 67,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Toegevende bijzinnen met ofschoon en hoewel",
+    "description": "Уступительные придаточные предложения с ofschoon и hoewel.",
+    "rule_text": "Toegevende bijzinnen met 'ofschoon' en 'hoewel' drukken een tegenstelling uit tussen wat verwacht wordt en wat werkelijk gebeurt. 'Ofschoon' is formeler en literairder dan 'hoewel'. Beide voegwoorden introduceren een bijzin die een tegenstrijdige omstandigheid beschrijft. De bijzin kan voor of na de hoofdzin staan en vereist altijd de bijzinwoordvolgorde.",
+    "examples": [
+      "Ofschoon het laat was, bleef hij doorwerken",
+      "Hij ging naar buiten, hoewel het regende",
+      "Ofschoon hij vermoeid was, voltooide hij de opdracht"
+    ],
+    "common_mistakes": "Путают 'ofschoon' и 'hoewel'; неправильный порядок слов в придаточном."
+  },
+  {
+    "kolmit_level": 68,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Bezittelijke voornaamwoorden in formele aanspreekvorm",
+    "description": "Притяжательные местоимения в формальной форме обращения.",
+    "rule_text": "In formele contexten worden bezittelijke voornaamwoorden aangepast aan het formele register. 'Uw' wordt gebruikt in plaats van 'jouw' bij formele aanspreekvorm. Bij meervoudige bezitters worden constructies zoals 'van u' of 'der heren/dames' gebruikt. Deze aanpassingen zijn essentieel voor professionele en formele communicatie.",
+    "examples": [
+      "Is dit uw auto?",
+      "De heer en mevrouw Jansen met hun kinderen",
+      "Het kantoor van de directie"
+    ],
+    "common_mistakes": "Используют неформальные местоимения в формальном контексте; неправильно образуют формы."
+  },
+  {
+    "kolmit_level": 69,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van oorzaak en gevolg",
+    "description": "Предлоги причины и следствия.",
+    "rule_text": "Voorzetsels van oorzaak en gevolg (vanwege, wegens, ten gevolge van, als gevolg van) worden gebruikt om causale relaties uit te drukken in formele contexten. Deze voorzetsels geven aan waarom iets gebeurt of wat het resultaat is van een handeling. Het juiste gebruik is essentieel voor logische en coherente argumentatie in academische en professionele teksten.",
+    "examples": [
+      "Vanwege de regen ging het evenement niet door",
+      "Wegens omstandigheden is het restaurant gesloten",
+      "Ten gevolge van de storm was er schade"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги причины; путают значения."
+  },
+  {
+    "kolmit_level": 70,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij bijwoordelijke bepalingen van plaats",
+    "description": "Инверсия при обстоятельствах места.",
+    "rule_text": "Bijwoordelijke bepalingen van plaats aan het begin van de zin veroorzaken inversie van onderwerp en persoonsvorm. Deze constructie benadrukt de locatie en is kenmerkend voor beschrijvende en formele teksten. De woordvolgorde is: plaatsbepaling - persoonsvorm - onderwerp - rest van de zin. Deze structuur vereist aandacht voor werkwoordsplaatsing en zinsmelodie.",
+    "examples": [
+      "In de tuin staat een grote boom",
+      "Aan de horizon verschenen de eerste schepen",
+      "Op het plein verzamelden zich de mensen"
+    ],
+    "common_mistakes": "Забывают инверсию; неправильный порядок слов."
+  },
+  {
+    "kolmit_level": 71,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Conditionele perfectum in hypothetische situaties",
+    "description": "Условное совершенное время в гипотетических ситуациях.",
+    "rule_text": "Het conditionele perfectum (zou + hebben/zijn + voltooid deelwoord) wordt gebruikt om hypothetische situaties in het verleden uit te drukken. Deze constructie beschrijft wat had kunnen gebeuren maar niet gebeurd is. In complexe zinnen wordt deze tijd gecombineerd met voorwaardelijke bijzinnen om genuanceerde hypothetische scenario's te creëren.",
+    "examples": [
+      "Hij zou zijn gekomen als hij had geweten",
+      "Zij zou het gedaan hebben als ze kon",
+      "We zouden gewonnen hebben als we beter hadden gespeeld"
+    ],
+    "common_mistakes": "Неправильно образуют условное время; путают с другими временами."
+  },
+  {
+    "kolmit_level": 72,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van doel met opdat en teneinde",
+    "description": "Придаточные предложения цели с opdat и teneinde.",
+    "rule_text": "'Opdat' en 'teneinde' worden gebruikt om doel bijzinnen te vormen in formele en schrijftalige contexten. 'Opdat' wordt gevolgd door een volledige bijzin, vaak met de aanvoegende wijs. 'Teneinde' wordt gevolgd door 'te + infinitief'. Beide constructies drukken het doel of de bedoeling van een handeling uit en zijn kenmerkend voor juridische en formele teksten.",
+    "examples": [
+      "Hij studeert hard opdat hij slaagt",
+      "Teneinde tijd te besparen, namen we de snelweg",
+      "We vertrokken vroeg opdat we op tijd zouden zijn"
+    ],
+    "common_mistakes": "Путают 'opdat' и 'teneinde'; неправильно используют инфинитивные конструкции."
+  },
+  {
+    "kolmit_level": 73,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wedekerige voornaamwoorden in formele correspondentie",
+    "description": "Взаимные местоимения в формальной переписке.",
+    "rule_text": "In formele correspondentie worden wederkerige voornaamwoorden vaak gebruikt om onderlinge relaties en wederzijdse verplichtingen uit te drukken. Constructies zoals 'onderling', 'wederzijds' en 'elkaar' worden gecombineerd met formele werkwoorden om professionele relaties te beschrijven. Het juiste gebruik is essentieel voor zakelijke communicatie en contracten.",
+    "examples": [
+      "De partijen verbinden zich ertoe elkaar te informeren",
+      "Wederzijdse samenwerking is essentieel",
+      "Onderling overleg wordt gewaardeerd"
+    ],
+    "common_mistakes": "Неправильно используют взаимные местоимения; путают с возвратными."
+  },
+  {
+    "kolmit_level": 74,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetseluitdrukkingen met vaste werkwoorden",
+    "description": "Устойчивые предложные выражения с глаголами.",
+    "rule_text": "Veel Nederlandse werkwoorden hebben vaste voorzetseluitdrukkingen die als geheel moeten worden geleerd. Deze combinaties zijn vaak idiomatisch en volgen geen logische regels. Voorbeelden zijn: 'rekenen op', 'zoeken naar', 'wachten op', 'denken aan'. Het juiste voorzetsel is essentieel voor de betekenis en moet consistent worden gebruikt.",
+    "examples": [
+      "Ik reken op uw medewerking",
+      "Zij zoekt naar een oplossing",
+      "Hij wacht op antwoord"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги; не запоминают устойчивые сочетания."
+  },
+  {
+    "kolmit_level": 75,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Naamwoordconstructies met van-der constructie",
+    "description": "Именные конструкции с van-der.",
+    "rule_text": "De 'van-der' constructie wordt gebruikt om bezit of relatie uit te drukken in formele en geschreven taal. Deze constructie is vaak eleganter dan de bezits-s maar vereist aandacht voor geslacht en getal. In complexe zinnen kunnen deze constructies worden gecombineerd met bijvoeglijke bijzinnen voor precieze specificatie.",
+    "examples": [
+      "De auto van de buurman",
+      "Het huis van mijn ouders",
+      "De directeur van het bedrijf"
+    ],
+    "common_mistakes": "Неправильно используют конструкцию; путают с притяжательными формами."
+  },
+  {
+    "kolmit_level": 76,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Hulpwerkwoorden van modaliteit in verleden tijd",
+    "description": "Вспомогательные глаголы модальности в прошедшем времени.",
+    "rule_text": "Hulpwerkwoorden van modaliteit (kunnen, moeten, mogen, willen) hebben specifieke vormen in de verleden tijd die nuances in betekenis kunnen veroorzaken. 'Kon' drukt vaak onvermogen uit, 'moest' verplichting, 'mocht' toestemming, en 'wilde' bereidheid of weigering. In complexe zinnen worden deze vormen gecombineerd met andere werkwoordstijden voor genuanceerde uitdrukking van modaliteit.",
+    "examples": [
+      "Hij kon niet komen omdat hij ziek was",
+      "Zij moest werken ondanks dat ze moe was",
+      "Hij wilde niet meedoen aan het project"
+    ],
+    "common_mistakes": "Неправильно используют прошедшие формы; путают значения модальных глаголов."
+  },
+  {
+    "kolmit_level": 77,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Temporale bijzinnen met zodra en zolang",
+    "description": "Временные придаточные предложения с zodra и zolang.",
+    "rule_text": "'Zodra' en 'zolang' worden gebruikt om temporele relaties uit te drukken in formele contexten. 'Zodra' betekent 'onmiddellijk nadat' en benadrukt directe opeenvolging. 'Zolang' betekent 'gedurende de tijd dat' en benadrukt duur. Beide voegwoorden introduceren bijzinnen die specifieke temporele voorwaarden beschrijven en zijn essentieel voor precieze tijdsaanduiding.",
+    "examples": [
+      "Zodra ik het hoor, laat ik het je weten",
+      "Zolang het licht is, kunnen we doorwerken",
+      "Zodra de vergadering afgelopen is, vertrek ik"
+    ],
+    "common_mistakes": "Путают 'zodra' и 'zolang'; неправильный порядок слов."
+  },
+  {
+    "kolmit_level": 78,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Aanwijzende voornaamwoorden met bijvoeglijke bijzinnen",
+    "description": "Указательные местоимения с определительными придаточными.",
+    "rule_text": "Aanwijzende voornaamwoorden kunnen worden gecombineerd met bijvoeglijke bijzinnen om specifieke referenties te maken. Deze constructies zijn complex omdat ze aandacht vereisen voor geslacht, getal en de juiste keuze van betrekkelijk voornaamwoord. In formele teksten worden deze constructies gebruikt voor precieze en ondubbelzinnige verwijzingen.",
+    "examples": [
+      "Diegene die het weet, mag het zeggen",
+      "Dat wat hij doet, is bewonderenswaardig",
+      "Degenen die komen, zijn welkom"
+    ],
+    "common_mistakes": "Неправильно сочетают указательные местоимения с придаточными; путают формы."
+  },
+  {
+    "kolmit_level": 79,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetselgroepen in formele beschrijvingen",
+    "description": "Предложные группы в формальных описаниях.",
+    "rule_text": "Voorzetselgroepen (combinaties van voorzetsels met naamwoorden) worden in formele beschrijvingen gebruikt om complexe ruimtelijke, temporele of abstracte relaties uit te drukken. Deze groepen kunnen worden uitgebreid met bijvoeglijke bepalingen en zijn kenmerkend voor academische, technische en ambtelijke taal. Het juiste gebruik vereist aandacht voor vaste combinaties en idiomatische uitdrukkingen.",
+    "examples": [
+      "In het kader van het onderzoek",
+      "Met het oog op de toekomst",
+      "Ten behoeve van de deelnemers"
+    ],
+    "common_mistakes": "Неправильно составляют предложные группы; путают предлоги."
+  },
+  {
+    "kolmit_level": 80,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Samengestelde zin met meerdere bijzinnen",
+    "description": "Составное предложение с несколькими придаточными.",
+    "rule_text": "Samengestelde zinnen met meerdere bijzinnen combineren verschillende typen bijzinnen (temporaal, causaal, conditioneel, etc.) in één complexe structuur. Deze zinnen vereisen zorgvuldige aandacht voor werkwoordsplaatsing, voegwoordkeuze en logische samenhang. Ze zijn kenmerkend voor academische, juridische en literaire teksten waar complexe gedachtegangen worden uitgedrukt.",
+    "examples": [
+      "Omdat het regende, terwijl we hadden afgesproken te wandelen, besloten we binnen te blijven",
+      "Als je komt, zodra je kunt, dan kunnen we het bespreken voordat het te laat is",
+      "Hoewel hij moe was, omdat hij hard had gewerkt, bleef hij doorgaan totdat het af was"
+    ],
+    "common_mistakes": "Теряют структуру предложения; неправильный порядок глаголов в сложных конструкциях."
+  },
+  {
+    "kolmit_level": 81,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid deelwoord als bijvoeglijke bepaling",
+    "description": "Причастие прошедшего времени в качестве определения.",
+    "rule_text": "Voltooide deelwoorden kunnen als bijvoeglijke bepaling fungeren en beschrijven dan een toestand die het resultaat is van een voltooide handeling. Deze constructie is compact en informatief, en wordt vaak gebruikt in formele en beschrijvende teksten. Het voltooid deelwoord moet overeenkomen met het zelfstandig naamwoord in geslacht en getal, en kan worden uitgebreid met bijwoorden of voorzetselgroepen.",
+    "examples": [
+      "De onverwachts gearriveerde gasten",
+      "Het zorgvuldig voorbereide plan",
+      "De gisteren ondertekende overeenkomst"
+    ],
+    "common_mistakes": "Неправильное согласование причастия; путают с причастиями настоящего времени."
+  },
+  {
+    "kolmit_level": 82,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Comparatief met 'als' en 'dan' in complexe zinnen",
+    "description": "Сравнительная степень с 'als' и 'dan' в сложных предложениях.",
+    "rule_text": "De comparatief wordt in complexe zinnen gecombineerd met 'als' voor gelijkheid en 'dan' voor ongelijkheid. In formele contexten kunnen deze constructies worden uitgebreid met bijzinnen en bijwoordelijke bepalingen voor genuanceerde vergelijkingen. De juiste keuze tussen 'als' en 'dan' is essentieel voor de betekenis en moet consistent worden toegepast in complexe zinsstructuren.",
+    "examples": [
+      "Hij is groter dan ik dacht",
+      "Zij werkt sneller dan wie dan ook",
+      "Het is beter als je zelf komt"
+    ],
+    "common_mistakes": "Путают 'als' и 'dan'; неправильно строят сравнительные конструкции."
+  },
+  {
+    "kolmit_level": 83,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerend voornaamwoord in lijdende vorm",
+    "description": "Возвратное местоимение в страдательном залоге.",
+    "rule_text": "Wederkerende voornaamwoorden kunnen worden gebruikt in lijdende vorm constructies om aan te geven dat de handeling op het onderwerp zelf wordt verricht. Deze constructie is complex omdat het wederkerend voornaamwoord moet overeenkomen met het onderwerp en de lijdende vorm correct moet worden gevormd. Het wordt vaak gebruikt in formele en technische beschrijvingen.",
+    "examples": [
+      "Het product laat zich gemakkelijk gebruiken",
+      "De deur opent zich automatisch",
+      "De situatie verbeterde zich geleidelijk"
+    ],
+    "common_mistakes": "Неправильно используют возвратные местоимения в пассиве; путают конструкции."
+  },
+  {
+    "kolmit_level": 84,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van middel en instrument",
+    "description": "Предлоги средства и инструмента.",
+    "rule_text": "Voorzetsels van middel en instrument (met, door middel van, via, met behulp van) worden gebruikt om aan te geven hoe een handeling wordt uitgevoerd. In formele en technische contexten worden deze voorzetsels gecombineerd met complexe naamwoordgroepen om precieze beschrijvingen van processen en methoden te geven. Het juiste gebruik is essentieel voor technische documentatie en handleidingen.",
+    "examples": [
+      "Met behulp van een speciaal gereedschap",
+      "Door middel van uitgebreid onderzoek",
+      "Via de officiële kanalen"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги средства; путают значения."
+  },
+  {
+    "kolmit_level": 85,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij vooropgeplaatste bepalingen",
+    "description": "Инверсия при вынесенных в начало обстоятельствах.",
+    "rule_text": "Wanneer bepalingen van tijd, plaats of wijze voorop worden geplaatst voor nadruk of stilistische redenen, treedt inversie op van onderwerp en persoonsvorm. Deze constructie is kenmerkend voor formele en literaire taal en vereist aandacht voor de juiste woordvolgorde. De bepaling staat eerst, gevolgd door de persoonsvorm, dan het onderwerp en de rest van de zin.",
+    "examples": [
+      "Met grote zorgvuldigheid prepareerde de arts de operatie",
+      "In alle stilte verlieten ze het gebouw",
+      "Gedurende de hele dag werkte hij aan het project"
+    ],
+    "common_mistakes": "Забывают инверсию; неправильный порядок слов после вынесенной конструкции."
+  },
+  {
+    "kolmit_level": 86,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Toekomende tijd in formele context",
+    "description": "Будущее время в формальном контексте.",
+    "rule_text": "De toekomende tijd (zullen + infinitief) wordt in formele contexten gebruikt om toekomstige gebeurtenissen, voorspellingen of intenties uit te drukken. In complexe zinnen kan deze tijd worden gecombineerd met modale werkwoorden en voorwaardelijke bijzinnen voor genuanceerde toekomstverwijzingen. Het gebruik van 'zullen' is essentieel voor formele planning en prognoses.",
+    "examples": [
+      "De vergadering zal morgen plaatsvinden",
+      "Zij zullen het project voltooien",
+      "Het zal naar verwachting regenen"
+    ],
+    "common_mistakes": "Неправильно образуют будущее время; путают с другими конструкциями."
+  },
+  {
+    "kolmit_level": 87,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van voorwaarde met mits en indien",
+    "description": "Условные придаточные предложения с mits и indien.",
+    "rule_text": "'Mits' en 'indien' worden gebruikt in formele voorwaardelijke bijzinnen. 'Mits' impliceert een voorwaarde die moet worden vervuld voor een bepaald resultaat, terwijl 'indien' een algemenere voorwaarde uitdrukt. Beide voegwoorden zijn formeler dan 'als' en worden vaak gebruikt in juridische, zakelijke en formele contexten. Ze vereisen de standaard bijzinwoordvolgorde.",
+    "examples": [
+      "Mits u op tijd betaalt, leveren wij direct",
+      "Indien nodig, nemen wij contact op",
+      "Het is mogelijk, mits aan alle voorwaarden wordt voldaan"
+    ],
+    "common_mistakes": "Путают 'mits' и 'indien'; неправильный порядок слов в условных придаточных."
+  },
+  {
+    "kolmit_level": 88,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Onbepaald voornaamwoord 'men' in formele taal",
+    "description": "Неопределенное местоимение 'men' в формальной речи.",
+    "rule_text": "Het onbepaald voornaamwoord 'men' wordt gebruikt in formele contexten om naar mensen in het algemeen te verwijzen zonder specifieke personen te noemen. Het wordt altijd gecombineerd met een werkwoord in de derde persoon enkelvoud. 'Men' is typisch voor formele, ambtelijke en academische taal waar algemene uitspraken worden gedaan.",
+    "examples": [
+      "Men zegt dat het gaat regenen",
+      "Men dient zich aan de regels te houden",
+      "Men kan zich afvragen of dit wel verstandig is"
+    ],
+    "common_mistakes": "Неправильно используют 'men'; путают с другими неопределенными местоимениями."
+  },
+  {
+    "kolmit_level": 89,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van concessie in formele stijl",
+    "description": "Предлоги уступки в формальном стиле.",
+    "rule_text": "Voorzetsels van concessie (ondanks, niettegenstaande, in weerwil van) worden gebruikt om tegenstrijdige omstandigheden uit te drukken in formele contexten. Deze voorzetsels introduceren een bepaling die in tegenspraak is met de hoofdzin. Ze zijn kenmerkend voor juridische, academische en formele teksten waar nuance en precisie belangrijk zijn.",
+    "examples": [
+      "Ondanks de regen ging het evenement door",
+      "Niettegenstaande zijn leeftijd is hij zeer actief",
+      "In weerwil van alle waarschuwingen ging hij door"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги уступки; путают значения."
+  },
+  {
+    "kolmit_level": 90,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Passieve constructies met modale hulpwerkwoorden",
+    "description": "Пассивные конструкции с модальными вспомогательными глаголами.",
+    "rule_text": "Passieve constructies kunnen worden gecombineerd met modale hulpwerkwoorden om mogelijkheid, verplichting of toestemming uit te drukken in formele contexten. De structuur is: modaal werkwoord + worden/zijn + voltooid deelwoord. Deze constructies zijn complex omdat ze aandacht vereisen voor werkwoordsvolgorde en de juiste keuze tussen 'worden' en 'zijn'.",
+    "examples": [
+      "Dit moet gedaan worden voor morgen",
+      "Het kan gerepareerd worden",
+      "Dat mag niet vergeten worden"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов; путают 'worden' и 'zijn' в пассиве."
+  },
+  {
+    "kolmit_level": 91,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Duratieve constructies met 'zitten te', 'staan te', 'liggen te'",
+    "description": "Дуративные конструкции с 'zitten te', 'staan te', 'liggen te'.",
+    "rule_text": "De constructies 'zitten te', 'staan te', 'liggen te' + infinitief worden gebruikt om duratieve handelingen uit te drukken die op een specifieke manier worden uitgevoerd. Deze constructies benadrukken zowel de duur als de houding of positie tijdens de handeling. Ze zijn informeler van stijl maar komen voor in beschrijvende teksten en dialogen.",
+    "examples": [
+      "Hij zat te lezen de hele middag",
+      "Zij stond te wachten op de hoek",
+      "Het kind lag te slapen in zijn bed"
+    ],
+    "common_mistakes": "Неправильно используют конструкции; путают с другими дуративными формами."
+  },
+  {
+    "kolmit_level": 92,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Redengevende bijzinnen met 'aangezien' en 'vermits'",
+    "description": "Придаточные предложения причины с 'aangezien' и 'vermits'.",
+    "rule_text": "'Aangezien' en 'vermits' zijn formele voegwoorden die redengevende bijzinnen introduceren. 'Aangezien' wordt gebruikt voor bekende feiten en gevestigde waarheden, terwijl 'vermits' meer juridisch en formeel is. Beide voegwoorden vereisen de standaard bijzinwoordvolgorde en zijn kenmerkend voor academische en juridische teksten.",
+    "examples": [
+      "Aangezien het regent, blijven we binnen",
+      "Vermits hij niet kwam, gingen we zonder hem",
+      "Aangezien alle feiten bekend zijn, kunnen we beslissen"
+    ],
+    "common_mistakes": "Путают 'aangezien' и 'vermits'; неправильный порядок слов."
+  },
+  {
+    "kolmit_level": 93,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Betrekkelijk voornaamwoord 'welk' in formele taal",
+    "description": "Относительное местоимение 'welk' в формальной речи.",
+    "rule_text": "Het betrekkelijk voornaamwoord 'welk' wordt gebruikt in zeer formele en schrijftalige contexten, vooral in juridische en ambtelijke taal. 'Welk' verwijst naar onzijdige zelfstandige naamwoorden en kan worden gecombineerd met voorzetsels. Het gebruik van 'welk' is beperkt tot specifieke formele registers en vereist aandacht voor geslacht en getal.",
+    "examples": [
+      "Het document, welk gisteren is ondertekend",
+      "De overeenkomst, op welk moment wij tekenden",
+      "Het bedrag, welk moet worden betaald"
+    ],
+    "common_mistakes": "Неправильно используют 'welk'; путают с другими относительными местоимениями."
+  },
+  {
+    "kolmit_level": 94,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetseluitdrukkingen met vaste naamwoorden",
+    "description": "Устойчивые предложные выражения с именами существительными.",
+    "rule_text": "Vaste voorzetseluitdrukkingen met naamwoorden zijn combinaties die als geheel moeten worden geleerd en vaak idiomatisch zijn. Deze uitdrukkingen zijn kenmerkend voor formele en vaste taal en komen veel voor in juridische, ambtelijke en zakelijke contexten. Het juiste voorzetsel is essentieel voor de betekenis.",
+    "examples": [
+      "In het kader van",
+      "Met betrekking tot",
+      "Ten aanzien van",
+      "In verband met"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги; не запоминают устойчивые сочетания."
+  },
+  {
+    "kolmit_level": 95,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe vraagzinnen in formele context",
+    "description": "Сложные вопросительные предложения в формальном контексте.",
+    "rule_text": "Complexe vraagzinnen in formele contexten combineren vraagwoorden met bijzinnen en meerdere werkwoorden. Deze zinnen vereisen aandacht voor woordvolgorde, werkwoordsplaatsing en de juiste gebruik van vraagwoorden. Ze zijn kenmerkend voor formele interviews, academische discussies en professionele communicatie waar complexe informatie wordt opgevraagd.",
+    "examples": [
+      "Kunt u mij vertellen wanneer de vergadering zal plaatsvinden?",
+      "Weet u hoe lang het zal duren voordat de resultaten bekend zijn?",
+      "Kunt u aangeven waarom dit besluit is genomen?"
+    ],
+    "common_mistakes": "Неправильный порядок слов в сложных вопросах; путают с утвердительными предложениями."
+  },
+  {
+    "kolmit_level": 96,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid deelwoord in bijvoeglijke gebruik",
+    "description": "Причастие прошедшего времени в атрибутивной функции.",
+    "rule_text": "Voltooide deelwoorden kunnen als bijvoeglijk naamwoord worden gebruikt om een toestand of resultaat te beschrijven. Deze constructie is compact en informatief, en wordt vaak gebruikt in formele en beschrijvende teksten. Het voltooid deelwoord moet overeenkomen met het zelfstandig naamwoord in geslacht en getal, en kan worden uitgebreid met bijwoorden of voorzetselgroepen voor meer precisie.",
+    "examples": [
+      "De gisteren aangekomen gasten",
+      "Het zorgvuldig uitgevoerde onderzoek",
+      "Een goed voorbereide presentatie"
+    ],
+    "common_mistakes": "Неправильное согласование причастия; путают с причастиями настоящего времени."
+  },
+  {
+    "kolmit_level": 97,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Voorwaardelijke zinnen met 'in geval dat'",
+    "description": "Условные предложения с 'in geval dat'.",
+    "rule_text": "'In geval dat' is een formele constructie die wordt gebruikt om hypothetische situaties en voorwaarden uit te drukken. Deze uitdrukking is typisch voor juridische, contractuele en formele zakelijke contexten. Het introduceert een bijzin die een specifieke voorwaarde of scenario beschrijft, gevolgd door de hoofdzin die het gevolg of de actie beschrijft.",
+    "examples": [
+      "In geval dat het regent, wordt het evenement verplaatst",
+      "In geval dat u vragen heeft, neem dan contact op",
+      "In geval dat de levering vertraagd is, ontvangt u een bericht"
+    ],
+    "common_mistakes": "Путают с другими условными конструкциями; неправильный порядок слов."
+  },
+  {
+    "kolmit_level": 98,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerend voornaamwoord in onpersoonlijke constructies",
+    "description": "Возвратное местоимение в безличных конструкциях.",
+    "rule_text": "Wederkerende voornaamwoorden worden gebruikt in onpersoonlijke constructies met 'zich' om algemene handelingen of toestanden te beschrijven. Deze constructies zijn formeel en worden vaak gebruikt in instructies, handleidingen en formele beschrijvingen. Het wederkerend voornaamwoord 'zich' blijft onveranderd in alle personen.",
+    "examples": [
+      "Het laat zich moeilijk verklaren",
+      "Dat verhoudt zich anders dan verwacht",
+      "Het probleem lost zich vanzelf op"
+    ],
+    "common_mistakes": "Неправильно используют возвратные местоимения; путают с личными конструкциями."
+  },
+  {
+    "kolmit_level": 99,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van oorsprong en herkomst",
+    "description": "Предлоги происхождения и источника.",
+    "rule_text": "Voorzetsels van oorsprong en herkomst (uit, van, afkomstig uit) worden gebruikt om de oorsprong, bron of herkomst van iets aan te geven. In formele contexten worden deze voorzetsels gecombineerd met complexe naamwoordgroepen om precieze beschrijvingen te geven van afkomst, bronnen en origine.",
+    "examples": [
+      "Een product uit Nederland",
+      "Afkomstig uit een adellijke familie",
+      "Een citaat van de auteur"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги происхождения; путают 'uit' и 'van'."
+  },
+  {
+    "kolmit_level": 100,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij comparatieve uitdrukkingen",
+    "description": "Инверсия при сравнительных выражениях.",
+    "rule_text": "Comparatieve uitdrukkingen aan het begin van de zin veroorzaken inversie van onderwerp en persoonsvorm. Deze constructie benadrukt de vergelijking en is kenmerkend voor formele en literaire teksten. De woordvolgorde is: comparatieve uitdrukking - persoonsvorm - onderwerp - rest van de zin.",
+    "examples": [
+      "Hoe langer hij wachtte, des te ongeduldiger werd hij",
+      "Sneller dan verwacht arriveerde de hulp",
+      "Beter dan ooit presteerde het team"
+    ],
+    "common_mistakes": "Забывают инверсию; неправильный порядок слов в сравнительных конструкциях."
+  },
+  {
+    "kolmit_level": 101,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Modale werkwoorden in voltooide tijden",
+    "description": "Модальные глаголы в совершенных временах.",
+    "rule_text": "Modale werkwoorden kunnen worden gebruikt in voltooide tijden om modaliteit in het verleden uit te drukken. De constructie is: hebben/zijn + voltooid deelwoord van modaal werkwoord + infinitief. Deze constructies zijn complex en vereisen aandacht voor de juiste keuze van hulpwerkwoord en werkwoordsvolgorde.",
+    "examples": [
+      "Hij had moeten komen",
+      "Zij heeft kunnen werken",
+      "We zijn moeten wachten"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов; путают вспомогательные глаголы."
+  },
+  {
+    "kolmit_level": 102,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Temporale bijzinnen met 'voordat' en 'alvorens'",
+    "description": "Временные придаточные предложения с 'voordat' и 'alvorens'.",
+    "rule_text": "'Voordat' en 'alvorens' worden gebruikt om aan te geven dat een handeling plaatsvindt vóór een andere handeling. 'Alvorens' is formeler en wordt vaak gevolgd door 'te + infinitief', terwijl 'voordat' een volledige bijzin introduceert. Beide voegwoorden zijn essentieel voor het uitdrukken van temporele volgorde in complexe zinnen.",
+    "examples": [
+      "Voordat we vertrekken, controleren we alles",
+      "Alvorens te tekenen, leest u het contract",
+      "Voordat de vergadering begint, bespreken we de agenda"
+    ],
+    "common_mistakes": "Путают 'voordat' и 'alvorens'; неправильно используют инфинитивные конструкции."
+  },
+  {
+    "kolmit_level": 103,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Aanwijzende voornaamwoorden in formele verwijzing",
+    "description": "Указательные местоимения в формальных ссылках.",
+    "rule_text": "Aanwijzende voornaamwoorden worden in formele contexten gebruikt om precieze verwijzingen te maken naar eerder genoemde elementen. Deze voornaamwoorden kunnen worden gecombineerd met voorzetsels en bijvoeglijke bepalingen voor specifieke referenties. Het juiste gebruik is essentieel voor heldere en ondubbelzinnige communicatie in formele documenten.",
+    "examples": [
+      "Deze hierboven genoemde punten",
+      "Die in paragraaf 3 beschreven situatie",
+      "Dat eerder vermelde feit"
+    ],
+    "common_mistakes": "Неправильный выбор указательных местоимений; неясные ссылки."
+  },
+  {
+    "kolmit_level": 104,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van uitzondering",
+    "description": "Предлоги исключения.",
+    "rule_text": "Voorzetsels van uitzondering (behalve, met uitzondering van, uitgezonderd) worden gebruikt om uitzonderingen aan te geven in formele contexten. Deze voorzetsels introduceren elementen die niet voldoen aan de algemene regel of beschrijving. Het juiste gebruik is essentieel voor precieze en complete beschrijvingen in formele teksten.",
+    "examples": [
+      "Iedereen was aanwezig behalen de directeur",
+      "Met uitzondering van vrijdag zijn we alle dagen open",
+      "Alle documenten zijn ingeleverd, uitgezonderd het contract"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги исключения; путают значения."
+  },
+  {
+    "kolmit_level": 105,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Samengestelde werkwoordstijden in bijzinnen",
+    "description": "Составные времена глаголов в придаточных предложениях.",
+    "rule_text": "Samengestelde werkwoordstijden in bijzinnen vereisen dat alle werkwoorden aan het einde van de bijzin staan in een vaste volgorde. Deze volgorde is: infinitieven voor deelwoorden, modale werkwoorden voor andere hulpwerkwoorden. Deze structuur is essentieel voor correcte zinsbouw in complexe Nederlandse zinnen en vereist zorgvuldige aandacht voor werkwoordsplaatsing.",
+    "examples": [
+      "Ik weet dat hij heeft moeten werken",
+      "Zij zei dat ze was komen aanlopen",
+      "Hij vertelde dat hij had kunnen helpen"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов в конце придаточного; забывают некоторые глаголы."
+  },
+  {
+    "kolmit_level": 106,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Imperatief in formele instructies",
+    "description": "Повелительное наклонение в формальных инструкциях.",
+    "rule_text": "De imperatief wordt in formele contexten gebruikt om instructies, richtlijnen en procedures te beschrijven. In formele taal wordt vaak de infinitief gebruikt als imperatief, vooral in geschreven instructies en handleidingen. Deze constructie is direct en duidelijk, wat essentieel is voor effectieve communicatie in professionele contexten.",
+    "examples": [
+      "Druk op de knop om te starten",
+      "Vul het formulier volledig in",
+      "Lees de instructies aandachtig door"
+    ],
+    "common_mistakes": "Используют неправильные формы повелительного наклонения; слишком неформальный тон."
+  },
+  {
+    "kolmit_level": 107,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Concessieve bijzinnen met 'niettegenstaande'",
+    "description": "Уступительные придаточные предложения с 'niettegenstaande'.",
+    "rule_text": "'Niettegenstaande' is een formeel voegwoord dat concessieve bijzinnen introduceert. Het drukt een tegenstelling uit tussen wat verwacht wordt en wat werkelijk gebeurt. Deze constructie is zeer formeel en wordt vooral gebruikt in juridische, ambtelijke en academische teksten. Het vereist de standaard bijzinwoordvolgorde.",
+    "examples": [
+      "Niettegenstaande de tegenwerking ging hij door",
+      "Niettegenstaande alle bezwaren werd het plan goedgekeurd",
+      "Niettegenstaande zijn jeugdige leeftijd is hij zeer bekwaam"
+    ],
+    "common_mistakes": "Неправильно используют 'niettegenstaande'; путают с другими уступительными союзами."
+  },
+  {
+    "kolmit_level": 108,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Bezittelijke voornaamwoorden in juridische taal",
+    "description": "Притяжательные местоимения в юридическом языке.",
+    "rule_text": "In juridische en formele taal worden bezittelijke voornaamwoorden op specifieke wijze gebruikt om eigendom, rechten en verplichtingen aan te geven. Constructies zoals 'zijne', 'hare', 'onze' worden gebruikt in zeer formele contexten. Het juiste gebruik is essentieel voor de juridische precisie en geldigheid van documenten.",
+    "examples": [
+      "Ten behoeve van zijne gezondheid",
+      "In hare hoedanigheid als directrice",
+      "Onze wens is duidelijk"
+    ],
+    "common_mistakes": "Используют неправильные формы притяжательных местоимений; несоответствие стилю."
+  },
+  {
+    "kolmit_level": 109,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van hoeveelheid en mate",
+    "description": "Предлоги количества и меры.",
+    "rule_text": "Voorzetsels van hoeveelheid en mate (tot, tot en met, ongeveer, circa) worden gebruikt om precieze of geschatte hoeveelheden aan te geven in formele contexten. Deze voorzetsels zijn essentieel voor technische specificaties, contracten en formele beschrijvingen waar precisie belangrijk is.",
+    "examples": [
+      "De prijs bedraagt tot €1000",
+      "De bijeenkomst duurt van 14:00 tot 16:00 uur",
+      "Ongeveer 50 personen waren aanwezig"
+    ],
+    "common_mistakes": "Неправильно используют предлоги количества; неточные указания меры."
+  },
+  {
+    "kolmit_level": 110,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe ontkenningen met 'noch'",
+    "description": "Сложные отрицания с 'noch'.",
+    "rule_text": "Het voegwoord 'noch' wordt gebruikt in complexe ontkenningen om meerdere negatieve elementen te verbinden. Deze constructie is formeel en wordt vaak gebruikt in juridische en formele teksten. 'Noch' kan worden gecombineerd met 'noch' in een reeks om meerdere uitsluitingen aan te geven.",
+    "examples": [
+      "Hij sprak noch Engels noch Frans",
+      "Noch de voorzitter, noch de secretaris was aanwezig",
+      "Het is noch goed, noch slecht"
+    ],
+    "common_mistakes": "Неправильно используют 'noch'; путают с другими отрицательными конструкциями."
+  },
+  {
+    "kolmit_level": 111,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid tegenwoordige toekomende tijd",
+    "description": "Совершенное настоящее будущее время.",
+    "rule_text": "De voltooid tegenwoordige toekomende tijd (zullen + hebben/zijn + voltooid deelwoord) wordt gebruikt om toekomstige handelingen uit te drukken die op een bepaald moment in de toekomst voltooid zullen zijn. Deze complexe werkwoordstijd combineert toekomst, voltooidheid en modaliteit en is kenmerkend voor formele planning en prognoses.",
+    "examples": [
+      "Morgen om deze tijd zal hij zijn aangekomen",
+      "Over een maand zullen we het project hebben afgerond",
+      "Volgend jaar zal zij haar studie hebben voltooid"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов; путают с другими сложными временами."
+  },
+  {
+    "kolmit_level": 112,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van vergelijking met 'zoals' en 'als'",
+    "description": "Придаточные предложения сравнения с 'zoals' и 'als'.",
+    "rule_text": "'Zoals' en 'als' worden gebruikt in vergelijkende bijzinnen, maar met verschillende nuances. 'Zoals' introduceert een directe vergelijking of gelijkenis, terwijl 'als' wordt gebruikt in hypothetische of conditionele vergelijkingen. Beide voegwoorden zijn essentieel voor het maken van genuanceerde vergelijkingen in formele teksten.",
+    "examples": [
+      "Hij werkt zoals hij altijd heeft gewerkt",
+      "Het resultaat was beter dan we hadden verwacht",
+      "Zoals gebruikelijk begon de vergadering op tijd"
+    ],
+    "common_mistakes": "Путают 'zoals' и 'als'; неправильно строят сравнительные конструкции."
+  },
+  {
+    "kolmit_level": 113,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerend voornaamwoord in vaste uitdrukkingen",
+    "description": "Возвратное местоимение в устойчивых выражениях.",
+    "rule_text": "Wederkerende voornaamwoorden komen voor in vele vaste uitdrukkingen en idiomatische constructies die als geheel moeten worden geleerd. Deze uitdrukkingen zijn vaak onvoorspelbaar en vereisen memorisatie. Ze zijn kenmerkend voor geavanceerd taalgebruik en komen voor in formele en informele contexten.",
+    "examples": [
+      "Zich bewust zijn van",
+      "Zich realiseren dat",
+      "Zich voorstellen dat",
+      "Zich herinneren"
+    ],
+    "common_mistakes": "Неправильно используют возвратные местоимения в устойчивых выражениях; забывают 'zich'."
+  },
+  {
+    "kolmit_level": 114,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van distributie en verdeling",
+    "description": "Предлоги распределения и разделения.",
+    "rule_text": "Voorzetsels van distributie en verdeling (per, per stuk, per persoon, per eenheid) worden gebruikt om verdeling en distributie aan te geven in formele en technische contexten. Deze voorzetsels zijn essentieel voor specificaties, statistieken en formele beschrijvingen van hoeveelheden en verdeling.",
+    "examples": [
+      "De kosten bedragen €50 per persoon",
+      "We produceren 100 stuks per uur",
+      "Per vierkante meter betaalt u €200"
+    ],
+    "common_mistakes": "Неправильно используют предлоги распределения; путают 'per' с другими предлогами."
+  },
+  {
+    "kolmit_level": 115,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij vooropgeplaatste voorzetselgroepen",
+    "description": "Инверсия при вынесенных в начало предложных группах.",
+    "rule_text": "Vooropgeplaatste voorzetselgroepen veroorzaken inversie van onderwerp en persoonsvorm. Deze constructie benadrukt de voorzetselgroep en is kenmerkend voor formele en literaire teksten. De woordvolgorde is: voorzetselgroep - persoonsvorm - onderwerp - rest van de zin.",
+    "examples": [
+      "In verband met deze kwestie hebben wij besloten",
+      "Met betrekking tot uw aanvraag kunnen wij meedelen",
+      "Ten aanzien van het contract zijn de volgende punten belangrijk"
+    ],
+    "common_mistakes": "Забывают инверсию; неправильный порядок слов после предложной группы."
+  },
+  {
+    "kolmit_level": 116,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Passieve infinitiefconstructies",
+    "description": "Пассивные инфинитивные конструкции.",
+    "rule_text": "Passieve infinitiefconstructies (te + worden + voltooid deelwoord) worden gebruikt om passiviteit in infinitiefvorm uit te drukken. Deze constructies komen voor na werkwoorden van waarneming, verplichting en mogelijkheid. Ze zijn complex omdat ze aandacht vereisen voor werkwoordsvolgorde en de juiste vorm van het deelwoord.",
+    "examples": [
+      "Het lijkt te worden opgelost",
+      "Hij hoopt te worden uitgenodigd",
+      "Dat moet te vermijden zijn"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов в пассивном инфинитиве; путают с активными конструкциями."
+  },
+  {
+    "kolmit_level": 117,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van modaliteit met 'opdat' en 'teneinde'",
+    "description": "Придаточные предложения модальности с 'opdat' и 'teneinde'.",
+    "rule_text": "'Opdat' en 'teneinde' zijn formele voegwoorden die bijzinnen van doel en modaliteit introduceren. 'Opdat' wordt gevolgd door een volledige bijzin, vaak met de aanvoegende wijs, terwijl 'teneinde' wordt gevolgd door 'te + infinitief'. Beide constructies zijn kenmerkend voor juridische en zeer formele teksten.",
+    "examples": [
+      "Hij werkte hard opdat hij zou slagen",
+      "Teneinde tijd te winnen, namen we een shortcut",
+      "We vertrokken vroeg opdat we op tijd zouden arriveren"
+    ],
+    "common_mistakes": "Путают 'opdat' и 'teneinde'; неправильно используют инфинитивные конструкции."
+  },
+  {
+    "kolmit_level": 118,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Onbepaalde voornaamwoorden in negatieve zinnen",
+    "description": "Неопределенные местоимения в отрицательных предложениях.",
+    "rule_text": "Onbepaalde voornaamwoorden (niemand, niets, geen) worden gebruikt in negatieve zinnen om de afwezigheid of ontkenning van personen, zaken of hoeveelheden aan te geven. In complexe zinnen moeten deze voornaamwoorden consistent worden gebruikt en overeenkomen met de rest van de ontkenning.",
+    "examples": [
+      "Er was niemand die het wist",
+      "Hij heeft niets gezegd over het probleem",
+      "Er is geen tijd meer beschikbaar"
+    ],
+    "common_mistakes": "Двойное отрицание; неправильное использование неопределенных местоимений."
+  },
+  {
+    "kolmit_level": 119,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van accompaniment",
+    "description": "Предлоги сопровождения.",
+    "rule_text": "Voorzetsels van accompaniment (met, samen met, in gezelschap van) worden gebruikt om aan te geven met wie of wat iets samen gebeurt. In formele contexten worden deze voorzetsels gecombineerd met complexe naamwoordgroepen om precieze beschrijvingen te geven van samenwerking en gezelschap.",
+    "examples": [
+      "Hij kwam met zijn assistent",
+      "Samen met de andere afdelingen",
+      "In gezelschap van belangrijke gasten"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги сопровождения; путают 'met' и 'samen met'."
+  },
+  {
+    "kolmit_level": 120,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe ontkenningen met dubbele ontkenning",
+    "description": "Сложные отрицания с двойным отрицанием.",
+    "rule_text": "Dubbele ontkenning in het Nederlands is grammaticaal correct en wordt gebruikt voor nadruk. Constructies zoals 'nooit geen', 'niemand niet' zijn acceptabel in formele taal. Deze constructies versterken de ontkenning en zijn kenmerkend voor nadrukkelijke en formele communicatie.",
+    "examples": [
+      "Hij heeft nooit geen moeite gedaan",
+      "Er was niemand die niet kwam",
+      "Ik heb geen moment niet gedacht aan de gevolgen"
+    ],
+    "common_mistakes": "Считают двойное отрицание ошибкой; неправильно строят усиленные отрицания."
+  },
+  {
+    "kolmit_level": 121,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Werkwoordstam in vaste uitdrukkingen",
+    "description": "Основа глагола в устойчивых выражениях.",
+    "rule_text": "De werkwoordstam (zonder -en) wordt gebruikt in vele vaste uitdrukkingen, gezegden en formele constructies. Deze uitdrukkingen zijn vaak historisch gegroeid en moeten als geheel worden geleerd. Ze zijn kenmerkend voor formeel en literair Nederlands.",
+    "examples": [
+      "Ter kennis nemen",
+      "Ten uitvoer brengen",
+      "Aan het licht komen",
+      "Van kracht worden"
+    ],
+    "common_mistakes": "Неправильно используют основы глаголов; не знают устойчивые выражения."
+  },
+  {
+    "kolmit_level": 122,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van tijd met 'zodra' en 'zolang'",
+    "description": "Временные придаточные предложения с 'zodra' и 'zolang'.",
+    "rule_text": "'Zodra' en 'zolang' worden gebruikt in temporele bijzinnen om specifieke tijdsrelaties uit te drukken. 'Zodra' betekent 'onmiddellijk nadat' en benadrukt directe opeenvolging. 'Zolang' betekent 'gedurende de tijd dat' en benadrukt duur. Beide voegwoorden zijn essentieel voor precieze tijdsaanduiding.",
+    "examples": [
+      "Zodra ik het weet, bel ik je",
+      "Zolang de voorraad strekt",
+      "Zodra de documenten binnen zijn, beginnen we"
+    ],
+    "common_mistakes": "Путают 'zodra' и 'zolang'; неправильный порядок слов."
+  },
+  {
+    "kolmit_level": 123,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Aanwijzende voornaamwoorden in formele correspondentie",
+    "description": "Указательные местоимения в формальной переписке.",
+    "rule_text": "Aanwijzende voornaamwoorden worden in formele correspondentie gebruikt om specifieke verwijzingen te maken naar documenten, data en afspraken. Het juiste gebruik van 'deze', 'dit', 'die', 'dat' is essentieel voor heldere en professionele communicatie.",
+    "examples": [
+      "In deze brief verwijzen wij naar",
+      "Dat genoemde punt zullen wij behandelen",
+      "Die overeenkomst is nog geldig"
+    ],
+    "common_mistakes": "Неправильный выбор указательных местоимений; неясные ссылки в переписке."
+  },
+  {
+    "kolmit_level": 124,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van materiaal en samenstelling",
+    "description": "Предлоги материала и состава.",
+    "rule_text": "Voorzetsels van materiaal en samenstelling (van, uit, gemaakt van) worden gebruikt om de samenstelling of het materiaal van iets aan te geven. In formele en technische contexten zijn deze voorzetsels essentieel voor precieze beschrijvingen van producten en materialen.",
+    "examples": [
+      "Een tafel van eikenhout",
+      "Gemaakt uit gerecycled materiaal",
+      "Bestaat uit drie delen"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги материала; путают 'van' и 'uit'."
+  },
+  {
+    "kolmit_level": 125,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Samengestelde zinnen met meerdere niveaus",
+    "description": "Составные предложения с несколькими уровнями.",
+    "rule_text": "Samengestelde zinnen met meerdere niveaus bevatten bijzinnen binnen bijzinnen, wat complexe werkwoordsplaatsing en aandacht voor logische samenhang vereist. Deze zinnen zijn kenmerkend voor academische, juridische en filosofische teksten waar complexe gedachtegangen worden uitgedrukt.",
+    "examples": [
+      "Hij zei dat hij dacht dat het waar was",
+      "Zij beweerde dat ze had gehoord dat het afgelast was",
+      "Ik weet dat hij wil dat ik kom"
+    ],
+    "common_mistakes": "Теряют структуру многоуровневых предложений; неправильный порядок глаголов."
+  },
+  {
+    "kolmit_level": 126,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid verleden toekomende tijd",
+    "description": "Совершенное прошедшее будущее время.",
+    "rule_text": "De voltooid verleden toekomende tijd (zouden + hebben/zijn + voltooid deelwoord) wordt gebruikt om hypothetische situaties in het verleden uit te drukken die niet hebben plaatsgevonden. Deze complexe werkwoordstijd combineert verleden, toekomst, voltooidheid en hypothese en is kenmerkend voor formele reflectie en analyse.",
+    "examples": [
+      "Hij zou zijn gekomen als hij had geweten",
+      "Zij zou het hebben gedaan als ze had gekund",
+      "We zouden hebben gewonnen als we beter hadden gespeeld"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов; путают с другими сложными временами."
+  },
+  {
+    "kolmit_level": 127,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van voorwaarde met 'mits' en 'tenzij'",
+    "description": "Условные придаточные предложения с 'mits' и 'tenzij'.",
+    "rule_text": "'Mits' en 'tenzij' zijn formele voegwoorden voor voorwaardelijke bijzinnen. 'Mits' drukt een positieve voorwaarde uit die vervuld moet worden, terwijl 'tenzij' een uitzondering of negatieve voorwaarde aangeeft. Beide worden veel gebruikt in juridische en contractuele taal.",
+    "examples": [
+      "Mits u op tijd betaalt, leveren wij direct",
+      "Tenzij anders vermeld, gelden deze voorwaarden",
+      "Het is toegestaan, mits aan alle eisen wordt voldaan"
+    ],
+    "common_mistakes": "Путают 'mits' и 'tenzij'; неправильный порядок слов в условных придаточных."
+  },
+  {
+    "kolmit_level": 128,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerend voornaamwoord in formele beschrijvingen",
+    "description": "Возвратное местоимение в формальных описаниях.",
+    "rule_text": "Wederkerende voornaamwoorden worden in formele beschrijvingen gebruikt om processen, mechanismen en natuurlijke fenomenen te beschrijven waar de handeling op het onderwerp zelf terugkeert. Deze constructies zijn kenmerkend voor wetenschappelijke en technische teksten.",
+    "examples": [
+      "Het materiaal vervormt zich onder druk",
+      "De situatie herstelt zich vanzelf",
+      "Het probleem lost zich op bij hogere temperaturen"
+    ],
+    "common_mistakes": "Неправильно используют возвратные местоимения; путают с пассивными конструкциями."
+  },
+  {
+    "kolmit_level": 129,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van bron en referentie",
+    "description": "Предлоги источника и ссылки.",
+    "rule_text": "Voorzetsels van bron en referentie (volgens, krachtens, ingevolge, conform) worden gebruikt om bronnen, autoriteiten en referenties aan te geven in formele en juridische contexten. Deze voorzetsels zijn essentieel voor academische, juridische en officiële documenten.",
+    "examples": [
+      "Volgens artikel 5 van de wet",
+      "Krachtens deze verordening",
+      "Conform de afspraak",
+      "Ingevolge het contract"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги ссылки; путают значения в юридическом контексте."
+  },
+  {
+    "kolmit_level": 130,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij comparatieve bijwoorden",
+    "description": "Инверсия при сравнительных наречиях.",
+    "rule_text": "Comparatieve bijwoorden aan het begin van de zin veroorzaken inversie van onderwerp en persoonsvorm. Deze constructie benadrukt de vergelijking en is kenmerkend voor formele en literaire stijl. De woordvolgorde is: comparatief bijwoord - persoonsvorm - onderwerp - rest van de zin.",
+    "examples": [
+      "Beter dan ooit presteerde het team",
+      "Sneller dan verwacht arriveerde de hulp",
+      "Efficiënter dan voorheen werkte de afdeling"
+    ],
+    "common_mistakes": "Забывают инверсию; неправильный порядок слов в сравнительных конструкциях."
+  },
+  {
+    "kolmit_level": 131,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Modale infinitiefconstructies",
+    "description": "Модальные инфинитивные конструкции.",
+    "rule_text": "Modale infinitiefconstructies combineren modale werkwoorden met infinitieven om complexe modaliteiten uit te drukken. Deze constructies kunnen meerdere modale lagen bevatten en vereisen zorgvuldige aandacht voor werkwoordsvolgorde en betekenisnuances.",
+    "examples": [
+      "Hij zou moeten kunnen werken",
+      "Zij moet willen meedoen",
+      "We kunnen moeten wachten"
+    ],
+    "common_mistakes": "Неправильный порядок модальных глаголов; путают значения сложных модальных конструкций."
+  },
+  {
+    "kolmit_level": 132,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Redengevende bijzinnen met 'aangezien' en 'vermits'",
+    "description": "Придаточные предложения причины с 'aangezien' и 'vermits'.",
+    "rule_text": "'Aangezien' en 'vermits' zijn formele voegwoorden voor redengevende bijzinnen. 'Aangezien' wordt gebruikt voor bekende feiten en logische gevolgtrekkingen, terwijl 'vermits' meer juridisch en formeel is. Beide vereisen de standaard bijzinwoordvolgorde.",
+    "examples": [
+      "Aangezien het bewijs ontbreekt, wordt de zaak geseponeerd",
+      "Vermits alle partijen akkoord zijn, kan worden getekend",
+      "Aangezien de omstandigheden zijn veranderd, heroverwegen we onze positie"
+    ],
+    "common_mistakes": "Путают 'aangezien' и 'vermits'; неправильный порядок слов в причинных придаточных."
+  },
+  {
+    "kolmit_level": 133,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Betrekkelijke voornaamwoorden in formele rapportage",
+    "description": "Относительные местоимения в формальной отчетности.",
+    "rule_text": "Betrekkelijke voornaamwoorden worden in formele rapportage gebruikt om complexe relaties en verwijzingen te creëren. Het juiste gebruik van 'die', 'dat', 'wie', 'wat' is essentieel voor heldere en professionele documentatie en analyse.",
+    "examples": [
+      "De resultaten, die zijn gepresenteerd in bijlage A",
+      "Het probleem, dat zich voordeed tijdens de test",
+      "De medewerkers, wie de training hebben gevolgd"
+    ],
+    "common_mistakes": "Неправильный выбор относительных местоимений; неясные ссылки в отчетах."
+  },
+  {
+    "kolmit_level": 134,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van functie en rol",
+    "description": "Предлоги функции и роли.",
+    "rule_text": "Voorzetsels van functie en rol (als, in de hoedanigheid van, in de functie van) worden gebruikt om iemands rol, positie of functie aan te geven in formele contexten. Deze voorzetsels zijn essentieel voor officiële documenten, contracten en formele communicatie.",
+    "examples": [
+      "In de hoedanigheid van voorzitter",
+      "Als vertegenwoordiger van het bedrijf",
+      "In de functie van manager"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги роли; путают 'als' и 'in de hoedanigheid van'."
+  },
+  {
+    "kolmit_level": 135,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe passieve constructies",
+    "description": "Сложные пассивные конструкции.",
+    "rule_text": "Complexe passieve constructies combineren lijdende vorm met modale werkwoorden, voltooide tijden en bijzinnen. Deze constructies vereisen aandacht voor werkwoordsvolgorde, deelwoordvorming en logische samenhang. Ze zijn kenmerkend voor wetenschappelijke en formele teksten.",
+    "examples": [
+      "Het had moeten worden gedaan",
+      "Er zal worden geprobeerd het op te lossen",
+      "Dat zou kunnen worden overwogen"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов в сложном пассиве; путают 'worden' и 'zijn'."
+  },
+  {
+    "kolmit_level": 136,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Duratieve constructies met 'blijven' en 'gaan'",
+    "description": "Дуративные конструкции с 'blijven' и 'gaan'.",
+    "rule_text": "De werkwoorden 'blijven' en 'gaan' worden gebruikt in duratieve constructies om voortduring of voortgang van een handeling aan te geven. 'Blijven + infinitief' drukt continuïteit uit, terwijl 'gaan + infinitief' toekomstige of beginnende handelingen aangeeft.",
+    "examples": [
+      "Hij bleef doorwerken ondanks de vermoeidheid",
+      "Het gaat regenen volgens de verwachting",
+      "Zij bleef maar praten over het onderwerp"
+    ],
+    "common_mistakes": "Неправильно используют дуративные конструкции; путают значения 'blijven' и 'gaan'."
+  },
+  {
+    "kolmit_level": 137,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Concessieve bijzinnen met 'hoewel' en 'ofschoon'",
+    "description": "Уступительные придаточные предложения с 'hoewel' и 'ofschoon'.",
+    "rule_text": "'Hoewel' en 'ofschoon' introduceren concessieve bijzinnen die een tegenstelling of beperking uitdrukken. 'Ofschoon' is formeler en literairder dan 'hoewel'. Beide voegwoorden vereisen de standaard bijzinwoordvolgorde en kunnen voor of na de hoofdzin staan.",
+    "examples": [
+      "Hoewel het moeilijk was, voltooide hij de opdracht",
+      "Ofschoon de omstandigheden ongunstig waren, slaagden we",
+      "Hij accepteerde het aanbod, hoewel hij twijfels had"
+    ],
+    "common_mistakes": "Путают 'hoewel' и 'ofschoon'; неправильный порядок слов в уступительных придаточных."
+  },
+  {
+    "kolmit_level": 138,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Onbepaalde voornaamwoorden in formele analyse",
+    "description": "Неопределенные местоимения в формальном анализе.",
+    "rule_text": "Onbepaalde voornaamwoorden worden in formele analyse gebruikt om algemene uitspraken te doen en patronen te beschrijven zonder specifieke referenties. Het juiste gebruik is essentieel voor wetenschappelijke en academische teksten.",
+    "examples": [
+      "Ieder van de deelnemers voltooide de test",
+      "Men kan concluderen dat er een verband bestaat",
+      "Er is iets dat niet klopt in de berekening"
+    ],
+    "common_mistakes": "Неправильно используют неопределенные местоимения в аналитическом контексте; неясные формулировки."
+  },
+  {
+    "kolmit_level": 139,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van vergelijking en contrast",
+    "description": "Предлоги сравнения и контраста.",
+    "rule_text": "Voorzetsels van vergelijking en contrast (in vergelijking met, tegenover, vergeleken met) worden gebruikt om vergelijkingen en tegenstellingen uit te drukken in formele contexten. Deze voorzetsels zijn essentieel voor analytische en vergelijkende studies.",
+    "examples": [
+      "In vergelijking met vorig jaar",
+      "Tegenover deze voordelen staan enkele nadelen",
+      "Vergeleken met andere methoden"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги сравнения; путают значения в сравнительном анализе."
+  },
+  {
+    "kolmit_level": 140,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Samengestelde zinnen met gecoördineerde bijzinnen",
+    "description": "Составные предложения с сочиненными придаточными.",
+    "rule_text": "Gecoördineerde bijzinnen in samengestelde zinnen worden verbonden door voegwoorden zoals 'en', 'of', 'maar', 'want'. Deze constructies vereisen aandacht voor parallelle structuur, werkwoordsplaatsing en logische samenhang. Ze zijn kenmerkend voor complexe argumentatie en analyse.",
+    "examples": [
+      "Hij werkt hard en hij studeert veel, maar hij heeft weinig vrije tijd",
+      "Of we gaan nu, of we wachten tot morgen, want het wordt laat",
+      "Ze is intelligent en ze is creatief, dus ze lost problemen goed op"
+    ],
+    "common_mistakes": "Нарушают параллельную структуру; неправильный порядок слов в сочиненных придаточных."
+  },
+  {
+    "kolmit_level": 141,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid deelwoord in predicatief gebruik",
+    "description": "Причастие прошедшего времени в предикативной функции.",
+    "rule_text": "Voltooide deelwoorden kunnen predicatief worden gebruikt na koppelwerkwoorden om een toestand of resultaat te beschrijven. In tegenstelling tot bijvoeglijk gebruik staat het deelwoord hier onverbogen en fungeert het als naamwoordelijk deel van het gezegde.",
+    "examples": [
+      "De deur is gesloten",
+      "Het raam was gebroken",
+      "De documenten zijn ondertekend"
+    ],
+    "common_mistakes": "Неправильно используют причастия в предикативе; путают с атрибутивным использованием."
+  },
+  {
+    "kolmit_level": 142,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van modaliteit met 'op voorwaarde dat'",
+    "description": "Придаточные предложения модальности с 'op voorwaarde dat'.",
+    "rule_text": "'Op voorwaarde dat' is een formele constructie die een strikte voorwaarde introduceert. Deze uitdrukking wordt veel gebruikt in juridische en contractuele contexten waar precieze voorwaarden moeten worden vastgelegd.",
+    "examples": [
+      "Op voorwaarde dat alle documenten zijn ingediend",
+      "We gaan akkoord, op voorwaarde dat de prijs wordt verlaagd",
+      "Toegestaan, op voorwaarde dat de regels worden nageleefd"
+    ],
+    "common_mistakes": "Неправильно используют конструкцию; путают с другими условными выражениями."
+  },
+  {
+    "kolmit_level": 143,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerend voornaamwoord in reciproke constructies",
+    "description": "Возвратное местоимение в реципрокных конструкциях.",
+    "rule_text": "Reciproque constructies met 'elkaar' en wederkerende voornaamwoorden drukken wederzijdse handelingen uit tussen twee of meer personen. Deze constructies kunnen complex worden wanneer ze worden gecombineerd met voorzetsels en bijzinnen.",
+    "examples": [
+      "Ze helpen elkaar bij moeilijke taken",
+      "De teams werken met elkaar samen",
+      "Ze vertrouwen elkaar volledig"
+    ],
+    "common_mistakes": "Неправильно используют реципрокные местоимения; путают 'elkaar' с возвратными местоимениями."
+  },
+  {
+    "kolmit_level": 144,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van tijdsduur en frequentie",
+    "description": "Предлоги длительности и частоты.",
+    "rule_text": "Voorzetsels van tijdsduur en frequentie (gedurende, tijdens, per, om de) worden gebruikt om de duur en frequentie van handelingen aan te geven in formele contexten. Deze voorzetsels zijn essentieel voor planning, schema's en formele beschrijvingen.",
+    "examples": [
+      "Gedurende de hele vergadering",
+      "Tijdens de werkzaamheden",
+      "Per kwartaal wordt er gerapporteerd",
+      "Om de week vindt overleg plaats"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги времени; путают 'gedurende' и 'tijdens'."
+  },
+  {
+    "kolmit_level": 145,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij vooropgeplaatste infinitiefconstructies",
+    "description": "Инверсия при вынесенных в начало инфинитивных конструкциях.",
+    "rule_text": "Vooropgeplaatste infinitiefconstructies (te + infinitief) veroorzaken inversie van onderwerp en persoonsvorm. Deze constructie benadrukt het doel of de intentie en is kenmerkend voor formele en schrijftalige teksten.",
+    "examples": [
+      "Om dit te bereiken, moeten we samenwerken",
+      "Te beginnen bij het eerste punt, zullen we alle aspecten behandelen",
+      "Om kosten te besparen, werd een andere aanpak gekozen"
+    ],
+    "common_mistakes": "Забывают инверсию; неправильный порядок слов после инфинитивной конструкции."
+  },
+  {
+    "kolmit_level": 146,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Passief met 'raken' in formele taal",
+    "description": "Пассив с 'raken' в формальной речи.",
+    "rule_text": "Het werkwoord 'raken' wordt soms gebruikt in plaats van 'worden' in lijdende vorm, vooral in formele en schrijftalige contexten. Deze constructie benadrukt het proces van verandering of beïnvloeding.",
+    "examples": [
+      "Hij raakte gewond bij het ongeval",
+      "De machine raakte beschadigd tijdens transport",
+      "De voorraad raakte uitgeput"
+    ],
+    "common_mistakes": "Неправильно используют 'raken' в пассиве; путают с 'worden'."
+  },
+  {
+    "kolmit_level": 147,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van restrictie met 'behalve' en 'uitgezonderd'",
+    "description": "Придаточные предложения ограничения с 'behalve' и 'uitgezonderd'.",
+    "rule_text": "'Behalve' en 'uitgezonderd' introduceren bijzinnen van restrictie die uitzonderingen op een algemene stelling aangeven. Deze voegwoorden zijn essentieel voor precieze en complete beschrijvingen in formele contexten.",
+    "examples": [
+      "Iedereen was aanwezig, behalen de directeur",
+      "Alle documenten zijn ingeleverd, uitgezonderd het contract",
+      "Het is elke dag open, behalen op maandag"
+    ],
+    "common_mistakes": "Путают 'behalve' и 'uitgezonderd'; неправильный порядок слов в ограничительных придаточных."
+  },
+  {
+    "kolmit_level": 148,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Aanwijzende voornaamwoorden in technische documentatie",
+    "description": "Указательные местоимения в технической документации.",
+    "rule_text": "In technische documentatie worden aanwijzende voornaamwoorden gebruikt om specifieke onderdelen, componenten en procedures aan te duiden. Het juiste gebruik is essentieel voor heldere en ondubbelzinnige technische beschrijvingen.",
+    "examples": [
+      "Dit onderdeel dient te worden vervangen",
+      "Die knop activeert het systeem",
+      "Dat mechanisme vereist regelmatig onderhoud"
+    ],
+    "common_mistakes": "Неясные указания в технической документации; неправильный выбор местоимений."
+  },
+  {
+    "kolmit_level": 149,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van richting en beweging",
+    "description": "Предлоги направления и движения.",
+    "rule_text": "Voorzetsels van richting en beweging (naar, richting, via, door) worden gebruikt om bewegingsrichtingen en routes aan te geven in formele en technische contexten. Deze voorzetsels zijn essentieel voor routebeschrijvingen en procesbeschrijvingen.",
+    "examples": [
+      "Naar het volgende station",
+      "Richting het centrum",
+      "Via de achteringang",
+      "Door de tunnel"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги направления; путают 'naar' и 'richting'."
+  },
+  {
+    "kolmit_level": 150,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe vraagconstructies in formele context",
+    "description": "Сложные вопросительные конструкции в формальном контексте.",
+    "rule_text": "Complexe vraagconstructies in formele contexten combineren vraagwoorden, bijzinnen en meerdere werkwoordstijden. Deze constructies vereisen aandacht voor woordvolgorde, werkwoordsplaatsing en de juiste formulering voor beleefde en professionele communicatie.",
+    "examples": [
+      "Zou u kunnen aangeven wanneer de levering zal plaatsvinden?",
+      "Kunt u mij informeren hoe dit proces verloopt?",
+      "Weet u misschien waarom deze keuze is gemaakt?"
+    ],
+    "common_mistakes": "Неправильный порядок слов в сложных вопросах; слишком прямолинейные формулировки."
+  },
+  {
+    "kolmit_level": 151,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Infinitiefcomplementen met waarnemingswerkwoorden",
+    "description": "Инфинитивные дополнения с глаголами восприятия.",
+    "rule_text": "Waarnemingswerkwoorden (zien, horen, voelen) kunnen worden gevolgd door een infinitief zonder 'te' om direct waargenomen handelingen aan te geven. Deze constructie benadrukt de directe waarneming en is kenmerkend voor beschrijvende teksten.",
+    "examples": [
+      "Ik zag hem lopen",
+      "Ze hoorden de vogels zingen",
+      "Hij voelde de grond trillen"
+    ],
+    "common_mistakes": "Неправильно используют инфинитивы с глаголами восприятия; добавляют лишнее 'te'."
+  },
+  {
+    "kolmit_level": 152,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Temporale bijzinnen met 'wanneer' en 'als'",
+    "description": "Временные придаточные предложения с 'wanneer' и 'als'.",
+    "rule_text": "'Wanneer' en 'als' worden beide gebruikt in temporele bijzinnen, maar met verschillende nuances. 'Wanneer' verwijst naar specifieke, bekende tijdstippen, terwijl 'als' meer algemene of hypothetische tijden aangeeft. Het juiste gebruik is essentieel voor precieze tijdsaanduiding.",
+    "examples": [
+      "Wanneer u aankomt, meld u dan bij de receptie",
+      "Als het regent, blijven we binnen",
+      "Wanneer de vergadering begint, wordt u geïnformeerd"
+    ],
+    "common_mistakes": "Путают 'wanneer' и 'als'; неправильный порядок слов во временных придаточных."
+  },
+  {
+    "kolmit_level": 153,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Bezittelijke voornaamwoorden in formele aanspraak",
+    "description": "Притяжательные местоимения в формальных обращениях.",
+    "rule_text": "In formele aanspraak worden bezittelijke voornaamwoorden aangepast aan het formele register. Constructies zoals 'uwe', 'onze' worden gebruikt in zeer formele contexten, vooral in historische of ceremoniële taal.",
+    "examples": [
+      "Uwe excellentie",
+      "Onze genodigden",
+      "In uwe hoedanigheid"
+    ],
+    "common_mistakes": "Используют несоответствующие формы в формальном обращении; смешивают стили."
+  },
+  {
+    "kolmit_level": 154,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van oorsprong in formele beschrijvingen",
+    "description": "Предлоги происхождения в формальных описаниях.",
+    "rule_text": "Voorzetsels van oorsprong (afkomstig uit, van, uit) worden gebruikt in formele beschrijvingen om de herkomst, afkomst of bron van personen, producten of ideeën aan te geven. Deze voorzetsels zijn essentieel voor historische, culturele en productbeschrijvingen.",
+    "examples": [
+      "Afkomstig uit een oud geslacht",
+      "Van Nederlandse makelij",
+      "Uit de zeventiende eeuw"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги происхождения; путают 'van' и 'uit' в описаниях."
+  },
+  {
+    "kolmit_level": 155,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Samengestelde zinnen met meerdere werkwoordstijden",
+    "description": "Составные предложения с несколькими временами глаголов.",
+    "rule_text": "Samengestelde zinnen met meerdere werkwoordstijden combineren verschillende tijden om complexe temporele relaties uit te drukken. Deze constructies vereisen aandacht voor werkwoordsvolgorde, tijdsconsistentie en logische samenhang tussen de verschillende tijden.",
+    "examples": [
+      "Hij zei dat hij had gewerkt voordat hij kwam",
+      "Zij weet dat ze morgen moet zijn waar ze gisteren was",
+      "We begrijpen dat het had gekund als we hadden geweten"
+    ],
+    "common_mistakes": "Нарушают временную согласованность; неправильный порядок глаголов в сложных временных конструкциях."
+  },
+  {
+    "kolmit_level": 156,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid deelwoord in onpersoonlijke constructies",
+    "description": "Причастие прошедшего времени в безличных конструкциях.",
+    "rule_text": "Voltooide deelwoorden worden gebruikt in onpersoonlijke constructies met 'er' om algemene toestanden of gebeurtenissen te beschrijven. Deze constructies zijn formeel en worden vaak gebruikt in beschrijvende en analytische teksten.",
+    "examples": [
+      "Er is veel gediscussieerd over dit onderwerp",
+      "Er werd besloten om verder te gaan",
+      "Er is genoeg gezegd over deze kwestie"
+    ],
+    "common_mistakes": "Неправильно используют безличные конструкции; путают с личными предложениями."
+  },
+  {
+    "kolmit_level": 157,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van veronderstelling met 'aangenomen dat'",
+    "description": "Придаточные предложения предположения с 'aangenomen dat'.",
+    "rule_text": "'Aangenomen dat' introduceert bijzinnen van veronderstelling of hypothese. Deze formele constructie wordt gebruikt in wetenschappelijke, technische en zakelijke contexten om aannames en voorwaarden voor verdere redenering vast te leggen.",
+    "examples": [
+      "Aangenomen dat de gegevens correct zijn, kunnen we conclusies trekken",
+      "We gaan door, aangenomen dat er geen bezwaren zijn",
+      "Aangenomen dat het budget wordt goedgekeurd, starten we in januari"
+    ],
+    "common_mistakes": "Неправильно используют конструкцию предположения; путают с условными предложениями."
+  },
+  {
+    "kolmit_level": 158,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerend voornaamwoord in juridische taal",
+    "description": "Возвратное местоимение в юридическом языке.",
+    "rule_text": "In juridische taal worden wederkerende voornaamwoorden gebruikt om wederzijdse verplichtingen en rechten uit te drukken. Deze constructies zijn essentieel voor contracten, overeenkomsten en wettelijke bepalingen.",
+    "examples": [
+      "De partijen verbinden zich ertoe elkaar te informeren",
+      "Het recht zich te verdedigen",
+      "De verplichting zich te houden aan de regels"
+    ],
+    "common_mistakes": "Неправильно используют возвратные местоимения в юридическом контексте; неясные формулировки."
+  },
+  {
+    "kolmit_level": 159,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van kwaliteit en eigenschap",
+    "description": "Предлоги качества и свойства.",
+    "rule_text": "Voorzetsels van kwaliteit en eigenschap (van, met, zonder) worden gebruikt om kenmerken, eigenschappen en kwaliteiten aan te geven in formele beschrijvingen. Deze voorzetsels zijn essentieel voor productbeschrijvingen, specificaties en kwaliteitsrapporten.",
+    "examples": [
+      "Een apparaat van hoge kwaliteit",
+      "Met extra functies",
+      "Zonder garantie"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги качества; путают 'van' и 'met' в описаниях свойств."
+  },
+  {
+    "kolmit_level": 160,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij formele uitdrukkingen van mening",
+    "description": "Инверсия при формальных выражениях мнения.",
+    "rule_text": "Formele uitdrukkingen van mening en standpunt aan het begin van de zin veroorzaken inversie van onderwerp en persoonsvorm. Deze constructie benadrukt het standpunt en is kenmerkend voor academische en formele betogen.",
+    "examples": [
+      "Naar onze mening dient dit te worden heroverwogen",
+      "Volgens de deskundigen is een andere aanpak nodig",
+      "In het licht van deze ontwikkelingen moeten we handelen"
+    ],
+    "common_mistakes": "Забывают инверсию; неправильный порядок слов после вводных выражений мнения."
+  },
+  {
+    "kolmit_level": 161,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Conditionele constructies met 'zou' in formele context",
+    "description": "Условные конструкции с 'zou' в формальном контексте.",
+    "rule_text": "Conditionele constructies met 'zou' worden in formele contexten gebruikt om hypothetische situaties, beleefde verzoeken en voorzichtige uitspraken te formuleren. Deze constructies zijn essentieel voor diplomatieke en professionele communicatie.",
+    "examples": [
+      "Zou u willen overleggen?",
+      "Het zou beter zijn als we wachten",
+      "Zou het mogelijk zijn om uit te stellen?"
+    ],
+    "common_mistakes": "Неправильно используют условные конструкции; слишком прямолинейные формулировки в формальном контексте."
+  },
+  {
+    "kolmit_level": 162,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van gevolg met 'met als gevolg dat'",
+    "description": "Придаточные предложения следствия с 'met als gevolg dat'.",
+    "rule_text": "'Met als gevolg dat' is een formele constructie die een direct gevolg of resultaat introduceert. Deze uitdrukking wordt veel gebruikt in wetenschappelijke, technische en formele rapportages om oorzaak-gevolgrelaties duidelijk aan te geven.",
+    "examples": [
+      "De investeringen zijn verhoogd, met als gevolg dat de productie is gestegen",
+      "Er was een stroomstoring, met als gevolg dat het systeem uitviel",
+      "De regels zijn aangescherpt, met als gevolg dat de veiligheid is verbeterd"
+    ],
+    "common_mistakes": "Неправильно используют конструкцию следствия; путают с причинными предложениями."
+  },
+  {
+    "kolmit_level": 163,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Onbepaalde voornaamwoorden in statistische context",
+    "description": "Неопределенные местоимения в статистическом контексте.",
+    "rule_text": "In statistische en wetenschappelijke contexten worden onbepaalde voornaamwoorden gebruikt om algemene trends en patronen te beschrijven zonder specifieke referenties. Het juiste gebruik is essentieel voor accurate en objectieve rapportage.",
+    "examples": [
+      "De meeste deelnemers voltooiden de test",
+      "Sommige resultaten waren onverwacht",
+      "Velen gaven aan tevreden te zijn"
+    ],
+    "common_mistakes": "Неточное использование неопределенных местоимений в статистике; преувеличение или преуменьшение данных."
+  },
+  {
+    "kolmit_level": 164,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van prijs en waarde",
+    "description": "Предлоги цены и стоимости.",
+    "rule_text": "Voorzetsels van prijs en waarde (voor, tegen, à) worden gebruikt om prijzen, kosten en waarden aan te geven in formele en commerciële contexten. Deze voorzetsels zijn essentieel voor offertes, facturen en financiële documenten.",
+    "examples": [
+      "Te koop voor €1000",
+      "Tegen een gereduceerde prijs",
+      "À €50 per stuk"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги цены; путают 'voor' и 'tegen' в коммерческом контексте."
+  },
+  {
+    "kolmit_level": 165,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe passieve zinnen met meerdere handelingen",
+    "description": "Сложные пассивные предложения с несколькими действиями.",
+    "rule_text": "Complexe passieve zinnen beschrijven meerdere handelingen of processen in lijdende vorm. Deze constructies vereisen aandacht voor werkwoordsvolgorde, consistentie in perspectief en logische samenhang tussen de verschillende handelingen.",
+    "examples": [
+      "Het product wordt geproduceerd, gecontroleerd en verpakt",
+      "De gegevens werden verzameld, geanalyseerd en gerapporteerd",
+      "Het voorstel is besproken, goedgekeurd en geïmplementeerd"
+    ],
+    "common_mistakes": "Нарушают последовательность действий в пассиве; неправильный порядок глаголов в цепочке действий."
+  },
+  {
+    "kolmit_level": 166,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Infinitiefconstructies met 'laten' en 'doen'",
+    "description": "Инфинитивные конструкции с 'laten' и 'doen'.",
+    "rule_text": "De werkwoorden 'laten' en 'doen' worden gebruikt in causatieve constructies om aan te geven dat iemand iets laat doen of veroorzaakt. 'Laten' impliceert toestemming of mogelijkheid, terwijl 'doen' actiever en directer is.",
+    "examples": [
+      "Hij laat het huis schilderen",
+      "Ze doet de machine repareren",
+      "We laten de documenten controleren"
+    ],
+    "common_mistakes": "Путают 'laten' и 'doen'; неправильно используют каузативные конструкции."
+  },
+  {
+    "kolmit_level": 167,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van vergelijking met 'net als' en 'evenals'",
+    "description": "Придаточные предложения сравнения с 'net als' и 'evenals'.",
+    "rule_text": "'Net als' en 'evenals' worden gebruikt in vergelijkende bijzinnen om gelijkenissen en overeenkomsten aan te geven. 'Evenals' is formeler dan 'net als' en wordt vaker gebruikt in geschreven taal.",
+    "examples": [
+      "Net als vorig jaar, behaalden we goede resultaten",
+      "Evenals onze concurrenten, investeren we in innovatie",
+      "Net als in andere afdelingen, wordt hier gewerkt met targets"
+    ],
+    "common_mistakes": "Путают 'net als' и 'evenals'; неправильный порядок слов в сравнительных придаточных."
+  },
+  {
+    "kolmit_level": 168,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Aanwijzende voornaamwoorden in wetenschappelijke teksten",
+    "description": "Указательные местоимения в научных текстах.",
+    "rule_text": "In wetenschappelijke teksten worden aanwijzende voornaamwoorden gebruikt om specifieke referenties te maken naar eerdere onderzoeken, data en conclusies. Het juiste gebruik is essentieel voor heldere en precieze wetenschappelijke communicatie.",
+    "examples": [
+      "Deze resultaten komen overeen met eerder onderzoek",
+      "Die methode bleek effectiever",
+      "Dat verschijnsel vereist nader onderzoek"
+    ],
+    "common_mistakes": "Неясные ссылки в научных текстах; неправильный выбор указательных местоимений."
+  },
+  {
+    "kolmit_level": 169,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van hoeveelheid in formele specificaties",
+    "description": "Предлоги количества в формальных спецификациях.",
+    "rule_text": "Voorzetsels van hoeveelheid (ongeveer, circa, tot, van ... tot) worden gebruikt in formele specificaties en technische documentatie om precieze of geschatte hoeveelheden aan te geven. Deze voorzetsels zijn essentieel voor contracten, specificaties en technische beschrijvingen.",
+    "examples": [
+      "Ongeveer 100 eenheden",
+      "Circa 50 kilometer",
+      "Van 10 tot 20 deelnemers",
+      "Tot 100 kg belasting"
+    ],
+    "common_mistakes": "Неточные указания количества; неправильное использование предлогов в спецификациях."
+  },
+  {
+    "kolmit_level": 170,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Samengestelde zinnen met gelaagde bijzinstructuur",
+    "description": "Составные предложения с многоуровневой структурой придаточных.",
+    "rule_text": "Gelaagde bijzinstructuur ontstaat wanneer bijzinnen zelf weer bijzinnen bevatten, wat complexe werkwoordsplaatsing en aandacht voor logische samenhang vereist. Deze constructies zijn kenmerkend voor academische, filosofische en juridische teksten.",
+    "examples": [
+      "Hij zei dat hij dacht dat het waar was wat ze beweerden",
+      "Zij beweerde dat ze had gehoord dat het was afgelast omdat het regende",
+      "We weten dat hij wil dat we begrijpen waarom het belangrijk is"
+    ],
+    "common_mistakes": "Теряют структуру многоуровневых предложений; неправильный порядок глаголов на разных уровнях."
+  },
+  {
+    "kolmit_level": 171,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid deelwoord in conditionele zinnen",
+    "description": "Причастие прошедшего времени в условных предложениях.",
+    "rule_text": "Voltooide deelwoorden worden gebruikt in conditionele zinnen om hypothetische situaties in het verleden uit te drukken. Deze constructies combineren de conditionele vorm met voltooide deelwoorden om complexe temporele relaties aan te geven.",
+    "examples": [
+      "Als hij was gekomen, hadden we het kunnen bespreken",
+      "Had ik dat geweten, dan was ik eerder gegaan",
+      "Zou ze hebben gewerkt, dan had ze meer ervaring gehad"
+    ],
+    "common_mistakes": "Неправильное образование условных конструкций с причастиями; путают времена."
+  },
+  {
+    "kolmit_level": 172,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van toegeving met 'hoewel' en 'ofschoon'",
+    "description": "Уступительные придаточные предложения с 'hoewel' и 'ofschoon'.",
+    "rule_text": "'Hoewel' en 'ofschoon' introduceren bijzinnen van toegeving die een tegenstelling uitdrukken tussen wat verwacht wordt en wat werkelijk gebeurt. 'Ofschoon' is formeler en wordt vaker gebruikt in geschreven taal.",
+    "examples": [
+      "Hoewel het moeilijk was, voltooide hij de opdracht",
+      "Ofschoon de omstandigheden ongunstig waren, slaagden we",
+      "Hij accepteerde het voorstel, hoewel hij bedenkingen had"
+    ],
+    "common_mistakes": "Путают уступительные и условные предложения; неправильный порядок слов."
+  },
+  {
+    "kolmit_level": 173,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerend voornaamwoord in formele instructies",
+    "description": "Возвратное местоимение в формальных инструкциях.",
+    "rule_text": "In formele instructies en handleidingen worden wederkerende voornaamwoorden gebruikt om processen en handelingen te beschrijven die op het onderwerp zelf zijn gericht. Deze constructies zijn essentieel voor technische documentatie.",
+    "examples": [
+      "Het apparaat reinigt zich automatisch",
+      "De software update zichzelf",
+      "Het systeem herstart zich na een stroomstoring"
+    ],
+    "common_mistakes": "Неправильно используют возвратные местоимения в инструкциях; неясные описания процессов."
+  },
+  {
+    "kolmit_level": 174,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van locatie in formele beschrijvingen",
+    "description": "Предлоги места в формальных описаниях.",
+    "rule_text": "Voorzetsels van locatie (in, op, aan, bij, onder, boven) worden gebruikt in formele beschrijvingen om precieze posities en locaties aan te geven. Deze voorzetsels zijn essentieel voor technische, juridische en vastgoedbeschrijvingen.",
+    "examples": [
+      "Gelegen in het centrum van de stad",
+      "Op de eerste verdieping",
+      "Aan de zuidkant van het gebouw",
+      "Bij het kruispunt"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги места; неточные указания локации."
+  },
+  {
+    "kolmit_level": 175,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij formele uitdrukkingen van tijd",
+    "description": "Инверсия при формальных выражениях времени.",
+    "rule_text": "Formele uitdrukkingen van tijd aan het begin van de zin veroorzaken inversie van onderwerp en persoonsvorm. Deze constructie benadrukt het temporele aspect en is kenmerkend voor formele en historische teksten.",
+    "examples": [
+      "In de loop der tijd is gebleken dat deze methode effectief is",
+      "Gedurende de afgelopen decennia hebben zich significante veranderingen voorgedaan",
+      "Met ingang van volgend jaar zullen nieuwe regels gelden"
+    ],
+    "common_mistakes": "Забывают инверсию; неправильный порядок слов после временных выражений."
+  },
+  {
+    "kolmit_level": 176,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Modale werkwoorden in indirecte rede",
+    "description": "Модальные глаголы в косвенной речи.",
+    "rule_text": "Modale werkwoorden in indirecte rede worden gebruikt om aangehaalde modaliteiten (mogelijkheid, verplichting, toestemming) weer te geven. Deze constructies vereisen aandacht voor tijdsverschuiving en consistentie in de weergave van de oorspronkelijke uitspraak.",
+    "examples": [
+      "Hij zei dat hij moest werken",
+      "Zij vertelde dat ze niet kon komen",
+      "Hij beweerde dat hij het had kunnen doen"
+    ],
+    "common_mistakes": "Неправильно передают модальность в косвенной речи; путают времена."
+  },
+  {
+    "kolmit_level": 177,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van doel met 'teneinde' en 'om'",
+    "description": "Придаточные предложения цели с 'teneinde' и 'om'.",
+    "rule_text": "'Teneinde' en 'om' introduceren bijzinnen van doel, maar met verschillende formele gradaties. 'Teneinde' is zeer formeel en wordt vooral gebruikt in juridische en ambtelijke taal, terwijl 'om' algemener is.",
+    "examples": [
+      "Teneinde kosten te besparen, werd een andere leverancier gekozen",
+      "Om de efficiëntie te verhogen, werd het proces gestroomlijnd",
+      "Hij studeert hard teneinde te slagen voor het examen"
+    ],
+    "common_mistakes": "Путают 'teneinde' и 'om'; неправильно используют инфинитивные конструкции."
+  },
+  {
+    "kolmit_level": 178,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Betrekkelijke voornaamwoorden in complexe verwijzingen",
+    "description": "Относительные местоимения в сложных ссылках.",
+    "rule_text": "In complexe teksten worden betrekkelijke voornaamwoorden gebruikt om ingewikkelde relaties en verwijzingen te creëren. Het juiste gebruik van 'die', 'dat', 'wie', 'wat' is essentieel voor heldere en precieze communicatie in academische en formele contexten.",
+    "examples": [
+      "De resultaten, die in bijlage 3 zijn weergegeven, tonen een duidelijke trend",
+      "Het probleem, dat zich voordeed tijdens de implementatie, is nu opgelost",
+      "De medewerkers, wie de training hebben gevolgd, presteren beter"
+    ],
+    "common_mistakes": "Неясные или двусмысленные ссылки; неправильный выбор относительных местоимений."
+  },
+  {
+    "kolmit_level": 179,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van reden in formele argumentatie",
+    "description": "Предлоги причины в формальной аргументации.",
+    "rule_text": "Voorzetsels van reden (wegens, vanwege, omwille van) worden gebruikt in formele argumentatie om oorzaken en redenen aan te geven. Deze voorzetsels zijn essentieel voor logische en overtuigende betogen.",
+    "examples": [
+      "Wegens omstandigheden is de bijeenkomst verplaatst",
+      "Vanwege de hoge vraag is de voorraad beperkt",
+      "Omwille van de duidelijkheid herhalen we de belangrijkste punten"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги причины; слабая аргументация."
+  },
+  {
+    "kolmit_level": 180,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe vraagzinnen met meerdere vraagwoorden",
+    "description": "Сложные вопросительные предложения с несколькими вопросительными словами.",
+    "rule_text": "Complexe vraagzinnen kunnen meerdere vraagwoorden bevatten die verschillende aspecten van de vraag benadrukken. Deze constructies vereisen aandacht voor woordvolgorde, werkwoordsplaatsing en logische samenhang tussen de vraag-elementen.",
+    "examples": [
+      "Wie weet wanneer en waar de vergadering plaatsvindt?",
+      "Hoe en waarom is dit besluit genomen?",
+      "Wat, waar en wanneer moeten we precies doen?"
+    ],
+    "common_mistakes": "Неправильный порядок слов в сложных вопросах; путают последовательность вопросительных слов."
+  },
+  {
+    "kolmit_level": 181,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Infinitiefconstructies met 'schijnen' en 'lijken'",
+    "description": "Инфинитивные конструкции с 'schijnen' и 'lijken'.",
+    "rule_text": "De werkwoorden 'schijnen' en 'lijken' worden gebruikt met te + infinitief om waarschijnlijkheid of schijn aan te geven. 'Schijnen' is vaak gebaseerd op externe waarneming, terwijl 'lijken' meer op persoonlijke indruk is gebaseerd.",
+    "examples": [
+      "Hij schijnt de instructies niet te begrijpen",
+      "Het lijkt te gaan regenen",
+      "Ze schijnen het probleem te hebben opgelost"
+    ],
+    "common_mistakes": "Путают 'schijnen' и 'lijken'; неправильно используют инфинитивные конструкции."
+  },
+  {
+    "kolmit_level": 182,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van voorwaarde met 'indien' en 'mits'",
+    "description": "Условные придаточные предложения с 'indien' и 'mits'.",
+    "rule_text": "'Indien' en 'mits' zijn formele voegwoorden voor voorwaardelijke bijzinnen. 'Indien' wordt gebruikt voor algemene voorwaarden, terwijl 'mits' een specifieke voorwaarde impliceert die vervuld moet worden.",
+    "examples": [
+      "Indien u akkoord gaat, teken dan het contract",
+      "Mits u op tijd betaalt, leveren wij direct",
+      "Indien nodig, nemen wij contact met u op"
+    ],
+    "common_mistakes": "Путают 'indien' и 'mits'; неправильный порядок слов в условных придаточных."
+  },
+  {
+    "kolmit_level": 183,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Onbepaalde voornaamwoorden in formele rapportage",
+    "description": "Неопределенные местоимения в формальной отчетности.",
+    "rule_text": "In formele rapportage worden onbepaalde voornaamwoorden gebruikt om algemene trends, patronen en observaties te beschrijven zonder specifieke individuen of instanties te noemen. Dit bevordert objectiviteit en professionaliteit.",
+    "examples": [
+      "Velen gaven aan tevreden te zijn met de service",
+      "Sommige resultaten vereisen nader onderzoek",
+      "Ieder van de deelnemers ontving een certificaat"
+    ],
+    "common_mistakes": "Слишком общие формулировки; недостаточная конкретика в отчетах."
+  },
+  {
+    "kolmit_level": 184,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van wijze in formele beschrijvingen",
+    "description": "Предлоги образа действия в формальных описаниях.",
+    "rule_text": "Voorzetsels van wijze (op, met, zonder, door middel van) worden gebruikt in formele beschrijvingen om de manier waarop iets gebeurt aan te geven. Deze voorzetsels zijn essentieel voor procesbeschrijvingen en methodologische uiteenzettingen.",
+    "examples": [
+      "Op een efficiënte manier",
+      "Met grote zorgvuldigheid",
+      "Zonder enige vertraging",
+      "Door middel van geavanceerde technologie"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги образа действия; неясные описания процессов."
+  },
+  {
+    "kolmit_level": 185,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Samengestelde zinnen met parallelle structuur",
+    "description": "Составные предложения с параллельной структурой.",
+    "rule_text": "Parallelle structuur in samengestelde zinnen zorgt voor duidelijkheid en esthetische balans. Deze constructie vereist dat gelijksoortige zinsdelen dezelfde grammaticale vorm hebben, wat essentieel is voor professionele en overtuigende communicatie.",
+    "examples": [
+      "Hij werkt hard, studeert veel en slaagt altijd",
+      "De afdeling ontwikkelt producten, test prototypes en implementeert oplossingen",
+      "We analyseren de data, trekken conclusies en maken aanbevelingen"
+    ],
+    "common_mistakes": "Нарушают параллельную структуру; несогласованные грамматические формы."
+  },
+  {
+    "kolmit_level": 186,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Voltooid deelwoord in futurum exactum",
+    "description": "Причастие прошедшего времени в Futurum Exactum.",
+    "rule_text": "Het futurum exactum (zullen + hebben/zijn + voltooid deelwoord) wordt gebruikt om handelingen uit te drukken die op een bepaald moment in de toekomst voltooid zullen zijn. Deze complexe tijd combineert toekomstperspectief met voltooidheid.",
+    "examples": [
+      "Morgen om deze tijd zal hij zijn aangekomen",
+      "Over een week zullen we het project hebben afgerond",
+      "Volgend jaar zal zij haar studie hebben voltooid"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов; путают с другими будущими временами."
+  },
+  {
+    "kolmit_level": 187,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van veronderstelling met 'gesteld dat'",
+    "description": "Придаточные предложения предположения с 'gesteld dat'.",
+    "rule_text": "'Gesteld dat' introduceert hypothetische situaties en veronderstellingen in formele contexten. Deze constructie wordt vaak gebruikt in wetenschappelijke, technische en zakelijke discussies om theoretische scenario's te onderzoeken.",
+    "examples": [
+      "Gesteld dat het budget wordt goedgekeurd, kunnen we in januari starten",
+      "Gesteld dat alle partijen akkoord gaan, ondertekenen we volgende week",
+      "Gesteld dat de markt groeit, investeren we in uitbreiding"
+    ],
+    "common_mistakes": "Неправильно используют конструкцию предположения; путают с условными предложениями."
+  },
+  {
+    "kolmit_level": 188,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Wederkerend voornaamwoord in wetenschappelijke taal",
+    "description": "Возвратное местоимение в научном языке.",
+    "rule_text": "In wetenschappelijke taal worden wederkerende voornaamwoorden gebruikt om natuurlijke processen, chemische reacties en fysieke verschijnselen te beschrijven waar de handeling op het onderwerp zelf terugkeert.",
+    "examples": [
+      "De stof lost zich op in water",
+      "Het metaal oxideert zich bij blootstelling aan lucht",
+      "De cel deelt zich tijdens het groeiproces"
+    ],
+    "common_mistakes": "Неправильно используют возвратные местоимения в научном контексте; неточные описания процессов."
+  },
+  {
+    "kolmit_level": 189,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van verhouding en proportie",
+    "description": "Предлоги отношения и пропорции.",
+    "rule_text": "Voorzetsels van verhouding en proportie (naar verhouding, in vergelijking met, ten opzichte van) worden gebruikt om relatieve verhoudingen en vergelijkingen uit te drukken in formele en wetenschappelijke contexten.",
+    "examples": [
+      "Naar verhouding zijn de kosten laag",
+      "In vergelijking met vorig jaar is de omzet gestegen",
+      "Ten opzichte van het gemiddelde presteert hij beter"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги пропорции; неточные сравнения."
+  },
+  {
+    "kolmit_level": 190,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Inversie bij formele uitdrukkingen van oorzaak",
+    "description": "Инверсия при формальных выражениях причины.",
+    "rule_text": "Formele uitdrukkingen van oorzaak en gevolg aan het begin van de zin veroorzaken inversie van onderwerp en persoonsvorm. Deze constructie benadrukt de causaliteit en is kenmerkend voor academische en formele teksten.",
+    "examples": [
+      "Als gevolg van deze ontwikkelingen moeten we ons beleid aanpassen",
+      "Ten gevolge van de crisis zijn maatregelen genomen",
+      "Vanwege de toenemende vraag hebben we de productie uitgebreid"
+    ],
+    "common_mistakes": "Забывают инверсию; неправильный порядок слов после причинных выражений."
+  },
+  {
+    "kolmit_level": 191,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Conditionele perfectum in formele communicatie",
+    "description": "Условное совершенное время в формальной коммуникации.",
+    "rule_text": "Het conditionele perfectum (zouden + hebben/zijn + voltooid deelwoord) wordt in formele communicatie gebruikt om beleefde verzoeken, voorzichtige suggesties en hypothetische scenario's uit te drukken met een verleden dimensie.",
+    "examples": [
+      "Zou u hebben kunnen overleggen met het team?",
+      "Het zou beter zijn geweest als we hadden gewacht",
+      "Zou het mogelijk zijn geweest om eerder te beginnen?"
+    ],
+    "common_mistakes": "Неправильно образуют условное совершенное время; слишком прямолинейные формулировки."
+  },
+  {
+    "kolmit_level": 192,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van beperking met 'voor zover'",
+    "description": "Придаточные предложения ограничения с 'voor zover'.",
+    "rule_text": "'Voor zover' introduceert bijzinnen van beperking die de reikwijdte of grenzen van een uitspraak aangeven. Deze constructie is essentieel voor precieze en genuanceerde formuleringen in formele contexten.",
+    "examples": [
+      "Voor zover wij weten, is dit de eerste keer",
+      "Voor zover mogelijk, zullen we aan uw verzoek voldoen",
+      "Voor zover de wet het toestaat, maken we uitzonderingen"
+    ],
+    "common_mistakes": "Неправильно используют ограничительные конструкции; слишком категоричные утверждения."
+  },
+  {
+    "kolmit_level": 193,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Aanwijzende voornaamwoorden in juridische verwijzingen",
+    "description": "Указательные местоимения в юридических ссылках.",
+    "rule_text": "In juridische documenten worden aanwijzende voornaamwoorden gebruikt om precieze verwijzingen te maken naar artikelen, clausules en bepalingen. Het juiste gebruik is essentieel voor de juridische geldigheid en interpretatie.",
+    "examples": [
+      "Dit artikel bepaalt dat...",
+      "Die clausule is niet van toepassing",
+      "Dat lid van de overeenkomst is vervallen"
+    ],
+    "common_mistakes": "Неясные юридические ссылки; неправильный выбор указательных местоимений."
+  },
+  {
+    "kolmit_level": 194,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van uitzondering in formele context",
+    "description": "Предлоги исключения в формальном контексте.",
+    "rule_text": "Voorzetsels van uitzondering (met uitzondering van, uitgezonderd, behalve) worden gebruikt in formele contexten om specifieke uitzonderingen op algemene regels of bepalingen aan te geven.",
+    "examples": [
+      "Met uitzondering van feestdagen is het kantoor altijd open",
+      "Uitgezonderd noodgevallen, dient dit protocol te worden gevolgd",
+      "Behalve in bijzondere omstandigheden, is toestemming vereist"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги исключения; неполные или неточные описания исключений."
+  },
+  {
+    "kolmit_level": 195,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Complexe passieve zinnen met modale nuances",
+    "description": "Сложные пассивные предложения с модальными оттенками.",
+    "rule_text": "Complexe passieve zinnen kunnen modale nuances bevatten door combinatie met modale werkwoorden. Deze constructies drukken mogelijkheid, verplichting of toestemming uit in lijdende vorm en zijn kenmerkend voor formele regelgeving en beleid.",
+    "examples": [
+      "Dit document dient te worden ondertekend",
+      "Er kan worden overgegaan tot uitvoering",
+      "Er mag niet worden afgeweken van het protocol"
+    ],
+    "common_mistakes": "Неправильный порядок глаголов в модальном пассиве; путают модальные оттенки."
+  },
+  {
+    "kolmit_level": 196,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Werkwoorden",
+    "rule_name": "Infinitiefconstructies met 'blijken' en 'lijken'",
+    "description": "Инфинитивные конструкции с 'blijken' и 'lijken'.",
+    "rule_text": "De werkwoorden 'blijken' en 'lijken' worden gebruikt met te + infinitief om conclusies en waarnemingen uit te drukken. 'Blijken' benadrukt objectieve vaststelling, terwijl 'lijken' meer op schijn of indruk is gebaseerd.",
+    "examples": [
+      "Hij blijkt de enige kandidaat te zijn",
+      "Het lijkt een goed voorstel te zijn",
+      "Ze blijken al eerder samengewerkt te hebben"
+    ],
+    "common_mistakes": "Путают 'blijken' и 'lijken'; неправильно используют инфинитивные конструкции."
+  },
+  {
+    "kolmit_level": 197,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsverbinding",
+    "rule_name": "Bijzinnen van tijd met 'alvorens' en 'voordat'",
+    "description": "Временные придаточные предложения с 'alvorens' и 'voordat'.",
+    "rule_text": "'Alvorens' en 'voordat' worden gebruikt om temporele volgorde aan te geven, waarbij 'alvorens' formeler is en vaak wordt gevolgd door 'te + infinitief'. Beide voegwoorden benadrukken dat de ene handeling voor de andere plaatsvindt.",
+    "examples": [
+      "Alvorens te beslissen, raadpleegt u alle documenten",
+      "Voordat we beginnen, controleren we de apparatuur",
+      "Alvorens het contract te ondertekenen, las hij alle clausules"
+    ],
+    "common_mistakes": "Путают 'alvorens' и 'voordat'; неправильно используют инфинитивные конструкции."
+  },
+  {
+    "kolmit_level": 198,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Onbepaalde voornaamwoorden in academische teksten",
+    "description": "Неопределенные местоимения в академических текстах.",
+    "rule_text": "In academische teksten worden onbepaalde voornaamwoorden gebruikt om algemene uitspraken te doen, trends te beschrijven en conclusies te trekken zonder specifieke referenties. Dit bevordert objectiviteit en wetenschappelijke distantie.",
+    "examples": [
+      "Velen zijn van mening dat verder onderzoek nodig is",
+      "Sommige studies tonen aan dat...",
+      "Ieder van deze factoren draagt bij aan het resultaat"
+    ],
+    "common_mistakes": "Слишком общие формулировки в академическом контексте; недостаточная доказательность."
+  },
+  {
+    "kolmit_level": 199,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van doel en functie",
+    "description": "Предлоги цели и функции.",
+    "rule_text": "Voorzetsels van doel en functie (voor, ten behoeve van, met het oog op) worden gebruikt om het doel, de bedoeling of functie van iets aan te geven in formele en technische contexten.",
+    "examples": [
+      "Voor intern gebruik",
+      "Ten behoeve van het onderzoek",
+      "Met het oog op toekomstige ontwikkelingen"
+    ],
+    "common_mistakes": "Неправильно выбирают предлоги цели; неясные описания назначения."
+  },
+  {
+    "kolmit_level": 200,
+    "cefr_level": "B2",
+    "level_type": "new",
+    "nt2_theme": "Zinsbouw",
+    "rule_name": "Samengestelde zinnen met meerdere bijwoordelijke bepalingen",
+    "description": "Составные предложения с несколькими обстоятельствами.",
+    "rule_text": "Samengestelde zinnen met meerdere bijwoordelijke bepalingen vereisen zorgvuldige plaatsing van tijd, plaats, wijze en andere bepalingen. De volgorde en onderlinge relaties tussen deze bepalingen zijn essentieel voor heldere en logische zinsbouw.",
+    "examples": [
+      "Gisteren hebben we in de vergaderzaal uitvoerig over het voorstel gediscussieerd",
+      "Morgen zal het team op locatie zorgvuldig de installatie testen",
+      "Vorige week heeft de commissie in Amsterdam uitgebreid onderzoek gedaan"
+    ],
+    "common_mistakes": "Неправильный порядок обстоятельств; нарушение логической последовательности."
+  }
+
+
+]

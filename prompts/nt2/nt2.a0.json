@@ -1,0 +1,111 @@
+[
+  {
+    "cefr_level": "A0",
+    "nt2_theme": "Voorstellen",
+    "rule_name": "Ik heet… / Mijn naam is…",
+    "description": "Как назвать себя, спросить имя",
+    "rule_text": "Ik heet Jan. / Mijn naam is Anna.",
+    "examples": [
+      "Hoe heet je?",
+      "Ik heet Pieter."
+    ],
+    "kolmit_level": 1
+  },
+  {
+    "cefr_level": "A0",
+    "nt2_theme": "Getallen 0-20",
+    "rule_name": "Telwoorden",
+    "description": "Основные числа до 20",
+    "rule_text": "nul, een, twee, drie, … twintig",
+    "examples": [
+      "Ik heb drie appels.",
+      "Zij is vijftien jaar."
+    ],
+    "kolmit_level": 2
+  },
+  {
+    "cefr_level": "A0",
+    "nt2_theme": "Weekdagen",
+    "rule_name": "Maandag… zondag",
+    "description": "Названия дней недели",
+    "rule_text": "maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag",
+    "examples": [
+      "Vandaag is maandag.",
+      "Morgen is dinsdag."
+    ],
+    "kolmit_level": 3
+  },
+  {
+    "cefr_level": "A0",
+    "nt2_theme": "Maanden & data",
+    "rule_name": "Januari… december, datum schrijven",
+    "description": "Названия месяцев, как сказать дату",
+    "rule_text": "januari, februari, maart … december",
+    "examples": [
+      "Het is 5 mei.",
+      "Mijn verjaardag is in juli."
+    ],
+    "kolmit_level": 4
+  },
+  {
+    "cefr_level": "A0",
+    "nt2_theme": "Kloktijd",
+    "rule_name": "Hoe laat is het?",
+    "description": "Основы времени по часам",
+    "rule_text": "uur-aanduiding: één uur, half twee, kwart over drie",
+    "examples": [
+      "Het is tien uur.",
+      "Het is half zeven."
+    ],
+    "kolmit_level": 5
+  },
+  {
+    "cefr_level": "A0",
+    "nt2_theme": "Klinkers",
+    "rule_name": "Korte en lange klinkers",
+    "description": "Различие долгих и кратких гласных",
+    "rule_text": "a/aa, e/ee, o/oo, u/uu, i/ie",
+    "examples": [
+      "man – maan",
+      "bed – been",
+      "bos – boom"
+    ],
+    "kolmit_level": 6
+  },
+  {
+    "cefr_level": "A0",
+    "nt2_theme": "Medeklinkers",
+    "rule_name": "Specifieke uitspraak",
+    "description": "Особенности согласных: g, sch, j",
+    "rule_text": "g – keelklank, sch – [sx), j – [й]",
+    "examples": [
+      "goed – school – jongen"
+    ],
+    "kolmit_level": 7
+  },
+  {
+    "cefr_level": "A0",
+    "nt2_theme": "Begroetingen",
+    "rule_name": "Hallo / Dag / Hoe gaat het?",
+    "description": "Формулы приветствия и прощания",
+    "rule_text": "Hallo, Dag, Goedemorgen, Tot ziens",
+    "examples": [
+      "Hallo! Hoe gaat het?",
+      "Goed, dank je!"
+    ],
+    "kolmit_level": 8
+  },
+  {
+    "cefr_level": "A0",
+    "nt2_theme": "Alfabet",
+    "rule_name": "Nederlandse alfabet",
+    "description": "Знакомство с буквами и их звучанием",
+    "rule_text": "26 letters, enkele verschillen: ij, y",
+    "examples": [
+      "a – appel",
+      "b – boom",
+      "ij – ijs"
+    ],
+    "kolmit_level": 9
+  }
+]

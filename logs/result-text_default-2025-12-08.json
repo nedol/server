@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-12-08T22:16:58.856Z",
+  "name": "text_default",
+  "result": {
+    "result": {
+      "article": {
+        "name": "Syrië herdenkt einde Assad-regime",
+        "cefr_level": 20,
+        "cefr_level_name": "A1",
+        "format": "simple_news",
+        "type": "politiek",
+        "content": [
+          "Syrië herdenkt vandaag het einde van het Assad-regime.",
+          "Een jaar geleden werd president Bashar al-Assad verdreven door rebellenleider Ahmed al-Sharaa.",
+          "Al-Sharaa zegt dat alle burgers hun krachten moeten bundelen voor een sterk Syrië.",
+          "De mensen in Syrië zijn blij dat er geen oorlog meer is.",
+          "Veel huizen en straten zijn kapot, maar het herstel gaat langzaam vooruit.",
+          "Miljoenen mensen zijn teruggekeerd naar hun huizen.",
+          "Er is nog steeds weinig werk en weinig geld in Syrië.",
+          "De veiligheid is beter, maar er zijn nog steeds problemen.",
+          "De overheid helpt de mensen met eten en medicijnen.",
+          "De toekomst van Syrië is nog onzeker, maar de hoop blijft."
+        ]
+      }
+    }
+  }
+}

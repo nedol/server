@@ -1,0 +1,358 @@
+[
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Verleden tijd regelmatig",
+    "rule_name": "Werkwoorden in de verleden tijd (regelmatig)",
+    "description": "Правильные глаголы в прошедшем времени",
+    "rule_text": "Gebruik regelmatige werkwoorden in de verleden tijd om afgeronde acties in het verleden te beschrijven. Kies -te als de stam eindigt op -t, -d, -p, -k, -f, -s of -ch, anders gebruik -de.",
+    "examples": [
+      "Ik werkte gisteren in de tuin",
+      "Jij speelde met de bal",
+      "Hij kookte het avondeten",
+      "Zij leerde voor de toets",
+      "Wij wandelden in het park",
+      "Jullie keken een film"
+    ],
+    "kolmit_level": 32
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Tijdsaanduidingen in verleden",
+    "rule_name": "Gisteren, vorige week",
+    "description": "Использование слов времени в прошедшем времени",
+    "rule_text": "Gebruik tijdsaanduidingen zoals gisteren, vorige week, vorig jaar om specifieke momenten in het verleden aan te geven wanneer je iets deed.",
+    "examples": [
+      "Gisteren ging ik naar school",
+      "Vorige week bezocht zij haar oma",
+      "Ik werkte gisteren thuis",
+      "Hij was vorige maand op vakantie",
+      "Zij las gisteren een boek",
+      "Vorig jaar verhuisden we",
+      "Wij aten gisteren pizza",
+      "Hij sprak vorige week met de directeur",
+      "Gisteren regende het hard",
+      "Zij bezocht vorige maand een museum."
+    ],
+    "kolmit_level": 33
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Plaats en richting",
+    "rule_name": "Naar, van, bij",
+    "description": "Употребление предлогов направления и места",
+    "rule_text": "Gebruik voorzetsels zoals naar, van, bij om richting en locatie aan te geven wanneer je beschrijft waar iets of iemand zich bevindt of naartoe gaat.",
+    "examples": [
+      "Ik ga naar school",
+      "Hij komt van het werk",
+      "Zij zit bij de leraar",
+      "Wij wandelen naar het park",
+      "De kat springt van de tafel",
+      "Hij woont bij zijn ouders",
+      "Ik loop naar het station",
+      "Zij komt van de supermarkt",
+      "Het boek ligt bij de lamp",
+      "Wij fietsen naar het dorp."
+    ],
+    "kolmit_level": 34
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Eenvoudige samengestelde zinnen verleden",
+    "rule_name": "En, maar, omdat in verleden tijd",
+    "description": "Соединение двух предложений в прошедшем времени",
+    "rule_text": "Gebruik 'en' om extra informatie toe te voegen, 'maar' om tegenstellingen aan te geven, en 'omdat' om redenen te geven in verleden tijd zinnen.",
+    "examples": [
+      "Ik werkte hard en hij keek tv",
+      "Zij ging naar de markt maar hij bleef thuis",
+      "Wij wandelden in het park omdat het mooi weer was",
+      "Ik las een boek en hij schreef een brief",
+      "Jij speelde buiten maar ik bleef binnen",
+      "Hij studeerde omdat hij examen had",
+      "Wij aten pizza en zij dronken limonade",
+      "Zij zongen omdat het feest was",
+      "Ik keek tv en zij luisterde muziek",
+      "Hij liep naar huis maar zij bleef bij de school."
+    ],
+    "kolmit_level": 35
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Bijvoeglijke naamwoorden verleden",
+    "rule_name": "Bijvoeglijke naamwoorden in verleden tijd",
+    "description": "Прилагательные для описания предметов и событий в прошедшем времени",
+    "rule_text": "Gebruik bijvoeglijke naamwoorden om personen, plaatsen of gebeurtenissen gedetailleerd te beschrijven in verhalen over het verleden.",
+    "examples": [
+      "Het was een mooie dag",
+      "De oude man liep langzaam",
+      "Zij droeg een rode jurk",
+      "Het huis was groot en gezellig",
+      "De kinderen waren blij",
+      "Het eten was lekker",
+      "Hij had een zware tas",
+      "Het park was rustig",
+      "De film was spannend",
+      "De bloemen waren prachtig."
+    ],
+    "kolmit_level": 36
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Modale werkwoorden verleden",
+    "rule_name": "Kon, moest, wilde",
+    "description": "Модальные глаголы в прошедшем времени",
+    "rule_text": "Gebruik modale werkwoorden zoals kon, moest, wilde in verleden tijd om mogelijkheden, verplichtingen of wensen in het verleden uit te drukken.",
+    "examples": [
+      "Ik kon niet komen",
+      "Jij moest studeren",
+      "Hij wilde een boek lezen",
+      "Wij konden helpen",
+      "Zij moesten werken",
+      "Jullie wilden spelen",
+      "Ik wilde slapen",
+      "Jij kon helpen",
+      "Hij moest vertrekken",
+      "Wij wilden leren."
+    ],
+    "kolmit_level": 37
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Eenvoudige verhalen",
+    "rule_name": "Vertellen van korte gebeurtenissen",
+    "description": "Простое повествование о событиях в прошедшем времени",
+    "rule_text": "Vertel korte gebeurtenissen in verleden tijd door zinnen te gebruiken met de juiste werkwoorden en tijdsaanduidingen om een duidelijk verhaal te vormen.",
+    "examples": [
+      "Gisteren ging ik naar school",
+      "Hij werkte hard",
+      "Zij las een boek",
+      "Wij wandelden in het park",
+      "Ik at ontbijt",
+      "Hij sliep laat",
+      "Zij speelde buiten",
+      "Wij studeerden samen",
+      "Ik keek tv",
+      "Hij liep naar huis."
+    ],
+    "kolmit_level": 38
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Woorden voor dagelijkse activiteiten",
+    "rule_name": "Dagelijkse activiteiten en voorwerpen",
+    "description": "Слова для описания повседневных действий и предметов",
+    "rule_text": "Gebruik veelvoorkomende woorden voor dagelijkse handelingen en voorwerpen om je routine of ervaringen duidelijk te beschrijven.",
+    "examples": [
+      "Ik ontbijt elke ochtend",
+      "Zij werkt op kantoor",
+      "Wij fietsen naar school",
+      "Hij leest een boek",
+      "Zij speelt met de kinderen",
+      "Ik kook avondeten",
+      "Jij schrijft een brief",
+      "Hij luistert naar muziek",
+      "Wij eten pizza",
+      "Zij lopen naar het park."
+    ],
+    "kolmit_level": 39
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Verleden tijd in samengestelde zinnen",
+    "rule_name": "Verleden tijd in complexe zinnen",
+    "description": "Использование прошедшего времени в сложных предложениях",
+    "rule_text": "Combineer verleden tijd met samengestelde zinnen om oorzaken, gevolgen en tegelijkertijd gebeurtenissen in het verleden duidelijk te maken.",
+    "examples": [
+      "Ik werkte hard en hij keek tv",
+      "Zij ging naar de markt omdat het mooi weer was",
+      "Wij wandelden in het park en zij speelden buiten",
+      "Ik las een boek omdat ik tijd had",
+      "Hij studeerde hard en zij maakte aantekeningen",
+      "Wij aten pizza omdat we honger hadden",
+      "Zij zongen en dansten",
+      "Ik keek tv en hij las een krant",
+      "Wij sliepen laat en stonden vroeg op",
+      "Hij liep naar huis omdat het regende."
+    ],
+    "kolmit_level": 40
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Toekomende tijd eenvoudig",
+    "rule_name": "Toekomende tijd met gaan",
+    "description": "Простое выражение будущего времени",
+    "rule_text": "Gebruik 'gaan' + infinitief om toekomstige plannen of acties aan te geven die je binnenkort wilt uitvoeren.",
+    "examples": [
+      "Ik ga morgen naar school",
+      "Zij gaat vanavond sporten",
+      "Wij gaan samen koken",
+      "Hij gaat naar het park",
+      "Jullie gaan fietsen",
+      "Ik ga naar de winkel",
+      "Hij gaat studeren",
+      "Wij gaan wandelen",
+      "Zij gaat lezen",
+      "Ik ga werken."
+    ],
+    "kolmit_level": 41
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Samengestelde bijzinnen",
+    "rule_name": "Omdat, terwijl, toen",
+    "description": "Использование нескольких простых придаточных предложений",
+    "rule_text": "Gebruik voegwoorden zoals omdat (reden), terwijl (tegelijkertijd), en toen (moment in verleden) om complexere verhalen te vertellen.",
+    "examples": [
+      "Ik bleef thuis omdat ik ziek was",
+      "Terwijl hij werkte, luisterde zij muziek",
+      "Toen ik thuiskwam, at ik avondeten",
+      "Ik studeerde omdat ik examen had",
+      "Terwijl zij kookte, deed hij de afwas",
+      "Toen het regende, bleven we binnen",
+      "Omdat het feest was, zongen we",
+      "Terwijl hij sliep, maakte zij huiswerk",
+      "Toen zij aankwam, begon het gesprek",
+      "Ik werkte hard omdat ik wilde slagen."
+    ],
+    "kolmit_level": 42
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Uitgebreide voorzetsels",
+    "rule_name": "Voorzetsels van plaats en tijd",
+    "description": "Расширенный набор предлогов места и времени",
+    "rule_text": "Gebruik een breder scala aan voorzetsels van plaats en tijd zoals op, onder, naast, achter, in, boven, om, vanaf, tot.",
+    "examples": [
+      "Het boek ligt op tafel",
+      "De stoel staat onder de tafel",
+      "Zij zit naast de deur",
+      "Hij hangt het schilderij achter de kast",
+      "Wij wandelen in het park",
+      "Het schilderij hangt boven het bed",
+      "Ik kom om acht uur",
+      "Zij werkt vanaf maandag",
+      "Het feest duurt tot vrijdag",
+      "Tijdens de vakantie gingen wij naar Spanje."
+    ],
+    "kolmit_level": 43
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Vergelijking van bijvoeglijke naamwoorden",
+    "rule_name": "Positief, comparatief, superlatief",
+    "description": "Сравнение прилагательных по степени",
+    "rule_text": "Gebruik positief, comparatief en superlatief om eigenschappen en intensiteit te vergelijken.",
+    "examples": [
+      "groot → groter",
+      "interessant → interessanter",
+      "snel → snelst",
+      "mooi → mooier → mooist",
+      "koud → kouder → koudst",
+      "warm → warmer → warmst",
+      "klein → kleiner → kleinst",
+      "zwaar → zwaarder → zwaarst",
+      "licht → lichter → lichtst",
+      "goed → beter → best"
+    ],
+    "kolmit_level": 44
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Modale werkwoorden in eenvoudige zinnen",
+    "rule_name": "Kunnen, moeten, mogen, willen",
+    "description": "Основное использование модальных глаголов в простых предложениях",
+    "rule_text": "Gebruik modale werkwoorden zoals kunnen, moeten, mogen en willen in eenvoudige zinnen om mogelijkheid, noodzaak или wens uit te drukken.",
+    "examples": [
+      "Ik kan helpen",
+      "Jij moet werken",
+      "Hij mag mee",
+      "Wij willen fietsen",
+      "Zij kunnen zingen",
+      "Jullie moeten luisteren",
+      "Ik wil lezen",
+      "Hij mag studeren",
+      "Zij kunnen zwemmen",
+      "Wij willen leren"
+    ],
+    "kolmit_level": 45
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Verhalende tekst",
+    "rule_name": "Vertellen van gebeurtenissen met tijdsaanduiding",
+    "description": "Создание небольших повествований о прошлом и настоящем",
+    "rule_text": "Gebruik tijdsaanduidingen en samengestelde zinnen om kleine verhalen te vertellen over gebeurtenissen in verleden en heden.",
+    "examples": [
+      "Gisteren ging ik naar school",
+      "Vandaag werk ik thuis",
+      "Vorige week bezocht hij zijn oma",
+      "Morgen ga ik naar het park",
+      "Ik studeerde gisteren",
+      "Wij eten vandaag pizza",
+      "Hij werkte vorige maand hard",
+      "Zij speelt vandaag buiten",
+      "Wij wandelden gisteren",
+      "Hij fietst morgen naar het werk"
+    ],
+    "kolmit_level": 46
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Woorden voor acties en gebeurtenissen",
+    "rule_name": "Acties, gebeurtenissen, voorwerpen",
+    "description": "Слова для описания действий, событий и предметов",
+    "rule_text": "Breid je woordenschat uit met woorden voor dagelijkse handelingen, gebeurtenissen и objecten.",
+    "examples": [
+      "Ik kook avondeten",
+      "Hij leest een krant",
+      "Wij fietsen naar school",
+      "Zij speelt met de bal",
+      "Ik werk op kantoor",
+      "Hij schrijft een brief",
+      "Wij wandelen in het park",
+      "Zij studeert hard",
+      "Ik eet ontbijt",
+      "Hij luistert naar muziek"
+    ],
+    "kolmit_level": 47
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Complexe negatieconstructies",
+    "rule_name": "Dubbele negatie en langere zinnen",
+    "description": "Сложные отрицательные конструкции",
+    "rule_text": "Gebruik dubbele negatie en langere samengestelde zinnen om ontkenning uit te drukken.",
+    "examples": [
+      "Ik weet niet waar hij woont",
+      "Jij kunt niet zeggen dat het waar is",
+      "Hij heeft nooit iets gedaan",
+      "Wij hebben niet gegeten en zij hebben niet gedronken",
+      "Zij zei niet dat zij kwam",
+      "Ik kan niet begrijpen waarom",
+      "Jij mag niet zeggen dat hij liegt",
+      "Hij wilde niet komen en zij bleef thuis",
+      "Wij weten niet of het regent",
+      "Zij heeft niet geweten dat het feest afgelast was"
+    ],
+    "kolmit_level": 48
+  },
+  {
+    "cefr_level": "A2",
+    "nt2_theme": "Vraagzinnen complex",
+    "rule_name": "Inversie en vraagwoorden in samengestelde zinnen",
+    "description": "Более сложные вопросы с инверсией и вопросительными словами",
+    "rule_text": "Gebruik inversie en vraagwoorden zoals wie, wat, waar, waarom, hoe in samengestelde zinnen.",
+    "examples": [
+      "Wie komt er naar het feest",
+      "Wat doet zij vandaag",
+      "Waar woont hij",
+      "Waarom werkt zij hard",
+      "Hoe kan ik helpen",
+      "Wanneer begint de les",
+      "Wie helpt jou",
+      "Wat wil hij kopen",
+      "Waar ga je naartoe",
+      "Waarom is hij ziek"
+    ],
+    "kolmit_level": 49
+  }
+]

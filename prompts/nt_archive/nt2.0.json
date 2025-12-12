@@ -1,0 +1,1455 @@
+[
+  {
+    "kolmit_level": 1,
+    "cefr_level": "A0",
+    "nt2_theme": "Alfabet en klanken",
+    "rule_name": "Alfabet en basisuitspraak",
+    "description": "Нидерландский алфавит и самые важные звуки",
+    "rule_text": "Het Nederlandse alfabet bestaat uit 26 letters + de letter ĳ (die als één teken wordt behandeld). Belangrijke klanken: g/ch = zachte keelklank [ɣ/x], sch = [sx], ng = [ŋ], j = [j], v en z zijn stemhebbend, maar v aan het eind van een woord wordt [f] en z wordt [s].",
+    "examples": [
+      "goed [ɣut]",
+      "acht [ɑxt]",
+      "school [sxo:l]",
+      "jong [jɔŋ]",
+      "vijf [fɛif]",
+      "huis [ɦœy̯s]",
+      "weg [ʋɛx]",
+      "regen [ˈreːɣən]",
+      "lachen [ˈlɑxə(n)]",
+      "vriend [vrint]"
+    ],
+    "common_mistakes": "Произносят g как русскую г; путают ij и y; читают sch как [ш]"
+  },
+  {
+    "kolmit_level": 2,
+    "cefr_level": "A0",
+    "nt2_theme": "Klinkers",
+    "rule_name": "Korte en lange klinkers",
+    "description": "Различие коротких и долгих гласных",
+    "rule_text": "Korte klinkers (a, e, i, o, u) staan in een gesloten lettergreep (één medeklinker volgt). Lange klinkers staan in een open lettergreep of worden dubbel geschreven (aa, ee, oo, uu) of als ie, oe, eu.",
+    "examples": [
+      "man – maan",
+      "bed – been",
+      "bos – boom",
+      "vis – vier",
+      "hut – muur",
+      "kat – kaas",
+      "les – lees",
+      "pot – poot",
+      "kus – muur",
+      "pit – piet"
+    ],
+    "common_mistakes": "Пишут одно a/aa; путают ie и ii"
+  },
+  {
+    "kolmit_level": 3,
+    "cefr_level": "A0",
+    "nt2_theme": "Lidwoorden",
+    "rule_name": "Lidwoorden de – het – een",
+    "description": "Определённые и неопределённый артикли 'de', 'het' en 'een'",
+    "rule_text": "De-woorden (mannelijk of vrouwelijk) krijgen altijd het lidwoord de. Het-woorden (onzijdig) krijgen altijd het lidwoord het. Het onbepaalde lidwoord is altijd een (ook voor het-woorden). In het meervoud krijgen alle zelfstandige naamwoorden het lidwoord de.",
+    "examples": [
+      "de man",
+      "de vrouw",
+      "de tafel",
+      "het huis",
+      "het kind",
+      "het boek",
+      "een auto",
+      "een fiets",
+      "een appel",
+      "de kinderen",
+      "de boeken",
+      "de mensen"
+    ],
+    "common_mistakes": "Путают de/het; забывают артикль вообще"
+  },
+  {
+    "kolmit_level": 4,
+    "cefr_level": "A0",
+    "nt2_theme": "Getallen",
+    "rule_name": "Telwoorden 0–20",
+    "description": "Числа от 0 до 20",
+    "rule_text": "0–20: nul, één, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf, dertien, veertien, vijftien, zestien, zeventien, achttien, negentien, twintig. Let op: één (met accent) bij tellen en leeftijden, een zonder accent als lidwoord.",
+    "examples": [
+      "Ik ben twintig jaar oud.",
+      "Mijn zus is vijftien.",
+      "Er zijn twaalf maanden in een jaar.",
+      "De les begint om acht uur.",
+      "Ik heb twee broers en één zus.",
+      "Het huisnummer is negentien.",
+      "De trein vertrekt om zeven uur dertig.",
+      "Er wonen elf mensen in het huis."
+    ],
+    "common_mistakes": "Пишут een вместо één; путают dertien/vijftien"
+  },
+  {
+    "kolmit_level": 5,
+    "cefr_level": "A0",
+    "nt2_theme": "Tijd",
+    "rule_name": "Weekdagen en maanden",
+    "description": "Дни недели и месяцы",
+    "rule_text": "Dagen en maanden worden in het Nederlands altijd met een kleine letter geschreven (behalve aan het begin van een zin): maandag, dinsdag … januari, februari … december.",
+    "examples": [
+      "Vandaag is maandag.",
+      "Morgen is het dinsdag 4 maart.",
+      "Mijn verjaardag is in mei.",
+      "De vakantie begint in juli.",
+      "Kerstmis is in december.",
+      "We hebben les op woensdag en vrijdag.",
+      "De vergadering is op donderdag.",
+      "Zondag is een vrije dag."
+    ],
+    "common_mistakes": "Пишут месяцы с большой буквы"
+  },
+  {
+    "kolmit_level": 6,
+    "cefr_level": "A0",
+    "nt2_theme": "Begroetingen",
+    "rule_name": "Begroetingen en afscheid",
+    "description": "Приветствия и прощания",
+    "rule_text": "Goedemorgen (tot ca. 12:00), goedemiddag (tot ca. 18:00), goedenavond (vanaf ca. 18:00). Informeel: hallo, hoi, dag, doei, tot straks, tot ziens, tot later.",
+    "examples": [
+      "Goedemorgen! – Morgen!",
+      "Goedemiddag, hoe gaat het?",
+      "Goedenavond, welkom!",
+      "Hallo Anna! – Hoi Max!",
+      "Dag! – Dag!",
+      "Tot ziens! – Doei!",
+      "Tot straks op school!",
+      "Fijne avond nog!"
+    ],
+    "common_mistakes": "Говорят goedendag (почти не используется)"
+  },
+  {
+    "kolmit_level": 7,
+    "cefr_level": "A0",
+    "nt2_theme": "Voorstellen",
+    "rule_name": "Zich voorstellen – Hoe heet je/u?",
+    "description": "Представляться и спрашивать имя",
+    "rule_text": "Om jezelf voor te stellen zeg je altijd Ik heet … of Mijn naam is … (formeel). Vragen: Hoe heet je? (informeel) / Hoe heet u? (formeel). Nooit Ik ben … als je alleen je naam zegt.",
+    "examples": [
+      "Ik heet Anna.",
+      "Mijn naam is Pieter de Vries.",
+      "Hoe heet jij? – Ik heet Max.",
+      "Hoe heet u? – Ik heet mevrouw Jansen.",
+      "Dit is mijn vriendin Lisa.",
+      "Mag ik je voorstellen aan mijn broer Tom?",
+      "Aangenaam kennis te maken."
+    ],
+    "common_mistakes": "Говорят Ik ben Anna"
+  },
+  {
+    "kolmit_level": 8,
+    "cefr_level": "A0",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Persoonlijke voornaamwoorden",
+    "description": "Личные местоимения",
+    "rule_text": "Onderwerp: ik – jij/je – u – hij – zij/ze – het – wij/we – jullie – zij/ze. Lijdend/meewerkend voorwerp: mij – jou – u – hem – haar – het – ons – jullie – hen/hun/ze.",
+    "examples": [
+      "Ik woon in Amsterdam.",
+      "Jij bent mijn vriend.",
+      "Geef mij het boek.",
+      "Hij helpt haar met huiswerk.",
+      "Zij belt ons morgen.",
+      "Wij gaan samen naar school.",
+      "Geven jullie hen de sleutel?",
+      "Het regent vandaag."
+    ],
+    "common_mistakes": "Используют ze вместо zij; забывают u"
+  },
+  {
+    "kolmit_level": 9,
+    "cefr_level": "A0",
+    "nt2_theme": "Tijd",
+    "rule_name": "Kloktijd – basis (hele uren, half, kwart)",
+    "description": "Как говорить время",
+    "rule_text": "Hele uren: Het is één/twee/drie … uur. Half + volgend uur: half negen = 08:30. Kwart over + uur = :15; kwart voor + uur = :45.",
+    "examples": [
+      "Het is twee uur.",
+      "Het is half negen (= 08:30).",
+      "Het is kwart over zes (= 06:15).",
+      "Het is kwart voor tien (= 09:45).",
+      "Het is vijf uur.",
+      "Het is twaalf uur 's middags.",
+      "Het is één uur 's nachts.",
+      "Het is precies acht uur."
+    ],
+    "common_mistakes": "Говорят tien uur dertig вместо half elf"
+  },
+  {
+    "kolmit_level": 10,
+    "cefr_level": "A1",
+    "nt2_theme": "Basiswerkwoorden",
+    "rule_name": "Zijn + S-V volgorde",
+    "description": "Глагол ZIJN + порядок S-V",
+    "rule_text": "ben/bent/is + persoonlijke voornaamwoorden. Eenvoudige zinnen met onderwerp-werkwoord volgorde",
+    "examples": [
+      "Ik ben student.",
+      "Jij bent leraar.",
+      "Hij is goed.",
+      "Wij zijn hier.",
+      "Zij is mooi."
+    ],
+    "common_mistakes": "Verwarring ben/bent/is"
+  },
+  {
+    "kolmit_level": 11,
+    "cefr_level": "A1",
+    "nt2_theme": "Basiswerkwoorden",
+    "rule_name": "Hebben + SVO volgorde",
+    "description": "Глагол HEBBEN + порядок SVO",
+    "rule_text": "heb/heeft/hebben + lidwoorden de/het. Onderwerp-werkwoord-voorwerp volgorde",
+    "examples": [
+      "Ik heb een huis.",
+      "Jij hebt de auto.",
+      "Hij heeft een boek.",
+      "Wij hebben tijd."
+    ],
+    "common_mistakes": "Verkeerde SVO volgorde"
+  },
+  {
+    "kolmit_level": 12,
+    "cefr_level": "A1",
+    "nt2_theme": "Vraagwoorden",
+    "rule_name": "Vraagwoorden + inversie",
+    "description": "Вопросы + инверсия",
+    "rule_text": "wat/waar/wie + werkwoord-onderwerp inversie in vragen",
+    "examples": [
+      "Wat is je naam?",
+      "Waar woon je?",
+      "Wie is hij?",
+      "Wat doe je?",
+      "Waar werk je?"
+    ],
+    "common_mistakes": "Geen inversie in vragen"
+  },
+  {
+    "kolmit_level": 13,
+    "cefr_level": "A1",
+    "nt2_theme": "Bezittelijke voornaamwoorden",
+    "rule_name": "Bezittelijke voornaamwoorden",
+    "description": "Притяжательные местоимения",
+    "rule_text": "mijn/jouw/zijn/haar/ons/jullie/hun + familie en bezit",
+    "examples": [
+      "Mijn huis is groot.",
+      "Jouw auto is rood.",
+      "Zijn boek is interessant.",
+      "Ons kind is klein."
+    ],
+    "common_mistakes": "Verwarring zijn/haar"
+  },
+  {
+    "kolmit_level": 14,
+    "cefr_level": "A1",
+    "nt2_theme": "Bijvoeglijke naamwoorden",
+    "rule_name": "Bijvoeglijke naamwoorden na zijn",
+    "description": "Прилагательные после ZIJN",
+    "rule_text": "Bijvoeglijk naamwoord komt na het werkwoord zijn. Geen verbuiging",
+    "examples": [
+      "Het huis is groot.",
+      "De auto is rood.",
+      "Ik ben moe.",
+      "Jij bent sterk.",
+      "Hij is blij."
+    ],
+    "common_mistakes": "Bijvoeglijk naamwoord voor het naamwoord plaatsen"
+  },
+  {
+    "kolmit_level": 15,
+    "cefr_level": "A1",
+    "nt2_theme": "Tegenwoordige tijd",
+    "rule_name": "Tegenwoordige tijd regelmatige werkwoorden",
+    "description": "Настоящее время правильных глаголов",
+    "rule_text": "Regelmatige werkwoorden: stam + -t (enkelvoud) / -en (meervoud)",
+    "examples": [
+      "Ik werk hier.",
+      "Jij werkt hard.",
+      "Hij leert Nederlands.",
+      "Wij wonen in Amsterdam."
+    ],
+    "common_mistakes": "Vergeten -t bij jij/hij/zij"
+  },
+  {
+    "kolmit_level": 16,
+    "cefr_level": "A1",
+    "nt2_theme": "Voorzetsels",
+    "rule_name": "Voorzetsels van tijd en plaats",
+    "description": "Предлоги времени и места",
+    "rule_text": "om/op/in (tijd) + in/op/aan/bij (plaats). Vaste combinaties",
+    "examples": [
+      "Ik werk om 9 uur.",
+      "Hij komt op maandag.",
+      "Zij woont in Amsterdam.",
+      "Het boek ligt op tafel."
+    ],
+    "common_mistakes": "Verkeerd voorzetsel kiezen"
+  },
+  {
+    "kolmit_level": 17,
+    "cefr_level": "A2",
+    "nt2_theme": "Modale werkwoorden",
+    "rule_name": "Kunnen en willen",
+    "description": "Модальные глаголы KUNNEN/WILLEN",
+    "rule_text": "kunnen/willen + infinitief. Geen -t in enkelvoud",
+    "examples": [
+      "Ik kan Nederlands spreken.",
+      "Jij wilt een huis kopen.",
+      "Hij kan goed werken.",
+      "Wij willen leren."
+    ],
+    "common_mistakes": "Toevoegen van -t bij modale werkwoorden"
+  },
+  {
+    "kolmit_level": 18,
+    "cefr_level": "A2",
+    "nt2_theme": "Modale werkwoorden",
+    "rule_name": "Moeten en mogen",
+    "description": "Модальные глаголы MOETEN/MOGEN",
+    "rule_text": "moeten/mogen + infinitief. Verplichting en toestemming",
+    "examples": [
+      "Ik moet werken.",
+      "Jij mag gaan.",
+      "Hij moet betalen.",
+      "Wij mogen komen."
+    ],
+    "common_mistakes": "Verwarring moeten/mogen"
+  },
+  {
+    "kolmit_level": 19,
+    "cefr_level": "A2",
+    "nt2_theme": "Modale werkwoorden",
+    "rule_name": "Hoeven en zouden",
+    "description": "Модальные глаголы HOEVEN/ZOULLEN",
+    "rule_text": "hoeven + te + infinitief (alleen met 'niet'), zouden + infinitief",
+    "examples": [
+      "Ik hoef niet te werken.",
+      "Jij zou moeten gaan.",
+      "Hij hoeft niet te betalen.",
+      "Zou je kunnen helpen?"
+    ],
+    "common_mistakes": "Hoeven zonder 'niet' gebruiken"
+  },
+  {
+    "kolmit_level": 20,
+    "cefr_level": "A2",
+    "nt2_theme": "Voltooide tijd",
+    "rule_name": "Perfectum met hebben",
+    "description": "Perfectum с HEBBEN",
+    "rule_text": "hebben + voltooid deelwoord. Regelmatige werkwoorden: ge- + stam + -t/-d",
+    "examples": [
+      "Ik heb gewerkt.",
+      "Jij hebt geleerd.",
+      "Hij heeft gekocht.",
+      "Wij hebben gezien."
+    ],
+    "common_mistakes": "Verkeerd voltooid deelwoord"
+  },
+  {
+    "kolmit_level": 21,
+    "cefr_level": "A2",
+    "nt2_theme": "Voltooide tijd",
+    "rule_name": "Perfectum met zijn",
+    "description": "Perfectum с ZIJN",
+    "rule_text": "zijn + voltooid deelwoord. Voor beweging en verandering",
+    "examples": [
+      "Ik ben gegaan.",
+      "Jij bent gekomen.",
+      "Hij is geworden.",
+      "Wij zijn gebleven."
+    ],
+    "common_mistakes": "Verkeerde hulpwerkwoord kiezen"
+  },
+  {
+    "kolmit_level": 22,
+    "cefr_level": "A2",
+    "nt2_theme": "Voegwoorden",
+    "rule_name": "Basis voegwoorden",
+    "description": "Основные союзы",
+    "rule_text": "en/maar/want/of + hoofdzin volgorde. Geen inversie",
+    "examples": [
+      "Ik werk en jij leert.",
+      "Hij is moe maar hij werkt.",
+      "Ik blijf want ik ben ziek.",
+      "Koffie of thee?"
+    ],
+    "common_mistakes": "Inversie na voegwoorden"
+  },
+  {
+    "kolmit_level": 23,
+    "cefr_level": "A2",
+    "nt2_theme": "Verleden tijd",
+    "rule_name": "Imperfectum onregelmatige werkwoorden",
+    "description": "Imperfectum неправильных глаголов",
+    "rule_text": "Onregelmatige werkwoorden in verleden tijd: was/had/ging/zag/etc.",
+    "examples": [
+      "Ik was thuis.",
+      "Jij had geld.",
+      "Hij ging naar school.",
+      "Wij zagen de film."
+    ],
+    "common_mistakes": "Regelmatige vervoeging voor onregelmatige werkwoorden"
+  },
+  {
+    "kolmit_level": 24,
+    "cefr_level": "B1",
+    "nt2_theme": "Bijzinnen",
+    "rule_name": "Omdat met inversie",
+    "description": "OMDAT + инверсия",
+    "rule_text": "omdat + onderwerp-werkwoord inversie in bijzin",
+    "examples": [
+      "Ik werk omdat ik geld nodig heb.",
+      "Hij leert omdat hij wil slagen.",
+      "We blijven omdat het regent."
+    ],
+    "common_mistakes": "Geen inversie in omdat-zin"
+  },
+  {
+    "kolmit_level": 25,
+    "cefr_level": "B1",
+    "nt2_theme": "Toekomende tijd",
+    "rule_name": "Toekomende tijd met gaan",
+    "description": "Будущее время с GAAN",
+    "rule_text": "gaan + infinitief voor plannen en intenties",
+    "examples": [
+      "Ik ga morgen werken.",
+      "Jij gaat een huis kopen.",
+      "Hij gaat leren.",
+      "Wij gaan reizen."
+    ],
+    "common_mistakes": "gaan + te + infinitief"
+  },
+  {
+    "kolmit_level": 26,
+    "cefr_level": "B1",
+    "nt2_theme": "Lijdende vorm",
+    "rule_name": "Passief met worden",
+    "description": "Пассив с WORDEN",
+    "rule_text": "worden + voltooid deelwoord. Handeling wordt uitgevoerd",
+    "examples": [
+      "Het huis wordt gebouwd.",
+      "De brief wordt geschreven.",
+      "Het werk wordt gedaan."
+    ],
+    "common_mistakes": "Verwarring met zijn-passief"
+  },
+  {
+    "kolmit_level": 27,
+    "cefr_level": "B1",
+    "nt2_theme": "Vergelijkingen",
+    "rule_name": "Vergrotende trap + dan",
+    "description": "Сравнительная степень + DAN",
+    "rule_text": "Bijvoeglijk naamwoord + -er + dan. Uitzonderingen: goed-beter, veel-meer",
+    "examples": [
+      "Dit is groter dan dat.",
+      "Hij is jonger dan ik.",
+      "Het is duurder than gisteren."
+    ],
+    "common_mistakes": "dan verwarren met als"
+  },
+  {
+    "kolmit_level": 28,
+    "cefr_level": "B1",
+    "nt2_theme": "Betrekkelijke bijzinnen",
+    "rule_name": "Relatieve voornaamwoorden die-dat-wat",
+    "description": "Относительные местоимения",
+    "rule_text": "die (de-woorden), dat (het-woorden), wat (hele zin/onbepaald)",
+    "examples": [
+      "De man die werkt.",
+      "Het huis dat groot is.",
+      "Alles wat hij zegt."
+    ],
+    "common_mistakes": "Verkeerd relatieve voornaamwoord"
+  },
+  {
+    "kolmit_level": 29,
+    "cefr_level": "B1",
+    "nt2_theme": "Wederkerende werkwoorden",
+    "rule_name": "Wederkerende werkwoorden",
+    "description": "Возвратные глаголы",
+    "rule_text": "zich + werkwoord. Wederkerend voornaamwoord verplicht",
+    "examples": [
+      "Ik was me.",
+      "Jij herinnert je.",
+      "Hij gedraagt zich.",
+      "Wij bevinden ons."
+    ],
+    "common_mistakes": "Vergeten van wederkerend voornaamwoord"
+  },
+  {
+    "kolmit_level": 30,
+    "cefr_level": "B1",
+    "nt2_theme": "Scheidbare werkwoorden",
+    "rule_name": "Scheidbare werkwoorden",
+    "description": "Разделяемые глаголы",
+    "rule_text": "Werkwoord scheidt in zin: voorzetsel naar einde, werkwoordstam op positie 2",
+    "examples": [
+      "Ik sta om 7 uur op.",
+      "Hij gaat vanavond uit.",
+      "Wij doen morgen mee."
+    ],
+    "common_mistakes": "Vergeten te scheiden"
+  },
+  {
+    "kolmit_level": 31,
+    "cefr_level": "B1",
+    "nt2_theme": "ER-constructies",
+    "rule_name": "ER zijn constructie",
+    "description": "Конструкция ER ZIJN",
+    "rule_text": "er zijn/is + onderwerp. Aanduiding van aanwezigheid",
+    "examples": [
+      "Er zijn veel mensen.",
+      "Er is een probleem.",
+      "Er zijn boeken op tafel."
+    ],
+    "common_mistakes": "Vergeten van ER"
+  },
+  {
+    "kolmit_level": 32,
+    "cefr_level": "B1",
+    "nt2_theme": "ER-constructies",
+    "rule_name": "ER komen/gaan constructie",
+    "description": "Конструкция ER KOMEN/GAAN",
+    "rule_text": "er komt/gaat + onderwerp. Aanduiding van verandering/komst",
+    "examples": [
+      "Er komt een bus.",
+      "Er gaat veel geld naar...",
+      "Er komt verandering."
+    ],
+    "common_mistakes": "Verkeerde werkwoordsvorm"
+  },
+  {
+    "kolmit_level": 33,
+    "cefr_level": "B1",
+    "nt2_theme": "Onscheidbare werkwoorden",
+    "rule_name": "Onscheidbare werkwoorden",
+    "description": "Неразделяемые глаголы",
+    "rule_text": "Werkwoorden met be-, ge-, her-, er-, ver- voorvoegsels. Niet scheidbaar",
+    "examples": [
+      "Ik begrijp het.",
+      "Hij bezoekt ons.",
+      "Wij geloven je.",
+      "Zij herkent hem."
+    ],
+    "common_mistakes": "Onscheidbare werkwoorden scheiden"
+  },
+  {
+    "kolmit_level": 34,
+    "cefr_level": "B1",
+    "nt2_theme": "Oorzaak-gevolg",
+    "rule_name": "Doordat - daarom - dus",
+    "description": "Причинно-следственные связи",
+    "rule_text": "doordat + inversie (oorzaak), daarom/dus + hoofdzin (gevolg)",
+    "examples": [
+      "Nat doordat het regent.",
+      "Regen, daarom ben ik nat.",
+      "Hij is ziek, dus werkt niet."
+    ],
+    "common_mistakes": "Verwarring doordat/omdat"
+  },
+  {
+    "kolmit_level": 35,
+    "cefr_level": "B1",
+    "nt2_theme": "Doelconstructies",
+    "rule_name": "Om te constructie",
+    "description": "Конструкция OM TE",
+    "rule_text": "om te + infinitief voor doel en intentie",
+    "examples": [
+      "Ik leer om Nederlands te spreken.",
+      "Hij werkt om geld te verdienen.",
+      "Zij komt om te helpen."
+    ],
+    "common_mistakes": "om + te vergeten"
+  },
+  {
+    "kolmit_level": 36,
+    "cefr_level": "B1",
+    "nt2_theme": "Vergelijkingen",
+    "rule_name": "Overtreffende trap",
+    "description": "Превосходная степень",
+    "rule_text": "Bijvoeglijk naamwoord + -st. Met lidwoord: de/het ...-ste",
+    "examples": [
+      "Het grootste huis.",
+      "De mooiste vrouw.",
+      "Het duurste boek.",
+      "De beste student."
+    ],
+    "common_mistakes": "Verkeerde verbuiging"
+  },
+  {
+    "kolmit_level": 37,
+    "cefr_level": "B2",
+    "nt2_theme": "Toekomende tijd",
+    "rule_name": "Futurum exactum",
+    "description": "Futurum Exactum",
+    "rule_text": "zullen + hebben/zijn + voltooid deelwoord. Afgeronde handeling in toekomst",
+    "examples": [
+      "Ik zal het gelezen hebben.",
+      "Hij zal gegaan zijn.",
+      "Zij zal gewerkt hebben."
+    ],
+    "common_mistakes": "Verkeerde hulpwerkwoord"
+  },
+  {
+    "kolmit_level": 38,
+    "cefr_level": "B2",
+    "nt2_theme": "Voorwaardelijke wijs",
+    "rule_name": "Conditioneel perfectum",
+    "description": "Conditioneel Perfectum",
+    "rule_text": "zouden + hebben/zijn + voltooid deelwoord. Niet-gerealiseerde verleden handeling",
+    "examples": [
+      "Ik zou het gedaan hebben.",
+      "Hij zou gekomen zijn.",
+      "Zij zou gewerkt hebben."
+    ],
+    "common_mistakes": "Verwarring met futurum exactum"
+  },
+  {
+    "kolmit_level": 39,
+    "cefr_level": "B1",
+    "nt2_theme": "Woordvolgorde",
+    "rule_name": "Inversie na bijwoordelijke bepaling",
+    "description": "Инверсия после наречий",
+    "rule_text": "Bijwoordelijke bepaling + werkwoord + onderwerp. Voor tijd, plaats, modaliteit",
+    "examples": [
+      "Gisteren werkte ik thuis.",
+      "Hier woont mijn vriend.",
+      "Gelukkig heeft hij tijd."
+    ],
+    "common_mistakes": "Geen inversie na vooropplaatsing"
+  },
+  {
+    "kolmit_level": 40,
+    "cefr_level": "B1",
+    "nt2_theme": "Lijdende vorm",
+    "rule_name": "Passief met zijn",
+    "description": "Пассив с ZIJН",
+    "rule_text": "zijn + voltooid deelwoord. Resultaat van handeling",
+    "examples": [
+      "Het huis is gebouwd.",
+      "De brief is geschreven.",
+      "Het werk is gedaan."
+    ],
+    "common_mistakes": "Verwarring met worden-passief"
+  },
+  {
+    "kolmit_level": 41,
+    "cefr_level": "B1",
+    "nt2_theme": "Lijdende vorm",
+    "rule_name": "Onpersoonlijk passief",
+    "description": "Безличный пассив",
+    "rule_text": "er wordt/worden + voltooid deelwoord. Geen specifiek onderwerp",
+    "examples": [
+      "Er wordt gewerkt.",
+      "Er worden boeken gelezen.",
+      "Er wordt gelachen."
+    ],
+    "common_mistakes": "Verkeerde werkwoordsvorm"
+  },
+  {
+    "kolmit_level": 42,
+    "cefr_level": "B1",
+    "nt2_theme": "Betrekkelijke bijzinnen",
+    "rule_name": "Relatieve bijzinnen met voorzetsel",
+    "description": "Относительные придаточные с предлогами",
+    "rule_text": "voorzetsel + wie (personen), waar + voorzetsel (dingen)",
+    "examples": [
+      "De man met wie ik praat.",
+      "Het huis waarin ik woon.",
+      "De stoel waarop ik zit."
+    ],
+    "common_mistakes": "Verkeerde constructie kiezen"
+  },
+  {
+    "kolmit_level": 43,
+    "cefr_level": "B1",
+    "nt2_theme": "Verleden tijd",
+    "rule_name": "Plusquamperfectum",
+    "description": "Plusquamperfectum",
+    "rule_text": "hadden/waren + voltooid deelwoord. Voorbij verleden tijd",
+    "examples": [
+      "Ik had gewerkt voordat hij kwam.",
+      "Hij was gegaan toen wij arriveerden."
+    ],
+    "common_mistakes": "Verkeerde hulpwerkwoord"
+  },
+  {
+    "kolmit_level": 44,
+    "cefr_level": "B1",
+    "nt2_theme": "Indirecte rede",
+    "rule_name": "Indirecte rede",
+    "description": "Косвенная речь",
+    "rule_text": "Overdracht van gesproken woord. Gebruik van conjunctief en tijdsverschuiving",
+    "examples": [
+      "Hij zei dat hij zou komen.",
+      "Zij vertelde dat ze had gewerkt."
+    ],
+    "common_mistakes": "Geen tijdsverschuiving"
+  },
+  {
+    "kolmit_level": 45,
+    "cefr_level": "B1",
+    "nt2_theme": "Voorwaardelijke bijzinnen",
+    "rule_name": "Voorwaardelijke bijzinnen alle types",
+    "description": "Условные предложения всех типов",
+    "rule_text": "Type 1-3: als + verschillende tijden, verschillende waarschijnlijkheid",
+    "examples": [
+      "Als ik tijd heb, kom ik.",
+      "Als ik tijd had, zou ik komen.",
+      "Als ik tijd had gehad, was ik gekomen."
+    ],
+    "common_mistakes": "Verkeerde tijdcombinatie"
+  },
+  {
+    "kolmit_level": 46,
+    "cefr_level": "B1",
+    "nt2_theme": "Samengestelde zinnen",
+    "rule_name": "Samengestelde zinnen",
+    "description": "Сложные предложения",
+    "rule_text": "Meerdere bijzinnen in één zin. Complexe woordvolgorde",
+    "examples": ["Hoewel hij moe was, werkte hij door omdat het moest."],
+    "common_mistakes": "Woordvolgorde fouten"
+  },
+  {
+    "kolmit_level": 47,
+    "cefr_level": "B1",
+    "nt2_theme": "Woordvolgorde",
+    "rule_name": "Woordvolgorde in bijzinnen",
+    "description": "Порядок слов в придаточных",
+    "rule_text": "Vaste woordvolgorde in bijzin: voegwoord + onderwerp + rest + werkwoord",
+    "examples": [
+      "Ik weet dat hij morgen komt.",
+      "Omdat het regent, blijven we thuis."
+    ],
+    "common_mistakes": "Werkwoord niet aan einde"
+  },
+  {
+    "kolmit_level": 48,
+    "cefr_level": "B1",
+    "nt2_theme": "Diminutieven",
+    "rule_name": "Diminutieven",
+    "description": "Уменьшительные формы",
+    "rule_text": "-je, -tje, -pje, -kje, -etje verkleinwoorden",
+    "examples": ["huisje", "boektje", "autootje", "kindje", "hondje"],
+    "common_mistakes": "Verkeerd verkleinwoord"
+  },
+  {
+    "kolmit_level": 49,
+    "cefr_level": "B2",
+    "nt2_theme": "Idiomatische uitdrukkingen",
+    "rule_name": "Idiomatische uitdrukkingen",
+    "description": "Идиоматические выражения",
+    "rule_text": "Vaste uitdrukkingen met werkwoorden: zin hebben, krijgen, geven, doen, maken",
+    "examples": [
+      "Ik heb zin in koffie.",
+      "Hij kreeg de kans.",
+      "Geef me de tijd.",
+      "Doe je best!"
+    ],
+    "common_mistakes": "Letterlijke vertaling"
+  },
+  {
+    "kolmit_level": 50,
+    "cefr_level": "B1",
+    "nt2_theme": "Tijdsconstructies",
+    "rule_name": "Vroeger..., nu... constructie",
+    "description": "Конструкция VROEGER..., NU...",
+    "rule_text": "Vroeger + verleden tijd, nu + tegenwoordige tijd. Contrast verleden-heden",
+    "examples": [
+      "Vroeger werkte ik in Amsterdam, nu in Rotterdam.",
+      "Vroeger had ik een auto, nu een fiets."
+    ],
+    "common_mistakes": "Verkeerde tijd met vroeger"
+  },
+  {
+    "kolmit_level": 51,
+    "cefr_level": "B1",
+    "nt2_theme": "Vergelijkingen",
+    "rule_name": "ALS - vergelijking en gelijkheid",
+    "description": "ALS для сравнения",
+    "rule_text": "even...als, net als, als in verleden tijd",
+    "examples": [
+      "Hij is even groot als ik.",
+      "Net als jij hou ik van koffie.",
+      "Als kind speelde ik buiten."
+    ],
+    "common_mistakes": "Verwarring als/dan"
+  },
+  {
+    "kolmit_level": 52,
+    "cefr_level": "B1",
+    "nt2_theme": "Tegengestelde relaties",
+    "rule_name": "Hoewel vs ondanks dat",
+    "description": "HOEWEL vs ONDANKS DAT",
+    "rule_text": "hoewel + bijzin, ondanks dat + bijzin, ondanks + zelfstandig naamwoord",
+    "examples": [
+      "Hoewel het regent, ga ik wandelen.",
+      "Ondanks dat hij moe is, werkt hij.",
+      "Ondanks de regen gaan we."
+    ],
+    "common_mistakes": "Verwarring hoewel/ondanks"
+  },
+  {
+    "kolmit_level": 53,
+    "cefr_level": "B1",
+    "nt2_theme": "Voorwaardelijke zinnen",
+    "rule_name": "Voorwaardelijke zin type 1",
+    "description": "Условные предложения 1 типа",
+    "rule_text": "Als + tegenwoordige tijd, (dan) + toekomende/tegenwoordige tijd",
+    "examples": [
+      "Als het regent, blijf ik thuis.",
+      "Als je komt, kook ik eten.",
+      "Ik ga, tenzij het regent."
+    ],
+    "common_mistakes": "Verkeerde tijd in voorwaarde"
+  },
+  {
+    "kolmit_level": 54,
+    "cefr_level": "B1",
+    "nt2_theme": "Voornaamwoord ER",
+    "rule_name": "ER als plaatsaanduiding en dummy subject",
+    "description": "ER как указание места и формальное подлежащее",
+    "rule_text": "ER voor plaats (vervanging daar) en als dummy onderwerp",
+    "examples": [
+      "Ik woon er 5 jaar.",
+      "Er staan drie boeken.",
+      "Er komt iemand."
+    ],
+    "common_mistakes": "ER vergeten"
+  },
+  {
+    "kolmit_level": 55,
+    "cefr_level": "B1",
+    "nt2_theme": "Vaste voorzetsels",
+    "rule_name": "Vaste voorzetsel-uitdrukkingen",
+    "description": "Устойчивые предложные конструкции",
+    "rule_text": "Vaste combinaties: trots OP, bang VOOR, blij MET, wachten OP",
+    "examples": [
+      "Ik ben trots op je.",
+      "Zij is bang voor spinnen.",
+      "Hij is blij met zijn werk."
+    ],
+    "common_mistakes": "Verkeerd voorzetsel"
+  },
+  {
+    "kolmit_level": 56,
+    "cefr_level": "B2",
+    "nt2_theme": "Causatieve constructies",
+    "rule_name": "Causatief: zich laten + infinitief",
+    "description": "Каузативная конструкция",
+    "rule_text": "zich laten + infinitief. Iets door ander laten doen",
+    "examples": [
+      "Ik laat me helpen.",
+      "Hij laat zijn auto repareren.",
+      "Zij laat zich onderzoeken."
+    ],
+    "common_mistakes": "Vergeten van wederkerend voornaamwoord"
+  },
+  {
+    "kolmit_level": 57,
+    "cefr_level": "B2",
+    "nt2_theme": "Formele taal",
+    "rule_name": "Formele voegwoorden",
+    "description": "Формальные союзы",
+    "rule_text": "indien = als (formeel), mits = op voorwaarde dat, alvorens = voordat, teneinde = om te",
+    "examples": [
+      "Indien nodig, nemen wij contact op.",
+      "Mits je op tijd bent, mag je mee.",
+      "Alvorens te beslissen...",
+      "Teneinde kosten te besparen..."
+    ],
+    "common_mistakes": "Formele woorden in spreektaal gebruiken"
+  },
+  {
+    "kolmit_level": 58,
+    "cefr_level": "B2",
+    "nt2_theme": "Geavanceerde constructies",
+    "rule_name": "Complexe samengestelde zinnen",
+    "description": "Сложные составные предложения",
+    "rule_text": "Combinatie van meerdere bijzinnen met verschillende voegwoorden",
+    "examples": [
+      "Hoewel hij wist dat het moeilijk zou zijn, besloot hij het te proberen omdat hij geloofde dat het mogelijk was."
+    ],
+    "common_mistakes": "Woordvolgorde en tijdscombinaties"
+  },
+  {
+    "kolmit_level": 59,
+    "cefr_level": "C1",
+    "nt2_theme": "Stilistische variatie",
+    "rule_name": "Stilistische variatie en register",
+    "description": "Стилистические вариации и регистры",
+    "rule_text": "Appropriate use of formal/informal register, stylistic variation in complex texts",
+    "examples": ["Formele brieven, academische teksten, letterlijke stijl"],
+    "common_mistakes": "Register mixing, inappropriate style choice"
+  },
+  {
+    "kolmit_level": 60,
+    "cefr_level": "C1",
+    "nt2_theme": "Schijnconstructies",
+    "rule_name": "Lijken – schijnen – blijken te + infinitief",
+    "description": "Конструкции кажимости и видимости",
+    "rule_text": "lijken te = кажется, создает впечатление; schijnen te = по-видимому, со слов других; blijken te = оказываться, выясняется. Все требуют te + infinitief",
+    "examples": [
+      "Hij lijkt moe te zijn.",
+      "Ze schijnen veel geld te hebben.",
+      "Het blijkt moeilijker te zijn dan gedacht.",
+      "Hij bleek de waarheid te spreken.",
+      "Het lijkt te gaan regenen.",
+      "Ze schijnen naar het buitenland te verhuizen."
+    ],
+    "common_mistakes": "Пропуск te, путаница между значениями глаголов, неправильное использование в разных временах"
+  },
+  {
+    "kolmit_level": 61,
+    "cefr_level": "C1",
+    "nt2_theme": "Voorwaardelijke bijzinnen",
+    "rule_name": "Voor zover – gesteld dat – tenzij",
+    "description": "Условные придаточные с ограничительными и гипотетическими союзами",
+    "rule_text": "voor zover = поскольку, насколько; gesteld dat = допустим что, предположим что; tenzij = если не, за исключением случая когда. Формальные условные конструкции с различной степенью вероятности",
+    "examples": [
+      "Voor zover ik weet, komt hij morgen.",
+      "Gesteld dat het waar is, wat doen we then?",
+      "Ik ga naar het feest, tenzij ik ziek word.",
+      "Voor zover mogelijk, proberen we op tijd te komen.",
+      "Gesteld dat je zou winnen, wat zou je dan doen?",
+      "We gaan door met het project, tenzij de financiering stopt."
+    ],
+    "common_mistakes": "Путаница между tenzij и als, неправильное использование gesteld dat в реальных условиях, пропуск инверсии в придаточных"
+  },
+  {
+    "kolmit_level": 62,
+    "cefr_level": "C1",
+    "nt2_theme": "Lijdende vorm",
+    "rule_name": "Modaal passief",
+    "description": "Модальный пассив",
+    "rule_text": "Модальные глаголы + пассивная конструкция. kunnen/moeten/zullen + worden + voltooid deelwoord. Выражает возможность, необходимость или будущее действие в пассиве",
+    "examples": [
+      "Dit probleem kan opgelost worden.",
+      "De ramen moeten gewassen worden.",
+      "Het huis zal volgend jaar gebouwd worden.",
+      "De brief moet nog geschreven worden.",
+      "Dat kan gemakkelijk geregeld worden.",
+      "De afspraak zal verzet worden."
+    ],
+    "common_mistakes": "Неправильный порядок слов, пропуск worden, путаница с активными модальными конструкциями"
+  },
+  {
+    "kolmit_level": 63,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele voorzetsels",
+    "rule_name": "Wegens - vanwege - teneinde - met het oog op",
+    "description": "Формальные предлоги и предложные выражения",
+    "rule_text": "wegens = из-за, по причине (формальный аналог vanwege); vanwege = из-за, по причине; teneinde = с целью, для того чтобы; met het oog op = ввиду, учитывая. Формальные предлоги, используемые в официальных документах и письменной речи",
+    "examples": [
+      "Wegens ziekte is de vergadering afgelast.",
+      "Vanwege de regen blijft het evenement binnen.",
+      "Teneinde kosten te besparen, worden nieuwe maatregelen genomen.",
+      "Met het oog op de veiligheid zijn extra controles ingesteld.",
+      "De winkel is gesloten wegens verbouwing.",
+      "Vanwege persoonlijke omstandigheden kan hij niet komen."
+    ],
+    "common_mistakes": "Использование в разговорной речи, путаница между wegens и vanwege, неправильное построение предложения с teneinde"
+  },
+  {
+    "kolmit_level": 64,
+    "cefr_level": "C1",
+    "nt2_theme": "Stilistische constructies",
+    "rule_name": "Parallelle structuur in opsommingen",
+    "description": "Параллельная структура в перечислениях",
+    "rule_text": "Gebruik van gelijke grammaticale structures in opsommingen: alle items in dezelfde vorm (werkwoordsvorm, voorzetsels, zinsstructuur). Belangrijk voor helderheid en stijl in formele teksten.",
+    "examples": [
+      "Hij houdt van lezen, zwemmen en reizen.",
+      "De taken zijn: documenten controleren, rapporten schrijven en vergaderingen voorbereiden.",
+      "Ze is verantwoordelijk voor het plannen, organiseren en uitvoeren van projecten.",
+      "Het bedrijf streeft naar groei, kwaliteit en innovatie.",
+      "Hij sprak over zijn jeugd, zijn carrière en zijn toekomstplannen.",
+      "We moeten analyseren, evalueren en verbeteren."
+    ],
+    "common_mistakes": "Verschillende grammaticale structures mengen, ongelijke werkwoordsvormen, inconsistent gebruik van voorzetsels"
+  },
+  {
+    "kolmit_level": 65,
+    "cefr_level": "C1",
+    "nt2_theme": "Voornaamwoorden",
+    "rule_name": "Onpersoonlijke en onbepaalde voornaamwoorden",
+    "description": "Безличные и неопределенные местоимения",
+    "rule_text": "Onpersoonlijke voornaamwoorden: men, je, ze (onbepaald). Onbepaalde voornaamwoorden: iemand, niemand, iets, niets, iedereen, alles, elk, enig, enkele. Gebruik in formele en informele contexten.",
+    "examples": [
+      "Men zegt dat het gaat regenen.",
+      "Je kunt hier niet parkeren.",
+      "Ze zeggen dat het goed gaat.",
+      "Is er iemand thuis?",
+      "Ik heb niets gehoord.",
+      "Iedereen is welkom.",
+      "Alles is mogelijk.",
+      "Elk huis heeft een tuin.",
+      "Heb je enig idee?",
+      "Er zijn enkele problemen."
+    ],
+    "common_mistakes": "Verwarring men/je/ze, verkeerd gebruik van enkelvoud/meervoud, verkeerde woordvolgorde met niets/niemand"
+  },
+  {
+    "kolmit_level": 66,
+    "cefr_level": "C1",
+    "nt2_theme": "Woordvolgorde",
+    "rule_name": "Inversie na formele uitdrukkingen",
+    "description": "Инверсия после формальных выражений",
+    "rule_text": "Inversie (omkering van onderwerp en werkwoord) verplicht na formele vooropplaatsingen: bijwoordelijke bepalingen van tijd, plaats, modaliteit en formele uitdrukkingen. Gebruikelijk in schrijftaal en formele spraak.",
+    "examples": [
+      "Nooit eerder had ik zoiets meegemaakt.",
+      "Zelden komt he te laat.",
+      "Met genoegen nodigen wij u uit.",
+      "In dit verband willen wij opmerken...",
+      "Onder geen beding zal hij toegeven.",
+      "Bij deze deel ik u mede...",
+      "Tot onze grote verbazing bleek het waar.",
+      "Na uitvoerig onderzoek concludeerde de commissie..."
+    ],
+    "common_mistakes": "Geen inversie toepassen, verkeerde werkwoordsvorm bij inversie, formele uitdrukkingen in informele context gebruiken"
+  },
+  {
+    "kolmit_level": 67,
+    "cefr_level": "C1",
+    "nt2_theme": "Geavanceerde werkwoordsconstructies",
+    "rule_name": "Perceptie- en causatiefconstructies zonder te",
+    "description": "Конструкции восприятия и каузатива без TE",
+    "rule_text": "Perceptieconstructies: zien/horen/voelen + infinitief zonder te (directe waarneming). Causatiefconstructies: laten + infinitief zonder te (causatief). Geen 'te' bij deze specifieke werkwoorden in directe constructies.",
+    "examples": [
+      "Ik zie hem komen.",
+      "We hoorden de kinderen spelen.",
+      "Hij voelde zijn hart kloppen.",
+      "Laat mij gaan!",
+      "Ze liet de auto wassen.",
+      "Ik zag haar het gebouw binnenlopen.",
+      "We lieten het huis bouwen.",
+      "Hij hoorde de vogels zingen."
+    ],
+    "common_mistakes": "Ten onrechte 'te' toevoegen, verwarring met constructies die wel 'te' vereisen, onjuiste woordvolgorde in complexe zinnen"
+  },
+  {
+    "kolmit_level": 68,
+    "cefr_level": "C1",
+    "nt2_theme": "Nadrukspartikels",
+    "rule_name": "Wel – toch – juist – even",
+    "description": "Частицы усиления и акцентирования",
+    "rule_text": "Wel = подчеркивание противопоставления (в ответ на отрицание); toch = выражает удивление, настойчивость или ожидание; juist = подчеркивает неожиданность или противоположность ожидаемому; even = смягчает просьбу или указывает на кратковременность",
+    "examples": [
+      "Ik heb het wel gezien, maar ik begrijp het niet.",
+      "Je komt toch wel naar het feest?",
+      "Hij is juist vertrokken toen je belde.",
+      "Kun je even helpen?",
+      "Dat is wel duur, maar het is de moeite waard.",
+      "Toch moet je het proberen.",
+      "Het is juist andersom.",
+      "Wacht even, ik kom eraan."
+    ],
+    "common_mistakes": "Verkeerd gebruik van partikels, overmatig gebruik, verkeerde positie in de zin, verwarring tussen wel en toch"
+  },
+  {
+    "kolmit_level": 69,
+    "cefr_level": "C1",
+    "nt2_theme": "Evenredigheidsconstructies",
+    "rule_name": "Des te ... hoe ...",
+    "description": "Конструкции пропорциональности",
+    "rule_text": "Des te + vergrotende trap ... hoe + vergrotende trap. Uitdrukking van evenredige relatie: hoe meer X, hoe meer Y. Formele constructie voor wiskundige of logische verbanden.",
+    "examples": [
+      "Des te meer je oefent, hoe beter je wordt.",
+      "Des te harder hij werkt, hoe moeër hij wordt.",
+      "Des te ouder je wordt, hoe wijzer je wordt.",
+      "Des te sneller we gaan, hoe eerder we er zijn.",
+      "Des te meer informatie, hoe beter de beslissing.",
+      "Des te complexer het probleem, hoe langer de oplossing duurt."
+    ],
+    "common_mistakes": "Verkeerde woordvolgorde, vergeten van 'des te', onjuiste vergrotende trap, informele varianten gebruiken in formele context"
+  },
+  {
+    "kolmit_level": 70,
+    "cefr_level": "C1",
+    "nt2_theme": "Indirecte rede",
+    "rule_name": "Indirecte rede en tijdsverschuiving",
+    "description": "Косвенная речь и сдвиг времен",
+    "rule_text": "Tijdsverschuiving in indirecte rede: tegenwoordige tijd → verleden tijd, verleden tijd → plusquamperfectum, toekomende tijd → conditionele tijd. Gebruik van voegwoord 'dat' en aanpassing van persoonlijke voornaamwoorden en tijdsaanduidingen.",
+    "examples": [
+      "Hij zei: 'Ik kom morgen.' → Hij zei dat hij de volgende dag zou komen.",
+      "Zij zei: 'Ik heb het gisteren gedaan.' → Zij zei dat ze het de dag ervoor had gedaan.",
+      "Hij vroeg: 'Ben je moe?' → Hij vroeg of ik moe was.",
+      "'We gaan naar huis,' zeiden ze. → Ze zeiden dat ze naar huis gingen.",
+      "'Ik kan het niet,' zei hij. → Hij zei dat hij het niet kon.",
+      "'Het regent,' zei she. → Ze zei dat het regende."
+    ],
+    "common_mistakes": "Geen tijdsverschuiving toepassen, verkeerde gebruik van zou/zouden, vergeten van voegwoord 'dat', onjuiste aanpassing van tijdsaanduidingen"
+  },
+  {
+    "kolmit_level": 71,
+    "cefr_level": "C1",
+    "nt2_theme": "Beleefdheidsvormen",
+    "rule_name": "Beleefde verzoeken met zouden",
+    "description": "Вежливые просьбы с использованием ZOUDEN",
+    "rule_text": "Zou/zouden + kunnen/willen/mogen voor beleefde verzoeken en vragen. Conditionele vorm verzacht de vraag en maakt hem beleefder. Gebruik in formele en informele situaties.",
+    "examples": [
+      "Zou u dat kunnen herhalen?",
+      "Zou je me willen helpen?",
+      "Zou ik even mogen storen?",
+      "Zouden jullie wat stiller kunnen zijn?",
+      "Zou je me de zout kunnen aangeven?",
+      "Zou u dit formulier willen invullen?",
+      "Zou ik een afspraak kunnen maken?",
+      "Zouden we hier mogen parkeren?"
+    ],
+    "common_mistakes": "Vergeten van zou/zouden, verkeerde woordvolgorde, onnodig gebruik in informele context, verwarring met andere modale werkwoorden"
+  },
+  {
+    "kolmit_level": 72,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele vergelijkingen",
+    "rule_name": "Formele vergelijking: ten opzichte van – met betrekking tot",
+    "description": "Формальные сравнения и соотнесения",
+    "rule_text": "Ten opzichte van = по сравнению с, относительно; met betrekking tot = относительно, что касается. Formele uitdrukkingen voor vergelijkingen и specificatie in zakelijke en academische context.",
+    "examples": [
+      "De omzet is gestegen ten opzichte van vorig jaar.",
+      "Ten opzichte van andere landen presteert Nederland goed.",
+      "Met betrekking tot uw aanvraag kunnen wij u het volgende meedelen.",
+      "Er zijn wijzigingen met betrekking tot de openingstijden.",
+      "De prijs is gunstig ten opzichte van de concurrentie.",
+      "Met betrekking tot het milieu zijn nieuwe maatregelen genomen.",
+      "Ten opzichte van de vorige versie is deze verbeterd.",
+      "Met betrekking tot uw klacht hebben wij onderzoek gedaan."
+    ],
+    "common_mistakes": "Informele alternatieven gebruiken in formele context, verkeerde voorzetsels, onnodig complex taalgebruik in simpele vergelijkingen"
+  },
+  {
+    "kolmit_level": 73,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele oorzaak",
+    "rule_name": "Aangezien – daar",
+    "description": "Формальные союзы причины",
+    "rule_text": "Aangezien = поскольку, так как (formeel); daar = так как, поскольку (formeel, vaak in geschreven taal). Beide geven een reden aan en worden gevolgd door inversie in de bijzin. Gebruik in formele correspondentie en academische teksten.",
+    "examples": [
+      "Aangezien het weer slecht is, annuleren we de excursie.",
+      "Daar alle voorwaarden zijn vervuld, keuren wij de aanvraag goed.",
+      "Aangezien u niet heeft gereageerd, gaan wij ervan uit dat u niet geïnteresseerd bent.",
+      "Daar de cijfers positief zijn, kunnen we doorgaan met het project.",
+      "Aangezien dit uw eerste overtreding is, geven we u een waarschuwing.",
+      "Daar de vergadering is uitgesteld, hebben we meer voorbereidingstijd."
+    ],
+    "common_mistakes": "Verwarring met informelere alternatieven zoals 'omdat', verkeerde woordvolgorde, overmatig gebruik in informele context"
+  },
+  {
+    "kolmit_level": 74,
+    "cefr_level": "C1",
+    "nt2_theme": "Nadruksinversie",
+    "rule_name": "Nadruksinversie met ontkennende bijwoorden",
+    "description": "Инверсия для эмфазы с отрицательными наречиями",
+    "rule_text": "Inversie verplicht bij vooropplaatsing van ontkennende bijwoorden: nooit, weinig, zelden, nauwelijks, noch, noch, niet alleen. Werkwoord komt direct na het bijwoord, gevolgd door het onderwerp. Creëert nadruk en formele stijl.",
+    "examples": [
+      "Nooit heb ik zoiets moois gezien.",
+      "Zelden komt hij op tijd.",
+      "Nauwelijks was hij binnen of de telefoon ging.",
+      "Niet alleen is hij intelligent, maar ook creatief.",
+      "Noch zijn ouders, noch zijn vrienden wisten ervan.",
+      "Weinig mensen begrijpen dit complexe probleem.",
+      "Nooit eerder was ik zo gelukkig.",
+      "Zelden heeft een boek me zo geraakt."
+    ],
+    "common_mistakes": "Geen inversie toepassen, verkeerde werkwoordsvorm, gebruik in informele context waar het onnatuurlijk klinkt"
+  },
+  {
+    "kolmit_level": 75,
+    "cefr_level": "C1",
+    "nt2_theme": "Deelwoordconstructies",
+    "rule_name": "Deelwoordconstructies in formele teksten",
+    "description": "Причастные конструкции в формальных текстах",
+    "rule_text": "Gebruik van tegenwoordig deelwoord (-end) en voltooid deelwoord als bijvoeglijke bepaling of bijwoordelijke bepaling. Veel gebruikt in formele, juridische en academische teksten voor compacte zinsbouw. Komt overeen met Engelse participle clauses.",
+    "examples": [
+      "De voor de vergadering verzamelde documenten liggen klaar.",
+      "Na de problemen overwonnen te hebben, ging het bedrijf verder.",
+      "Hiermee instemmend, ondertekende hij het contract.",
+      "Uitgaande van deze cijfers, kunnen we concluderen dat...",
+      "De door de commissie aanbevolen maatregelen worden doorgevoerd.",
+      "Zich bewust van de risico's, investeerde hij toch.",
+      "Gesteld voor deze keuze, moest hij snel handelen.",
+      "Gelet op de omstandigheden, is dit het beste besluit."
+    ],
+    "common_mistakes": "Onjuiste woordvolgorde, verkeerde vorm van het deelwoord, dangling modifiers (zonder duidelijk onderwerp), overmatig gebruik waardoor tekst onduidelijk wordt"
+  },
+  {
+    "kolmit_level": 76,
+    "cefr_level": "C1",
+    "nt2_theme": "Specifieke werkwoordconstructies",
+    "rule_name": "Dreigen te – beloven te",
+    "description": "Глаголы угрозы и обещания",
+    "rule_text": "Dreigen te + infinitief = угрожать чем-либо, создавать опасность; beloven te + infinitief = обещать сделать что-либо. Beide worden gevolgd door 'te' + infinitief en drukken toekomstige gebeurtenissen uit met verschillende emotionele lading.",
+    "examples": [
+      "Het dreigt te gaan regenen.",
+      "Hij dreigde ontslag te nemen.",
+      "De situatie dreigt erger te worden.",
+      "Ze belooft op tijd te komen.",
+      "Hij heeft beloofd het probleem op te lossen.",
+      "Het bedrijf belooft te investeren in duurzaamheid.",
+      "De economie dreigt in recessie te raken.",
+      "Ze beloven de waarheid te spreken."
+    ],
+    "common_mistakes": "Vergeten van 'te', verwarring tussen dreigen en beloven, onjuiste woordvolgorde in samengestelde zinnen, verkeerde gebruik van tijden"
+  },
+  {
+    "kolmit_level": 77,
+    "cefr_level": "C1",
+    "nt2_theme": "Evenredigheidsconstructies",
+    "rule_name": "Hoe ... des te ...",
+    "description": "Конструкции пропорциональности (обратный порядок)",
+    "rule_text": "Hoe + vergrotende trap ... des te + vergrotende trap. Alternatieve volgorde voor evenredigheidsrelaties. Minder formeel than 'des te ... hoe ...' maar nog steeds verzorgd taalgebruik. Benadrukt de progressieve relatie tussen twee elementen.",
+    "examples": [
+      "Hoe meer je leest, des te beter je wordt.",
+      "Hoe harder hij werkt, des te moeër hij wordt.",
+      "Hoe ouder je wordt, des te wijzer je wordt.",
+      "Hoe sneller we rijden, des te eerder we aankomen.",
+      "Hoe complexer het probleem, des te meer tijd we nodig hebben.",
+      "Hoe vaker je oefent, des te makkelijker het wordt.",
+      "Hoe langer je wacht, des te moeilijker het wordt.",
+      "Hoe beter de voorbereiding, des te groter de kans op succes."
+    ],
+    "common_mistakes": "Verkeerde woordvolgorde, vergeten van 'des te', onjuiste vergrotende trap, inconsistent gebruik van de constructie binnen dezelfde tekst"
+  },
+  {
+    "kolmit_level": 78,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele uitdrukkingen",
+    "rule_name": "Formele middelen: door middel van – met behulp van",
+    "description": "Формальные выражения для обозначения средств и инструментов",
+    "rule_text": "Door middel van = посредством, с помощью; met behulp van = при помощи, с использованием. Formele uitdrukkingen om instrumenten, methoden of hulpmiddelen aan te duiden. Gebruik in academische, technische en zakelijke context.",
+    "examples": [
+      "De communicatie verloopt door middel van e-mail.",
+      "Met behulp van deze software kunnen we de data analyseren.",
+      "Het onderzoek werd uitgevoerd door middel van vragenlijsten.",
+      "Met behulp van een microscoop kunnen we de cellen zien.",
+      "De betaling kan door middel van creditcard worden gedaan.",
+      "Met behulp van onze nieuwe methode besparen we tijd.",
+      "De toegang wordt gecontroleerd door middel van een pasjesysteem.",
+      "Met behulp van deze handleiding kunt u het apparaat installeren."
+    ],
+    "common_mistakes": "Verwarring tussen de twee uitdrukkingen, onnodig gebruik in informele context, verkeerde voorzetsels, overmatig gebruik waardoor tekst zwaar wordt"
+  },
+  {
+    "kolmit_level": 79,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele gevolg",
+    "rule_name": "Derhalve – bijgevolg",
+    "description": "Формальные союзы следствия",
+    "rule_text": "Derhalve = следовательно, поэтому (zeer formeel, juridisch); bijgevolg = вследствие этого, соответственно (formeel, logisch gevolg). Beide drukken een logisch gevolg uit en worden vooral in formele, juridische en academische teksten gebruikt. Gevolgd door hoofdzin woordvolgorde.",
+    "examples": [
+      "De documenten zijn niet in orde. Derhalve kunnen wij uw aanvraag niet in behandeling nemen.",
+      "Het product voldoet niet aan de eisen. Bijgevolg wordt het teruggeroepen.",
+      "Er is onvoldoende bewijs. Derhalve wordt de zaak geseponeerd.",
+      "De kosten zijn hoger dan begroot. Bijgevolg moeten we het budget aanpassen.",
+      "U heeft niet gereageerd op onze eerdere brief. Derhalve gaan wij over tot verdere stappen.",
+      "De weersomstandigheden zijn slecht. Bijgevolg wordt het evenement afgelast."
+    ],
+    "common_mistakes": "Gebruik in informele context, verwarring met 'dus' of 'daarom', verkeerde woordvolgorde, overmatig gebruik waardoor tekst stroef wordt"
+  },
+  {
+    "kolmit_level": 80,
+    "cefr_level": "C2",
+    "nt2_theme": "Juridische taal",
+    "rule_name": "Juridische voorzetsels: ingevolge – krachtens – conform",
+    "description": "Юридические предлоги",
+    "rule_text": "Ingevolge = в соответствии с, на основании (formeel/juridisch); krachtens = на основании, в силу (zeer formeel/juridisch, autoriteit); conform = в соответствии с, согласно (formeel, overeenstemming). Juridische voorzetsels die verwijzen naar wettelijke basis en autoriteit.",
+    "examples": [
+      "Ingevolge artikel 5 van de wet is dit verboden.",
+      "Krachtens zijn bevoegdheid tekende hij het document.",
+      "Conform de afspraak leveren wij de goederen aan.",
+      "Ingevolge de privacywetgeving worden gegevens beveiligd.",
+      "Krachtens de statuten heeft de voorzitter beslissingsbevoegdheid.",
+      "Conform onze richtlijnen moet dit worden gemeld.",
+      "Ingevolge de overeenkomst bent u verplicht tot betaling.",
+      "Krachtens deze machtiging mag hij namens ons handelen."
+    ],
+    "common_mistakes": "Gebruik in niet-juridische context, verwarring tussen de verschillende voorzetsels, verkeerde zinsconstructie, onjuist gebruik van naamvallen"
+  },
+  {
+    "kolmit_level": 81,
+    "cefr_level": "C1",
+    "nt2_theme": "Retorische vragen",
+    "rule_name": "Retorische vragen",
+    "description": "Риторические вопросы",
+    "rule_text": "Vragen waar geen antwoord op wordt verwacht, gebruikt om een punt te benadrukken, te overtuigen of emotie uit te drukken. Vaak met 'toch', 'immers' of ontkenning. Behoudt vraagwoordvolgorde maar functioneert als stelling.",
+    "examples": [
+      "We willen toch allemaal het beste?",
+      "Is dat niet gewoon prachtig?",
+      "Wie zou dat nu niet willen?",
+      "Heb ik je dat niet altijd gezegd?",
+      "Wat moet je daar nu van denken?",
+      "Is dat niet belachelijk?",
+      "Weet je wat het ergste is?",
+      "Kun je het je voorstellen?"
+    ],
+    "common_mistakes": "Verkeerde intonatie bij uitspraak, te letterlijk antwoord geven op retorische vraag, overmatig gebruik waardoor tekst drammerig wordt, verkeerde woordvolgorde"
+  },
+  {
+    "kolmit_level": 82,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele correspondentie",
+    "rule_name": "Formele correspondentie",
+    "description": "Формальная переписка",
+    "rule_text": "Vaste structuren en formele uitdrukkingen voor brieven en e-mails: aanhef, inleiding, kern, slot, afsluiting. Gebruik van formele aanspreekvormen, vaste zinsconstructies en beleefdheidsformules. Belangrijk voor zakelijke en officiële communicatie.",
+    "examples": [
+      "Geachte heer/mevrouw,",
+      "Hierbij deel ik u mede dat...",
+      "Naar aanleiding van uw brief van...",
+      "Wij zien uw reactie met belangstelling tegemoet.",
+      "Hoogachtend,",
+      "Met vriendelijke groet,",
+      "Bij dezen doe ik u toekomen...",
+      "Voor nadere informatie kunt u contact opnemen met..."
+    ],
+    "common_mistakes": "Informeel taalgebruik in formele context, verkeerde aanspreekvormen, onvolledige zinsconstructies, vergeten van beleefdheidsformules, onjuiste afsluiting"
+  },
+  {
+    "kolmit_level": 83,
+    "cefr_level": "C1",
+    "nt2_theme": "Geneste relatieve bijzinnen",
+    "rule_name": "Geneste relatieve bijzinnen",
+    "description": "Вложенные относительные придаточные",
+    "rule_text": "Meerdere relatieve bijzinnen in één zin, waarbij de ene bijzin binnen de andere staat. Complexe constructie die zorgvuldige woordvolgorde en interpunctie vereist. Gebruik in academische, juridische en literaire teksten.",
+    "examples": [
+      "De man die de auto die voor het huis dat gerenoveerd wordt geparkeerd staat bestuurde, is mijn buurman.",
+      "Het boek dat de auteur die ik bewonder schreef, is net uitgekomen.",
+      "De student die het onderzoek dat door de professor die vorig jaar met pensioen ging begeleid werd uitvoerde, kreeg een prijs.",
+      "Het bedrijf dat het product dat de problemen die klanten meldden oplost ontwikkelde, ziet zijn omzet stijgen.",
+      "De wet die de regels die betrekking hebben op de situatie die wij bespraken bevat, wordt herzien."
+    ],
+    "common_mistakes": "Onduidelijke verwijzingen, te lange en ingewikkelde zinnen, verkeerde woordvolgorde, vergeten van komma's bij bijzinnen, dangling modifiers"
+  },
+  {
+    "kolmit_level": 84,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele onderwerpen",
+    "rule_name": "Ten aanzien van – inzake",
+    "description": "Формальные выражения для обозначения темы",
+    "rule_text": "Ten aanzien van = относительно, что касается; inzake = касательно, по вопросу (zeer formeel, vooral juridisch). Beide worden gebruikt om het onderwerp of thema van een formele mededeling aan te geven. Veel gebruikt in officiële correspondentie en juridische documenten.",
+    "examples": [
+      "Ten aanzien van uw aanvraag kunnen wij u het volgende meedelen.",
+      "Inzake de lopende onderhandelingen is overeenstemming bereikt.",
+      "Ten aanzien van het milieu zijn nieuwe regels van kracht.",
+      "Inzake de huurovereenkomst willen wij enkele punten bespreken.",
+      "Ten aanzien van de kwaliteit zijn wij zeer tevreden.",
+      "Inzake uw klacht hebben wij intern onderzoek gedaan.",
+      "Ten aanzien van de kosten dient u rekening te houden met...",
+      "Inzake de vergadering van morgen is de agenda vastgesteld."
+    ],
+    "common_mistakes": "Gebruik in informele context, verwarring tussen ten aanzien van en met betrekking tot, onjuiste zinsconstructie, overmatig gebruik waardoor tekst zwaar wordt"
+  },
+  {
+    "kolmit_level": 85,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele wederkerende werkwoorden",
+    "rule_name": "Formele reflexieve werkwoorden: zich beroepen op – zich richten tot",
+    "description": "Формальные возвратные глаголы",
+    "rule_text": "Zich beroepen op = ссылаться на, апеллировать к (formeel/juridisch); zich richten tot = обращаться к (formeel). Beide zijn wederkerende werkwoorden die in formele en juridische context worden gebruikt voor specifieke handelingen en communicatie.",
+    "examples": [
+      "Hij beriep zich op artikel 7 van de wet.",
+      "U kunt zich tot onze klantenservice richten voor vragen.",
+      "De verdachte beriep zich op zijn zwijgrecht.",
+      "Wij richten ons tot het management met dit verzoek.",
+      "Zij beriep zich op eerdere afspraken.",
+      "U dient zich tot de daartoe bevoegde instantie te richten.",
+      "Hij beriep zich ten onrechte op deze regeling.",
+      "Wij richten ons in eerste instantie tot de direct betrokkenen."
+    ],
+    "common_mistakes": "Vergeten van wederkerend voornaamwoord, verkeerd gebruik in informele context, onjuiste voorzetsels, verwarring met niet-wederkerende varianten"
+  },
+  {
+    "kolmit_level": 86,
+    "cefr_level": "C1",
+    "nt2_theme": "Causatief passief",
+    "rule_name": "Passief met laten",
+    "description": "Пассив с глаголом LATEN",
+    "rule_text": "Laten + infinitief + worden. Causatieve passieve constructie die uitdrukt dat iemand toestaat of veroorzaakt dat iets met hem/haar wordt gedaan. Combinatie van causatief и passief in één constructie.",
+    "examples": [
+      "Hij laat zich niet misleiden.",
+      "Ik laat me niet onder druk zetten.",
+      "Zij laat haar haar knippen.",
+      "We laten het huis schilderen.",
+      "Hij laat zich altijd helpen.",
+      "De directeur laat de cijfers controleren.",
+      "Ze laat zich niet intimideren.",
+      "Wij laten de tuin onderhouden."
+    ],
+    "common_mistakes": "Vergeten van 'zich' bij personen, verkeerde woordvolgorde, verwarring met actieve constructies, onjuist gebruik van worden"
+  },
+  {
+    "kolmit_level": 87,
+    "cefr_level": "C1",
+    "nt2_theme": "Stilistische variatie",
+    "rule_name": "Vermijden van herhaling",
+    "description": "Избегание повторов",
+    "rule_text": "Gebruik van synoniemen, voornaamwoorden, verwijzingen en andere stilistische middelen om herhaling van woorden en zinsconstructies te voorkomen. Belangrijk voor vloeiende, professionele teksten.",
+    "examples": [
+      "Het bedrijf heeft nieuwe doelen gesteld. Deze doelstellingen zijn ambitieus.",
+      "De manager besprak het probleem. Vervolgens werd de kwestie opgelost.",
+      "Hij kocht een huis. De aankoop was een goede investering.",
+      "De vergadering was productief. Tijdens deze bijeenkomst werden belangrijke beslissingen genomen.",
+      "Ze schreef een boek. Haar werk werd goed ontvangen.",
+      "Het project is succesvol. Dit initiatief zal worden voortgezet.",
+      "Hij gaf een presentatie. Zijn voordracht duurde een uur.",
+      "We onderzochten de mogelijkheden. Deze opties worden nu geëvalueerd."
+    ],
+    "common_mistakes": "Te veel synoniemen gebruiken waardoor tekst onnatuurlijk wordt, onduidelijke verwijzingen, inconsistent taalgebruik, overmatig gebruik van voornaamwoorden"
+  },
+  {
+    "kolmit_level": 88,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele tegengestelde relaties",
+    "rule_name": "Niettegenstaande – ondanks het feit dat",
+    "description": "Формальные противительные союзы",
+    "rule_text": "Niettegenstaande = несмотря на (zeer formeel, juridisch); ondanks het feit dat = несмотря на то что (formeel). Beide drukken een tegenstelling uit in formele context. Niettegenstaande kan met zelfstandig naamwoord of bijzin, ondanks het feit dat altijd met bijzin.",
+    "examples": [
+      "Niettegenstaande de tegenvallende resultaten gaan we door.",
+      "Ondanks het feit dat het regent, gaan we wandelen.",
+      "Niettegenstaande hij gewaarschuwd was, maakte hij de fout.",
+      "Ondanks het feit dat de kosten hoog zijn, investeren we in kwaliteit.",
+      "Niettegenstaande alle bezwaren werd het plan goedgekeurd.",
+      "Ondanks het feit dat het moeilijk is, moeten we het proberen.",
+      "Niettegenstaande de economische crisis groeit het bedrijf.",
+      "Ondanks het feit dat hij moe was, werkte hij door."
+    ],
+    "common_mistakes": "Verkeerde constructie met niettegenstaande, gebruik in informele context, verwarring met eenvoudigere alternatieven zoals 'hoewel', onjuiste woordvolgorde in de bijzin"
+  },
+  {
+    "kolmit_level": 89,
+    "cefr_level": "C1",
+    "nt2_theme": "Formele wederkerende werkwoorden",
+    "rule_name": "Formele reflexieve werkwoorden",
+    "description": "Формальные возвратные глаголы",
+    "rule_text": "Wederkerende werkwoorden met 'zich' in formele context: zich beroepen op, zich buigen over, zich ontfermen over, zich verzetten tegen, zich voegen naar, zich onthouden van. Gebruik in officiële, juridische en bestuurlijke teksten.",
+    "examples": [
+      "Hij beriep zich op zijn rechten.",
+      "De commissie buigt zich over de kwestie.",
+      "Zij ontfermde zich over de weeskinderen.",
+      "De bevolking verzette zich tegen het besluit.",
+      "Wij voegen ons naar de regels.",
+      "Hij onthield zich van commentaar.",
+      "Het bedrijf beroept zich op de overeenkomst.",
+      "De raad buigt zich momenteel over deze zaak."
+    ],
+    "common_mistakes": "Vergeten van 'zich', verkeerde voorzetsels, gebruik in informele context, onjuiste werkwoordsvervoeging"
+  },
+  {
+    "kolmit_level": 90,
+    "cefr_level": "C2",
+    "nt2_theme": "Stilistische middelen",
+    "rule_name": "Eufemismen en formele uitdrukkingen",
+    "description": "Эвфемизмы и формальные выражения",
+    "rule_text": "Gebruik van verbloemende of beleefde uitdrukkingen in plaats van directe termen. Formele alternatieven voor alledaagse begrippen, vaak in zakelijke, diplomatieke of gevoelige contexten. Bevordert professionele communicatie en respectvol taalgebruik.",
+    "examples": [
+      "Hij is niet meer onder ons (in plaats van: hij is overleden).",
+      "We moeten onze uitgaven herzien (in plaats van: bezuinigen).",
+      "De resultaten vallen tegen (in plaats van: zijn slecht).",
+      "Er is ruimte voor verbetering (in plaats van: het is niet goed).",
+      "We gaan een andere richting uit (in plaats van: we stoppen ermee).",
+      "Hij is tussen jobs (in plaats van: werkloos).",
+      "Er is een budgettaire uitdaging (in plaats van: geldgebrek).",
+      "We optimaliseren de processen (in plaats van: we ontslaan mensen)."
+    ],
+    "common_mistakes": "Onnodig complex taalgebruik, onduidelijkheid door te veel verbloeming, inconsistent gebruik binnen één tekst, gebruik in context waar directheid vereist is"
+  }
+]
