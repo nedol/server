@@ -16,58 +16,154 @@ import  {GetEmbedding} from './cron/gemini.js'
 
 import {Pool} from 'pg';
 
-let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
-
-// Log environment variables (without sensitive data) for debugging
-console.log('Database config:', {
-  user: process.env.RNDRUSER ? 'SET' : 'NOT SET',
-  host: process.env.RNDRHOST ? 'SET' : 'NOT SET',
-  database: process.env.RNDRDATABASE ? 'SET' : 'NOT SET',
-  password: process.env.RNDRPASSWORD ? 'SET' : 'NOT SET',
-  port: 5432
-});
-
-export const pool = new Pool({
-  user: process.env.RNDRUSER,
-  host: process.env.RNDRHOST,
-  database: process.env.RNDRDATABASE,
-  password: process.env.RNDRPASSWORD,
-  port: 5432,
-  ssl: {
-    rejectUnauthorized: false
+/**
+ * Database configuration schemas
+ * Add new database configurations here as needed
+ */
+const DB_SCHEMAS = {
+  hetzner: {
+    host: process.env.LOCALHOST,
+    port: parseInt(process.env.LOCALPORT || '5432', 10),
+    database: process.env.LOCALDATABASE,
+    user: process.env.LOCALUSER,
+    password: process.env.LOCALPASSWORD,
+    ssl: process.env.LOCALSSL === 'true'
+      ? { rejectUnauthorized: false }
+      : false,
+    max: 20,
+    idleTimeoutMillis: parseInt(process.env.DB_IDLE_TIMEOUT_MS || '30000', 10),
+    connectionTimeoutMillis: parseInt(process.env.DB_CONNECTION_TIMEOUT_MS || '30000', 10),
+    maxLifetimeSeconds: parseInt(process.env.DB_MAX_LIFETIME_SECONDS || '0', 10),
+    keepAlive: true,
+    keepAliveInitialDelayMillis: 10000,
   },
-  // Add connection timeout
-  connectionTimeoutMillis: 5000,
-  // Add idle timeout
-  idleTimeoutMillis: 30000,
-  // Add max connections
-  max: 10
-});
+  supabase: {
+    connectionString: process.env.SB_CON_STR,
+    ssl: {
+      rejectUnauthorized: false,
+    },
+    max: 20,
+    idleTimeoutMillis: parseInt(process.env.DB_IDLE_TIMEOUT_MS || '30000', 10),
+    connectionTimeoutMillis: parseInt(process.env.DB_CONNECTION_TIMEOUT_MS || '15000', 10),
+    maxLifetimeSeconds: parseInt(process.env.DB_MAX_LIFETIME_SECONDS || '0', 10),
+    keepAlive: true,
+    keepAliveInitialDelayMillis: 10000,
+  },
+};
+
+/**
+ * Get the active database schema name from environment
+ * Default to 'hetzner' if not specified
+ */
+function getActiveSchema() {
+  const schema = process.env.DB_SCHEMA || 'hetzner';
+  console.log(`\n🔌 Database Connection Schema: ${schema.toUpperCase()}`);
+  return schema;
+}
+
+/**
+ * Get database configuration for the active schema
+ */
+function getDatabaseConfig() {
+  const schemaName = getActiveSchema();
+  const config = DB_SCHEMAS[schemaName];
+
+  if (!config) {
+    console.error(`❌ Unknown database schema: ${schemaName}`);
+    console.log('Available schemas:', Object.keys(DB_SCHEMAS).join(', '));
+    throw new Error(`Unknown database schema: ${schemaName}`);
+  }
+
+  // Log connection info (without password)
+  console.log('📊 Connection Details:');
+  if (config.connectionString) {
+    const maskedUrl = config.connectionString.replace(/:[^:@]+@/, ':****@');
+    console.log(`   URL: ${maskedUrl}`);
+  } else {
+    console.log(`   Host: ${config.host}:${config.port}`);
+    console.log(`   Database: ${config.database}`);
+    console.log(`   User: ${config.user}`);
+    console.log(`   SSL: ${config.ssl ? 'enabled' : 'disabled'}`);
+  }
+  console.log('');
+
+  return config;
+}
+
+/**
+ * Create and export the connection pool
+ */
+export const pool = new Pool(getDatabaseConfig());
+
+// Keep track of connection attempts
+let connectionAttempts = 0;
+
+function isRecoverableIdleError(err) {
+  const message = err?.message || '';
+  const code = err?.code || '';
+
+  return (
+    message.includes('Connection terminated unexpectedly') ||
+    message.includes('server closed the connection unexpectedly') ||
+    code === 'ECONNRESET' ||
+    code === '57P01'
+  );
+}
 
 // Add connection event listeners for better error handling
 pool.on('error', (err) => {
-  console.error('Unexpected error on idle client', err);
-  // Handle the error appropriately
+  if (isRecoverableIdleError(err)) {
+    console.warn(`⚠️ Recoverable idle DB client disconnect: ${err.message}`);
+    return;
+  }
+
+  console.error('❌ Unexpected error on idle DB client', {
+    message: err?.message,
+    code: err?.code,
+    stack: err?.stack,
+  });
+});
+
+pool.on('connect', () => {
+  console.log('✅ New database connection established');
+  connectionAttempts = 0; // Reset connection attempts on successful connection
 });
 
 pool.on('connect', (client) => {
-  console.log('Connected to PostgreSQL database');
+  client.on('error', (err) => {
+    if (isRecoverableIdleError(err)) {
+      console.warn(`⚠️ Recoverable checked-out DB client disconnect: ${err.message}`);
+      return;
+    }
+
+    console.error('❌ Unexpected checked-out DB client error', {
+      message: err?.message,
+      code: err?.code,
+      stack: err?.stack,
+    });
+  });
 });
 
 pool.on('remove', () => {
-  console.log('Client removed from pool');
+  console.log('🔌 Database connection removed from pool');
 });
 
-// Test the database connection
+/**
+ * Test database connection
+ */
 async function testConnection() {
   let client;
   try {
     client = await pool.connect();
-    console.log('Database connection test successful');
-    const result = await client.query('SELECT NOW()');
-    console.log('Database time:', result.rows[0].now);
+    const result = await client.query('SELECT NOW() as current_time, current_database() as database');
+    console.log('✅ Database connection test successful');
+    console.log(`   Time: ${result.rows[0].current_time}`);
+    console.log(`   Database: ${result.rows[0].database}\n`);
+    return true;
   } catch (err) {
-    console.error('Database connection test failed:', err.message);
+    const error = err;
+    console.error('❌ Database connection test failed:', error.message);
+    return false;
   } finally {
     if (client) {
       client.release();
@@ -75,8 +171,26 @@ async function testConnection() {
   }
 }
 
-// Run the connection test
-// testConnection();
+/**
+ * Get current schema name
+ */
+export function getCurrentSchema() {
+  return getActiveSchema();
+}
+
+/**
+ * Get available schemas
+ */
+export function getAvailableSchemas() {
+  return Object.keys(DB_SCHEMAS);
+}
+
+// Run the connection test on module load
+testConnection().catch(err => {
+  console.error('Failed to establish initial database connection:', err);
+});
+
+export { testConnection };
 
 function getHash(par) {
   return md5(par + par);
@@ -271,10 +385,9 @@ export async function GetGrammarRegionToLevel(data) {
       }
     }
 
-    // Add kolmit_level based on array index (starting from 1 to match database behavior)
     const rulesWithLevel = grammarRules.map((rule, index) => ({
       ...rule,
-      kolmit_level: index + 1
+      kolmit_level: rule.level !== undefined ? parseFloat(rule.level) : index + 1
     }));
 
     // Filter rules for region (±3 levels from current level)
@@ -396,10 +509,9 @@ export async function GetGrammarRegion(data) {
       }
     }
 
-    // Add kolmit_level based on array index (starting from 1 to match database behavior)
     const rulesWithLevel = grammarRules.map((rule, index) => ({
       ...rule,
-      kolmit_level: index + 1
+      kolmit_level: rule.level !== undefined ? parseFloat(rule.level) : index + 1
     }));
 
     // Filter rules for region (±3 levels from current level)
@@ -1308,5 +1420,56 @@ export function SendEmailTodayPublished(q) {
   operator.SendMail(mail, head, html, (result) => {
     console.log('Письмо успешно отправлено:', result);
   });
+}
+
+// Ensure free_models table exists before reads/writes
+export async function EnsureFreeModelsTable() {
+  const client = await pool.connect();
+
+  try {
+    const query = `
+      CREATE TABLE IF NOT EXISTS free_models (
+        id SERIAL PRIMARY KEY,
+        json_data JSONB NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )
+    `;
+
+    await client.query(query);
+  } finally {
+    client.release();
+  }
+}
+
+// Function to save free models to database
+export async function SaveFreeModels(modelsData) {
+  await EnsureFreeModelsTable();
+  const client = await pool.connect();
+  
+  try {
+    await client.query('BEGIN');
+    
+    // Insert the models data with timestamp
+    const query = `
+      INSERT INTO free_models (json_data, created_at, updated_at)
+      VALUES ($1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+      RETURNING id
+    `;
+    
+    const res = await client.query(query, [JSON.stringify(modelsData)]);
+    
+    await client.query('COMMIT');
+    
+    console.log('Free models saved successfully with ID:', res.rows[0].id);
+    return res.rows[0].id;
+    
+  } catch (err) {
+    await client.query('ROLLBACK');
+    console.error('Error saving free models:', err);
+    throw err;
+  } finally {
+    client.release();
+  }
 }
 

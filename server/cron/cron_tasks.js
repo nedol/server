@@ -1,10 +1,31 @@
+  // Retry navigation helper
+  async function navigateWithRetry(page, url, options, retries = 3) {
+    let lastError;
+    for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+        await page.goto(url, { ...options });
+        return true;
+      } catch (error) {
+        lastError = error;
+        console.warn(`Navigation attempt ${attempt} failed for ${url}: ${error.message}`);
+        if (attempt < retries) {
+          await new Promise(resolve => setTimeout(resolve, 2000)); // Wait before retry
+        }
+      }
+    }
+    throw lastError;
+  }
 // import  generate_from_text_input from './vertex.js'
-import generate_from_text_input from './openrouter.js'
+// import generate_from_text_input from './openrouter.js'
 // import  generate_from_text_input from './gemini.js'
 // import  generate_from_text_input from './deepseek.js'
-// import  generate_from_text_input from './hf.js'
+import  generate_from_text_input from './ollama.js'
 
 import { logger, GetCefrScale, GetCefrLevelName } from '../../utils.js';
+
+// OpenRouter configuration
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+const OPENROUTER_BASE_URL = process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1";
 
 import { config } from 'dotenv';
 config();
@@ -44,8 +65,13 @@ import {
   UpdateDialog,
   ReadSpeech,
   WriteSpeech,
-  SaveArticle
+  SaveArticle,
+  SaveFreeModels,
+  EnsureFreeModelsTable
 } from '../db.js';
+
+// Also import pool for direct queries
+import { pool } from '../db.js';
 
 const formatDate = (date) => {
   const year = date.getFullYear();
@@ -54,70 +80,581 @@ const formatDate = (date) => {
   return `${year}-${month}-${day}`;
 };
 
+const BASE_NEWS_LEVEL = 0;
+const BASE_NEWS_SENTENCE_COUNT = 10;
+
+function normalizeNewsSentences(content, sentenceLimit = BASE_NEWS_SENTENCE_COUNT) {
+  if (Array.isArray(content)) {
+    return content
+      .map(sentence => typeof sentence === 'string' ? sentence.trim() : '')
+      .filter(Boolean)
+      .slice(0, sentenceLimit);
+  }
+
+  if (typeof content === 'string') {
+    return content
+      .split(/(?<=[.!?])\s+/)
+      .map(sentence => sentence.trim())
+      .filter(Boolean)
+      .slice(0, sentenceLimit);
+  }
+
+  return [];
+}
+
+function normalizeAdaptedArticlePayload(jsonArticle, level) {
+  if (!jsonArticle?.result?.article) {
+    return null;
+  }
+
+  const article = jsonArticle.result.article;
+  const content = normalizeNewsSentences(article.content);
+
+  if (!article.name || content.length === 0) {
+    return null;
+  }
+
+  return {
+    ...article,
+    cefr_level: Number.isFinite(Number(article.cefr_level)) ? Number(article.cefr_level) : level,
+    content,
+  };
+}
+
+function buildBaseNewsPrompt(text, langCode, date) {
+  return `Ты делаешь базовую новостную выжимку для последующей адаптации на клиенте.
+
+Верни ТОЛЬКО валидный JSON без markdown и пояснений.
+Весь текст внутри JSON должен быть строго на языке ${langCode}.
+
+Задача:
+- сократи исходную новость до ${BASE_NEWS_SENTENCE_COUNT} коротких, фактических, связанных предложений;
+- не используй матрицу грамматики;
+- не используй частотный словарь;
+- не добавляй новых фактов;
+- каждое предложение должно быть отдельной строкой массива content;
+- массив content должен содержать ровно ${BASE_NEWS_SENTENCE_COUNT} предложений;
+- каждое предложение должно быть одним законченным предложением;
+- без списков, цитат, markdown, двоеточий и точек с запятой.
+
+Если исходный текст шумный, оставь только основное содержание новости.
+Если тип новости неясен, используй type = "algemeen".
+Дата новости: ${date}.
+
+Исходный текст:
+${text}
+
+Формат ответа:
+{
+  "result": {
+    "article": {
+      "name": "Korte titel in ${langCode}",
+      "cefr_level": ${BASE_NEWS_LEVEL},
+      "cefr_level_name": "BASE",
+      "format": "news_source_summary",
+      "type": "algemeen",
+      "content": [
+        "Zin 1.",
+        "Zin 2.",
+        "Zin 3.",
+        "Zin 4.",
+        "Zin 5.",
+        "Zin 6.",
+        "Zin 7.",
+        "Zin 8.",
+        "Zin 9.",
+        "Zin 10."
+      ]
+    }
+  }
+}`;
+}
+
+async function saveBaseLevelNewsArticles(articles, input, langCode, date) {
+  const processedLinks = new Set();
+  const processedArticleHashes = new Set();
+
+  for (const article of articles) {
+    try {
+      if (!article?.content || article.content.includes('Контент не найден') || article.content.includes('Ошибка:')) {
+        continue;
+      }
+
+      const contentHash = md5(article.content);
+      if (processedLinks.has(article.link) || processedArticleHashes.has(contentHash)) {
+        continue;
+      }
+
+      const systemPrompt = buildBaseNewsPrompt(article.content, langCode, date);
+      const adaptedArticle = await adaptNews({ user: systemPrompt, system: '' }, article.content);
+      const normalizedArticle = normalizeAdaptedArticlePayload(adaptedArticle, BASE_NEWS_LEVEL);
+
+      if (!normalizedArticle) {
+        console.warn('Skipping base news article with invalid payload:', article.link);
+        continue;
+      }
+
+      if (normalizedArticle.content.length !== BASE_NEWS_SENTENCE_COUNT) {
+        console.warn(
+          `Skipping base news article with ${normalizedArticle.content.length} sentences instead of ${BASE_NEWS_SENTENCE_COUNT}:`,
+          article.link
+        );
+        continue;
+      }
+
+      await SaveArticle(
+        input.name,
+        normalizedArticle.name,
+        normalizedArticle.content,
+        BASE_NEWS_LEVEL,
+        normalizedArticle.type || 'algemeen',
+        article.link,
+        adaptNews.lastUsedModel
+      );
+
+      processedLinks.add(article.link);
+      processedArticleHashes.add(contentHash);
+      console.log('Saved base level news article:', article.link);
+    } catch (error) {
+      console.error('Ошибка при сохранении базовой новости:', article?.link, error);
+    }
+  }
+}
+
 import { JSDOM } from 'jsdom';
 
-const style = `
-<style>
-article {
-  display: block;
-  background: #f9f9f9;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+// Function to check if we should update free models (more than 24 hours since last update)
+async function shouldUpdateFreeModels() {
+  try {
+    await EnsureFreeModelsTable();
+    const client = await pool.connect();
+    try {
+      const res = await client.query('SELECT created_at FROM free_models ORDER BY created_at DESC LIMIT 1');
+      
+      if (res.rows.length === 0) {
+        console.log('No previous records found, update needed');
+        return true;
+      }
+      
+      const lastUpdate = new Date(res.rows[0].created_at);
+      const now = new Date();
+      const hoursSinceUpdate = (now - lastUpdate) / (1000 * 60 * 60);
+      
+      console.log(`Last update was ${hoursSinceUpdate.toFixed(1)} hours ago`);
+      
+      // Update if more than 24 hours have passed
+      return hoursSinceUpdate >= 24;
+    } finally {
+      client.release();
+    }
+  } catch (error) {
+    console.error('Error checking last update time:', error.message);
+    return true; // Update if we can't check
+  }
 }
 
-article p {
-  margin-bottom: 15px;
-  color: #333;
+// Function to test model response time with improved error handling
+async function testModelResponseTime(modelId, debug = false) {
+  try {
+    const startTime = Date.now();
+    
+    // Simple test prompt
+    const testPrompt = "Say hello";
+    
+    // Validate API key
+    if (!OPENROUTER_API_KEY) {
+      if (debug) {
+        console.log(`  🔑 ${modelId}: API key missing`);
+      }
+      return { modelId, responseTime: 0, status: 'api_key_missing', error: 'API key not configured' };
+    }
+    
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 20000); // 20 second timeout
+    
+    const response = await fetch(`${OPENROUTER_BASE_URL}/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+        'HTTP-Referer': 'https://kolmit.onrender.com',
+        'Content-Type': 'application/json',
+        'X-Title': 'Model Testing'
+      },
+      body: JSON.stringify({
+        model: modelId,
+        messages: [{ role: 'user', content: testPrompt }],
+        max_tokens: 20,
+        temperature: 0.1,
+        stream: false
+      }),
+      signal: controller.signal
+    });
+    
+    clearTimeout(timeoutId);
+    const endTime = Date.now();
+    const responseTime = endTime - startTime;
+    
+    if (response.ok) {
+      const responseData = await response.json();
+      const content = responseData.choices?.[0]?.message?.content || '';
+      
+      if (content && content.length > 0) {
+        if (debug) {
+          console.log(`  ✅ ${modelId}: ${responseTime}ms - Response: ${content.substring(0, 30)}...`);
+        }
+        return { modelId, responseTime, status: 'success', response: content };
+      } else {
+        if (debug) {
+          console.log(`  ⚠️  ${modelId}: ${responseTime}ms - Empty response`);
+        }
+        return { modelId, responseTime, status: 'empty_response', error: 'Empty response content' };
+      }
+    } else {
+      const errorText = await response.text();
+      if (debug) {
+        console.log(`  ❌ ${modelId}: Failed (${response.status}) - ${responseTime}ms - ${errorText.substring(0, 100)}`);
+      }
+      return { modelId, responseTime, status: 'failed', error: errorText };
+    }
+  } catch (error) {
+    const responseTime = Date.now() - startTime || 20000; // Use actual elapsed time
+    if (debug) {
+      console.log(`  ⏱️  ${modelId}: Timeout/error - ${responseTime}ms - ${error.message}`);
+    }
+    return { modelId, responseTime, status: 'error', error: error.message };
+  }
 }
 
-article p:last-child {
-  margin-bottom: 0;
+// Function to fetch all models from OpenRouter with performance testing
+async function fetchAllModels() {
+  try {
+    console.log('📡 Fetching all models from OpenRouter...');
+    
+    // Validate API configuration
+    if (!OPENROUTER_API_KEY) {
+      throw new Error('OPENROUTER_API_KEY environment variable is not set');
+    }
+    
+    console.log(`🔑 Using API key: ${OPENROUTER_API_KEY.substring(0, 8)}...`);
+    
+    const response = await fetch(`${OPENROUTER_BASE_URL}/models`, {
+      headers: {
+        'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+        'HTTP-Referer': 'https://kolmit.onrender.com',
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
+    }
+
+    const data = await response.json();
+    console.log(`✅ Found ${data.data.length} total models`);
+    
+    // Filter for truly free models
+    const freeModels = data.data.filter(model => {
+      const isFree = model.pricing?.prompt === '0' && model.pricing?.completion === '0';
+      return isFree;
+    });
+
+    console.log(`🎯 Identified ${freeModels.length} free models`);
+    
+    if (freeModels.length === 0) {
+      console.warn('⚠️  No free models found! Check pricing criteria.');
+      return { freeModels: [], testResults: [] };
+    }
+    
+    // Test response times for ranking
+    console.log('\n⏱️  Testing model response times for ranking...');
+    console.log('  This may take several minutes...');
+    
+    // Test models with detailed logging
+    console.log(`  Testing ${freeModels.length} models for response times...`);
+    
+    const testResults = [];
+    let successCount = 0;
+    let failureCount = 0;
+    
+    for (let i = 0; i < freeModels.length; i++) {
+      const model = freeModels[i];
+      console.log(`\n  Testing ${i + 1}/${freeModels.length}: ${model.id}`);
+      
+      const result = await testModelResponseTime(model.id, true); // Enable debug logging
+      testResults.push(result);
+      
+      if (result.status === 'success') {
+        successCount++;
+      } else {
+        failureCount++;
+      }
+      
+      // Progress indicator
+      if ((i + 1) % 5 === 0 || i === freeModels.length - 1) {
+        console.log(`  Progress: ${i + 1}/${freeModels.length} (${successCount} working, ${failureCount} failed)`);
+      }
+      
+      // Small delay to avoid rate limiting
+      await new Promise(resolve => setTimeout(resolve, 300));
+    }
+    
+    // Detailed results summary
+    console.log('\n📋 Test Results Summary:');
+    const statusCounts = {};
+    testResults.forEach(r => {
+      statusCounts[r.status] = (statusCounts[r.status] || 0) + 1;
+    });
+    
+    Object.entries(statusCounts).forEach(([status, count]) => {
+      console.log(`  ${status}: ${count} models`);
+    });
+    
+    // Sort by response time (fastest first) for working models
+    const sortedResults = testResults
+      .filter(r => r.status === 'success')
+      .sort((a, b) => a.responseTime - b.responseTime);
+    
+    if (sortedResults.length > 0) {
+      console.log('\n📊 Working Models Response Time Ranking (Fastest to Slowest):');
+      sortedResults.forEach((result, index) => {
+        console.log(`  ${index + 1}. ${result.modelId}: ${result.responseTime}ms`);
+      });
+    } else {
+      console.warn('\n⚠️  No models responded successfully! All models may be temporarily unavailable.');
+    }
+    
+    // Use sorted models for categorization
+    const sortedModelIds = sortedResults.map(r => r.modelId);
+    const remainingModels = freeModels
+      .filter(m => !sortedModelIds.includes(m.id))
+      .map(m => m.id);
+    
+    // Combine: sorted tested models + remaining untested models
+    const rankedModelIds = [...sortedModelIds, ...remainingModels];
+    
+    // Reorder freeModels array based on ranking
+    freeModels.sort((a, b) => {
+      const indexA = rankedModelIds.indexOf(a.id);
+      const indexB = rankedModelIds.indexOf(b.id);
+      return indexA - indexB;
+    });
+    
+    console.log(`\n✅ Ranked ${sortedResults.length} working models by response time`);
+    console.log(`📊 Total models processed: ${freeModels.length}`);
+    
+    // Return both freeModels and testResults
+    return { freeModels, testResults };
+
+  } catch (error) {
+    console.error('\n💥 Error fetching models:', error.message);
+    console.error('Stack trace:', error.stack);
+    throw error;
+  }
 }
 
-article subj {
-  font-weight: bold;
-  color: rgb(49, 49, 169);
+// Function to categorize models into structured format (unified list for all categories)
+async function categorizeModelsStructured(freeModels, testResults, debug = false) {
+  // Get list of working models with their response times
+  const workingModels = testResults
+    .filter(result => result.status === 'success')
+    .map(result => ({
+      modelId: result.modelId,
+      responseTime: result.responseTime
+    }))
+    // Sort by response time (fastest first)
+    .sort((a, b) => a.responseTime - b.responseTime);
+  
+  const workingModelIds = workingModels.map(model => model.modelId);
+  
+  console.log(`\n✅ Found ${workingModelIds.length} working models out of ${testResults.length} tested`);
+  console.log(`📊 Sorted by response time (fastest to slowest):`);
+  workingModels.forEach((model, index) => {
+    console.log(`  ${index + 1}. ${model.modelId}: ${model.responseTime}ms`);
+  });
+  
+  if (debug) {
+    console.log('Working models:', workingModelIds);
+  }
+  
+  // For unified model list across all categories (as per project requirements)
+  // All functional categories use the same list of active working models
+  // Models are already sorted by response time (fastest first)
+  const categorizedModels = {
+    chat: [...workingModelIds],
+    news: [...workingModelIds],
+    synt: [...workingModelIds],
+    level: [...workingModelIds],
+    translate: [...workingModelIds]
+  };
+
+  // Log categories
+  console.log('\n📂 Unified Model Categories (same working models for all categories):');
+  Object.entries(categorizedModels).forEach(([category, models]) => {
+    console.log(`  ${category}: ${models.length} models`);
+    if (debug) {
+      console.log(`    Models: ${models.join(', ')}`);
+    }
+  });
+
+  return categorizedModels;
 }
 
-article ver {
-  color: #e74c3c;
-  font-style: italic;
+// Main function to fetch and save free models (with 24-hour check)
+async function updateFreeModelsDaily() {
+  try {
+    console.log('=== Checking Free Models Update Schedule ===');
+    await EnsureFreeModelsTable();
+    
+    const shouldUpdate = true;//await shouldUpdateFreeModels();
+    
+    if (!shouldUpdate) {
+      console.log('Free models are up to date (updated within last 24 hours)');
+      return { updated: false, message: 'Already up to date' };
+    }
+    
+    console.log('Updating free models...');
+    console.log('Current time:', new Date().toISOString());
+    
+    // 1. Fetch all free models with performance testing
+    const { freeModels, testResults } = await fetchAllModels();
+    
+    // Handle case when no models are found
+    if (freeModels.length === 0) {
+      console.warn('\n⚠️  No free models available. Using fallback defaults.');
+      const fallbackData = {
+        chat: [
+          'google/gemini-2.0-flash-exp:free',
+          'meta-llama/llama-3.1-8b-instruct:free'
+        ],
+        news: ['google/gemini-2.0-flash-exp:free'],
+        synt: ['google/gemini-2.0-flash-exp:free'],
+        level: [],
+        translate: ['google/gemini-2.0-flash-exp:free'],
+        fetched_at: new Date().toISOString(),
+        model_performance: {}
+      };
+      
+      console.log('\n💾 Saving fallback models to database...');
+      const recordId = await SaveFreeModels(fallbackData);
+      console.log(`✅ Saved fallback record ID: ${recordId}`);
+      
+      return { updated: true, recordId, data: fallbackData, fallback: true };
+    }
+    
+    // 2. Categorize models into structured format
+    const categorizedModels = await categorizeModelsStructured(freeModels, testResults);
+    
+    // 3. Prepare data for saving in the exact format shown in your query
+    const modelsData = {
+      chat: categorizedModels.chat || [],
+      news: categorizedModels.news || [],
+      synt: categorizedModels.synt || [],
+      level: categorizedModels.level || [],
+      translate: categorizedModels.translate || [],
+      fetched_at: new Date().toISOString(),
+      model_performance: {}
+    };
+    
+    // 4. Add response times to model_performance
+    const successfulTests = testResults.filter(r => r.status === 'success');
+    
+    if (successfulTests.length > 0) {
+      console.log(`\n📊 Adding response times for ${successfulTests.length} successfully tested models...`);
+      
+      successfulTests.forEach(result => {
+        modelsData.model_performance[result.modelId] = {
+          response_time: result.responseTime,
+          status: result.status,
+          tested_at: new Date().toISOString(),
+          response_sample: result.response?.substring(0, 50) || ''
+        };
+      });
+      
+      console.log(`  Stored performance data for ${Object.keys(modelsData.model_performance).length} models`);
+    } else {
+      console.warn('\n⚠️  No models responded successfully. Performance data will be empty.');
+      console.log('  This may indicate temporary API issues or all models being overloaded.');
+    }
+    
+    // 5. Save to database
+    console.log('\n💾 Saving models to database...');
+    
+    const recordId = await SaveFreeModels(modelsData);
+    
+    console.log('\n=== Free Models Update Completed Successfully ===');
+    console.log(`✅ Saved record ID: ${recordId}`);
+    
+    // Print summary
+    console.log('\n📋 Summary by Category:');
+    for (const [category, models] of Object.entries(categorizedModels)) {
+      console.log(`  ${category}: ${models.length} models`);
+    }
+    
+    console.log('\n📊 Performance Statistics:');
+    console.log(`  Total models tested: ${testResults.length}`);
+    console.log(`  Working models: ${successfulTests.length}`);
+    console.log(`  Success rate: ${(successfulTests.length / testResults.length * 100).toFixed(1)}%`);
+    
+    if (successfulTests.length > 0) {
+      const avgResponseTime = successfulTests.reduce((sum, r) => sum + r.responseTime, 0) / successfulTests.length;
+      console.log(`  Average response time: ${Math.round(avgResponseTime)}ms`);
+      
+      const fastest = successfulTests[0];
+      const slowest = successfulTests[successfulTests.length - 1];
+      console.log(`  Fastest model: ${fastest.modelId} (${fastest.responseTime}ms)`);
+      console.log(`  Slowest model: ${slowest.modelId} (${slowest.responseTime}ms)`);
+    }
+    
+    return { 
+      updated: true, 
+      recordId, 
+      data: modelsData,
+      stats: {
+        totalModels: testResults.length,
+        workingModels: successfulTests.length,
+        successRate: successfulTests.length / testResults.length
+      }
+    };
+    
+  } catch (error) {
+    console.error('\n💥 Error in updateFreeModelsDaily:', error);
+    console.error('Error details:', error.message);
+    
+    // Try to save fallback data even if main process fails
+    try {
+      console.log('\n🔄 Attempting to save fallback data...');
+      const fallbackData = {
+        chat: ['google/gemini-2.0-flash-exp:free'],
+        news: ['google/gemini-2.0-flash-exp:free'],
+        synt: ['google/gemini-2.0-flash-exp:free'],
+        level: [],
+        translate: ['google/gemini-2.0-flash-exp:free'],
+        fetched_at: new Date().toISOString(),
+        model_performance: {},
+        error_note: `Update failed: ${error.message}`
+      };
+      
+      const recordId = await SaveFreeModels(fallbackData);
+      console.log(`✅ Saved fallback record ID: ${recordId} after error`);
+      
+      return { 
+        updated: true, 
+        recordId, 
+        data: fallbackData, 
+        fallback: true, 
+        error: error.message 
+      };
+    } catch (fallbackError) {
+      console.error('❌ Fallback save also failed:', fallbackError.message);
+      throw error;
+    }
+  }
 }
-
-article dirobj {
-  color: #3498db;
-  font-weight: bold;
-}
-
-article tijd {
-  color: #27ae60;
-  font-style: italic;
-}
-
-article plaats {
-  color: magenta;
-  font-style: italic;
-}
-
-article extra, article adv {
-  color: grey;
-  font-style: italic;
-}
-
-article:hover {
-  background: #ffffff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out;
-}
-</style>`;
 
 export default async function generate_news() {
   try {
+
     // Получить шаблон запроса для новостей
     // let data = await GetPrompt(`news.ru`);
   
@@ -156,18 +693,25 @@ export default async function generate_news() {
     for (const input of inputs) {
 
       const articles = await getNews(date, input.url,20);
-
-      await adaptNews_(articles, input);
+      await saveBaseLevelNewsArticles(articles, input, lang, date);
     }
 
     async function adaptNews_(articles, input) {
       for (const owner of owners) {
         const levels = await getLevels(owner);
         for (let level of levels) {
-          if (!level)// || level!==20)
+          if (!level)// || level<40)
             continue;
 
-          let level_prompt = await GetPrompt(`news.adapt.${lang}.${level}`);
+          let level_prompt = null;
+          for (let lvl = level; lvl >= 1; lvl--) {
+            const candidate = await GetPrompt(`news.adapt.${lang}.${lvl}`);
+            if (candidate?.prompt?.system && typeof candidate.prompt.system === 'string') {
+              level_prompt = candidate;
+              break;
+            }
+          }
+          if (!level_prompt) level_prompt = { prompt: { system: '' } };
           let prompt = await GetPrompt(`news.adapt.${lang}`);
 
           const adaptedArticles = [];
@@ -485,6 +1029,7 @@ async function getNews(date, url,  maxLinks = 20, content = 'link', newsContent 
   if (!browser) {
     browser = await puppeteer.launch({ 
       headless: 'new',
+      protocolTimeout: 180000,
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
@@ -501,13 +1046,20 @@ async function getNews(date, url,  maxLinks = 20, content = 'link', newsContent 
   let page;
   try {
     page = await browser.newPage();
-    await page.setDefaultNavigationTimeout(60000);
-    await page.setDefaultTimeout(60000);
+    await page.setDefaultNavigationTimeout(180000);
+    await page.setDefaultTimeout(180000);
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
     await page.setJavaScriptEnabled(true);
 
     if (content === 'link') {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+      // Retry navigation for links
+      try {
+        await navigateWithRetry(page, url, { waitUntil: 'domcontentloaded', timeout: 120000 }, 3);
+      } catch (navError) {
+        console.error(`Navigation failed after retries for ${url}:`, navError);
+        newsContent.push({ link: url, content: `Navigation error: ${navError.message}` });
+        return newsContent;
+      }
       const links = await extractLinks(page, formatDate(date));
       const limitedLinks = links.slice(0, maxLinks);
 
@@ -544,24 +1096,13 @@ async function getNews(date, url,  maxLinks = 20, content = 'link', newsContent 
         }
       }
     } else {
-      // Try multiple navigation strategies for problematic URLs with increased timeouts
+      // Retry navigation for article content
       try {
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-      } catch (navigationError) {
-        console.warn(`Primary navigation failed for ${url}, trying alternative method:`, navigationError.message);
-        try {
-          // Alternative navigation with longer timeout and different wait condition
-          await page.goto(url, { waitUntil: 'load', timeout: 60000 });
-        } catch (altNavigationError) {
-          console.warn(`Alternative navigation failed for ${url}:`, altNavigationError.message);
-          try {
-            // Try with networkidle0 for more complete loading
-            await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
-          } catch (networkError) {
-            console.warn(`Network idle navigation failed for ${url}:`, networkError.message);
-            // Even if navigation "fails", try to extract content anyway
-          }
-        }
+        await navigateWithRetry(page, url, { waitUntil: 'domcontentloaded', timeout: 120000 }, 3);
+      } catch (navError) {
+        console.error(`Navigation failed after retries for ${url}:`, navError);
+        newsContent.push({ link: url, content: `Navigation error: ${navError.message}` });
+        return newsContent;
       }
 
       // Wait for page to load with multiple strategies
@@ -578,8 +1119,6 @@ async function getNews(date, url,  maxLinks = 20, content = 'link', newsContent 
         await new Promise(resolve => setTimeout(resolve, 2000));
       } catch (e) { 
         // Not all pages have cookie banners, so this is fine
-        // This is debug info, not an error - only show for actual debugging
-        // console.debug('No cookie consent popup found or error clicking it:', e.message);
       }
 
       const articleContent = await extractArticleContent(page);
@@ -673,7 +1212,7 @@ async function getNewsStandaard(date, url, content = 'link', newsContent = [], b
   };
 
   if (!browser) {
-    browser = await puppeteer.launch({ headless: 'new' });
+    browser = await puppeteer.launch({ headless: 'new', protocolTimeout: 120000 });
     isBrowserOwner = true;
   }
 
@@ -982,5 +1521,5 @@ function base64ToMpeg(base64Str, filePath) {
   });
 }
 
-export { getNews };
+export { getNews, updateFreeModelsDaily, categorizeModelsStructured, testModelResponseTime };
 

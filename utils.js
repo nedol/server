@@ -105,27 +105,57 @@ export default {
             // First, try to parse as-is in case it's already clean JSON
             return JSON.parse(str);
         } catch (e) {
-            // If that fails, try to extract JSON from markdown code blocks
+            // If that fails, try multiple cleaning strategies
             try {
-                // Remove markdown code block markers (```json, ```, etc.)
+                // Strategy 1: Remove markdown code block markers
                 let cleaned = str.replace(/```(?:json)?\s*([\s\S]*?)\s*```/gi, '$1');
-                
-                // Also remove any leading/trailing whitespace
                 cleaned = cleaned.trim();
                 
+                // Strategy 2: Fix common JSON issues
+                // Remove trailing commas before closing braces/brackets
+                cleaned = cleaned.replace(/,\s*([}\]])/g, '$1');
+                
+                // Fix unescaped quotes in strings (basic attempt)
+                // This is tricky, so we'll try to be conservative
+                
+                // Strategy 3: Extract JSON from text
                 // Try to find balanced braces approach
                 const firstBrace = cleaned.indexOf('{');
                 const lastBrace = cleaned.lastIndexOf('}');
                 
                 if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
-                    const jsonString = cleaned.substring(firstBrace, lastBrace + 1);
-                    return JSON.parse(jsonString);
+                    let jsonString = cleaned.substring(firstBrace, lastBrace + 1);
+                    
+                    // Try to fix common array issues
+                    // Remove trailing commas in arrays
+                    jsonString = jsonString.replace(/,\s*]/g, ']');
+                    
+                    try {
+                        return JSON.parse(jsonString);
+                    } catch (parseError) {
+                        // Log the problematic JSON for debugging
+                        console.error('JSON parse error at position:', parseError.message);
+                        console.error('Problematic JSON section:', jsonString.substring(Math.max(0, 800), Math.min(jsonString.length, 900)));
+                        
+                        // Strategy 4: Try to fix the specific issue at the error position
+                        const positionMatch = parseError.message.match(/position (\d+)/);
+                        if (positionMatch) {
+                            const errorPos = parseInt(positionMatch[1]);
+                            const before = jsonString.substring(Math.max(0, errorPos - 50), errorPos);
+                            const after = jsonString.substring(errorPos, Math.min(jsonString.length, errorPos + 50));
+                            console.error('Context around error:', { before, after });
+                        }
+                        
+                        return null;
+                    }
                 }
                 
                 // If we still have issues, try the original string
                 return JSON.parse(cleaned);
             } catch (e2) {
                 console.error('Failed to parse JSON even after cleaning:', e2);
+                console.error('Original string length:', str.length);
+                console.error('First 200 chars:', str.substring(0, 200));
                 return null;
             }
         }
@@ -316,29 +346,37 @@ export default {
           console.error('Error reading nt2 files:', error);
           // Return a default scale if file reading fails
           return {
-            0: "A0",
-            9: "A1",
-            31: "A2",
-            50: "B1",
-            67: "B2"
+            "1-9": "A0",
+            "10-31": "A1",
+            "32-49": "A2",
+            "50-66": "B1",
+            "67-100": "B2"
           };
         }
       }
-      
-      // Create a map of first occurrence of each CEFR level
-      const cefrScale = {};
-      const seenLevels = new Set();
-      
-      data.forEach((item, index) => {
-        // Use the index position as kolmit_level (starting from 1)
-        const kolmitLevel = index + 1;
-        if (!seenLevels.has(item.cefr_level)) {
-          cefrScale[kolmitLevel] = item.cefr_level;
-          seenLevels.add(item.cefr_level);
+
+      const cefrGroups = {};
+      data.forEach(item => {
+        if (!item.cefr_level || item.level === undefined) return;
+        const baseLevel = item.cefr_level.substring(0, 2);
+        const kolmitLevel = parseFloat(item.level);
+        if (isNaN(kolmitLevel)) return;
+        if (!cefrGroups[baseLevel]) {
+          cefrGroups[baseLevel] = { min: kolmitLevel, max: kolmitLevel };
+        } else {
+          cefrGroups[baseLevel].min = Math.min(cefrGroups[baseLevel].min, kolmitLevel);
+          cefrGroups[baseLevel].max = Math.max(cefrGroups[baseLevel].max, kolmitLevel);
         }
       });
-      
-      return cefrScale;
+
+      const cefrRanges = {};
+      Object.entries(cefrGroups)
+        .sort((a, b) => a[1].min - b[1].min)
+        .forEach(([cefrName, range]) => {
+          cefrRanges[`${range.min}-${range.max}`] = cefrName;
+        });
+
+      return cefrRanges;
     },
 
     // Function to get CEFR level name by numerical level
@@ -460,28 +498,37 @@ export async function GetCefrScale() {
       console.error('Error reading nt2 files:', error);
       // Return a default scale if file reading fails
       return JSON.stringify({
-        0: "A0",
-        9: "A1",
-        31: "A2",
-        50: "B1",
-        67: "B2"
+        "1-9": "A0",
+        "10-31": "A1",
+        "32-49": "A2",
+        "50-66": "B1",
+        "67-100": "B2"
       });
     }
-  }  
-  // Create a map of first occurrence of each CEFR level
-  const cefrScale = {};
-  const seenLevels = new Set();
-  
-  data.forEach((item, index) => {
-    // Use the index position as kolmit_level (starting from 1)
-    const kolmitLevel = index + 1;
-    if (!seenLevels.has(item.cefr_level)) {
-      cefrScale[kolmitLevel] = item.cefr_level;
-      seenLevels.add(item.cefr_level);
+  }
+
+  const cefrGroups = {};
+  data.forEach(item => {
+    if (!item.cefr_level || item.level === undefined) return;
+    const baseLevel = item.cefr_level.substring(0, 2);
+    const kolmitLevel = parseFloat(item.level);
+    if (isNaN(kolmitLevel)) return;
+    if (!cefrGroups[baseLevel]) {
+      cefrGroups[baseLevel] = { min: kolmitLevel, max: kolmitLevel };
+    } else {
+      cefrGroups[baseLevel].min = Math.min(cefrGroups[baseLevel].min, kolmitLevel);
+      cefrGroups[baseLevel].max = Math.max(cefrGroups[baseLevel].max, kolmitLevel);
     }
   });
-  
-  return JSON.stringify(cefrScale);
+
+  const cefrRanges = {};
+  Object.entries(cefrGroups)
+    .sort((a, b) => a[1].min - b[1].min)
+    .forEach(([cefrName, range]) => {
+      cefrRanges[`${range.min}-${range.max}`] = cefrName;
+    });
+
+  return JSON.stringify(cefrRanges);
 }
 
 // Function to get CEFR level name by numerical level
